@@ -85,7 +85,7 @@ class CfgGroups {
                     };
                 };
 
-                class o_ukterrorists_specops_blyat5_black {
+                class o_ukterrorists_specops_blyat_5_black {
                     name = "Blyat5";
                     side = 0;
                     faction = "O_UKTerrorists_Black";

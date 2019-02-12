@@ -1,4 +1,4 @@
-# 2BNB Framework
+# 2BNB Extras
 This mod is being developed to offer members of the 2nd Battalion, Nord Brigade custom configs and game enhancements.
 
 ## Dependencies
@@ -24,12 +24,12 @@ The build system will require:
 
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:
-- for code: bnb_f
-- for urls: 2bnb-framework
-- for presentation: 2BNB Framework
+- for code: bnb_e
+- for urls: 2bnb-extras
+- for presentation: 2BNB Extras
 
 ### Prefixes
-The prefix `bnb_f_` should be used where appropriate to avoid any potential name clashes with other mods.
+The prefix `bnb_e_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
 For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/DRaWNyf).

@@ -1,5 +1,5 @@
 **Arma 3 Version:** `1.xx` (stable / rc / dev)
-**2BNB Framework Version:** `1.x.x` (stable / dev + commit hash)
+**2BNB Extras Version:** `1.x.x` (stable / dev + commit hash)
 
 **Mods:**
 ```

@@ -1,12 +1,12 @@
-name = "2BNB Framework";
+name = "2BNB Extras";
 picture = "2bnb-logo.paa";
 actionName = "2BNB Discord";
 action = "https://discord.gg/DRaWNyf";
-description = "2nd Battalion, Nord Brigade - Framework";
+description = "2nd Battalion, Nord Brigade - Extras";
 logo = "2bnb-logo.paa";
 logoOver = "2bnb-logo.paa";
-tooltip = "2BNB Framework";
-tooltipOwned = "2BNB Framework Owned";
-overview = "2BNB Framework";
+tooltip = "2BNB Extras";
+tooltipOwned = "2BNB Extras Owned";
+overview = "2BNB Extras";
 author = "D. Ford & Arend";
 overviewPicture = "2bnb-logo.paa";

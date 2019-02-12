@@ -3,6 +3,8 @@ This mod is being developed to offer server side functionality for the 2nd Batta
 
 ## Dependencies
 - RHS GREF
+- CBA
+- DrongosAPS
 
 
 # For Developers of this mod

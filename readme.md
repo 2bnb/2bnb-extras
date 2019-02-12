@@ -1,5 +1,5 @@
 # 2BNB Framework
-This mod is being developed to offer server side functionality for the 2nd Battalion, Nord Brigade mission makers and moderators to use.
+This mod is being developed to offer members of the 2nd Battalion, Nord Brigade custom configs and game enhancements.
 
 ## Dependencies
 - RHS GREF

@@ -2,7 +2,7 @@
 This mod is being developed to offer server side functionality for the 2nd Battalion, Nord Brigade mission makers and moderators to use.
 
 ## Dependencies
-- ACE3
+- RHS GREF
 
 
 # For Developers of this mod

@@ -1,6 +1,6 @@
 name = "2BNB Extras";
 picture = "2bnb-logo.paa";
-actionName = "2BNB Discord";
+actionName = "Discord";
 action = "https://discord.gg/DRaWNyf";
 description = "2nd Battalion, Nord Brigade - Extras";
 logo = "2bnb-logo.paa";

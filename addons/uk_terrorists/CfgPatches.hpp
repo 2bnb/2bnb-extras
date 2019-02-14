@@ -1,5 +1,5 @@
 class CfgPatches {
-	class O_UKTerrorists_Black {
+	class bnb_e_uk_terrorists {
 		units[] = {
 			"O_UKTerrorists_Rifleman_Black_01",
 			"O_UKTerrorists_Medic_Black_01",
@@ -14,7 +14,7 @@ class CfgPatches {
 			"A3_Characters_F",
 			"rhsgref_c_troops"
 		};
-		authors[] = {
+		author[] = {
 			"D. Ford",
 			"Arend"
 		};

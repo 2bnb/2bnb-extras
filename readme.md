@@ -2,8 +2,9 @@
 This mod is being developed to offer members of the 2nd Battalion, Nord Brigade custom configs and game enhancements.
 
 ## Dependencies
-- RHS GREF
 - CBA
+- TFAR 1.0 (BETA)
+- RHS GREF
 - DrongosAPS
 
 

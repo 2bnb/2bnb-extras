@@ -12,16 +12,10 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 ## Install
 We have a build system to allow for key signing and addon compiling.
 
-### Linux
-If on Linux, use the `make` command, along with `Makefile` found in the root of the mod, to build the mod for use in Arma 3.
-
 ### Windows
-If on Windows, use the `tools\make.ps1` file to build the mod for you.
+If on Windows, use the `tools\make.ps1` file to build the mod for you. It will build the mod, sign the addons, include the public key in the `keys` folder, and also copy across all files found in the `extras` folder, as well as the files specified in the file `tools\support-files.txt`.
 
-Make sure to run as administrator.
-
-The build system will require:
-- Git
+The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:

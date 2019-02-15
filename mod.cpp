@@ -10,7 +10,7 @@ logoOver = "2bnb-logo.paa";
 
 tooltip = "2nd Battalion, Nord Brigade - Extras";
 tooltipOwned = "2nd Battalion, Nord Brigade - Extras";
-overview = "2BNB extra customisations & enhancements.";
+overview = "2BNB extra customisations and enhancements.";
 author = "2nd Battalion, Nord Brigade Technical Team";
 overviewPicture = "2bnb-logo.paa";
 overviewText = "2nd Battalion, Nord Brigade - Extras";

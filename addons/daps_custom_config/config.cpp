@@ -1,11 +1,14 @@
 class CfgPatches {
-	// You can edit this class name to whatever you like. Author and name too, but don't change the other stuff
-	class DrongosAPScustom {
-		author = "Drongo";
-		name = "Drongo's APS Custom";
+	class bnb_e_daps {
+		name = "2BNB Extras - DAPS Custom Config";
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {"CBA_main","DrongosAPS"};
+		author[] = {
+			"Drongo",
+			"D. Ford",
+			"Arend"
+		};
 	};
 };
 

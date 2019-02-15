@@ -28,7 +28,7 @@ function Get-Extras {
 	$supportFiles = @(Get-ChildItem -Path "$projectRoot\extras\*")
 	$supportFiles += Get-ChildItem -Path "$projectRoot\*" | Where-Object -FilterScript {$_.Name -match $supportFilesRegex}
 
-	if ($type) {
+	if ($type -ne $False) {
 		$supportFilesArray = @()
 		foreach ($file in $supportFiles) {
 			$supportFilesArray += $file.$($type)

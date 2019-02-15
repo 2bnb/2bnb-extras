@@ -1,5 +1,6 @@
 class CfgPatches {
 	class bnb_e_uk_terrorists {
+		name = "2BNB Extras - UK Terrorists";
 		units[] = {
 			"O_UKTerrorists_Rifleman_Black_01",
 			"O_UKTerrorists_Medic_Black_01",

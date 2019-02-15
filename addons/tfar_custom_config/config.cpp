@@ -1,6 +1,6 @@
 class CfgPatches {
 	class bnb_e_tfar {
-		name = "TFAR Custom Config";
+		name = "2BNB Extras - TFAR Custom Config";
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {"tfar_core"};

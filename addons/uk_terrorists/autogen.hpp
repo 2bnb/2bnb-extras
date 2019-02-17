@@ -197,8 +197,9 @@ class CfgVehicles {
         displayName = "Rifleman";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_TK","LanguagePER_F","G_IRAN_default"};
+        identityTypes[] = {"Head_TK","LanguageENGB_F", "VSM_FaceMask_black", "G_IRAN_default"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -220,14 +221,14 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 
@@ -238,8 +239,9 @@ class CfgVehicles {
         displayName = "Medic";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_Euro","LanguageRUS","rhs_scarf","G_CIVIL_male"};
+        identityTypes[] = {"Head_Euro","LanguageENGB_F","VSM_FaceMask_black","G_CIVIL_male"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -254,21 +256,21 @@ class CfgVehicles {
 
         backpack = "CUP_B_USPack_Black";
 
-        ALiVE_orbatCreator_loadout[] = {{"SMA_ACRREMblk_N","SMA_supp1b_556","rhsusf_acc_anpeq15A","sma_spitfire_03_rds_black",{"rhs_mag_30Rnd_556x45_M855A1_Stanag",30},{},""},{},{"rhsusf_weap_glock17g4","rhsusf_acc_omega9k","acc_flashlight_pistol","",{"rhsusf_mag_17Rnd_9x19_JHP",17},{},""},{"rhs_uniform_g3_blk",{{"ACE_MapTools",1},{"ACE_EarPlugs",1},{"ACE_EntrenchingTool",1},{"ACE_CableTie",12},{"ACE_Flashlight_XL50",1},{"ACE_IR_Strobe_Item",2}}},{"V_PlateCarrier2_blk",{{"ACE_bodyBag",2},{"rhsusf_mag_17Rnd_9x19_FMJ",5,17},{"ACE_30Rnd_556x45_Stanag_Mk262_mag",9,30}}},{"CUP_B_USPack_Black",{{"ACE_quikclot",21},{"ACE_elasticBandage",21},{"ACE_fieldDressing",25},{"ACE_epinephrine",17},{"ACE_morphine",16},{"ACE_salineIV_500",4},{"ACE_Banana",3},{"ACE_surgicalKit",1},{"ACE_packingBandage",13},{"ACE_salineIV_250",7},{"ACE_salineIV",4},{"ACE_Chemlight_HiGreen",6,1},{"SmokeShell",8,1},{"SmokeShellBlue",2,1},{"SmokeShellGreen",2,1},{"SmokeShellRed",2,1}}},"rhsusf_opscore_bk","",{"Laserdesignator_01_khk_F","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","TFAR_microdagr","A3_GPNVG18b_BLK_F"}};
+        ALiVE_orbatCreator_loadout[] = {{"SMA_ACRREMblk_N","SMA_supp1b_556","rhsusf_acc_anpeq15A","sma_spitfire_03_rds_black",{"rhs_mag_30Rnd_556x45_M855A1_Stanag",30},{},""},{},{"rhsusf_weap_glock17g4","rhsusf_acc_omega9k","acc_flashlight_pistol","",{"rhsusf_mag_17Rnd_9x19_JHP",17},{},""},{"rhs_uniform_g3_blk",{{"ACE_MapTools",1},{"ACE_EarPlugs",1},{"ACE_EntrenchingTool",1},{"ACE_CableTie",12},{"ACE_Flashlight_XL50",1},{"ACE_IR_Strobe_Item",2}}},{"V_PlateCarrier2_blk",{{"ACE_bodyBag",2},{"rhsusf_mag_17Rnd_9x19_FMJ",5,17},{"ACE_30Rnd_556x45_Stanag_Mk262_mag",9,30}}},{"CUP_B_USPack_Black",{{"ACE_quikclot",21},{"ACE_elasticBandage",21},{"ACE_fieldDressing",25},{"ACE_epinephrine",17},{"ACE_morphine",16},{"ACE_salineIV_500",4},{"ACE_Banana",3},{"ACE_surgicalKit",1},{"ACE_packingBandage",13},{"ACE_salineIV_250",7},{"ACE_salineIV",4},{"ACE_Chemlight_HiGreen",6,1},{"SmokeShell",8,1},{"SmokeShellBlue",2,1},{"SmokeShellGreen",2,1},{"SmokeShellRed",2,1}}},"rhsusf_opscore_bk","VSM_FaceMask_black",{"Laserdesignator_01_khk_F","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","TFAR_microdagr","A3_GPNVG18b_BLK_F"}};
 
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 
@@ -279,8 +281,9 @@ class CfgVehicles {
         displayName = "AT";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_Euro","LanguageRUS","rhs_scarf","G_CIVIL_male"};
+        identityTypes[] = {"Head_Euro","LanguageENGB_F","VSM_FaceMask_black","G_CIVIL_male"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -302,14 +305,14 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 
@@ -320,8 +323,9 @@ class CfgVehicles {
         displayName = "SL";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_TK","LanguagePER_F","G_IRAN_default"};
+        identityTypes[] = {"Head_TK","LanguageENGB_F", "VSM_FaceMask_black", "G_CIVIL_male"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -343,14 +347,14 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 
@@ -361,8 +365,9 @@ class CfgVehicles {
         displayName = "Marksman";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_TK","LanguagePER_F","G_IRAN_default"};
+        identityTypes[] = {"Head_TK","LanguageENGB_F", "VSM_FaceMask_black", "G_CIVIL_male"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -377,21 +382,21 @@ class CfgVehicles {
 
         backpack = "B_ViperLightHarness_blk_F";
 
-        ALiVE_orbatCreator_loadout[] = {{"SMA_SKS_F","SMA_supp_762","rhsusf_acc_anpeq15A","sma_spitfire_03_rds_black",{"SMA_30Rnd_762x39_7n23_AP_Red",30},{},""},{},{"rhsusf_weap_glock17g4","rhsusf_acc_omega9k","acc_flashlight_pistol","",{"rhsusf_mag_17Rnd_9x19_JHP",17},{},""},{"rhs_uniform_g3_blk",{{"ACE_MapTools",1},{"ACE_EarPlugs",1},{"ACE_EntrenchingTool",1},{"ACE_CableTie",12},{"ACE_Flashlight_XL50",1},{"ACE_IR_Strobe_Item",2}}},{"V_PlateCarrier2_blk",{{"ACE_bodyBag",2},{"rhsusf_mag_17Rnd_9x19_FMJ",5,17},{"SMA_30Rnd_762x39_SKS_7n23_AP",4,30},{"SMA_30Rnd_762x39_SKS_FMJ",5,30}}},{"B_ViperLightHarness_blk_F",{{"ACE_quikclot",10},{"ACE_elasticBandage",10},{"ACE_fieldDressing",10},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_salineIV_500",2},{"ACE_Banana",3},{"ACE_packingBandage",10},{"rhs_mag_mk84",5,1},{"ACE_Chemlight_HiGreen",6,1},{"CUP_HandGrenade_L109A1_HE",3,1},{"CUP_HandGrenade_L109A2_HE",3,1},{"SmokeShell",8,1},{"SmokeShellBlue",2,1},{"SmokeShellGreen",2,1},{"SmokeShellRed",2,1},{"SMA_30Rnd_762x39_7n23_AP_Red",1,30}}},"rhsusf_opscore_bk","",{"Laserdesignator_01_khk_F","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","TFAR_microdagr","A3_GPNVG18b_BLK_F"}};
+        ALiVE_orbatCreator_loadout[] = {{"SMA_SKS_F","SMA_supp_762","rhsusf_acc_anpeq15A","sma_spitfire_03_rds_black",{"SMA_30Rnd_762x39_7n23_AP_Red",30},{},""},{},{"rhsusf_weap_glock17g4","rhsusf_acc_omega9k","acc_flashlight_pistol","",{"rhsusf_mag_17Rnd_9x19_JHP",17},{},""},{"rhs_uniform_g3_blk",{{"ACE_MapTools",1},{"ACE_EarPlugs",1},{"ACE_EntrenchingTool",1},{"ACE_CableTie",12},{"ACE_Flashlight_XL50",1},{"ACE_IR_Strobe_Item",2}}},{"V_PlateCarrier2_blk",{{"ACE_bodyBag",2},{"rhsusf_mag_17Rnd_9x19_FMJ",5,17},{"SMA_30Rnd_762x39_SKS_7n23_AP",4,30},{"SMA_30Rnd_762x39_SKS_FMJ",5,30}}},{"B_ViperLightHarness_blk_F",{{"ACE_quikclot",10},{"ACE_elasticBandage",10},{"ACE_fieldDressing",10},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_salineIV_500",2},{"ACE_Banana",3},{"ACE_packingBandage",10},{"rhs_mag_mk84",5,1},{"ACE_Chemlight_HiGreen",6,1},{"CUP_HandGrenade_L109A1_HE",3,1},{"CUP_HandGrenade_L109A2_HE",3,1},{"SmokeShell",8,1},{"SmokeShellBlue",2,1},{"SmokeShellGreen",2,1},{"SmokeShellRed",2,1},{"SMA_30Rnd_762x39_7n23_AP_Red",1,30}}},"rhsusf_opscore_bk","VSM_FaceMask_black",{"Laserdesignator_01_khk_F","","","",{"Laserbatteries",1},{},""},{"ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","TFAR_microdagr","A3_GPNVG18b_BLK_F"}};
 
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 
@@ -402,8 +407,9 @@ class CfgVehicles {
         displayName = "MG";
         side = 0;
         faction = "O_UKTerrorists_Black";
+        editorSubcategory = "rhsgref_EdSubcat_infantry";
 
-        identityTypes[] = {"Head_TK","LanguagePER_F","G_IRAN_default"};
+        identityTypes[] = {"Head_TK","LanguageENGB_F", "VSM_FaceMask_black", "G_IRAN_default"};
 
         uniformClass = "rhs_uniform_g3_blk";
 
@@ -425,14 +431,14 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 
             class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'ENFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+                init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2; _backpack = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'backpack'); waituntil {sleep 0.2; backpack _this == _backpack};if !(_this getVariable ['ALiVE_OverrideLoadout',false]) then {_loadout = getArray(configFile >> 'CfgVehicles' >> (typeOf _this) >> 'ALiVE_orbatCreator_loadout'); _this setunitloadout _loadout;[_this, 'SCTFlagW'] call BIS_fnc_setUnitInsignia;reload _this};};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
             };
 
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_insignia = "ENFlagW";
+        ALiVE_orbatCreator_insignia = "SCTFlagW";
 
     };
 

@@ -13,5 +13,5 @@ class CfgPatches {
 };
 
 class Extended_PostInit_EventHandlers {
-	dapscInit = "execVM '\daps_custom_config\Start.sqf'";
+	dapscInit = "execVM '\x\bnb_e\daps_custom_config\Start.sqf'";
 };

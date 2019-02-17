@@ -167,7 +167,6 @@ function Build-Directory {
     $fullPath  = $directory.FullName
     $parent    = $directory.Parent
     $binPath   = "$buildPath\$parent\bnb_e_$component.pbo"
-    $prefix    = Get-Content $fullPath'\$PREFIX$'
 
     if (Test-Path -Path $binPath) {
         Remove-Item $binPath

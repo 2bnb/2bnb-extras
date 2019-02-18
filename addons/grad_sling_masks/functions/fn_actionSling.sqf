@@ -22,4 +22,5 @@ private _helmetClass = goggles _unit;
 if (_helmetClass isEqualTo "") exitWith {};
 
 [_unit, _helmetClass] call GRAD_slingHelmet_fnc_addSlungHelmet;
+_unit setVariable ["bnb_e_grad_sling_mask_slung", 1];
 removegoggles _unit;

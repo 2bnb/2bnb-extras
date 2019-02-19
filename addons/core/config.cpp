@@ -15,7 +15,7 @@ class CfgFunctions {
 	class bnb_e_core {
 		class functions {
 			file="\x\bnb_e\core\functions";
-			class zeusModuleDialog {};
+			class zeusAddContamAreaDialog {};
 		};
 	};
 };

@@ -6,6 +6,7 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 - TFAR 1.0 (BETA)
 - RHS GREF
 - DrongosAPS
+- GRAD Sling Helmet
 
 
 # For Developers of this mod

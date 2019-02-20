@@ -41,6 +41,8 @@ _timeToDeath = 100;
 _usePos = false;
 _onDestroy = true;
 
+_showMarker = [_showMarker] call bnb_e_core_fnc_toBoolean;
+_entireMap = [_entireMap] call bnb_e_core_fnc_toBoolean;
 
 if !(_showMarker) then {
 	_alphaMarker = 0;

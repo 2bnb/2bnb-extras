@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Project name="grad_sling_mask">
-	<Package name="Mission One">
+<Project name="bnb_e">
+	<Package name="sling_mask">
 		<Container name="Misc">
-			<Key ID="STR_grad_sling_mask_sling">
+			<Key ID="STR_sling_mask_sling">
 				<Original>Sling Gas Mask</Original>
 				<English>Sling Gas Mask</English>
 				<German>Gasmaske absetzen</German>
-				<Japanese>ヘルメットをかける</Japanese>
 			</Key>
-               <Key ID="STR_grad_sling_mask_unsling">
+			<Key ID="STR_sling_mask_unsling">
 				<Original>Unsling Gas Mask</Original>
 				<English>Unsling Gas Mask</English>
 				<German>Gasmaske aufsetzen</German>
-				<Japanese>ヘルメットを被る</Japanese>
+			</Key>
+			<Key ID="STR_sling_mask_swap">
+				<Original>Swap Facewear with Gas Mask</Original>
+				<English>Swap Facewear with Gas Mask</English>
+				<German>Gesichtsmaske mit Gasmaske austauschen</German>
 			</Key>
 		</Container>
 	</Package>

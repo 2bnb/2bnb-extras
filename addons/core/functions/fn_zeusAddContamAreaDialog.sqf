@@ -18,8 +18,6 @@ Author:
 	Arend
 ---------------------------------------------------------------------------- */
 params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-systemChat "entered";
-diag_log "2BNB Entered zeusAddContamAreaDialog";
 
 private _dialogResult =
 [
@@ -27,7 +25,7 @@ private _dialogResult =
 	[
 		// The last number is optional! If you want the first selection you can remove the number.
 		["Name of Area", "", "Zone_0"],
-		["Delete Area when Object Destroyed (Only if placed on an object)", ["No", "Yes"], 1]
+		["Delete Area when Object Destroyed (Only if placed on an object)", ["No", "Yes"], 1],
 		["Entire Map", ["No","Yes"], 0],
 		["Cold Zone Radius", "", "100"],
 		["Hot Zone Radius", "", "50"],
@@ -68,6 +66,8 @@ _objRadius = 5;
 _timeToDeath = 100;
 _usePos = true;
 
+_radius = parseNumber _radius;
+_hotRadius = parseNumber _hotRadius;
 _onDestroy = [_onDestroy] call bnb_e_core_fnc_toBoolean;
 _showMarker = [_showMarker] call bnb_e_core_fnc_toBoolean;
 _entireMap = [_entireMap] call bnb_e_core_fnc_toBoolean;
@@ -91,12 +91,3 @@ if (_entireMap) then {
 		[_objectUnderCursor,[_radius,_hotRadius,_objRadius],_timeToDeath,_alphaMarker,[true,_objectUnderCursor,_onDestroy],_moppLevel,_name] call JSHK_contam_fnc_addArea;
 	};
 };
-
-// Output the data to the chat.
-systemChat format ["Name of Area: %1", _name];
-systemChat format ["Entire Map: %1", _entireMap];
-systemChat format ["Cold Zone Radius: %1", _radius];
-systemChat format ["Hot Zone Radius: %1", _hotRadius];
-systemChat format ["Show Area on Map: %1", _showMarker];
-systemChat format ["Type of Marker: %1", _alphaMarker];
-systemChat format ["MOPP Level: %1", _moppLevel];

@@ -70,3 +70,124 @@ private _bnb_e_settings = [
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
+
+
+
+missionNamespace setVariable ["JSHK_contam_aiDamageEnabled",bnb_e_contam_aiDamage];
+missionNamespace setVariable ["JSHK_contam_addSpawnedAI",TRUE];
+missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina",bnb_e_contam_equipment_enableMaskStaminaEffect];
+
+
+
+//set gasmasks
+private _head = [bnb_e_contam_equipment_masks] call JSHK_contam_fnc_strToArray;
+private _headArr = [];
+{
+	if (isClass (configFile >> "CfgWeapons" >> _x)) then
+	{
+		_headArr pushBackUnique _x;
+	} else
+	{
+		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+	};
+} forEach _head;
+missionNamespace setVariable ["JSHK_contam_headgear",_headArr];
+
+private _masks50 = [bnb_e_contam_equipment_masks] call JSHK_contam_fnc_strToArray;
+private _allMasks = [];
+{
+	private _arr = _x;
+	{
+		if ((isClass (configFile >> "CfgWeapons" >> _x)) || 
+				(isClass (configfile >> "CfgGlasses" >> _x))) then
+		{
+			_allMasks pushBackUnique _x;
+		} else
+		{
+			[format ["fn_moduleMask: Mask classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+		};
+	} forEach _arr;
+} forEach [_masks50];
+missionNamespace setVariable ["JSHK_contam_gasMasks50",_masks50];
+missionNamespace setVariable ["JSHK_contam_gasMasks",_allMasks];
+
+
+//other gear
+private _uni = [bnb_e_contam_equipment_uniforms] call JSHK_contam_fnc_strToArray;
+private _uniArr = [];
+{
+	if (isClass (configFile >> "CfgWeapons" >> _x)) then
+	{
+		_uniArr pushBackUnique _x;
+	} else
+	{
+		[format ["fn_moduleSettingsValues: Uniform classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+	};
+} forEach _uni;
+missionNamespace setVariable ["JSHK_contam_uniforms",_uniArr];
+
+private _vests = [bnb_e_contam_equipment_vests] call JSHK_contam_fnc_strToArray;
+private _vestArr = [];
+{
+	if (isClass (configFile >> "CfgWeapons" >> _x)) then
+	{
+		_vestArr pushBackUnique _x;
+	} else
+	{
+		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+	};
+} forEach _vests;
+missionNamespace setVariable ["JSHK_contam_vests",_vestArr];
+
+
+
+//safe vehicles 
+
+private _tempArr = [bnb_e_contam_equipment_vehicles] call JSHK_contam_fnc_strToArray;
+[format ["fn_moduleVehicles: _tempArr value pre-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
+{
+	if !(_x isKindOf "Man") then
+	{
+		_tempArr pushBackUnique _x;
+	} else
+	{
+		[format ["fn_moduleSettingsValues: Player or units cannot be added as safe vehicles: %1",typeOf _x],true] call JSHK_contam_fnc_logMessage;
+	};
+} forEach _units;
+[format ["fn_moduleVehicles: _tempArr value post-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
+private _vehArr = [];
+{
+	if (typeName _x == "OBJECT") then 
+	{
+		if (!isNull _x) then
+		{
+			_vehArr pushBackUnique _x;
+			["fn_moduleVehicles: Vehicle by object added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+		};
+	} else
+	{
+		if (typeName _x == "STRING") then
+		{
+			if (isClass (configfile >> "CfgVehicles" >> _x)) then
+			{
+				_vehArr pushBackUnique _x;
+				["fn_moduleVehicles: Vehicle class added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+			} else
+			{
+				private _vehObj = missionNamespace getVariable [_x,objNull];
+				if (!isNull _vehObj) then
+				{
+					_vehArr pushBackUnique _x;
+					["fn_moduleVehicles: Vehicle by variable name added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+				} else
+				{
+					[format ["fn_moduleVehicles: Vehicle classname or object provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+				};
+			};
+		};
+	};
+} forEach _tempArr;
+[format ["fn_moduleVehicles: Final value of _vehArr - %1",_vehArr]] call JSHK_contam_fnc_logMessage;
+missionNamespace setVariable ["JSHK_contam_safeVehicles",_vehArr];
+
+

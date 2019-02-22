@@ -25,7 +25,7 @@ class CfgFunctions {
 	};
 };
 
-class Extended_PostInit_EventHandlers {
+class Extended_PreInit_EventHandlers {
 	class bnb_e_zeus_modules {
         init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf';";
 	};

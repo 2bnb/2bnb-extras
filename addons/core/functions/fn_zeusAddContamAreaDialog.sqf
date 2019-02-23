@@ -64,7 +64,7 @@ _dialogResult params [
 // Set defaults for those variables we didn't leave customisable
 _objRadius = 5;
 _timeToDeath = 100;
-_usePos = true;
+_useModulePos = true;
 
 _radius = parseNumber _radius;
 _hotRadius = parseNumber _hotRadius;
@@ -73,7 +73,7 @@ _showMarker = [_showMarker] call bnb_e_core_fnc_toBoolean;
 _entireMap = [_entireMap] call bnb_e_core_fnc_toBoolean;
 
 if !(isNull _objectUnderCursor) then {
-	_usePos = false;
+	_useModulePos = false;
 };
 
 if !(_showMarker) then {
@@ -83,11 +83,11 @@ if !(_showMarker) then {
 if (_entireMap) then {
 	[_position,[0,(worldSize/2),0],_timeToDeath,_alphaMarker,[false,objNull,false],_moppLevel,_name] call JSHK_contam_fnc_addArea;
 } else {
-	if (_usePos) then {
+	if (_useModulePos) then {
 		[_position,[_radius,_hotRadius,_objRadius],_timeToDeath,_alphaMarker,[false,objNull,_onDestroy],_moppLevel,_name] call JSHK_contam_fnc_addArea;
 	};
 
 	if !(isNull _objectUnderCursor) then {
-		[_objectUnderCursor,[_radius,_hotRadius,_objRadius],_timeToDeath,_alphaMarker,[true,_objectUnderCursor,_onDestroy],_moppLevel,_name] call JSHK_contam_fnc_addArea;
+		[getPos _objectUnderCursor,[_radius,_hotRadius,_objRadius],_timeToDeath,_alphaMarker,[true,_objectUnderCursor,_onDestroy],_moppLevel,_name] call JSHK_contam_fnc_addArea;
 	};
 };

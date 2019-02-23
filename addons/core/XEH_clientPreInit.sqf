@@ -73,9 +73,9 @@ private _bnb_e_settings = [
 
 
 
-missionNamespace setVariable ["JSHK_contam_aiDamageEnabled",bnb_e_contam_aiDamage];
-missionNamespace setVariable ["JSHK_contam_addSpawnedAI",TRUE];
-missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina",bnb_e_contam_equipment_enableMaskStaminaEffect];
+missionNamespace setVariable ["JSHK_contam_aiDamageEnabled", bnb_e_contam_aiDamage];
+missionNamespace setVariable ["JSHK_contam_addSpawnedAI", true];
+missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina", bnb_e_contam_equipment_enableMaskStaminaEffect];
 
 
 
@@ -98,7 +98,7 @@ private _allMasks = [];
 {
 	private _arr = _x;
 	{
-		if ((isClass (configFile >> "CfgWeapons" >> _x)) || 
+		if ((isClass (configFile >> "CfgWeapons" >> _x)) ||
 				(isClass (configfile >> "CfgGlasses" >> _x))) then
 		{
 			_allMasks pushBackUnique _x;
@@ -141,7 +141,7 @@ missionNamespace setVariable ["JSHK_contam_vests",_vestArr];
 
 
 
-//safe vehicles 
+//safe vehicles
 
 private _tempArr = [bnb_e_contam_equipment_vehicles] call JSHK_contam_fnc_strToArray;
 [format ["fn_moduleVehicles: _tempArr value pre-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
@@ -157,7 +157,7 @@ private _tempArr = [bnb_e_contam_equipment_vehicles] call JSHK_contam_fnc_strToA
 [format ["fn_moduleVehicles: _tempArr value post-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
 private _vehArr = [];
 {
-	if (typeName _x == "OBJECT") then 
+	if (typeName _x == "OBJECT") then
 	{
 		if (!isNull _x) then
 		{

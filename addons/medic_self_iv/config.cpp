@@ -1,9 +1,9 @@
 class CfgPatches {
-	class bnb_e_tfar {
-		name = "Test";
+	class bnb_e_medic {
+		name = "2BNB Extras - Medic stuff";
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"tfar_core"};
+		requiredAddons[] = {"ace_medical"};
 		author[] = {
 			"D. Ford",
 			"Arend"

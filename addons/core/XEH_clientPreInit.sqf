@@ -76,6 +76,7 @@ private _bnb_e_settings = [
 missionNamespace setVariable ["JSHK_contam_aiDamageEnabled", bnb_e_contam_aiDamage];
 missionNamespace setVariable ["JSHK_contam_addSpawnedAI", true];
 missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina", bnb_e_contam_equipment_enableMaskStaminaEffect];
+missionNamespace setVariable ["JSHK_contam_DEBUG", bnb_e_contam_enableDebug];
 
 
 

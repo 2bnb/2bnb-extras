@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="SPA">
+    <Package name="PiR">
+  		<Container name="PiR translate">
+ 
+  		<Key ID="STR_PIR">
+		<English>Project injury Reaction</English>
+		<Russian>Проект имитации Ранений</Russian>
+		</Key>
+ 
+  		<Key ID="STR_Enable_injuries_for_player">
+		<English>Enable injuries for player</English>
+		<Russian>Влючить ранения для игрока</Russian>
+		</Key>
+		
+  		<Key ID="STR_Enable_injuries_for_player_back">
+		<English>If you turn it off, then a regular system of injuries will act on the player</English>
+		<Russian>Если выключить, то на игрока будет действовать штатная система ранений</Russian>
+		</Key>
+
+  		<Key ID="STR_Turn_on_smoke">
+		<English>Turn on smoke</English>
+		<Russian>Включить дымы</Russian>
+		</Key>
+
+		<Key ID="STR_Turn_on_smoke_back">
+		<English>If enabled, when dragging off injured, AIs will be throw smoke 30% of the time</English>
+		<Russian>Если включено, то при оттаскивании раненых, ИИ будет бросать дым в 30% случаев</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_helmet">
+		<English>Knock off helmet from the head</English>
+		<Russian>Сбивать шлем с головы</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_helmet_back">
+		<English>In the case of a head, there is a chance of knocking down a helmet</English>
+		<Russian>В случае попадания в голову, появится вероятность сбить шлем</Russian>
+		</Key>
+
+ 		<Key ID="STR_Turn_on_weapon">
+		<English>Knock the weapon out of hand</English>
+		<Russian>Выбивать оружие из рук</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_weapon_back">
+		<English>In case hit into the hands, there is a chance to knock out the weapon</English>
+		<Russian>В случае попадания в руки, появится вероятность выбить оружие</Russian>
+		</Key>
+
+ 		<Key ID="STR_Turn_on_civilian">
+		<English>Enable injuries for civilians</English>
+		<Russian>Включить ранения для гражданских</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_civilian_back">
+		<English>If you turn it off, then a regular system of injuries will act on the civilians</English>
+		<Russian>Если выключить, то на гражданских будет действовать штатная система ранений</Russian>
+		</Key>
+
+ 		<Key ID="STR_Turn_on_captive">
+		<English>AI kills the wounded</English>
+		<Russian>ИИ добивает раненых</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_captive_back">
+		<English>If enabled, the AI will shoot at the wounded</English>
+		<Russian>Если включить, то ИИ буду стрелять по раненым</Russian>
+		</Key>		
+
+		<Key ID="STR_Provide_medical_care">
+		<English>Provide medical care</English>
+		<Russian>Оказать помощь</Russian>
+		</Key>
+		
+		<Key ID="STR_Kill_yourself">
+		<English>Kill yourself</English>
+		<Russian>Убить себя</Russian>
+		</Key>
+
+
+		</Container>
+    </Package>
+</Project>

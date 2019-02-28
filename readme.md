@@ -1,12 +1,19 @@
 # 2BNB Extras
 This mod is being developed to offer members of the 2nd Battalion, Nord Brigade custom configs and game enhancements.
 
+
+
 ## Dependencies
 - CBA
 - TFAR 1.0 (BETA)
 - RHS GREF
 - DrongosAPS
 - GRAD Sling Helmet
+
+
+# Credit
+-  [Project injury Reaction (PiR) authors, which was modified to work better with ace](https://steamcommunity.com/sharedfiles/filedetails/?id=1665585720)
+
 
 
 # For Developers of this mod

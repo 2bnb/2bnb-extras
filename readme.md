@@ -11,7 +11,7 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 - GRAD Sling Helmet
 
 
-# Credit
+# Credits
 -  [Project injury Reaction (PiR) authors, which was modified to work better with ace](https://steamcommunity.com/sharedfiles/filedetails/?id=1665585720)
 
 

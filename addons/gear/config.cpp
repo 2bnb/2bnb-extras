@@ -20,6 +20,8 @@ class CfgPatches {
    class ItemInfo;
    class ItemCore;
    class VestItem;
+	class HeadgearItem;
+	
 
    class U_I_CombatUniform;
 
@@ -97,7 +99,65 @@ class CfgPatches {
         };
     };
 
+	class Adidas_Berret: ItemCore
+	{
+		author = "Ford";
+        scope = 2;
+		displayName = "Adidas Berret";
+		picture = "\gear\data\adidass.paa";
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\gear\data\adidasB.paa" };
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+			modelSides[] = { TCivilian, TWest };
+			hiddenSelections[] = { "camo" };
 
+			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			{
+				class Head
+				{
+					hitPointName = "HitHead";
+					armor = 6;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
+	
+	
+		class Adidas_Helmet: ItemCore
+	{
+		author = "Ford";
+        scope = 2;
+		displayName = "Adidas Helmet";
+		picture = "\gear\data\adidass.paa";
+		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\gear\head\data\gay.paa"};
+
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
+			modelSides[] = { TCivilian, TWest };
+			hiddenSelections[] = { "camo" };
+
+			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			{
+				class Head
+				{
+					hitPointName = "HitHead";
+					armor = 15;
+					passThrough = 0.5;
+				};
+			};
+		};
+	};
+	
+	
 
 };
 

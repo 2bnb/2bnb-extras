@@ -19,7 +19,7 @@ while { (true) } do {
 
 
  			 _x setVariable ["dam_ignore_hit0",true];
-
+			 _x setVariable ["dam_zdorovie_lecit0",0,true];
 
 			 IF (!isplayer _x) then {
 				IF (side _x == civilian ) then {

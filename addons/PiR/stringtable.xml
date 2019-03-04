@@ -79,6 +79,67 @@
 		</Key>
 
 
+ 		<Key ID="STR_Turn_on_bloodlosing">
+		<English>Minimal blood loss time</English>
+		<Russian>Минимальное время кровопотери</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodlosing_back">
+		<English>Minimum blood loss time after which a unit may die</English>
+		<Russian>Минимальное время кровопотери, по истечении которого юнит может умереть</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_bloodlosingM">
+		<English>Maximum blood loss time</English>
+		<Russian>Максимальное время кровопотери</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodlosingM_back">
+		<English>Maximum blood loss time after which a unit may die</English>
+		<Russian>Максимальное время кровопотери, по истечении которого юнит может умереть</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_bloodhill">
+		<English>Minimal medical care time</English>
+		<Russian>Минимальное время оказания помощи</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodhill_back">
+		<English>Minimum time required to medical assist</English>
+		<Russian>Минимальное время, необходимое для оказания помощи</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_bloodhillM">
+		<English>Maximum medical care time</English>
+		<Russian>Максимальное время оказания помощи</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodhillM_back">
+		<English>Maximum time required to medical assist</English>
+		<Russian>Максимальное время, необходимое для оказания помощи</Russian>
+		</Key>			
+		
+ 		<Key ID="STR_Turn_on_bloodkill">
+		<English>Minimal suicide time</English>
+		<Russian>Минимальное время самоубийства</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodkill_back">
+		<English>Minimum time required to suicide</English>
+		<Russian>Минимальное время, необходимое для самоубийства</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_bloodkillM">
+		<English>Maximum suicide time</English>
+		<Russian>Максимальное время самоубийства</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_bloodkillM_back">
+		<English>Maximum time required to suicide</English>
+		<Russian>Максимальное время, необходимое для самоубийства</Russian>
+		</Key>	
+
+
 		</Container>
     </Package>
 </Project>

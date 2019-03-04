@@ -3,20 +3,21 @@ if (!isServer) exitWith {};
 _unit = (_this select 0);
 _anim = (_this select 1);
 _shans = (_this select 2);
+_shooter = (_this select 3);
 
-private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs"];    
+private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_shooter"];    
 
 _unitGrp = group _unit;
 _unitGrpPR = str side group _unit;
 _unitStance = stance _unit;
-
+_udalenie = 0;
 IF !(PiR_captive_on) then {
 _unit setcaptive true;
 };
 
-	if  (alive _unit) then {
+	IF  (alive _unit) then {
 
-	 _numberOfKits = 15;
+	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
   	 [_unit, "firstaidkit"] remoteExec ["removeItems", 0];	 
      [ _unit, true ] remoteExec [ "setUnconscious", _unit ];
 	 [_unit] joinSilent grpNull;
@@ -37,6 +38,7 @@ _unit setcaptive true;
 	 waitUntil { sleep 0.1; ((AnimationState _unit == "UnconsciousReviveDefault") or (!alive _unit)) };
 
 		If (alive _unit) then {
+		 _udalenie = 1;
 
 		 [_unit, (primaryWeapon _unit)] remoteExec ["removeWeapon", 0];
 		 [_unit, (secondaryWeapon _unit)] remoteExec ["removeWeapon", 0];		 
@@ -56,8 +58,10 @@ _unit setcaptive true;
 
 
 			 sleep 2;
-
+			 IF ("CROUCH" ==  _unitStance ) then {
 			 [ _unit, "AUTO" ] remoteExec [ "setUnitPos", _unit ];
+				};
+
 			 [ _unit, "CARELESS" ] remoteExec [ "setBehaviour", _unit ];
 
 			 _dis = (11 + random 36);  
@@ -93,7 +97,7 @@ _unit setcaptive true;
 				IF ((_shans - (random 10)) >=0) then {
 
 			 	 [_unit] joinSilent _unitGrp;
-				 _null = [_unit, _anim, _shans] spawn Uncondition;
+				 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition;
 				  sleep 6;
 
 				} Else {
@@ -145,7 +149,7 @@ _unit setcaptive true;
 
 					} Else {
 
-					 [ _unit ] remoteExec [ "dam_fnc_setunconscious", 2 ];
+					 [ _unit, true ] remoteExec [ "setUnconscious", _unit ];
 						waitUntil { sleep 0.1; ((AnimationState _unit == "UnconsciousReviveDefault") or (!alive _unit)) 
 						};	
 					 [ _unit, false ] remoteExec [ "setUnconscious", _unit ];
@@ -180,6 +184,7 @@ _unit setcaptive true;
 
 
 		sleep 2;
+		IF (_udalenie == 1) then {
 
 			IF (_sWeapon != "") then {
 				IF ((_smag select 0) != "") then {
@@ -206,7 +211,7 @@ _unit setcaptive true;
 			 [_unit, _binocs] remoteExec ["addWeapon", 0];
 			 };
 			
-			
+		};	
 
 
 

@@ -3,8 +3,9 @@ if (!isServer) exitWith {};
   	 _unit = _this select 0;
 	 _anim = _this select 1;
 	 _shans = _this select 2;
-
-	private [ "_unit", "_anim", "_shans"];    
+	 _shooter = _this select 3;
+	 
+	private [ "_unit", "_anim", "_shans", "_shooter"];    
 
 
 
@@ -52,7 +53,7 @@ If ((!alive _unit) or ((damage _unit < 0.251) && !(_unit getVariable ["dam_ignor
 		};
 	 
 	};
-
+	_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];
 
 IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
 
@@ -63,7 +64,7 @@ IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]
      if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
     }] remoteExec ["call"];
 
-	 _null = [_unit, _anim, _shans] spawn Uncondition;
+	 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition;
 
 };
 
@@ -71,5 +72,5 @@ sleep (8 - (random 4));
 
 
 };
-
+		_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];
  		_unit setVariable ["dam_ignore_effect0",false];

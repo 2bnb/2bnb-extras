@@ -19,7 +19,7 @@ _unit setcaptive true;
  
 
 	IF (alive _unit) then {
-	 _numberOfKits = 15;	
+	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
      [_unit, "firstaidkit"] remoteExec ["removeItems", 0];
 	 [_unit] joinSilent grpNull;
  
@@ -214,14 +214,14 @@ _unit setcaptive true;
 				IF ((_pmag select 0) != "") then {
 				 _unit addMagazine [(_pmag select 0), 9999];
 				};
-			[_unit, _pWeapon] remoteExec ["addWeapon", 0];
+			 [_unit, _pWeapon] remoteExec ["addWeapon", 0];
 			 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _pWItems;
 			 };
 			IF (_hWeapon != "") then {
 				IF ((_hmag select 0) != "") then {
 				 _unit addMagazine [(_hmag select 0), 9999];
 				};
-			[_unit, _hWeapon] remoteExec ["addWeapon", 0];
+			 [_unit, _hWeapon] remoteExec ["addWeapon", 0];
 			 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _hWItems;
 			 };
 			IF (_binocs != "") then {

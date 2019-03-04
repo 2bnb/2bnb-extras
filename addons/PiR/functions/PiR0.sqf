@@ -4,11 +4,11 @@ if (!isServer) exitWith {};
 
 // Назначение действий на попадание игрок
 
-     private ["_unit","_selection","_shans"];
+     private ["_unit","_selection","_shans", "_shooter"];
 
 	 _unit = (_this select 0) ;
 	_selection = (_this select 1);	
-
+	_shooter = (_this select 2);
 
 
 
@@ -17,7 +17,13 @@ if (!isServer) exitWith {};
 	
 IF !(_unit getVariable ["dam_ignore_injured0",false]) then {
 
-
+IF ((str _shooter != "") && (_shooter != _unit)) then {
+	IF (side _shooter == side _unit) then {
+	 _shooter = (_unit getDir _shooter);
+	} ELSE {
+	 _shooter = (_shooter getDir _unit);
+	};
+};
 
 //________________________________Распределение анимаций по частям тела______________________________________________________________________		
 
@@ -33,7 +39,7 @@ _shans = 8;
 		IF !(_unit getVariable ["dam_ignore_effect0",false]) then {
 
 		 _unit setVariable ["dam_ignore_effect0",true,true];	
-		 _null = [_unit, _anim, _shans] spawn EyeEffect0;
+		 _null = [_unit, _anim, _shans, _shooter] spawn EyeEffect0;
 		};
 	
 	};					
@@ -104,10 +110,10 @@ IF ((_shans == 10) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
     }] remoteExec ["call"];
 
 		IF (((_shans - (random 25)) >=0) && (PiR_helmet_on)) then {
-		_null = [_unit, _anim, _shans] spawn Helmet0;
+		_null = [_unit, _anim, _shans, _shooter] spawn Helmet0;
 		} ELSE {
 
-		_null = [_unit, _anim, _shans] spawn Uncondition0;	
+		_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
 		};
 		};
 
@@ -123,12 +129,12 @@ IF (((_shans == 7) or (_shans == 9)) && ((_shans - (random 10)) >=0) && !(_unit 
     }] remoteExec ["call"];
 
 		IF ((_shans - (random 22)) >=0) then {
-		_null = [_unit, _anim, _shans] spawn BendsDown0;
+		_null = [_unit, _anim, _shans, _shooter] spawn BendsDown0;
 		} ELSE {
 			IF ((_shans - (random 14)) >=0) then {
-		     _null = [_unit, _anim, _shans] spawn Crawl0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;	
 			} ELSE {
-			_null = [_unit, _anim, _shans] spawn Uncondition0;
+			_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 			 };
 		};	
 		};
@@ -147,9 +153,9 @@ IF (((_shans == 1) or (_shans == 3)) && ((7 - (random 10)) >=0) && !(_unit getVa
 		_null = [_unit, _anim, _shans] spawn DropWeapon0;
 		} ELSE {
 			IF ((_shans - (random 10)) >=0) then {
-		     _null = [_unit, _anim, _shans] spawn Uncondition0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
 			} ELSE {
-			_null = [_unit, _anim, _shans] spawn Crawl0;
+			_null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 			 };
 		};	
 		};	
@@ -165,15 +171,18 @@ IF (((_shans == 6) or (_shans == 4) or (_shans == 2)) && ((_shans - (random 10))
     }] remoteExec ["call"];
 
 		IF ((_shans - (random 22)) >=0) then {
-		_null = [_unit, _anim, _shans] spawn Uncondition0;
+		_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 		} ELSE {
-		     _null = [_unit, _anim, _shans] spawn Crawl0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;	
 
 		};	
 		};	
+
+sleep 0.1;
+
 
 // Подрыв
-IF ((_shans == 8) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
+IF ((((damage _unit) - (_unit getVariable "dam_zdorovie_lecit0")) > 0.04) && (_shans == 8) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
 		_unit setVariable ["dam_ignore_injured0",true,true];	
     remoteExec ["", PIR0jipId];
@@ -183,15 +192,15 @@ IF ((_shans == 8) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_i
     }] remoteExec ["call"];
 
 		IF ((_shans - (random 16)) >=0) then {
-		_null = [_unit, _anim, _shans] spawn Crawl0;
+		_null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 		} ELSE {
 			IF ((_shans - (random 12)) >=0) then {
-		     _null = [_unit, _anim, _shans] spawn Uncondition0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
 			} ELSE {
 			IF (((_shans - (random 12)) >=0) && (PiR_helmet_on)) then {
-			 _null = [_unit, _anim, _shans] spawn Helmet0;
+			 _null = [_unit, _anim, _shans, _shooter] spawn Helmet0;
 			 } ELSE {
-			 _null = [_unit, _anim, _shans] spawn BendsDown0;
+			 _null = [_unit, _anim, _shans, _shooter] spawn BendsDown0;
 			 };
 		};	
 		};		
@@ -200,6 +209,7 @@ IF ((_shans == 8) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_i
 	
 	
 	//_____________________________________________________________________________________________________________________	
+
 
 //________________________________Крик при попадании_______________________________________________________________________
   IF (_shans !=10 ) then {

@@ -3,10 +3,12 @@ if (!isServer) exitWith {};
   	 _unit = _this select 0;
 	 _anim = _this select 1;
 	 _shans = _this select 2;
+	 _shooter = _this select 3;	 
+
 	 _unitGrp = group _unit;
 	 _unitGrpPR = str side group _unit;
 
-	private [ "_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_weapon", "_weaponHolder", "_weaponHolder0", "_shar", "_shar0", "_nvg" ];    
+	private [ "_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_weapon", "_weaponHolder", "_weaponHolder0", "_shar", "_shar0", "_nvg", "_shooter" ];    
 
 
 
@@ -77,7 +79,7 @@ IF (_nvg == "") then {
 
 	IF (alive _unit) then {
 
-	 _null = [_unit, _anim, _shans] spawn Uncondition0;
+	 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 	} ELSE {
      _unit setVariable ["dam_ignore_injured0",false,true];	
  	 _unit setVariable ["dam_ignore_hit0",false];
@@ -85,11 +87,12 @@ IF (_nvg == "") then {
 
 //_______________________________________________________________________________________________________________________________
 
- sleep 10;
+ sleep (8 + (random 4));
 
  _shar hideObjectGlobal true;
 
-IF (_nvg == "") then {
+IF (_nvg != "") then {
+ sleep (1 + (random 2));
  _shar0 hideObjectGlobal true;
 };
 

@@ -3,10 +3,12 @@ if (!isServer) exitWith {};
 _unit = _this select 0;
 _anim = _this select 1;
 _shans = _this select 2;
+_shooter = _this select 3;
+
 _unitGrp = group _unit;
 _unitGrpPR = str side group _unit;
 
-private [ "_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_numberOfKits", "_stanceu"];
+private [ "_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_numberOfKits", "_stanceu", "_shooter"];
 
 
 IF !(PiR_captive_on) then {
@@ -16,7 +18,7 @@ _unit setcaptive true;
 
 IF  (alive _unit) then {
 
- _numberOfKits = 15;
+ _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
  [_unit, "firstaidkit"] remoteExec ["removeItems", 0];	
 	
 _stanceu = 0;
@@ -60,12 +62,12 @@ _stanceu = 0;
 		IF ((_shans - (random 18)) >=0) then {		
 		 [_unit,"AmovPknlMstpSrasWrflDnon_AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];
 		 sleep 0.05;		
-		 _null = [_unit, _anim, _shans] spawn Crawl;
+		 _null = [_unit, _anim, _shans, _shooter] spawn Crawl;
 	
 		} ELSE {	
 		 [_unit,"AmovPknlMstpSrasWrflDnon_AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];
 		 sleep 0.05;
-		 _null = [_unit, _anim, _shans] spawn Uncondition;
+		 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition;
 
 		};
 

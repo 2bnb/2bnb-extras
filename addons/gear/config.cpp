@@ -21,7 +21,7 @@ class CfgPatches {
    class ItemCore;
    class VestItem;
 	class HeadgearItem;
-	
+
 
    class U_I_CombatUniform;
 
@@ -126,8 +126,8 @@ class CfgPatches {
 			};
 		};
 	};
-	
-	
+
+
 		class Adidas_Helmet: ItemCore
 	{
 		author = "Ford";
@@ -156,8 +156,21 @@ class CfgPatches {
 			};
 		};
 	};
-	
-	
+	/*
+	class CUP_arifle_AK101;
+	class Adidas_AK:CUP_arifle_AK101
+	{
+		author = "Ford";
+        scope = 2;
+		displayName = "Adidas AK 101";
+
+		magazines[] = {"CUP_30Rnd_556x45_AK","CUP_30Rnd_TE1_Red_Tracer_556x45_AK","CUP_30Rnd_TE1_Green_Tracer_556x45_AK","CUP_30Rnd_TE1_Yellow_Tracer_556x45_AK","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_Mk262_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag"};
+		magazineWell[] = {"CBA_556x45_AK"};
+		magazineReloadSwitchPhase = 0;
+		magazineReloadTime = 0;
+		modelOptics = "-";
+	};
+	*/
 
 };
 

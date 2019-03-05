@@ -708,19 +708,6 @@ do {
 				};
 
 			};
-
-
-
-
-
-
-
-
-
-
-
-
-
 	};
 
 
@@ -748,5 +735,3 @@ do {
 IF !(PiR_captive_on) then {
 _unit setcaptive false;
 };
-
-

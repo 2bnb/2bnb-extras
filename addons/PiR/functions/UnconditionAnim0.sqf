@@ -10,5 +10,5 @@ if (!isServer) exitWith {};
 					};
 				  [_unit, _anim] remoteExec ["playMove", 0];
 				 sleep ((random 4)+4);
-				};	
-		_unit setVariable ["dam_uncondition_injured0",false,true]; 
+				};
+		_unit setVariable ["dam_uncondition_injured0",false,true];

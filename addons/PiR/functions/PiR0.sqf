@@ -7,14 +7,14 @@ if (!isServer) exitWith {};
      private ["_unit","_selection","_shans", "_shooter"];
 
 	 _unit = (_this select 0) ;
-	_selection = (_this select 1);	
+	_selection = (_this select 1);
 	_shooter = (_this select 2);
 
 
 
-	
-	
-	
+
+
+
 IF !(_unit getVariable ["dam_ignore_injured0",false]) then {
 
 IF ((str _shooter != "") && (_shooter != _unit)) then {
@@ -25,24 +25,24 @@ IF ((str _shooter != "") && (_shooter != _unit)) then {
 	};
 };
 
-//________________________________Распределение анимаций по частям тела______________________________________________________________________		
+//________________________________Распределение анимаций по частям тела______________________________________________________________________
 
 	_anim = selectRandom [
 	"UnconsciousReviveArms_A","UnconsciousReviveArms_B","UnconsciousReviveArms_C","UnconsciousReviveBody_A",
 	"UnconsciousReviveBody_B","UnconsciousReviveDefault_A","UnconsciousReviveDefault_B","UnconsciousReviveDefault_C","UnconsciousReviveHead_A",
 	"UnconsciousReviveHead_B","UnconsciousReviveHead_C","UnconsciousReviveLegs_A","UnconsciousReviveLegs_B"];
-		
+
 _shans = 8;
-					
+
 	if (vehicle _unit != _unit) exitWith {
-	
+
 		IF !(_unit getVariable ["dam_ignore_effect0",false]) then {
 
-		 _unit setVariable ["dam_ignore_effect0",true,true];	
+		 _unit setVariable ["dam_ignore_effect0",true,true];
 		 _null = [_unit, _anim, _shans, _shooter] spawn EyeEffect0;
 		};
-	
-	};					
+
+	};
 
 		if ("head" in _selection) then {
 		_anim = selectRandom [
@@ -61,7 +61,7 @@ _shans = 7;
 		_anim = selectRandom [
 		"UnconsciousReviveDefault_A","UnconsciousReviveDefault_B","UnconsciousReviveDefault_C"];
 _shans = 9;
-		};	
+		};
 
 		if (("leftforearm" in _selection) or ("rightforearm" in _selection)) then {
 		_anim = selectRandom [
@@ -99,10 +99,10 @@ _shans = 2;
 
 
 
-// Голова	
+// Голова
 IF ((_shans == 10) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
-		_unit setVariable ["dam_ignore_injured0",true,true];	
+		_unit setVariable ["dam_ignore_injured0",true,true];
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
@@ -113,15 +113,15 @@ IF ((_shans == 10) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 		_null = [_unit, _anim, _shans, _shooter] spawn Helmet0;
 		} ELSE {
 
-		_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
+		_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 		};
 		};
 
 
-//	Живот и Грудь		
+//	Живот и Грудь
 IF (((_shans == 7) or (_shans == 9)) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
-		_unit setVariable ["dam_ignore_injured0",true,true];	
+		_unit setVariable ["dam_ignore_injured0",true,true];
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
@@ -132,17 +132,17 @@ IF (((_shans == 7) or (_shans == 9)) && ((_shans - (random 10)) >=0) && !(_unit 
 		_null = [_unit, _anim, _shans, _shooter] spawn BendsDown0;
 		} ELSE {
 			IF ((_shans - (random 14)) >=0) then {
-		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 			} ELSE {
 			_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 			 };
-		};	
+		};
 		};
 
 // Верх руки и Низ руки
 IF (((_shans == 1) or (_shans == 3)) && ((7 - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
-		_unit setVariable ["dam_ignore_injured0",true,true];	
+		_unit setVariable ["dam_ignore_injured0",true,true];
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
@@ -153,17 +153,17 @@ IF (((_shans == 1) or (_shans == 3)) && ((7 - (random 10)) >=0) && !(_unit getVa
 		_null = [_unit, _anim, _shans] spawn DropWeapon0;
 		} ELSE {
 			IF ((_shans - (random 10)) >=0) then {
-		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 			} ELSE {
 			_null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 			 };
-		};	
-		};	
+		};
+		};
 
 // Бедро, голень и стопа
 IF (((_shans == 6) or (_shans == 4) or (_shans == 2)) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
-		_unit setVariable ["dam_ignore_injured0",true,true];	
+		_unit setVariable ["dam_ignore_injured0",true,true];
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
@@ -173,10 +173,10 @@ IF (((_shans == 6) or (_shans == 4) or (_shans == 2)) && ((_shans - (random 10))
 		IF ((_shans - (random 22)) >=0) then {
 		_null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 		} ELSE {
-		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 
-		};	
-		};	
+		};
+		};
 
 sleep 0.1;
 
@@ -184,7 +184,7 @@ sleep 0.1;
 // Подрыв
 IF ((((damage _unit) - (_unit getVariable "dam_zdorovie_lecit0")) > 0.04) && (_shans == 8) && ((_shans - (random 10)) >=0) && !(_unit getVariable ["dam_ignore_injured0",false])) then {
 
-		_unit setVariable ["dam_ignore_injured0",true,true];	
+		_unit setVariable ["dam_ignore_injured0",true,true];
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
@@ -195,20 +195,20 @@ IF ((((damage _unit) - (_unit getVariable "dam_zdorovie_lecit0")) > 0.04) && (_s
 		_null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 		} ELSE {
 			IF ((_shans - (random 12)) >=0) then {
-		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;	
+		     _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 			} ELSE {
 			IF (((_shans - (random 12)) >=0) && (PiR_helmet_on)) then {
 			 _null = [_unit, _anim, _shans, _shooter] spawn Helmet0;
 			 } ELSE {
 			 _null = [_unit, _anim, _shans, _shooter] spawn BendsDown0;
 			 };
-		};	
-		};		
 		};
-	
-	
-	
-	//_____________________________________________________________________________________________________________________	
+		};
+		};
+
+
+
+	//_____________________________________________________________________________________________________________________
 
 
 //________________________________Крик при попадании_______________________________________________________________________
@@ -222,15 +222,15 @@ IF ((((damage _unit) - (_unit getVariable "dam_zdorovie_lecit0")) > 0.04) && (_s
 
 	IF !(_unit getVariable ["dam_ignore_effect0",false]) then {
 
-	 _unit setVariable ["dam_ignore_effect0",true,true];	
-	 
+	 _unit setVariable ["dam_ignore_effect0",true,true];
+
 	 [_unit, _anim, _shans ] remoteExec [ "EyeEffect0", _unit ];
 
 
 
 	};
 
-//__________________________________________________________________________________________________________________________	
+//__________________________________________________________________________________________________________________________
 
 sleep 1;
 
@@ -239,35 +239,29 @@ sleep 1;
 	IF (alive _unit) then {
 		while {true} do {
 
-	 		 sleep (40 + random 20);		
-				 
-		 if (!(_unit getVariable ["dam_ignore_injured0",false]) or !(alive _unit)) exitWith {};	
+	 		 sleep (40 + random 20);
+
+		 if (!(_unit getVariable ["dam_ignore_injured0",false]) or !(alive _unit)) exitWith {};
 
 
-	
+
 		 [_unit, (selectRandom ["pain1", "pain2", "pain3", "pain4", "pain5", "pain6", "pain7", "pain8", "pain9"]) ] remoteExec [ "say3D", 0];
 
 
-		 
+
 		};
-	};	
-		
+	};
+
 //___________________________________________________________________________________________________________________________
 
 	};
 
-sleep 1;	
-IF (!(alive _unit) && !(_unit getVariable ["dam_ignore_injured0",false]))then {	
+sleep 1;
+IF (!(alive _unit) && !(_unit getVariable ["dam_ignore_injured0",false]))then {
     remoteExec ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
      if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
     }] remoteExec ["call"];
-_unit setVariable ["dam_ignore_hit0",false];	
+_unit setVariable ["dam_ignore_hit0",false];
 };
-
-
-
-
-
-

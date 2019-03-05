@@ -19,7 +19,7 @@ PiRredirect0 = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect0.sq
 
 
 if (isServer) then {
-	
+
 Uncondition = compile preprocessfilelinenumbers "\PiR\Functions\Uncondition.sqf";
 Crawl = compile preprocessfilelinenumbers "\PiR\Functions\Crawl.sqf";
 DropWeapon = compile preprocessfilelinenumbers "\PiR\Functions\DropWeapon.sqf";
@@ -43,7 +43,3 @@ PiR0 = compile preprocessfilelinenumbers "\PiR\Functions\PiR0.sqf";
 _null = [] execvm "\PiR\Functions\PiRstart.sqf";
 
 };
-
-
-
-

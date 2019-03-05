@@ -10,5 +10,4 @@ if (!isServer) exitWith {};
 				  [_unit, "AinjPpneMrunSnonWnonDb"] remoteExec ["playMove", 0];
 
 				 sleep 1;
-				};	
-
+				};

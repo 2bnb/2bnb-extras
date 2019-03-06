@@ -1,5 +1,5 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
-["Drongo's APS","Show Dialog",["Show Dialog","Shows the APS Rearm dialog"],"",{call daps_fnc_KeyPressed},[DIK_HOME,[false,false,false]],false,0,true] call cba_fnc_addKeybind;
+["Drongo's APS","Show Dialog",["Show Dialog","Shows the APS Rearm dialog"],"",{call daps_fnc_KeyPressed},[DIK_HOME,[true,true,false]],false,0,true] call cba_fnc_addKeybind;
 
 private ["_scriptWait"];
 sleep 3;

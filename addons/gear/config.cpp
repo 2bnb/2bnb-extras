@@ -156,6 +156,35 @@ class CfgPatches {
 			};
 		};
 	};
+	
+	class Adidas_BerretX: Adidas_Berret 
+	{
+		author = "Ford";
+        scope = 2;
+		displayName = "Adidas BerretX";
+		picture = "\gear\data\adidass.paa";
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\gear\data\adidasB.paa" };
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo:HitpointsProtectionInfo
+			{
+				class Head:Head
+				{
+				};
+			};
+		};
+	};
+	
+	
+	
+	
+
+	
+	
+	
+	
 	/*
 	class CUP_arifle_AK101;
 	class Adidas_AK:CUP_arifle_AK101

@@ -1,5 +1,5 @@
-if (!isServer) exitWith {};
-
+if (!isServer) exitWith {}; 
+ 
 			 _unit = _this select 0;
 			 _anim = _this select 1;
 			 private ["_unit","_anim"];
@@ -10,5 +10,5 @@ if (!isServer) exitWith {};
 					};
 				  [_unit, _anim] remoteExec ["playMove", 0];
 				 sleep ((random 4)+4);
-				};
-		_unit setVariable ["dam_uncondition_injured0",false];
+				};	
+		_unit setVariable ["dam_uncondition_injured0",false]; 

@@ -1,7 +1,7 @@
 
 
 if (!isServer) exitWith {};
-
+	 
 
 sleep 5;
 //Добавляем  юнитам отслеживание попадания
@@ -13,9 +13,9 @@ while { (true) } do {
 		if ((_x isKindOf "Man")) then
         {
 
-            if ((alive _x) && !(_x getVariable ["dam_ignore_hit0",false]) && (("INJURED" == lifeState _x) or ("HEALTHY" == lifeState _x))) then
+            if ((alive _x) && !(_x getVariable ["dam_ignore_hit0",false]) && (("INJURED" == lifeState _x) or ("HEALTHY" == lifeState _x))) then 
 			{
-			 _units pushBack _x;
+			 _units pushBack _x; 
 
 
  			 _x setVariable ["dam_ignore_hit0",true];
@@ -36,7 +36,7 @@ while { (true) } do {
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 					};
-
+					
 				} ELSE {
 					IF !(PiR_injuriplayer_on) exitwith {};
 					PIR0jipId = [_x, {
@@ -46,9 +46,17 @@ while { (true) } do {
 				};
 			 };
 		};
-
+	
 	} forEach allUnits;
 
 sleep 30;
 
 };
+
+
+
+
+
+
+
+

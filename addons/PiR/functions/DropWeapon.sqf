@@ -4,9 +4,10 @@ _unit = (_this select 0);
 _anim = (_this select 1);
 _shans = (_this select 2);
 
-private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_disT"];    
+private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_disT","_unitLdr"];    
 
 _unitGrp = group _unit;
+_unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
  
 
@@ -19,8 +20,7 @@ _unit setcaptive true;
  
 
 	IF (alive _unit) then {
-	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
-     [_unit, "firstaidkit"] remoteExec ["removeItems", 0];
+
 	 [_unit] joinSilent grpNull;
  
 	 _pWeapon = primaryWeapon _unit;
@@ -165,17 +165,86 @@ _unit setcaptive true;
 		 [ _unit, "AUTO" ] remoteExec [ "setUnitPos", _unit ];	
 		 [ _unit, "CARELESS" ] remoteExec [ "setBehaviour", _unit ];
 
-		 _dis = (20 + random 65);  
+		 _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
 		 _Pos = [_unit, _dis,(((getDir _unit)-240) + (random 120))] call BIS_fnc_relPos;
 
    
-		 _timer = (time + 25 + (random 20));   
+		 _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));   
 		 [ _unit, _Pos ] remoteExec [ "domove", _unit ];		
+
+
+
+
+//__________________Добавляем действие на перетаскивание для игрока__________________________________________________	 
+	 
+	 
+
+	 
+[_unit, 
+[
+    "<img size='3'  image='PiR\Icons\klast_CA.paa'/>", 
+    {
+
+		
+		_unit = (_this select 0);
+		_dragger = (_this select 1);
+
+		IF (alive _unit) then {
+			IF ("STAND" == stance _dragger )  then {
+			 [_dragger, "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+			} ELSE {
+				IF ("CROUCH" == stance _dragger ) then {
+				 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+				} ELSE {
+					IF ("PRONE" == stance _dragger ) then {
+					 [_dragger, "AinvPpneMstpSrasWrflDnon_Putdown_AmovPpneMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+					} ELSE {
+						IF ("UNDEFINED" == stance _dragger ) then {
+						 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+						};	
+					};
+				};
+			};
+		};
+
+	 sleep 1;		
+	 _unit setVariable ["dam_player_lecit0",true,true];
+
+
+
+
+	},
+    [],
+    6, 
+    true, 
+    true, 
+    "",
+    "(_this distance _target < 2) && !(_target getVariable ['dam_player_lecit0',false]) && !(_this getVariable ['dam_ignore_injured0',false])", // _target, _this, _originalTarget
+    2,
+    false,
+    "",
+    ""
+]	 
+] remoteExec ["addAction",0];
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+//________________________________________________________________________________________________________________________________	 
+
+
+
+
 
 	while {true}                  
 	do {
 		_disT = getPos _unit;
-		IF ((_unit distance _Pos < 5) or (!alive _unit) or (time >= _timer)) exitWith {
+		IF ((_unit distance _Pos < 5) or (!alive _unit) or (time >= _timer) or (_unit getVariable ['dam_player_lecit0',false])) exitWith {
 		};	
 		sleep 4;
 		IF ((_unit distance _disT < 0.5) && ( AnimationState _unit != "ApanPercMstpSnonWnonDnon_G02") && ( AnimationState _unit != "ApanPknlMstpSnonWnonDnon_G02") && ( AnimationState _unit != "ApanPpneMstpSnonWnonDnon_G02")) then {
@@ -200,6 +269,8 @@ _unit setcaptive true;
 							 };
 		};
 	}; 
+			 [_unit] remoteExec [ "removeAllActions", 0, true ];
+			 _unit setVariable ["dam_player_lecit0",false,true];
 
 		 _unit doMove getpos _unit;			 
 		};
@@ -257,9 +328,6 @@ _unit setcaptive true;
 			 {_unit addMagazine [_x, 9999]} forEach _magsremove;
 
 
-		IF (_numberOfKits > 0 ) then {
-			for "_i" from 1 to _numberOfKits do { _unit addItem "FirstAidKit"};
-		};
 	
 
 	 [ _unit, "AUTO" ] remoteExec [ "setUnitPos", _unit ];
@@ -268,11 +336,13 @@ _unit setcaptive true;
 
 
  	 [_unit] joinSilent _unitGrp;
-	 _unit setVariable ["dam_ignore_injured0",false];
+	 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
+	 _unit setVariable ["dam_ignore_injured0",false,true];
+	 _unit setVariable ["dam_player_lecitsebia0",false,true];
  	 IF (alive _unit) then {
 
 					PIRjipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 	 };

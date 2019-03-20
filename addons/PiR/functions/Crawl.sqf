@@ -5,9 +5,10 @@ _anim = (_this select 1);
 _shans = (_this select 2);
 _shooter = (_this select 3);
 
-private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_shooter"];    
+private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_shooter","_unitLdr"];    
 
 _unitGrp = group _unit;
+_unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
 _unitStance = stance _unit;
 _udalenie = 0;
@@ -16,9 +17,7 @@ _unit setcaptive true;
 };
 
 	IF  (alive _unit) then {
-
-	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
-  	 [_unit, "firstaidkit"] remoteExec ["removeItems", 0];	 
+	 
      [ _unit, true ] remoteExec [ "setUnconscious", _unit ];
 	 [_unit] joinSilent grpNull;
  
@@ -63,40 +62,102 @@ _unit setcaptive true;
 
 			 [ _unit, "CARELESS" ] remoteExec [ "setBehaviour", _unit ];
 
-			 _dis = (11 + random 36);  
+			 _dis = ((PiR_crawl_on) + random ((PiR_crawlM_on max PiR_crawl_on) - (PiR_crawl_on min PiR_crawlM_on)));  
 			 _Pos = [_unit, _dis,(((getDir _unit)-25) + (random 50))] call BIS_fnc_relPos;
 
    
-			 _timer = (time + 25 + (random 20));   
+			 _timer = (time +  ((PiR_crawl_on) + (random ((PiR_crawlM_on max PiR_crawl_on) - (PiR_crawl_on min PiR_crawlM_on))) / 2));   
 			 [ _unit, _Pos ] remoteExec [ "domove", _unit ];	
 			 [ _unit, "FULL" ] remoteExec [ "setSpeedMode", _unit ];
 			 
 			 sleep 2;
 			 			 [ _unit, "DOWN" ] remoteExec [ "setUnitPos", _unit ];
-				while {true}                  
+
+//__________________Добавляем действие на перетаскивание для игрока__________________________________________________	 
+	 
+	 
+
+	 
+[_unit, 
+[
+    "<img size='3'  image='PiR\Icons\klast_CA.paa'/>", 
+    {
+
+		
+		_unit = (_this select 0);
+		_dragger = (_this select 1);
+
+		IF (alive _unit) then {
+			IF ("STAND" == stance _dragger )  then {
+			 [_dragger, "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+			} ELSE {
+				IF ("CROUCH" == stance _dragger ) then {
+				 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+				} ELSE {
+					IF ("PRONE" == stance _dragger ) then {
+					 [_dragger, "AinvPpneMstpSrasWrflDnon_Putdown_AmovPpneMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+					} ELSE {
+						IF ("UNDEFINED" == stance _dragger ) then {
+						 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+						};	
+					};
+				};
+			};
+		};
+
+	 sleep 1;		
+	 _unit setVariable ["dam_player_lecit0",true,true];
+
+
+
+
+	},
+    [],
+    6, 
+    true, 
+    true, 
+    "",
+    "(_this distance _target < 2) && !(_target getVariable ['dam_player_lecit0',false]) && !(_this getVariable ['dam_ignore_injured0',false])", // _target, _this, _originalTarget
+    2,
+    false,
+    "",
+    ""
+]	 
+] remoteExec ["addAction",0];
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+//________________________________________________________________________________________________________________________________	 
+
+			 while {true}                  
 				do {
-					IF ((_unit distance _Pos < 6 ) or (!alive _unit) or (time >= _timer)) exitWith {};	 
+					IF ((_unit distance _Pos < 6 ) or (!alive _unit) or (time >= _timer) or (_unit getVariable ['dam_player_lecit0',false])) exitWith {};	 
 						IF (( AnimationState _unit != "ApanPpneMstpSnonWnonDnon") && ( AnimationState _unit != "ApanPpneMstpSnonWnonDnon_G01") && ( AnimationState _unit != "ApanPpneMstpSnonWnonDnon_G02") && ( AnimationState _unit != "ApanPpneMstpSnonWnonDnon_G03") && ( AnimationState _unit != "ApanPpneMsprSnonWnonDf") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDb") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDbl") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDbr") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDf") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDfl") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDfr") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDl") && ( AnimationState _unit != "ApanPpneMrunSnonWnonDr")) then {
 						 [_unit, "ApanPpneMstpSnonWnonDnon_G02"] remoteExec ["playMove", 0];
 						 sleep 2;
 						};
 				 sleep 0.5;
 				};
-
+			 [_unit] remoteExec [ "removeAllActions", 0, true ];
+			 _unit setVariable ["dam_player_lecit0",false,true];			  
 			 _unit doMove getpos _unit;
 
 //__________________________________________________________Выход_______________________________________________________________			 
 			 
 
-			IF (_numberOfKits > 0 ) then {
-				for "_i" from 1 to _numberOfKits do { _unit addItem "FirstAidKit"};
-			};
 			 {_unit addMagazine [_x, 9999]} forEach _magsremove;
 			 
 			IF (alive _unit) then {
 				IF ((_shans - (random 10)) >=0) then {
 
 			 	 [_unit] joinSilent _unitGrp;
+				 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
 				 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition;
 				  sleep 6;
 
@@ -141,7 +202,7 @@ _unit setcaptive true;
 	 
 				 
 					 
-					 _unit setVariable ["dam_ignore_injured0",false];
+					 _unit setVariable ["dam_ignore_injured0",false,true];
 				 
 					 sleep 1;
 
@@ -149,11 +210,12 @@ _unit setcaptive true;
 
 					} Else {
 
+
 					 [ _unit, true ] remoteExec [ "setUnconscious", _unit ];
 						waitUntil { sleep 0.1; ((AnimationState _unit == "UnconsciousReviveDefault") or (!alive _unit)) 
 						};	
 					 [ _unit, false ] remoteExec [ "setUnconscious", _unit ];
-					 _unit setVariable ["dam_ignore_injured0",false];
+					 _unit setVariable ["dam_ignore_injured0",false,true];
 
 					 [ _unit, "AUTO" ] remoteExec [ "setUnitPos", _unit ];					 
 					 [ _unit, "RED" ] remoteExec [ "setCombatMode", _unit ];
@@ -161,9 +223,10 @@ _unit setcaptive true;
 
 
 					 [_unit] joinSilent _unitGrp;
-
+					 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
+					 _unit setVariable ["dam_player_lecitsebia0",false,true];
 					 PIRjipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 
@@ -223,7 +286,7 @@ _unit setcaptive true;
 
 
 	IF (!alive _unit) then {
-	 _unit setVariable ["dam_ignore_injured0",false]; 
+	 _unit setVariable ["dam_ignore_injured0",false,true]; 
 
 	 IF !(PiR_captive_on) then {
 	 _unit setcaptive false;

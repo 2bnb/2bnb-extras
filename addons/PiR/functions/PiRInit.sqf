@@ -1,5 +1,9 @@
 ["PiR_injuriplayer_on", "CHECKBOX", ["STR_Enable_injuries_for_player", "STR_Enable_injuries_for_player_back"], "STR_PIR", true] call cba_settings_fnc_init;
+["PiR_injuriAI_on", "CHECKBOX", ["STR_Enable_injuries_for_AI", "STR_Enable_injuries_for_AI_back"], "STR_PIR", true] call cba_settings_fnc_init;
 ["PiR_civilian_on", "CHECKBOX", ["STR_Turn_on_civilian", "STR_Turn_on_civilian_back"], "STR_PIR", true] call cba_settings_fnc_init;
+["PiR_resistance_on", "CHECKBOX", ["STR_Turn_on_resistance", "STR_Turn_on_resistance_back"], "STR_PIR", true] call cba_settings_fnc_init;
+["PiR_west_on", "CHECKBOX", ["STR_Turn_on_west", "STR_Turn_on_west_back"], "STR_PIR", true] call cba_settings_fnc_init;
+["PiR_east_on", "CHECKBOX", ["STR_Turn_on_east", "STR_Turn_on_east_back"], "STR_PIR", true] call cba_settings_fnc_init;
 ["PiR_smoke_on", "CHECKBOX", ["STR_Turn_on_smoke", "STR_Turn_on_smoke_back"], "STR_PIR", true] call cba_settings_fnc_init;
 ["PiR_helmet_on", "CHECKBOX", ["STR_Turn_on_helmet", "STR_Turn_on_helmet_back"], "STR_PIR", true] call cba_settings_fnc_init;
 ["PiR_weapon_on", "CHECKBOX", ["STR_Turn_on_weapon", "STR_Turn_on_weapon_back"], "STR_PIR", true] call cba_settings_fnc_init;
@@ -11,6 +15,12 @@
 ["PiR_bloodhillM_on", "SLIDER", ["STR_Turn_on_bloodhillM", "STR_Turn_on_bloodhill_backM"], "STR_PIR",[10, 120, 30, 0], true] call cba_settings_fnc_init;
 ["PiR_bloodkill_on", "SLIDER", ["STR_Turn_on_bloodkill", "STR_Turn_on_bloodkill_back"], "STR_PIR",[5, 60, 15, 0], true] call cba_settings_fnc_init;
 ["PiR_bloodkillM_on", "SLIDER", ["STR_Turn_on_bloodkillM", "STR_Turn_on_bloodkill_backM"], "STR_PIR",[5, 60, 20, 0], true] call cba_settings_fnc_init;
+["PiR_crawl_on", "SLIDER", ["STR_Turn_on_crawl", "STR_Turn_on_crawl_back"], "STR_PIR",[5, 100, 11, 0], true] call cba_settings_fnc_init;
+["PiR_crawlM_on", "SLIDER", ["STR_Turn_on_crawlM", "STR_Turn_on_crawl_backM"], "STR_PIR",[5, 100, 36, 0], true] call cba_settings_fnc_init;
+["PiR_drop_on", "SLIDER", ["STR_Turn_on_drop", "STR_Turn_on_drop_back"], "STR_PIR",[5, 260, 25, 0], true] call cba_settings_fnc_init;
+["PiR_dropM_on", "SLIDER", ["STR_Turn_on_dropM", "STR_Turn_on_drop_backM"], "STR_PIR",[5, 260, 65, 0], true] call cba_settings_fnc_init;
+["PiR_dragger_on", "SLIDER", ["STR_Turn_on_dragger", "STR_Turn_on_dragger_back"], "STR_PIR",[10, 600, 60, 0], true] call cba_settings_fnc_init;
+
 
 EyeEffect0 = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffect0.sqf";
 PiRredirect = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect.sqf";

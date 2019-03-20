@@ -18,6 +18,16 @@
 		<Russian>Если выключить, то на игрока будет действовать штатная система ранений</Russian>
 		</Key>
 
+  		<Key ID="STR_Enable_injuries_for_AI">
+		<English>Enable injuries for AI</English>
+		<Russian>Влючить ранения для ИИ</Russian>
+		</Key>
+		
+  		<Key ID="STR_Enable_injuries_for_AI_back">
+		<English>If you turn it off, then a regular system of injuries will act on the AI</English>
+		<Russian>Если выключить, то на ИИ будет действовать штатная система ранений</Russian>
+		</Key>		
+		
   		<Key ID="STR_Turn_on_smoke">
 		<English>Turn on smoke</English>
 		<Russian>Включить дымы</Russian>
@@ -49,15 +59,45 @@
 		</Key>
 
  		<Key ID="STR_Turn_on_civilian">
-		<English>Enable injuries for civilians</English>
-		<Russian>Включить ранения для гражданских</Russian>
+		<English>Enable injuries for Civilians</English>
+		<Russian>Включить ранения для Гражданских</Russian>
 		</Key>
 		
 		<Key ID="STR_Turn_on_civilian_back">
-		<English>If you turn it off, then a regular system of injuries will act on the civilians</English>
-		<Russian>Если выключить, то на гражданских будет действовать штатная система ранений</Russian>
+		<English>If you turn it off, then a regular system of injuries will act on the Civilians</English>
+		<Russian>Если выключить, то на Гражданских будет действовать штатная система ранений</Russian>
 		</Key>
 
+ 		<Key ID="STR_Turn_on_resistance">
+		<English>Enable injuries for Independent</English>
+		<Russian>Включить ранения для Независимых</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_resistance_back">
+		<English>If you turn it off, then a regular system of injuries will act on the Independent</English>
+		<Russian>Если выключить, то на Независимых будет действовать штатная система ранений</Russian>
+		</Key>		
+
+ 		<Key ID="STR_Turn_on_west">
+		<English>Enable injuries for BluFor</English>
+		<Russian>Включить ранения для БлуФор</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_west_back">
+		<English>If you turn it off, then a regular system of injuries will act on the BluFor</English>
+		<Russian>Если выключить, то на БлуФор будет действовать штатная система ранений</Russian>
+		</Key>
+
+ 		<Key ID="STR_Turn_on_east">
+		<English>Enable injuries for OpFor</English>
+		<Russian>Включить ранения для ОпФор</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_east_back">
+		<English>If you turn it off, then a regular system of injuries will act on the OpFor</English>
+		<Russian>Если выключить, то на ОпФор будет действовать штатная система ранений</Russian>
+		</Key>
+		
  		<Key ID="STR_Turn_on_captive">
 		<English>AI kills the wounded</English>
 		<Russian>ИИ добивает раненых</Russian>
@@ -140,6 +180,57 @@
 		</Key>	
 
 
+ 		<Key ID="STR_Turn_on_crawl">
+		<English>Minimum crawl ratio</English>
+		<Russian>Минимальный коэффициент отползания</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_crawl_back">
+		<English>The coefficient affects the minimum time and distance from crawling</English>
+		<Russian>Коэффициент влияет на минимальное время и дистанцию отползания</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_crawlM">
+		<English>Maximum crawl ratio</English>
+		<Russian>Максимальный коэффициент отползания</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_crawlM_back">
+		<English>The coefficient affects the maximum time and distance from crawling</English>
+		<Russian>Коэффициент влияет на максимальное время и дистанцию отползания</Russian>
+		</Key>			
+		
+ 		<Key ID="STR_Turn_on_drop">
+		<English>Minimum ratio after losing weapons</English>
+		<Russian>Минимальный коэффициент после потери оружия</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_drop_back">
+		<English>The coefficient affects the minimum time and distance after losing weapon</English>
+		<Russian>Коэффициент влияет на минимальное время и дистанцию после потери оружия</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_dropM">
+		<English>Maximum ratio after losing weapon</English>
+		<Russian>Максимальный коэффициент после потери оружия</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_dropM_back">
+		<English>The coefficient affects the maximum time and distance after losing weapon</English>
+		<Russian>Коэффициент влияет на максимальное время и дистанцию после потери оружия</Russian>
+		</Key>	
+
+ 		<Key ID="STR_Turn_on_dragger">
+		<English>Search Radius AI for assistance</English>
+		<Russian>Радиус поиска ИИ для оказания помощи</Russian>
+		</Key>
+		
+		<Key ID="STR_Turn_on_dragger_back">
+		<English>The radius in which the search for AI is carried out to assist the wounded</English>
+		<Russian>Радиус в котором осуществялется поис ИИ для оказания помощи раненому</Russian>
+		</Key>			
+		
+		
 		</Container>
     </Package>
 </Project>

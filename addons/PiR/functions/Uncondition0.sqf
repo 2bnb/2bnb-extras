@@ -9,7 +9,7 @@ _shooter = (_this select 3);
 
 
 private ["_unit","_anim", "_shans", "_Pos","_dummy","_nearestunits","_dragger","_emptyHouse","_nearesthouses",
-"_houseList","_randomHouse","_dis", "_randomSmoke", "_unitGrp","_draggerGrp","_ls","_future","_nearPlayers","_isFriendly","_bloodtime","_tashit","_statys","_dummypos","_unitGrpPR","_pos0","_dummyV","_numberOfKits","_shooter", "_shooterV"];
+"_houseList","_randomHouse","_dis", "_randomSmoke", "_unitGrp","_draggerGrp","_ls","_future","_nearPlayers","_isFriendly","_bloodtime","_tashit","_statys","_dummypos","_unitGrpPR","_pos0","_dummyV","_numberOfKits","_shooter", "_shooterV","_unitLdr"];
 
 IF !(PiR_captive_on) then {
 _unit setcaptive true;
@@ -18,13 +18,13 @@ _unit setcaptive true;
 IF (alive _unit) then {
 
 _unitGrp = group _unit;
+_unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
-_bloodtime = (time +  ((PiR_bloodlosing_on) + random ((PiR_bloodlosing_on max PiR_bloodlosing_on) - (PiR_bloodlosing_on min PiR_bloodlosing_on))));
+_bloodtime = (time +  ((PiR_bloodlosing_on) + random ((PiR_bloodlosingM_on max PiR_bloodlosing_on) - (PiR_bloodlosing_on min PiR_bloodlosingM_on))));
 _statys = 1;
 _pos0 = [0,0,0];
 
-	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);
-	 [_unit, "firstaidkit"] remoteExec ["removeItems", 0];
+
  	 _magsremove = magazines _unit;
 	 {_unit removeMagazineGlobal _x} forEach magazines _unit;	 
 	 
@@ -122,9 +122,7 @@ _shooterV =  _unit getPos [50, _shooter];
 
 		
 		_unit = (_this select 0);
-		_dragger = (_this select 1);
-	 _numberOfKits = {"FirstAidKit" == _x} count (items _dragger); 
-	 _dragger removeItems "FirstAidKit";	
+		_dragger = (_this select 1);	
 	 _unit setVariable ["dam_player_lecit0",true,true];
      _unit setVariable ["dam_uncondition_injured0",true,true];
 	 
@@ -176,10 +174,8 @@ _shooterV =  _unit getPos [50, _shooter];
 			 [_dragger,"AmovPknlMstpSrasWrflDnon"] remoteExec ["switchMove", 0];
 			};
 		};	
-			IF (_numberOfKits > 0 ) then {
-				for "_i" from 1 to _numberOfKits do { _dragger addItem "FirstAidKit"};
-			};
-		sleep 2;
+
+		 sleep 2;
 		 _unit setVariable ["dam_player_lecit0",false,true];		
 		 _unit setVariable ["dam_uncondition_injured0",false,true];
 
@@ -220,7 +216,7 @@ _shooterV =  _unit getPos [50, _shooter];
 	localize "STR_Provide_medical_care",										// Title of the action
 	"PiR\Icons\krest_CA.paa",	// Иконка действия
 	"PiR\Icons\estpuls_CA.paa",	// Иконка прогресса
-	"(_this distance _target < 2) && !(_target getVariable ['dam_uncondition_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) || (({'FirstAidKit' == _x} count (items _this) > 0) or ({'Medikit' == _x} count (items _this) > 0))",						// Условие к созданию действия
+	"(_this distance _target < 2) && !(_target getVariable ['dam_uncondition_injured0',false]) && ('PRONE' != stance _target) && !(_this getVariable ['dam_ignore_injured0',false]) || (({'PiR_bint' == _x} count (items _target) > 0) or ({'PiR_apteka' == _x} count (items _target) > 0) or ({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0))",						// Условие к созданию действия
 	"(_this distance _target < 2) && ((inputAction 'Action') > 0) && (alive _this) && (alive _target) && !(_this getVariable ['dam_ignore_injured0',false])",						// Условие на выполнение действия
 	{// Старт
 	
@@ -258,9 +254,17 @@ _shooterV =  _unit getPos [50, _shooter];
 	 _unit setVariable ["dam_uncondition_injured0",true,true];
 	 [ _unit, false ] remoteExec [ "setUnconscious", _unit ];
 	 	 _unit setVariable ["dam_conec_istorii0",true,true]; 
-		IF ({"Medikit" == _x} count (items _dragger) == 0) then {
-		 _dragger removeItem "FirstAidKit";
+
+	IF (({"PiR_apteka" == _x} count (items _unit) != 0) or ({"PiR_bint" == _x} count (items _unit) != 0)) then {
+		IF ({"PiR_apteka" == _x} count (items _unit) == 0) then {
+		 _unit removeItem "PiR_bint";
 		};
+	} ELSE {
+		IF ({"PiR_apteka" == _x} count (items _dragger) == 0) then {
+		 _dragger removeItem "PiR_bint";
+		};
+	};	
+
 	 sleep 2;
 	 _unit setVariable ["dam_player_lecit0",false,true];
 	 
@@ -306,8 +310,9 @@ do {
 	 sleep 0.1;
 	
 	 [_unit] joinSilent _unitGrp;	
+	 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
 					PIR0jipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect0;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 	};
@@ -338,17 +343,17 @@ do {
 		};
 
 
-     _nearestunits = _unit nearEntities ["CAManBase", 60];
+     _nearestunits = _unit nearEntities ["CAManBase", (PiR_dragger_on)];
 
      _nearPlayers = 0; 
         { 
-        IF ((_x distance _unit) <= 60) then 
+        IF ((_x distance _unit) <= (PiR_dragger_on)) then 
             { 
              _nearPlayers = _nearPlayers + 1;                                  
             }; 
         } forEach switchableUnits;
 		        { 
-        IF ((_x distance _unit) <= 60) then 
+        IF ((_x distance _unit) <= (PiR_dragger_on)) then 
             { 
              _nearPlayers = _nearPlayers + 1;                                  
             }; 
@@ -413,9 +418,10 @@ do {
 	
 	 [_unit,"UnconsciousOutProne"] remoteExec ["switchMove", 0];
 	 sleep 0.1;	
-	 [_unit] joinSilent _unitGrp;	
+	 [_unit] joinSilent _unitGrp;
+	 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};	 
 					PIR0jipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect0;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 	};
@@ -452,7 +458,7 @@ do {
 		 _dragger setVariable ["dam_ignore_dragger0",false,true];
 		 }; 
 
-
+_unit setVariable ["dam_player_lecit0",true,true];
 
 //__________________Пускаем дым_________________________________________________________	 
 	IF (PiR_smoke_on) then {	 
@@ -529,7 +535,8 @@ do {
 		 [ _unit, true ] remoteExec [ "setUnconscious", _unit ];	 
 		 waitUntil { sleep 0.1; ((AnimationState _unit == "UnconsciousReviveDefault") or (!alive _unit)) };
 		 [_unit, _anim] remoteExec ["switchMove", 0];
-		 [_unit, _anim] remoteExec ["playMove", 0];	 		 
+		 [_unit, _anim] remoteExec ["playMove", 0];	
+		 _unit setVariable ["dam_player_lecit0",false,true];
 		};
 
 		IF (!alive _unit) exitwith {
@@ -545,10 +552,11 @@ do {
 		 [ _dragger, "AUTO" ] remoteExec [ "setUnitPos", _dragger ];
 		 
  		 _dragger setVariable ["dam_ignore_dragger0",false,true];
+		 _unit setVariable ["dam_player_lecit0",false,true];
 
 		};
 
-		_unit attachTo [_dummy, [-0.1, -0.5, 0]];
+		 _unit attachTo [_dummy, [-0.1, -0.5, 0]];
 		 [_unit] joinSilent grpNull;
 
 		 [_dragger, "AcinPknlMwlkSrasWrflDb"] remoteExec ["playMove", 0];
@@ -634,11 +642,13 @@ do {
 			 deleteVehicle _dummy;
 			 [_unit,"AinjPpneMrunSnonWnonDb_release"] remoteExec ["switchMove", 0];			
 			 [_unit] joinSilent _unitGrp;
+			 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
 			 _dragger setVariable ["dam_ignore_dragger0",false,true];
 			 [ _unit, true ] remoteExec [ "setUnconscious", _unit ];	 
 			 waitUntil { sleep 0.1; ((AnimationState _unit == "UnconsciousReviveDefault") or (!alive _unit)) };
 			 [_unit, _anim] remoteExec ["switchMove", 0];
 			 [_unit, _anim] remoteExec ["playMove", 0];	 
+			 _unit setVariable ["dam_player_lecit0",false,true];
 		 
 				IF (true) exitwith {
 
@@ -663,6 +673,7 @@ do {
 				 [ _dragger, "AUTO" ] remoteExec [ "setUnitPos", _dragger ];
 
 				 _dragger setVariable ["dam_ignore_dragger0",false,true];	
+				 _unit setVariable ["dam_player_lecit0",false,true];
 
 					IF (true) exitwith {
 					};
@@ -712,12 +723,14 @@ do {
 
 
 						 [_unit] joinSilent _unitGrp;
+						 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
  						 [_unit,_anim] remoteExec ["switchMove", 0];
 
 						 [_unit, _anim] remoteExec ["playMove", 0]; 
   						 [ _dragger, "ANIM" ] remoteExec [ "enableAI", _dragger ];
 	
-						 _dragger setVariable ["dam_ignore_dragger0",false,true];						
+						 _dragger setVariable ["dam_ignore_dragger0",false,true];
+						 _unit setVariable ["dam_player_lecit0",false,true];						 
 							IF ( _dis == 0 ) then {
 							 [_dragger,""] remoteExec ["switchMove", 0];
 							};
@@ -743,7 +756,8 @@ do {
 
 						 sleep 0.1;
 	
-						 _dragger setVariable ["dam_ignore_dragger0",false,true];	
+						 _dragger setVariable ["dam_ignore_dragger0",false,true];
+						 _unit setVariable ["dam_player_lecit0",false,true];
 							IF (true) exitwith {
 							 _unit setVariable ["dam_conec_istorii0",true,true];
 
@@ -780,11 +794,6 @@ do {
 
 //______________________________________________________________________________________
 	 {_unit addMagazine [_x, 9999]} forEach _magsremove;
-
-			IF (_numberOfKits > 0 ) then {
-				for "_i" from 1 to _numberOfKits do { _unit addItem "FirstAidKit"};
-			};
- 
 
 
 

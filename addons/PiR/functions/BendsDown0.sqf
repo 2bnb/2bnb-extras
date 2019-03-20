@@ -17,10 +17,7 @@ _unit setcaptive true;
 
 
 IF  (alive _unit) then {
-
- _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
- [_unit, "firstaidkit"] remoteExec ["removeItems", 0];	
-
+[_unit] remoteExec [ "removeAllActions", 0, true ];
 _stanceu = 0;
 			IF ("STAND" == stance _unit )  then {
 			 [_unit,(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExec ["playMove", 0];	
@@ -53,20 +50,23 @@ _stanceu = 0;
 	 
 //__________________________________________________________Выход_______________________________________________________________	 
 	 
-	IF (_numberOfKits > 0 ) then {
-	 for "_i" from 1 to _numberOfKits do { _unit addItem "FirstAidKit"};
-	};
 
 	IF  (alive _unit) then {
 	IF ((_shans - (random 15)) >=0) then {
-		IF ((_shans - (random 18)) >=0) then {		
-		 [_unit,"AmovPknlMstpSrasWrflDnon_AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];
+
+		IF (_stanceu == 0) then {
+		 [_unit,"AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];	
+		} ELSE {
+		 [_unit,"AmovPknlMstpSrasWrflDnon_AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];	
+		};
 		 sleep 0.05;
+
+		IF ((_shans - (random 18)) >=0) then {		
+
+
 		 _null = [_unit, _anim, _shans, _shooter] spawn Crawl0;
 	
 		} ELSE {	
-		 [_unit,"AmovPknlMstpSrasWrflDnon_AmovPpneMstpSrasWrflDnon"] remoteExec ["switchMove", 0];
-		 sleep 0.05;
 		 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition0;
 
 		};
@@ -95,8 +95,9 @@ _stanceu = 0;
 
 				};
 				 _unit setVariable ["dam_ignore_injured0",false,true];
+				 _unit setVariable ["dam_player_lecitsebia0",false,true];
 					PIR0jipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect0;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 
@@ -112,7 +113,7 @@ _stanceu = 0;
 
 	IF !(alive _unit) then {
 	 _unit setVariable ["dam_ignore_injured0",false,true];
- 	 _unit setVariable ["dam_ignore_hit0",false];		
+ 	 _unit setVariable ["dam_ignore_hit0",false,true];		
 
 	IF !(PiR_captive_on) then {
 	 _unit setcaptive false;

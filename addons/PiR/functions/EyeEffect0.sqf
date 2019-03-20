@@ -22,10 +22,106 @@ _effect3 = ppEffectCreate ["ColorCorrections", 1500];
 _effect3 ppeffectenable true; 
 
 
+
 	while {true}                  
 do {
 
-If ((!alive _unit) or ((damage _unit < 0.251) && !(_unit getVariable ["dam_ignore_injured0",false]))) exitWith {};
+IF ((alive _unit) && !(_unit getVariable ["dam_player_lecitsebia0",false])) then {
+
+
+_unit setVariable ["dam_player_lecitsebia0",true,true];
+
+//__________________Добавляем действие на лечение для игрока__________________________________________________	 
+	 
+	 
+
+	 
+[_unit, 
+[
+    "<img size='3'  image='PiR\Icons\sebia_CA.paa'/>", 
+    {
+
+		
+		_unit = (_this select 0);
+		_dragger = (_this select 1);
+
+		IF (_unit == _dragger) then {
+
+			IF ("PRONE" == stance _dragger ) then {
+				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medic"] remoteExec ["playMove", 0];
+				} ELSE {
+				 [_dragger, "AinvPpneMstpSlayWnonDnon_medic"] remoteExec ["playMove", 0];
+				};	
+			} ELSE {
+				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
+				 [_dragger, "AinvPknlMstpSlayWpstDnon_medic"] remoteExec ["playMove", 0];
+				} ELSE {
+				 [_dragger, "AinvPknlMstpSlayWrflDnon_medic"] remoteExec ["playMove", 0];
+				};	
+			};
+
+		} ELSE {
+
+			IF ("PRONE" == stance _dragger ) then {
+				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				} ELSE {
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				};	
+			} ELSE {
+				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
+				 [_dragger, "AinvPknlMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				} ELSE {
+				 [_dragger, "AinvPknlMstpSlayWrflDnon_medicOther"] remoteExec ["playMove", 0];
+				};	
+			};		
+		
+		};
+
+		IF ({"PiR_apteka" == _x} count (items _dragger) == 0) then {
+		 _dragger removeItem "PiR_bint";
+		 _unit setDamage 0.1;
+		} ELSE {
+		 _unit setDamage 0;
+		};
+
+
+
+
+	},
+    [],
+    5.8, 
+    true, 
+    true, 
+    "",
+    "(_this distance _target < 2) && !(_target getVariable ['dam_ignore_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) && (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0)) && (vehicle _target == _target)", // _target, _this, _originalTarget
+    2,
+    false,
+    "",
+    ""
+]	 
+] remoteExec ["addAction",0];
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+//________________________________________________________________________________________________________________________________	 
+
+};
+
+IF ((!alive _unit) or ((damage _unit <= 0.1) && !(_unit getVariable ["dam_ignore_injured0",false]))) exitWith {
+[_unit] remoteExec [ "removeAllActions", 0, true ];
+_unit setVariable ["dam_player_lecitsebia0",false,true];
+};
+
+
+
 
 	IF ((damage _unit) < 0.89) then {
 	 _unit setDamage ((damage _unit) + (damage _unit)*0.06);
@@ -67,7 +163,7 @@ If ((!alive _unit) or ((damage _unit < 0.251) && !(_unit getVariable ["dam_ignor
 	_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];	
 
 IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
-
+	 [_unit] remoteExec [ "removeAllActions", 0, true ];
 		_unit setVariable ["dam_ignore_injured0",true,true];	
     remoteExec ["", PIR0jipId];
     [_unit, {

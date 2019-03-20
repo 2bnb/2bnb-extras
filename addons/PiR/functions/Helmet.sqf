@@ -81,7 +81,7 @@ IF (_nvg == "") then {
 
 	 _null = [_unit, _anim, _shans, _shooter] spawn Uncondition;
 	} ELSE {
-    _unit setVariable ["dam_ignore_injured0",false];	
+    _unit setVariable ["dam_ignore_injured0",false,true];	
 	};
 
 //_______________________________________________________________________________________________________________________________

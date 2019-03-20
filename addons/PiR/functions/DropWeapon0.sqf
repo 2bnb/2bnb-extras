@@ -4,9 +4,10 @@ _unit = (_this select 0);
 _anim = (_this select 1);
 _shans = (_this select 2);
 
-private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs"];    
+private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];    
 
 _unitGrp = group _unit;
+_unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
  
 
@@ -20,8 +21,6 @@ _unit setcaptive true;
 
 	IF (alive _unit) then {
 
-	 _numberOfKits = {"FirstAidKit" == _x} count (items _unit);	
-	 [_unit, "firstaidkit"] remoteExec ["removeItems", 0];
 	 [_unit] joinSilent grpNull;
  
 	 _pWeapon = primaryWeapon _unit;
@@ -147,15 +146,82 @@ _unit setcaptive true;
 			};
 
 
-		 _dis = (20 + random 65);  
+		 _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
 		 _Pos = getPos _unit;
 
    
-		 _timer = (time + 25 + (random 20));   		
+		 _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));   		
 
-			waituntil { sleep 0.5; ((_unit distance _Pos >= _dis) or (!alive _unit) or (time >= _timer))
+		 
+//__________________Добавляем действие на перетаскивание для игрока__________________________________________________	 
+	 
+	 
+
+	 
+[_unit, 
+[
+    "<img size='3'  image='PiR\Icons\klast_CA.paa'/>", 
+    {
+
+		
+		_unit = (_this select 0);
+		_dragger = (_this select 1);
+
+		IF (alive _unit) then {
+			IF ("STAND" == stance _dragger )  then {
+			 [_dragger, "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+			} ELSE {
+				IF ("CROUCH" == stance _dragger ) then {
+				 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+				} ELSE {
+					IF ("PRONE" == stance _dragger ) then {
+					 [_dragger, "AinvPpneMstpSrasWrflDnon_Putdown_AmovPpneMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+					} ELSE {
+						IF ("UNDEFINED" == stance _dragger ) then {
+						 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+						};	
+					};
+				};
+			};
+		};
+
+	 sleep 1;		
+	 _unit setVariable ["dam_player_lecit0",true,true];
+
+
+
+
+	},
+    [],
+    6, 
+    true, 
+    true, 
+    "",
+    "(_this distance _target < 2) && !(_target getVariable ['dam_player_lecit0',false]) && !(_this getVariable ['dam_ignore_injured0',false])", // _target, _this, _originalTarget
+    2,
+    false,
+    "",
+    ""
+]	 
+] remoteExec ["addAction",0];
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+//________________________________________________________________________________________________________________________________	 
+		 
+		 
+		 
+		 
+			waituntil { sleep 0.5; ((_unit distance _Pos >= _dis) or (!alive _unit) or (time >= _timer) or (_unit getVariable ['dam_player_lecit0',false]))
 			};	 
-			 
+			 [_unit] remoteExec [ "removeAllActions", 0, true ];
+			 _unit setVariable ["dam_player_lecit0",false,true];
 		};
 		 sleep 0.5;
 		IF (alive _unit) then {
@@ -276,22 +342,20 @@ _unit setcaptive true;
 
 	{_unit addMagazine [_x, 9999]} forEach _magsremove;	
 	
-		IF (_numberOfKits > 0 ) then {
-			for "_i" from 1 to _numberOfKits do { _unit addItem "FirstAidKit"};
-		};
 
 	 [_unit] joinSilent _unitGrp;
+	 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
 
 
 	 };
 
 	 _unit setVariable ["dam_ignore_injured0",false,true];	 
-	 
+	 _unit setVariable ["dam_player_lecitsebia0",false,true];	 
 	 IF !(alive _unit) then {
- 	 _unit setVariable ["dam_ignore_hit0",false];		
+ 	 _unit setVariable ["dam_ignore_hit0",false,true];		
 	} ELSE {
 					PIR0jipId = [_unit, {
-					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) spawn PiRredirect0;}];
+					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 					 _this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 	 };

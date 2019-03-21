@@ -180,7 +180,7 @@ function Create-Private-Key {
 	$binKeysPath    = Split-Path -Parent $publicKeyFile
 
 	# Do we need to clean up first?
-	if (Test-Path -Path "$cachedKeysPath\*" -Exclude "$modPrefix$tag.*") {
+	if (Test-Path -Path "$binKeysPath\*" -Exclude "$modPrefix$tag.*") {
 		Remove-Item "$cachedKeysPath\*" -Exclude "$modPrefix$tag.*"
 		Remove-Item "$binKeysPath\*" -Exclude "$modPrefix$tag.*"
 		Remove-Item "$buildPath\addons\*.bisign" -Exclude "*$tag.bisign"
@@ -197,7 +197,7 @@ function Create-Private-Key {
 		Move-Item -Path "$buildPath\keys\$modPrefix$tag.biprivatekey" -Destination $privateKeyFile -Force
 	}
 
-
+	# Re-check the work done above to verify they exist
 	if (!((Test-Path -Path $privateKeyFile) -And (Test-Path -Path $publicKeyFile))) {
 		Write-Error "[$timestamp] Failed to generate key pairs $privateKeyFile"
 	}

@@ -5,13 +5,47 @@ param(
 $projectRoot    = Split-Path -Parent $PSScriptRoot
 $toolsPath		= "$projectRoot\tools"
 $buildPath      = "$projectRoot\.build\@2BNB Extras"
+$cachePath      = "$projectRoot\.build\cache"
+$modPrefix      = "bnb_e_"
 $releasePage    = "https://github.com/KoffeinFlummi/armake/releases"
 $downloadPage   = "https://github.com/KoffeinFlummi/armake/releases/download/v{0}/armake_v{0}.zip"
 $armake         = "$projectRoot\tools\armake.exe"
 $tag            = git describe --tag | %{$_ -replace "-.*-", "-"}
-$privateKeyFile = "$buildPath\keys\bnb_e_$tag.biprivatekey"
+$privateKeyFile = "$buildPath\keys\$modPrefix$tag.biprivatekey"
 $timestamp      = Get-Date -UFormat "%T"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+
+function Get-DirHash {
+    [Cmdletbinding()]
+    Param(
+        [Parameter(Mandatory=$True)]
+        [ValidateScript({
+            if(Test-Path -Path $_ -ErrorAction SilentlyContinue)
+            {
+                return $true
+            }
+            else
+            {
+                throw "$($_) is not a valid path."
+            }
+        })]
+        [string]$Path,
+        [string]$Algo = "MD5"
+    )
+    $temp = [System.IO.Path]::GetTempFileName()
+
+    # Get child-file hashes
+    gci -File -Recurse $Path | Get-FileHash -Algorithm $Algo | select -ExpandProperty Hash | Out-File $temp -NoNewline
+    # Hash directory name in case that has changed
+    Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -NoNewline
+
+    $hash = Get-FileHash $temp
+    Remove-Item $temp
+
+    $hash.Path = $Path
+    return $hash
+}
 
 
 function Get-Extras {
@@ -50,6 +84,8 @@ function Remove {
 	} elseif ($remove -eq "extras") {
 		$items = $(Get-Extras "Name") -join ","
 		iex "Remove-Item -Path '$buildPath\*' -include $items"
+	} elseif ($remove -eq "addons") {
+		Remove-Item "$buildPath\addons\*"
 	}
 
 	Set-Location $origLocation
@@ -157,6 +193,23 @@ function Create-Private-Key {
 }
 
 
+function Check-Obsolete {
+	param(
+	      [Parameter(Mandatory=$True)]
+	      $addonPbo
+	)
+
+    $pboName = $addonPbo.Name
+    $addon = $pboName.Replace('bnb_e_', '').Replace('.pbo', '')
+
+    if (!(Test-Path -Path "$projectRoot\addons\$addon")) {
+    	Remove-Item "$buildPath\addons\$pboName"
+    	Remove-Item "$buildPath\addons\$($pboName).bnb_e_$tag.bisign" -ErrorAction SilentlyContinue
+        Write-Output "  [$timestamp] Deleting obsolete PBO $pboName"
+    }
+}
+
+
 function Build-Directory {
     param(
         [Parameter(Mandatory=$True)]
@@ -166,7 +219,20 @@ function Build-Directory {
     $component = $directory.Name
     $fullPath  = $directory.FullName
     $parent    = $directory.Parent
+    $dirHash   = Get-DirHash $fullPath | select -ExpandProperty Hash
     $binPath   = "$buildPath\$parent\bnb_e_$component.pbo"
+
+    if (Test-Path -Path "$cachePath\addons\$component") {
+        $cachedHash = Get-Content "$cachePath\addons\$component"
+
+        if ($dirHash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
+            return "  [$timestamp] Skipping PBO $component"
+        }
+    } else {
+    	if (!(Test-Path -Path "$cachePath\addons")) {
+	        New-Item "$cachePath\addons" -ItemType "directory" | Out-Null
+    	}
+    }
 
     if (Test-Path -Path $binPath) {
         Remove-Item $binPath
@@ -176,6 +242,9 @@ function Build-Directory {
         Write-Output "  [$timestamp] Creating PBO $component"
         & $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
     }
+
+    # Store this for later comparisons
+    $dirHash | Out-File "$cachePath\addons\$component" -NoNewline
 
     if ($LastExitCode -ne 0) {
         Write-Error "[$timestamp] Failed to build $component."
@@ -230,11 +299,13 @@ function Main {
     Create-Private-Key
 
     if (Test-Path -Path $privateKeyFile) {
-        foreach ($folder in "addons") {
-            New-Item "$buildPath\$folder" -ItemType "directory" -Force | Out-Null
-            foreach ($component in Get-ChildItem -Directory "$PSScriptRoot\..\$folder") {
-                Build-Directory $component
-            }
+        New-Item "$buildPath\addons" -ItemType "directory" -Force | Out-Null
+        foreach ($component in Get-ChildItem -Directory "$projectRoot\addons") {
+            Build-Directory $component
+        }
+
+        foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {
+        	Check-Obsolete $component
         }
 
 	    # Cleanup the private key file in preparation for uploading to Steam Workshop

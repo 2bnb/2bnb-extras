@@ -3,7 +3,7 @@ param(
 )
 
 $projectRoot    = Split-Path -Parent $PSScriptRoot
-$toolsPath		= "$projectRoot\tools"
+$toolsPath      = "$projectRoot\tools"
 $buildPath      = "$projectRoot\.build\@2BNB Extras"
 $cachePath      = "$projectRoot\.build\cache"
 $modPrefix      = "bnb_e_"
@@ -11,7 +11,8 @@ $releasePage    = "https://github.com/KoffeinFlummi/armake/releases"
 $downloadPage   = "https://github.com/KoffeinFlummi/armake/releases/download/v{0}/armake_v{0}.zip"
 $armake         = "$projectRoot\tools\armake.exe"
 $tag            = git describe --tag | %{$_ -replace "-.*-", "-"}
-$privateKeyFile = "$buildPath\keys\$modPrefix$tag.biprivatekey"
+$privateKeyFile = "$cachePath\keys\$modPrefix$tag.biprivatekey"
+$publicKeyFile  = "$buildPath\keys\$modPrefix$tag.bikey"
 $timestamp      = Get-Date -UFormat "%T"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
@@ -81,9 +82,11 @@ function Remove {
 
 	if ($remove -eq "all") {
 		Remove-Item "$buildPath" -Recurse
+
 	} elseif ($remove -eq "extras") {
 		$items = $(Get-Extras "Name") -join ","
 		iex "Remove-Item -Path '$buildPath\*' -include $items"
+
 	} elseif ($remove -eq "addons") {
 		Remove-Item "$buildPath\addons\*"
 	}
@@ -174,20 +177,29 @@ function Update-Armake {
 
 
 function Create-Private-Key {
-	$keysPath = Split-Path -Parent $privateKeyFile
-	if (Test-Path -Path "$keysPath\*") {
-		Remove-Item "$keysPath\*"
-		Remove-Item "$buildPath\addons\*.bisign"
+	$cachedKeysPath = Split-Path -Parent $privateKeyFile
+	$binKeysPath    = Split-Path -Parent $publicKeyFile
 
-		Write-Output "  [$timestamp] Updating key pairs for $tag"
-		& $armake keygen -f "keys\bnb_e_$tag"
-	} else {
-		Write-Output "  [$timestamp] Creating key pairs for $tag"
-		& $armake keygen -f "keys\bnb_e_$tag"
+	# Do we need to clean up first?
+	if (Test-Path -Path "$cachedKeysPath\*" -Exclude "$modPrefix$tag.*") {
+		Remove-Item "$cachedKeysPath\*" -Exclude "$modPrefix$tag.*"
+		Remove-Item "$binKeysPath\*" -Exclude "$modPrefix$tag.*"
+		Remove-Item "$buildPath\addons\*.bisign" -Exclude "*$tag.bisign"
+
+		Write-Output "  [$timestamp] Cleaning up old keys. Current tag: $tag"
 	}
 
 
-	if (!(Test-Path -Path $privateKeyFile)) {
+	if (!((Test-Path -Path $privateKeyFile) -And (Test-Path -Path $publicKeyFile))) {
+		Write-Output "  [$timestamp] Creating key pairs for $tag"
+		& $armake keygen -f "$buildPath\keys\$modPrefix$tag"
+
+		New-Item "$cachePath\keys" -ItemType "directory" -ErrorAction SilentlyContinue | Out-Null
+		Move-Item -Path "$buildPath\keys\$modPrefix$tag.biprivatekey" -Destination $privateKeyFile -Force
+	}
+
+
+	if (!((Test-Path -Path $privateKeyFile) -And (Test-Path -Path $publicKeyFile))) {
 		Write-Error "[$timestamp] Failed to generate key pairs $privateKeyFile"
 	}
 }
@@ -200,11 +212,11 @@ function Check-Obsolete {
 	)
 
 	$pboName = $addonPbo.Name
-	$addon = $pboName.Replace('bnb_e_', '').Replace('.pbo', '')
+	$addon = $pboName.Replace($modPrefix, '').Replace('.pbo', '')
 
 	if (!(Test-Path -Path "$projectRoot\addons\$addon")) {
 		Remove-Item "$buildPath\addons\$pboName"
-		Remove-Item "$buildPath\addons\$($pboName).bnb_e_$tag.bisign" -ErrorAction SilentlyContinue
+		Remove-Item "$buildPath\addons\$($pboName).$modPrefix$tag.bisign" -ErrorAction SilentlyContinue
 		Write-Output "  [$timestamp] Deleting obsolete PBO $pboName"
 	}
 }
@@ -220,13 +232,19 @@ function Build-Directory {
 	$fullPath  = $directory.FullName
 	$parent    = $directory.Parent
 	$dirHash   = Get-DirHash $fullPath | select -ExpandProperty Hash
-	$binPath   = "$buildPath\$parent\bnb_e_$component.pbo"
+	$binPath   = "$buildPath\$parent\$modPrefix$component.pbo"
 
 	if (Test-Path -Path "$cachePath\addons\$component") {
 		$cachedHash = Get-Content "$cachePath\addons\$component"
 
 		if ($dirHash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
-			return "  [$timestamp] Skipping PBO $component"
+			if (!(Test-Path -Path "$binPath.$modPrefix$tag.bisign")) {
+				Write-Output "  [$timestamp] Updating bisign for $component"
+				& $armake sign -f $privateKeyFile $binPath
+				return
+			} else {
+				return "  [$timestamp] Skipping PBO $component"
+			}
 		}
 	} else {
 		if (!(Test-Path -Path "$cachePath\addons")) {
@@ -307,9 +325,6 @@ function Main {
 		foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {
 			Check-Obsolete $component
 		}
-
-		# Cleanup the private key file in preparation for uploading to Steam Workshop
-		Remove-Item $privateKeyFile;
 	}
 
 	Set-Location $origLocation

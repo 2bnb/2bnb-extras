@@ -1,5 +1,5 @@
 param(
-      [string] $remove = $False
+	  [string] $remove = $False
 )
 
 $projectRoot    = Split-Path -Parent $PSScriptRoot
@@ -17,40 +17,40 @@ $timestamp      = Get-Date -UFormat "%T"
 
 
 function Get-DirHash {
-    [Cmdletbinding()]
-    Param(
-        [Parameter(Mandatory=$True)]
-        [ValidateScript({
-            if(Test-Path -Path $_ -ErrorAction SilentlyContinue)
-            {
-                return $true
-            }
-            else
-            {
-                throw "$($_) is not a valid path."
-            }
-        })]
-        [string]$Path,
-        [string]$Algo = "MD5"
-    )
-    $temp = [System.IO.Path]::GetTempFileName()
+	[Cmdletbinding()]
+	Param(
+		[Parameter(Mandatory=$True)]
+		[ValidateScript({
+			if(Test-Path -Path $_ -ErrorAction SilentlyContinue)
+			{
+				return $true
+			}
+			else
+			{
+				throw "$($_) is not a valid path."
+			}
+		})]
+		[string]$Path,
+		[string]$Algo = "MD5"
+	)
+	$temp = [System.IO.Path]::GetTempFileName()
 
-    # Get child-file hashes
-    gci -File -Recurse $Path | Get-FileHash -Algorithm $Algo | select -ExpandProperty Hash | Out-File $temp -NoNewline
-    # Hash directory name in case that has changed
-    Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -NoNewline
+	# Get child-file hashes
+	gci -File -Recurse $Path | Get-FileHash -Algorithm $Algo | select -ExpandProperty Hash | Out-File $temp -NoNewline
+	# Hash directory name in case that has changed
+	Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -NoNewline
 
-    $hash = Get-FileHash $temp
-    Remove-Item $temp
+	$hash = Get-FileHash $temp
+	Remove-Item $temp
 
-    $hash.Path = $Path
-    return $hash
+	$hash.Path = $Path
+	return $hash
 }
 
 
 function Get-Extras {
 	param (
-	       [string] $type = $False
+		   [string] $type = $False
 	)
 
 	if (Test-Path -Path "$toolsPath\support-files.txt") {
@@ -93,83 +93,83 @@ function Remove {
 
 
 function Compare-VersionNewerThan {
-    param(
-        [Parameter(Mandatory=$True)]
-        $version1,
+	param(
+		[Parameter(Mandatory=$True)]
+		$version1,
 
-        [Parameter(Mandatory=$True)]
-        $version2
-    )
+		[Parameter(Mandatory=$True)]
+		$version2
+	)
 
-    $version1 = $version1.Split(".") | % {[int] $_}
-    $version2 = $version2.Split(".") | % {[int] $_}
+	$version1 = $version1.Split(".") | % {[int] $_}
+	$version2 = $version2.Split(".") | % {[int] $_}
 
-    $newer = $False
-    for ($i = 0; $i -lt $version1.Length; $i++) {
-        if ($version1[$i] -gt $version2[$i]) {
-            $newer = $True
-            break
-        }
-    }
+	$newer = $False
+	for ($i = 0; $i -lt $version1.Length; $i++) {
+		if ($version1[$i] -gt $version2[$i]) {
+			$newer = $True
+			break
+		}
+	}
 
-    $newer
+	$newer
 }
 
 
 function Get-InstalledArmakeVersion {
-    if (Test-Path $armake) {
-        $version = & $armake --version
-        $version = $version.Substring(1)
-    } else {
-        $version = "0.0.0"
-    }
+	if (Test-Path $armake) {
+		$version = & $armake --version
+		$version = $version.Substring(1)
+	} else {
+		$version = "0.0.0"
+	}
 
-    $version
+	$version
 }
 
 
 function Get-LatestArmakeVersion {
-    $client = New-Object Net.WebClient
-    $content = $client.DownloadString($releasePage)
-    $client.dispose()
+	$client = New-Object Net.WebClient
+	$content = $client.DownloadString($releasePage)
+	$client.dispose()
 
-    $match = $content -match "<a href="".*?/releases/download/v(.*?)/.*?.zip"".*?>"
-    if (!$match) {
-        Write-Error "[$timestamp] Failed to find valid armake download link."
-        $version = "0.0.0"
-    } else {
-        $version = $matches[1]
-    }
+	$match = $content -match "<a href="".*?/releases/download/v(.*?)/.*?.zip"".*?>"
+	if (!$match) {
+		Write-Error "[$timestamp] Failed to find valid armake download link."
+		$version = "0.0.0"
+	} else {
+		$version = $matches[1]
+	}
 
-    $version
+	$version
 }
 
 
 function Update-Armake {
-    param(
-        [Parameter(Mandatory=$True)]
-        $url
-    )
+	param(
+		[Parameter(Mandatory=$True)]
+		$url
+	)
 
-    New-Item "$PSScriptRoot\temp" -ItemType "directory" -Force | Out-Null
+	New-Item "$PSScriptRoot\temp" -ItemType "directory" -Force | Out-Null
 
-    Write-Output "Downloading armake..."
-    $client = New-Object Net.WebClient
-    $client.DownloadFile($url, "$PSScriptRoot\temp\armake.zip")
-    $client.dispose()
+	Write-Output "Downloading armake..."
+	$client = New-Object Net.WebClient
+	$client.DownloadFile($url, "$PSScriptRoot\temp\armake.zip")
+	$client.dispose()
 
-    Write-Output "Download complete, unpacking..."
-    Expand-Archive "$PSScriptRoot\temp\armake.zip" "$PSScriptRoot\temp\armake"
-    Remove-Item "$PSScriptRoot\temp\armake.zip"
+	Write-Output "Download complete, unpacking..."
+	Expand-Archive "$PSScriptRoot\temp\armake.zip" "$PSScriptRoot\temp\armake"
+	Remove-Item "$PSScriptRoot\temp\armake.zip"
 
-    if ([Environment]::Is64BitProcess) {
-        $binary = Get-ChildItem -Path "$PSScriptRoot\temp\armake" -Include "*.exe" -Recurse | Where-Object {$_.Name -match ".*w64.exe"}
-    } else {
-        $binary = Get-ChildItem -Path "$PSScriptRoot\temp\armake" -Include "*.exe" -Recurse | Where-Object {$_.Name -match ".*w64.exe"}
-    }
-    Move-Item $binary.FullName $armake -Force
+	if ([Environment]::Is64BitProcess) {
+		$binary = Get-ChildItem -Path "$PSScriptRoot\temp\armake" -Include "*.exe" -Recurse | Where-Object {$_.Name -match ".*w64.exe"}
+	} else {
+		$binary = Get-ChildItem -Path "$PSScriptRoot\temp\armake" -Include "*.exe" -Recurse | Where-Object {$_.Name -match ".*w64.exe"}
+	}
+	Move-Item $binary.FullName $armake -Force
 
-    Remove-Item "$PSScriptRoot\temp" -Recurse -Force
+	Remove-Item "$PSScriptRoot\temp" -Recurse -Force
 }
 
 
@@ -179,76 +179,76 @@ function Create-Private-Key {
 		Remove-Item "$keysPath\*"
 		Remove-Item "$buildPath\addons\*.bisign"
 
-	    Write-Output "  [$timestamp] Updating key pairs for $tag"
-	    & $armake keygen -f "keys\bnb_e_$tag"
+		Write-Output "  [$timestamp] Updating key pairs for $tag"
+		& $armake keygen -f "keys\bnb_e_$tag"
 	} else {
-	    Write-Output "  [$timestamp] Creating key pairs for $tag"
-	    & $armake keygen -f "keys\bnb_e_$tag"
+		Write-Output "  [$timestamp] Creating key pairs for $tag"
+		& $armake keygen -f "keys\bnb_e_$tag"
 	}
 
 
-    if (!(Test-Path -Path $privateKeyFile)) {
-        Write-Error "[$timestamp] Failed to generate key pairs $privateKeyFile"
-    }
+	if (!(Test-Path -Path $privateKeyFile)) {
+		Write-Error "[$timestamp] Failed to generate key pairs $privateKeyFile"
+	}
 }
 
 
 function Check-Obsolete {
 	param(
-	      [Parameter(Mandatory=$True)]
-	      $addonPbo
+		  [Parameter(Mandatory=$True)]
+		  $addonPbo
 	)
 
-    $pboName = $addonPbo.Name
-    $addon = $pboName.Replace('bnb_e_', '').Replace('.pbo', '')
+	$pboName = $addonPbo.Name
+	$addon = $pboName.Replace('bnb_e_', '').Replace('.pbo', '')
 
-    if (!(Test-Path -Path "$projectRoot\addons\$addon")) {
-    	Remove-Item "$buildPath\addons\$pboName"
-    	Remove-Item "$buildPath\addons\$($pboName).bnb_e_$tag.bisign" -ErrorAction SilentlyContinue
-        Write-Output "  [$timestamp] Deleting obsolete PBO $pboName"
-    }
+	if (!(Test-Path -Path "$projectRoot\addons\$addon")) {
+		Remove-Item "$buildPath\addons\$pboName"
+		Remove-Item "$buildPath\addons\$($pboName).bnb_e_$tag.bisign" -ErrorAction SilentlyContinue
+		Write-Output "  [$timestamp] Deleting obsolete PBO $pboName"
+	}
 }
 
 
 function Build-Directory {
-    param(
-        [Parameter(Mandatory=$True)]
-        $directory
-    )
+	param(
+		[Parameter(Mandatory=$True)]
+		$directory
+	)
 
-    $component = $directory.Name
-    $fullPath  = $directory.FullName
-    $parent    = $directory.Parent
-    $dirHash   = Get-DirHash $fullPath | select -ExpandProperty Hash
-    $binPath   = "$buildPath\$parent\bnb_e_$component.pbo"
+	$component = $directory.Name
+	$fullPath  = $directory.FullName
+	$parent    = $directory.Parent
+	$dirHash   = Get-DirHash $fullPath | select -ExpandProperty Hash
+	$binPath   = "$buildPath\$parent\bnb_e_$component.pbo"
 
-    if (Test-Path -Path "$cachePath\addons\$component") {
-        $cachedHash = Get-Content "$cachePath\addons\$component"
+	if (Test-Path -Path "$cachePath\addons\$component") {
+		$cachedHash = Get-Content "$cachePath\addons\$component"
 
-        if ($dirHash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
-            return "  [$timestamp] Skipping PBO $component"
-        }
-    } else {
-    	if (!(Test-Path -Path "$cachePath\addons")) {
-	        New-Item "$cachePath\addons" -ItemType "directory" | Out-Null
-    	}
-    }
+		if ($dirHash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
+			return "  [$timestamp] Skipping PBO $component"
+		}
+	} else {
+		if (!(Test-Path -Path "$cachePath\addons")) {
+			New-Item "$cachePath\addons" -ItemType "directory" | Out-Null
+		}
+	}
 
-    if (Test-Path -Path $binPath) {
-        Remove-Item $binPath
-        Write-Output "  [$timestamp] Updating PBO $component"
-        & $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
-    } else {
-        Write-Output "  [$timestamp] Creating PBO $component"
-        & $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
-    }
+	if (Test-Path -Path $binPath) {
+		Remove-Item $binPath
+		Write-Output "  [$timestamp] Updating PBO $component"
+		& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+	} else {
+		Write-Output "  [$timestamp] Creating PBO $component"
+		& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+	}
 
-    # Store this for later comparisons
-    $dirHash | Out-File "$cachePath\addons\$component" -NoNewline
+	# Store this for later comparisons
+	$dirHash | Out-File "$cachePath\addons\$component" -NoNewline
 
-    if ($LastExitCode -ne 0) {
-        Write-Error "[$timestamp] Failed to build $component."
-    }
+	if ($LastExitCode -ne 0) {
+		Write-Error "[$timestamp] Failed to build $component."
+	}
 }
 
 
@@ -262,12 +262,12 @@ function Copy-Extras {
 	foreach ($file in $supportFiles) {
 		$fileName = $(Get-ChildItem $file).Name
 
-        Write-Output "  [$timestamp] Copying $fileName"
+		Write-Output "  [$timestamp] Copying $fileName"
 		& Copy-Item -Path $file -Destination $buildPath -Force -Recurse
 
-	    if ($LastExitCode -ne 0) {
-	        Write-Error "[$timestamp] Failed to copy $fileName."
-	    }
+		if ($LastExitCode -ne 0) {
+			Write-Error "[$timestamp] Failed to copy $fileName."
+		}
 	}
 
 	Set-Location $origLocation
@@ -280,40 +280,40 @@ function Main {
 		return
 	}
 
-    $installed = Get-InstalledArmakeVersion
-    $latest    = Get-LatestArmakeVersion
+	$installed = Get-InstalledArmakeVersion
+	$latest    = Get-LatestArmakeVersion
 
-    if (Compare-VersionNewerThan $latest $installed) {
-        Write-Output "Found newer version of armake:" "  Installed: $installed" "  Latest: $latest"
-        Update-Armake ($downloadPage -f $latest)
-        Write-Output "Update complete, armake up-to-date."
-    }
+	if (Compare-VersionNewerThan $latest $installed) {
+		Write-Output "Found newer version of armake:" "  Installed: $installed" "  Latest: $latest"
+		Update-Armake ($downloadPage -f $latest)
+		Write-Output "Update complete, armake up-to-date."
+	}
 
-    New-Item "$buildPath" -ItemType "directory" -Force | Out-Null
-    New-Item "$buildPath\keys" -ItemType "directory" -Force | Out-Null
+	New-Item "$buildPath" -ItemType "directory" -Force | Out-Null
+	New-Item "$buildPath\keys" -ItemType "directory" -Force | Out-Null
 
-    # Switch from tools dir to buildPath dir
-    $origLocation = Get-Location
-    Set-Location -Path $buildPath
+	# Switch from tools dir to buildPath dir
+	$origLocation = Get-Location
+	Set-Location -Path $buildPath
 
-    Create-Private-Key
+	Create-Private-Key
 
-    if (Test-Path -Path $privateKeyFile) {
-        New-Item "$buildPath\addons" -ItemType "directory" -Force | Out-Null
-        foreach ($component in Get-ChildItem -Directory "$projectRoot\addons") {
-            Build-Directory $component
-        }
+	if (Test-Path -Path $privateKeyFile) {
+		New-Item "$buildPath\addons" -ItemType "directory" -Force | Out-Null
+		foreach ($component in Get-ChildItem -Directory "$projectRoot\addons") {
+			Build-Directory $component
+		}
 
-        foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {
-        	Check-Obsolete $component
-        }
+		foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {
+			Check-Obsolete $component
+		}
 
-	    # Cleanup the private key file in preparation for uploading to Steam Workshop
-    	Remove-Item $privateKeyFile;
-    }
+		# Cleanup the private key file in preparation for uploading to Steam Workshop
+		Remove-Item $privateKeyFile;
+	}
 
-    Set-Location $origLocation
+	Set-Location $origLocation
 
-    Copy-Extras
+	Copy-Extras
 }
 Main

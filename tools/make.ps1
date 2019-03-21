@@ -80,15 +80,14 @@ function Remove {
 	$origLocation = Get-Location
 	Set-Location "$projectRoot\.build"
 
-	if ($remove -eq "all") {
-		Remove-Item "$buildPath" -Recurse
-
-	} elseif ($remove -eq "extras") {
-		$items = $(Get-Extras "Name") -join ","
-		iex "Remove-Item -Path '$buildPath\*' -include $items"
-
-	} elseif ($remove -eq "addons") {
-		Remove-Item "$buildPath\addons\*"
+	Switch ($remove) {
+		"all" { Remove-Item "$buildPath" -Recurse -ErrorAction SilentlyContinue }
+		"extras" {
+			$items = $(Get-Extras "Name") -join ","
+			iex "Remove-Item -Path '$buildPath\*' -include $items"
+		}
+		"addons" { Remove-Item "$buildPath\addons\*" }
+		"cache" { Remove-Item "$cachePath" -Recurse -ErrorAction SilentlyContinue }
 	}
 
 	Set-Location $origLocation

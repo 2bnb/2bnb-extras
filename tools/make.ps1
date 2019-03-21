@@ -17,9 +17,35 @@ $timestamp      = Get-Date -UFormat "%T"
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 
+function Get-FullFileHash {
+	param (
+		[String] $Algo = "MD5"
+	)
+
+	$hashes = @()
+
+	foreach ($file in $input) {
+		$string = $file.FullName
+
+		# http://jongurgul.com/blog/get-stringhash-get-filehash/
+		$StringBuilder = New-Object System.Text.StringBuilder
+		[System.Security.Cryptography.HashAlgorithm]::Create($Algo).ComputeHash([System.Text.Encoding]::UTF8.GetBytes($string))|%{
+			[Void]$StringBuilder.Append($_.ToString("x2"))
+		}
+
+		$hash = Get-FileHash $file.FullName -Algorithm $Algo
+		$hash.Hash = $hash.Hash + $StringBuilder.ToString()
+
+		$hashes += $hash
+	}
+
+	return $hashes
+}
+
+
 function Get-DirHash {
 	[Cmdletbinding()]
-	Param(
+	param(
 		[Parameter(Mandatory=$True)]
 		[ValidateScript({
 			if(Test-Path -Path $_ -ErrorAction SilentlyContinue)
@@ -37,11 +63,11 @@ function Get-DirHash {
 	$temp = [System.IO.Path]::GetTempFileName()
 
 	# Get child-file hashes
-	gci -File -Recurse $Path | Get-FileHash -Algorithm $Algo | select -ExpandProperty Hash | Out-File $temp -NoNewline
-	# Hash directory name in case that has changed
-	Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -NoNewline
+	gci -File -Recurse $Path | Get-FullFileHash $Algo | select -ExpandProperty Hash | Out-File $temp -Append -NoNewline
+	# Hash directory in case that has changed
+	Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -Append -NoNewline
 
-	$hash = Get-FileHash $temp
+	$hash = Get-FileHash $temp -Algorithm $Algo
 	Remove-Item $temp
 
 	$hash.Path = $Path

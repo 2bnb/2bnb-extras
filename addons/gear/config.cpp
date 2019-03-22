@@ -134,8 +134,8 @@ class cfgWeapons
 		displayName = "Adidas Helmet";
 		picture = "\gear\data\adidass.paa";
 		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
-		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\gear\head\data\gay.paa"};
+		//hiddenSelections[] = { "camo" };
+		//hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\gear\head\data\gay.paa"};
 
 		class ItemInfo: HeadgearItem
 		{

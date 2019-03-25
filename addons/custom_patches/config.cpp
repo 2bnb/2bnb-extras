@@ -132,5 +132,13 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\CmbtMdcJcks.paa";
 		textureVehicle="";
 	};
+
+	class PlankMedicPatch
+	{
+		displayName="Combat Medic - Plank";
+		author="Jackson";
+		texture="x\bnb_e\custom_patches\img\PlankMedicPatch.paa";
+		textureVehicle="";
+	};
 };
 

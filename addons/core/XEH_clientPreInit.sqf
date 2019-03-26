@@ -66,12 +66,58 @@ private _bnb_e_settings = [
 		["2BNB Contamination", "MOPP Equipment"],
 		"",
 		true
+	],
+	[
+		"bnb_e_sc_vehicles",
+		"EDITBOX",
+		["Vehicle classes", "vehicle classes in brackets and commas seperated by ,"],
+		"2BNB Survivable crashes",
+		"",
+		true
+	],
+	[
+		"bnb_e_sc_damage",
+		"EDITBOX",
+		["Damage multiplier", "decimal from 0 to 1 ex 0.5"],
+		"2BNB Survivable crashes",
+		"0.3",
+		true
 	]
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
 
 
+
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_ModEnabled", true];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VisualEffectsEnabled", true];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_SoundEffectsEnabled", true];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_ExaggeratedEffectsEnabled", true];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_MedicalSystem", "ACE"];
+
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_CrewDamageMultiplier", bnb_e_sc_damage];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleKindWhitelist", bnb_e_sc_vehicles];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_OnCrashCode", ""];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_CrewPostCrashCode", ""];
+missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleRestCode", ""];
+if(hasInterface) then {
+	[player] execVM "\r0ed_SurvivableCrashes\functions\fn_handleUnitDamage.sqf";
+};
+{
+    _unit = _x;
+    _veh = vehicle _x;
+	if(_veh != _unit && not (_veh isKindOf "Man")) then {
+		if(isServer or (hasInterface && _veh == vehicle player)) then {
+			[_veh] call r0ed_SurvivableCrashes_VehicleInit;
+		};
+	};
+} forEach allUnits;
+[] execVM "\r0ed_SurvivableCrashes\functions\init\init_default.sqf";
+missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
+
+r0ed_SurvivableCrashes_OnVehicleCrash = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_onVehicleCrash.sqf";
+r0ed_SurvivableCrashes_VehicleInit = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_vehicleInit.sqf";
+r0ed_SurvivableCrashes_PlaySfx = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_playSfx.sqf";
 
 missionNamespace setVariable ["JSHK_contam_aiDamageEnabled", bnb_e_contam_aiDamage];
 missionNamespace setVariable ["JSHK_contam_addSpawnedAI", true];

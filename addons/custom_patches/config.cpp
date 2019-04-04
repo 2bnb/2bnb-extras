@@ -140,5 +140,13 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\PlankMedicPatch.paa";
 		textureVehicle="";
 	};
+
+	class ScruffyHammond
+	{
+		displayName="Scruffy Hammond";
+		author="Psycho";
+		texture="x\bnb_e\custom_patches\img\hammond.paa";
+		textureVehicle="";
+	};
 };
 

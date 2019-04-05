@@ -88,6 +88,11 @@ private _bnb_e_settings = [
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
 
 
+r0ed_SurvivableCrashes_OnVehicleCrash = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_onVehicleCrash.sqf";
+r0ed_SurvivableCrashes_VehicleInit = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_vehicleInit.sqf";
+r0ed_SurvivableCrashes_PlaySfx = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_playSfx.sqf";
+
+
 
 missionNamespace setVariable ["r0ed_SurvivableCrashesVar_ModEnabled", true];
 missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VisualEffectsEnabled", true];
@@ -100,24 +105,25 @@ missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleKindWhitelist", 
 missionNamespace setVariable ["r0ed_SurvivableCrashesVar_OnCrashCode", ""];
 missionNamespace setVariable ["r0ed_SurvivableCrashesVar_CrewPostCrashCode", ""];
 missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleRestCode", ""];
-if(hasInterface) then {
-	[player] execVM "\r0ed_SurvivableCrashes\functions\fn_handleUnitDamage.sqf";
-};
-{
-    _unit = _x;
-    _veh = vehicle _x;
-	if(_veh != _unit && not (_veh isKindOf "Man")) then {
-		if(isServer or (hasInterface && _veh == vehicle player)) then {
-			[_veh] call r0ed_SurvivableCrashes_VehicleInit;
-		};
-	};
-} forEach allUnits;
-[] execVM "\r0ed_SurvivableCrashes\functions\init\init_default.sqf";
+
+private["_logic"];
+_logic = param [0,objNull,[objNull]];
+
+[	_logic getVariable "r0ed_SurvivableCrashesVar_ModEnabled",
+	_logic getVariable "r0ed_SurvivableCrashesVar_VisualEffectsEnabled",
+	_logic getVariable "r0ed_SurvivableCrashesVar_SoundEffectsEnabled",
+	_logic getVariable "r0ed_SurvivableCrashesVar_ExaggeratedEffectsEnabled",
+	_logic getVariable "r0ed_SurvivableCrashesVar_MedicalSystem",
+	_logic getVariable "r0ed_SurvivableCrashesVar_CrewDamageMultiplier",
+	call compile (_logic getVariable "VehicleKindWhitelist"),
+	compile (_logic getVariable "OnCrashCode"),
+	compile (_logic getVariable "CrewPostCrashCode"),
+	compile (_logic getVariable "VehicleRestCode")
+] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
+
 missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
 
-r0ed_SurvivableCrashes_OnVehicleCrash = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_onVehicleCrash.sqf";
-r0ed_SurvivableCrashes_VehicleInit = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_vehicleInit.sqf";
-r0ed_SurvivableCrashes_PlaySfx = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_playSfx.sqf";
+
 
 missionNamespace setVariable ["JSHK_contam_aiDamageEnabled", bnb_e_contam_aiDamage];
 missionNamespace setVariable ["JSHK_contam_addSpawnedAI", true];

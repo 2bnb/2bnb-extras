@@ -1,13 +1,11 @@
-
-
-  	 _unit = _this select 0;
-	 _anim = _this select 1;
-	 _shans = _this select 2;
-	 _shooter = _this select 3;	 
-
-	private [ "_unit", "_anim", "_shans", "_shooter"];    
+params [ "_unit", "_anim", "_shans", "_shooter", "_effect1", "_effect2", "_effect3"];
+  
 
 if !(local _unit) exitWith {};
+
+IF !(_unit getVariable ["dam_player_lecitsebiaKR0",false]) then {
+
+
 
 _effect1 = ppEffectCreate ["ChromAberration", 200]; 
  
@@ -21,10 +19,9 @@ _effect3 = ppEffectCreate ["ColorCorrections", 1500];
   
 _effect3 ppeffectenable true; 
 
+_unit setVariable ["dam_player_lecitsebiaKR0",true,true];
+};
 
-
-	while {true}                  
-do {
 
 IF ((alive _unit) && !(_unit getVariable ["dam_player_lecitsebia0",false])) then {
 
@@ -42,22 +39,21 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
     {
 
 		
-		_unit = (_this select 0);
-		_dragger = (_this select 1);
+		params ["_unit", "_dragger"];
 
 		IF (_unit == _dragger) then {
 
 			IF ("PRONE" == stance _dragger ) then {
 				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPpneMstpSlayWpstDnon_medic"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medic"] remoteExecCall ["playMove", 0];
 				} ELSE {
-				 [_dragger, "AinvPpneMstpSlayWnonDnon_medic"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPpneMstpSlayWnonDnon_medic"] remoteExecCall ["playMove", 0];
 				};	
 			} ELSE {
 				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPknlMstpSlayWpstDnon_medic"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPknlMstpSlayWpstDnon_medic"] remoteExecCall ["playMove", 0];
 				} ELSE {
-				 [_dragger, "AinvPknlMstpSlayWrflDnon_medic"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPknlMstpSlayWrflDnon_medic"] remoteExecCall ["playMove", 0];
 				};	
 			};
 
@@ -65,15 +61,15 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
 
 			IF ("PRONE" == stance _dragger ) then {
 				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExecCall ["playMove", 0];
 				} ELSE {
-				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPpneMstpSlayWpstDnon_medicOther"] remoteExecCall ["playMove", 0];
 				};	
 			} ELSE {
 				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPknlMstpSlayWpstDnon_medicOther"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPknlMstpSlayWpstDnon_medicOther"] remoteExecCall ["playMove", 0];
 				} ELSE {
-				 [_dragger, "AinvPknlMstpSlayWrflDnon_medicOther"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPknlMstpSlayWrflDnon_medicOther"] remoteExecCall ["playMove", 0];
 				};	
 			};		
 		
@@ -101,7 +97,7 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
     "",
     ""
 ]	 
-] remoteExec ["addAction",0];
+] remoteExecCall ["addAction", 0, _unit];
 	 
 	 
 	 
@@ -116,10 +112,22 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
 };
 
 IF ((!alive _unit) or ((damage _unit <= 0.1) && !(_unit getVariable ["dam_ignore_injured0",false]))) exitWith {
-[_unit] remoteExec [ "removeAllActions", 0, true ];
+[_unit] remoteExecCall [ "removeAllActions", 0, true ];
 _unit setVariable ["dam_player_lecitsebia0",false,true];
-};
+_unit setVariable ["dam_player_lecitsebiaKR0",false,true];
+ 	_effect3 ppEffectEnable false;
+	ppEffectDestroy _effect3;
+	
+	_effect2 ppEffectEnable false;
+	ppEffectDestroy _effect2;
+	
+	_effect1 ppEffectEnable false;
+	ppEffectDestroy _effect1;
 
+		_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];
+ 		_unit setVariable ["dam_ignore_effect0",false,true];
+
+};
 
 
 
@@ -163,14 +171,14 @@ _unit setVariable ["dam_player_lecitsebia0",false,true];
 	_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];	
 
 IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
-	 [_unit] remoteExec [ "removeAllActions", 0, true ];
+	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 		_unit setVariable ["dam_ignore_injured0",true,true];	
-    remoteExec ["", PIR0jipId];
+    remoteExecCall ["", PIR0jipId];
     [_unit, {
      _ehId = _this getVariable ["hitPartEhId", -1];
      if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
-    }] remoteExec ["call"];
-	 [_unit, _anim, _shans, _shooter] remoteExec [ "Uncondition0", 2 ];
+    }] remoteExecCall ["call"];
+	 [_unit, _anim, _shans, _shooter] remoteExecCall [ "Uncondition0", 2 ];
 
 };
 
@@ -237,8 +245,10 @@ _effect3 ppeffectcommit 0.2;
 
 
 //_____________________________________________________________________________________________________________________________________
-sleep 0.2;
 
+[{
+
+params [ "_unit", "_anim", "_shans", "_shooter", "_effect1", "_effect2", "_effect3"];
 //_____________________________________________________________________________________________________________________________________
 
 
@@ -299,22 +309,21 @@ _effect3 ppeffectcommit 1;
 
 
 //_____________________________________________________________________________________________________________________________________
-sleep (6 - (random 3));
+
+
+[{
+
+params [ "_unit", "_anim", "_shans", "_shooter", "_effect1", "_effect2", "_effect3"];
 
 //_____________________________________________________________________________________________________________________________________
 
 
-};
-
-	_effect3 ppEffectEnable false;
-	ppEffectDestroy _effect3;
 	
-	_effect2 ppEffectEnable false;
-	ppEffectDestroy _effect2;
-	
-	_effect1 ppEffectEnable false;
-	ppEffectDestroy _effect1;
+[_unit, _anim, _shans, _shooter, _effect1, _effect2, _effect3] call EyeEffect0;		
+ 
+ }, [_unit, _anim, _shans, _shooter, _effect1, _effect2, _effect3], (6 - (random 3))] call CBA_fnc_waitAndExecute;
+ }, [_unit, _anim, _shans, _shooter, _effect1, _effect2, _effect3], 0.2] call CBA_fnc_waitAndExecute;
+ 
+ 
 
-		_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];
- 		_unit setVariable ["dam_ignore_effect0",false,true];
  

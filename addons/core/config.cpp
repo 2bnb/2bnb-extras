@@ -30,10 +30,24 @@ class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf';";
 	};
 };
+
 class Extended_PostInit_EventHandlers
 {
 	class bnb_e_survivable_crashes
 	{
 		init="call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
+	};
+};
+
+class cfgWeapons
+{
+	class ACE_ItemCore;
+	class CBA_MiscItem_ItemInfo;
+	class tfw_rf3080Item: ACE_ItemCore
+	{
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+		};
+
 	};
 };

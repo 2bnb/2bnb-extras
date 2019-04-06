@@ -25,11 +25,19 @@
 EyeEffect0 = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffect0.sqf";
 PiRredirect = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect.sqf";
 PiRredirect0 = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect0.sqf";
-
+PiRrespawn0 = compile preprocessfilelinenumbers "\PiR\Functions\PiRrespawn0.sqf";
 
 
 if (isServer) then {
-	
+PiRstart = compile preprocessfilelinenumbers "\PiR\Functions\PiRstart.sqf";
+PiRscreams = compile preprocessfilelinenumbers "\PiR\Functions\PiRscreams.sqf";
+CrawlAnim = compile preprocessfilelinenumbers "\PiR\Functions\CrawlAnim.sqf";
+CrawlAnim0 = compile preprocessfilelinenumbers "\PiR\Functions\CrawlAnim0.sqf";
+UnconditionFind = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionFind.sqf";
+UnconditionFind0 = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionFind0.sqf";
+UnconditionHill = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionHill.sqf";
+
+
 Uncondition = compile preprocessfilelinenumbers "\PiR\Functions\Uncondition.sqf";
 Crawl = compile preprocessfilelinenumbers "\PiR\Functions\Crawl.sqf";
 DropWeapon = compile preprocessfilelinenumbers "\PiR\Functions\DropWeapon.sqf";
@@ -50,7 +58,7 @@ UnconditionDrag0 = compile preprocessfilelinenumbers "\PiR\Functions\Uncondition
 PiR0 = compile preprocessfilelinenumbers "\PiR\Functions\PiR0.sqf";
 
 
-_null = [] execvm "\PiR\Functions\PiRstart.sqf";
+[{call PiRstart;}, [], 5] call CBA_fnc_waitAndExecute;
 
 };
 

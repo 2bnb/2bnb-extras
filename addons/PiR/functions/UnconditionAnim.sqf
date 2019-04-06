@@ -1,14 +1,10 @@
 if (!isServer) exitWith {}; 
  
-			 _unit = _this select 0;
-			 _anim = _this select 1;
-			 private ["_unit","_anim"];
+params ["_unit","_anim"];
 
-				while {true} do {
-
-					if ((_unit getVariable ["dam_uncondition_injured0",false]) or (!alive _unit)) exitWith {
-					};
-				  [_unit, _anim] remoteExec ["playMove", 0];
-				 sleep ((random 4)+4);
-				};	
-		_unit setVariable ["dam_uncondition_injured0",false,true]; 
+	IF ((_unit getVariable ["dam_uncondition_injured0",false]) or (!alive _unit)) exitWith {
+	 _unit setVariable ["dam_uncondition_injured0",false,true];
+	};
+[_unit, _anim] remoteExecCall ["playMove", 0];
+[{call UnconditionAnim;}, [_unit, _anim], ((random 4)+4)] call CBA_fnc_waitAndExecute;	
+ 

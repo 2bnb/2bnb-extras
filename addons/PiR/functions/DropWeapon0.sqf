@@ -1,25 +1,16 @@
 if (!isServer) exitWith {}; 
 
-_unit = (_this select 0);
-_anim = (_this select 1);
-_shans = (_this select 2);
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];    
 
-private ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer","_numberOfKits", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];    
+IF (alive _unit) then {
 
 _unitGrp = group _unit;
 _unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
  
-
-
 IF !(PiR_captive_on) then {
-_unit setcaptive true;
+[ _unit, true ] remoteExecCall [ "setcaptive", _unit ];
 };
-
-		
- 
-
-	IF (alive _unit) then {
 
 	 [_unit] joinSilent grpNull;
  
@@ -77,14 +68,15 @@ _unit setcaptive true;
 
 	 _weaponHolder setVelocity [3 * sin(((getDir _unit)-80) + (random 160)), 3 * cos(((getDir _unit)-80) + (random 160)),4]; 
 
-	 sleep 0.1;
-	 clearWeaponCargoGlobal _weaponHolder0;
-	 deleteVehicle _weaponHolder0;
+	 [{
+	 clearWeaponCargoGlobal (_this select 0);
+	 deleteVehicle (_this select 0);
+	 }, [_weaponHolder0], 0.1] call CBA_fnc_waitAndExecute;
 	 
-	 [_unit, (primaryWeapon _unit)] remoteExec ["removeWeapon", 0];
-	 [_unit, (secondaryWeapon _unit)] remoteExec ["removeWeapon", 0];		 
-	 [_unit, (handgunWeapon _unit)] remoteExec ["removeWeapon", 0];
-	 [_unit, (binocular _unit)] remoteExec ["removeWeapon", 0];		 
+	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
+	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];		 
 //______________________________________________________________________________________________________________________________
 
 //_________________________________________________Бежит в панике_______________________________________________________________
@@ -95,50 +87,50 @@ _unit setcaptive true;
 			IF ("STAND" == stance _unit )  then {
 
 				IF (_ranpos == 1) then {
-				 [_unit, "ApanPercMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0];
+				 [_unit, "ApanPercMstpSnonWnonDnon_G01"] remoteExecCall ["switchMove", 0];
 				};
 				IF (_ranpos == 2) then {
-				 [_unit, "ApanPercMstpSnonWnonDnon_ApanPknlMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+				 [_unit, "ApanPercMstpSnonWnonDnon_ApanPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 				};
 				IF (_ranpos == 3) then {
-				 [_unit, "ApanPercMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+				 [_unit, "ApanPercMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 				};			
 			} ELSE {
 				IF ("CROUCH" == stance _unit ) then {
 		
 					IF (_ranpos == 1) then {
-					[_unit, "ApanPknlMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+					[_unit, "ApanPknlMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 2) then {
-					[_unit, "ApanPknlMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0];
+					[_unit, "ApanPknlMstpSnonWnonDnon_G01"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 3) then {
-					[_unit, "ApanPknlMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+					[_unit, "ApanPknlMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};		 
 				} ELSE {
 					IF ("PRONE" == stance _unit ) then {
 
 					IF (_ranpos == 1) then {
-					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 2) then {
-					[_unit, ""] remoteExec ["switchMove", _unit];
-					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPknlMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+					[_unit, ""] remoteExecCall ["switchMove", _unit];
+					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 3) then {
-					[_unit, "ApanPpneMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0];
+					[_unit, "ApanPpneMstpSnonWnonDnon_G01"] remoteExecCall ["switchMove", 0];
 					};
 					} ELSE {
 						IF ("UNDEFINED" == stance _unit ) then {
 
 							IF (_ranpos == 1) then {
-							 [_unit, "ApanPknlMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+							 [_unit, "ApanPknlMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 							};
 							IF (_ranpos == 2) then {
-							 [_unit, "ApanPknlMstpSnonWnonDnon_G01"] remoteExec ["switchMove", 0];
+							 [_unit, "ApanPknlMstpSnonWnonDnon_G01"] remoteExecCall ["switchMove", 0];
 							};
 							IF (_ranpos == 3) then {
-							 [_unit, "ApanPknlMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+							 [_unit, "ApanPknlMstpSnonWnonDnon_ApanPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 							};	
 						};
 					};
@@ -169,24 +161,25 @@ _unit setcaptive true;
 
 		IF (alive _unit) then {
 			IF ("STAND" == stance _dragger )  then {
-			 [_dragger, "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+			 [_dragger, "AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"] remoteExecCall ["playMove", 0];
 			} ELSE {
 				IF ("CROUCH" == stance _dragger ) then {
-				 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+				 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExecCall ["playMove", 0];
 				} ELSE {
 					IF ("PRONE" == stance _dragger ) then {
-					 [_dragger, "AinvPpneMstpSrasWrflDnon_Putdown_AmovPpneMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+					 [_dragger, "AinvPpneMstpSrasWrflDnon_Putdown_AmovPpneMstpSrasWrflDnon"] remoteExecCall ["playMove", 0];
 					} ELSE {
 						IF ("UNDEFINED" == stance _dragger ) then {
-						 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExec ["playMove", 0];
+						 [_dragger, "AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"] remoteExecCall ["playMove", 0];
 						};	
 					};
 				};
 			};
 		};
 
-	 sleep 1;		
-	 _unit setVariable ["dam_player_lecit0",true,true];
+	[{		
+	 (_this select 0) setVariable ["dam_player_lecit0",true,true];
+	}, [_unit], 1] call CBA_fnc_waitAndExecute;
 
 
 
@@ -203,7 +196,7 @@ _unit setcaptive true;
     "",
     ""
 ]	 
-] remoteExec ["addAction",0];
+] remoteExecCall ["addAction", 0, _unit];
 	 
 	 
 	 
@@ -211,38 +204,43 @@ _unit setcaptive true;
 	 
 	 
 	 
-	 
+}; 
 	 
 //________________________________________________________________________________________________________________________________	 
 		 
+[{((_this select 0) distance (_this select 12) >= (_this select 11)) or (!alive (_this select 0)) or (time >= (_this select 13)) or ((_this select 0) getVariable ['dam_player_lecit0',false])
+}, {		 
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];		 
 		 
-		 
-		 
-			waituntil { sleep 0.5; ((_unit distance _Pos >= _dis) or (!alive _unit) or (time >= _timer) or (_unit getVariable ['dam_player_lecit0',false]))
-			};	 
-			 [_unit] remoteExec [ "removeAllActions", 0, true ];
+ 
+			 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 			 _unit setVariable ["dam_player_lecit0",false,true];
-		};
-		 sleep 0.5;
+
+
+
+[{
+
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
+
+
+
 		IF (alive _unit) then {
 
 		IF (_ranpos == 1) then {
 
-			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExec ["switchMove", 0];			 
+			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];			 
 			};
 			IF (_ranpos == 2) then {
 
-			 [_unit,"AmovPknlMstpSnonWnonDnon_AwopPknlMstpSoptWbinDnon"] remoteExec ["switchMove", 0];
+			 [_unit,"AmovPknlMstpSnonWnonDnon_AwopPknlMstpSoptWbinDnon"] remoteExecCall ["switchMove", 0];
 			};
 			IF (_ranpos == 3) then {
 
-			 [_unit,"AmovPpneMstpSnonWnonDnon_AinvPpneMstpSnonWnonDnon"] remoteExec ["switchMove", 0];
+			 [_unit,"AmovPpneMstpSnonWnonDnon_AinvPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 			};			 
 
-			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExec ["playMove", 0];
+			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExecCall ["playMove", 0];
 		 
-
-		 sleep 2;
 
 		};
 
@@ -251,7 +249,9 @@ _unit setcaptive true;
 
 //_________________________________________________Выход________________________________________________________________________
 
+[{
 
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
 
 
 	 
@@ -260,18 +260,18 @@ _unit setcaptive true;
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			 };
-		 [_unit, _pWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		 [_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			}; 
-		 [_unit, _hWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
 		};	
 		IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExec ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
 		};
 	};
 	
@@ -280,18 +280,18 @@ _unit setcaptive true;
 			IF ((_smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			};
-		 [_unit, _sWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			};
-		 [_unit, _hWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
 		};	
 		IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExec ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
 		};
 	};
 	
@@ -300,18 +300,18 @@ _unit setcaptive true;
 			IF ((_Smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			}; 
-		 [_unit, _sWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
 		};
 		IF (_pWeapon != "") then {
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			};
-		[_unit, _pWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		[_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
 		};
 		 IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExec ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
 		};	
 	};
 
@@ -320,22 +320,22 @@ _unit setcaptive true;
 			IF ((_smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			};
-		 [_unit, _sWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
 		};
 		IF (_pWeapon != "") then {
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			};
-		 [_unit, _pWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		 [_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			}; 
-		 [_unit, _hWeapon] remoteExec ["addWeapon", 0];
-		 {[_unit, _x] remoteExec ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
 		};
 	};	
 
@@ -344,22 +344,31 @@ _unit setcaptive true;
 	
 
 	 [_unit] joinSilent _unitGrp;
-	 IF (_unit == _unitLdr) then {_unitGrp selectLeader _unit};
+	IF (_unit == _unitLdr) then {
+	 _unitGrp selectLeader _unit;
+	};
 
 
-	 };
+
 
 	 _unit setVariable ["dam_ignore_injured0",false,true];	 
 	 _unit setVariable ["dam_player_lecitsebia0",false,true];	 
-	 IF !(alive _unit) then {
- 	 _unit setVariable ["dam_ignore_hit0",false,true];		
-	} ELSE {
+	 IF (alive _unit) then {
 					PIR0jipId = [_unit, {
 					 _ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 					 _this setVariable ["hitPartEhId", _ehId];
-					}] remoteExec ["call", 0, true];
+					}] remoteExecCall ["call", 0, true];
 	 };
 
 IF !(PiR_captive_on) then {
-_unit setcaptive false;
+[ _unit, false ] remoteExecCall [ "setcaptive", _unit ];
+};
+
+
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr], 2] call CBA_fnc_waitAndExecute; 
+
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _ranpos, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr], 0.5] call CBA_fnc_waitAndExecute; 
+
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _ranpos, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr]] call CBA_fnc_waitUntilAndExecute;
+
 };

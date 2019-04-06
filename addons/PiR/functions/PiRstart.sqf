@@ -1,97 +1,71 @@
-
-
 if (!isServer) exitWith {};
 	 
-private ["_unitP", "_numberOfKits", "_numberOfItems"];
-sleep 5;
+params ["_unitP", "_numberOfKits", "_numberOfItems", "_units"];
+
 //Добавляем  юнитам отслеживание попадания
 _units = [];
-while { (true) } do {
+{
+_units pushBack _x;
 
-	{
+_unitP = _x;
 
+IF  (((({"FirstAidKit" == _x} count (itemCargo _unitP)) > 0) or (({"Medikit" == _x} count (itemCargo _unitP)) > 0)) && (PiR_injuriplayer_on)) then {
+ _numberOfKits = {"FirstAidKit" == _x} count (itemCargo _unitP);
+
+	IF (_numberOfKits > 0) then {
+	 _numberOfItems = itemCargo _unitP;
+	 _numberOfItems = _numberOfItems - ["FirstAidKit"]; 
+	 [_unitP, "FirstAidKit"] remoteExec ["removeItems", 0];
+	 clearItemCargoGlobal _unitP;
+		{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
+	 _unitP addItemCargoGlobal ["PiR_bint", _numberOfKits]; 
+		for "_i" from 1 to _numberOfKits do { _unitP addItem "PiR_bint"};
+	};
+
+	 _numberOfKits = {"Medikit" == _x} count (itemCargo _unitP);
+
+	IF (_numberOfKits > 0) then {
+	 _numberOfItems = itemCargo _unitP;
+	 _numberOfItems = _numberOfItems - ["Medikit"]; 
+	 [_unitP, "Medikit"] remoteExec ["removeItems", 0];
+	 clearItemCargoGlobal _unitP;
+		{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
+	 _unitP addItemCargoGlobal ["PiR_apteka", _numberOfKits]; 
+		for "_i" from 1 to _numberOfKits do { _unitP addItem "PiR_apteka"};
+	};
+};	
 	
-	
-	IF  ((({"FirstAidKit" == _x} count (itemCargo _x)) > 0) or (({"Medikit" == _x} count (itemCargo _x)) > 0)) then {	
+	IF  (!(_unitP getVariable ["dam_ignore_hit0",false]) && (_unitP isKindOf "Man") && (alive _unitP)) then {	
 
-	 _numberOfKits = {"FirstAidKit" == _x} count (itemCargo _x);
+ 	 _unitP setVariable ["dam_ignore_hit0",true,true];	
+	 _unitP setVariable ["dam_zdorovie_lecit0",0,true];
 
-		IF (_numberOfKits > 0) then {
-
-		 _numberOfItems = itemCargo _x;
-		 _numberOfItems = _numberOfItems - ["FirstAidKit"]; 
-		 [_x, "FirstAidKit"] remoteExec ["removeItems", 0];
-		 clearItemCargoGlobal _x;
-		 _unitP = _x;
-			{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
-
-		 _x addItemCargoGlobal ["PiR_bint", _numberOfKits]; 
-			for "_i" from 1 to _numberOfKits do { _x addItem "PiR_bint"};
-
-
-		};
-
-	 _numberOfKits = {"Medikit" == _x} count (itemCargo _x);
-
-		IF (_numberOfKits > 0) then {
-
-		 _numberOfItems = itemCargo _x;
-		 _numberOfItems = _numberOfItems - ["Medikit"]; 
-		 [_x, "Medikit"] remoteExec ["removeItems", 0];
-		 clearItemCargoGlobal _x;
-		 _unitP = _x;
-			{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
-		 _x addItemCargoGlobal ["PiR_apteka", _numberOfKits]; 
-			for "_i" from 1 to _numberOfKits do { _x addItem "PiR_apteka"};
-
-		};
-	
-	};	
-	
-	IF  (!(_x getVariable ["dam_ignore_hit0",false])) then {	
-
- 	 _x setVariable ["dam_ignore_hit0",true,true];	
-	
-	
-	
-	
-		IF ((_x isKindOf "Man")) then
-        {
-
-            IF ((alive _x)  && (("INJURED" == lifeState _x) or ("HEALTHY" == lifeState _x))) then 
-			{
-			 _units pushBack _x; 
-
-
-
-			 _x setVariable ["dam_zdorovie_lecit0",0,true];
-
-			 IF (!isplayer _x) then {
-					IF !(PiR_injuriAI_on) exitwith {};
-				IF (side _x == civilian ) then {
+			 IF (!isplayer _unitP) then {
+				IF !(PiR_injuriAI_on) exitwith {};
+				IF (side _unitP == civilian ) then {
 					IF !(PiR_civilian_on) exitwith {};
-					PIRjipId = [_x, {
+					PIRjipId = [_unitP, {
 					_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					_this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 				};
-				IF (side _x == resistance ) then {
+				IF (side _unitP == resistance ) then {
 					IF !(PiR_resistance_on) exitwith {};
-					PIRjipId = [_x, {
+					PIRjipId = [_unitP, {
 					_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					_this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 				};				
-				IF (side _x == west ) then {
+				IF (side _unitP == west ) then {
 					IF !(PiR_west_on) exitwith {};
-					PIRjipId = [_x, {
+					PIRjipId = [_unitP, {
 					_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					_this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
 				};
-				IF (side _x == east ) then {
+				IF (side _unitP == east ) then {
 					IF !(PiR_east_on) exitwith {};
-					PIRjipId = [_x, {
+					PIRjipId = [_unitP, {
 					_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect;}];
 					_this setVariable ["hitPartEhId", _ehId];
 					}] remoteExec ["call", 0, true];
@@ -99,44 +73,46 @@ while { (true) } do {
 					
 				} ELSE {
 					IF !(PiR_injuriplayer_on) exitwith {};
-					IF (side _x == civilian ) then {
-						IF !(PiR_civilian_on) exitwith {};
-						PIR0jipId = [_x, {
+					IF (side _unitP == civilian ) then {
+						IF !(PiR_civilian_on) exitwith {};	
+						_unitP addMPEventHandler ["MPRespawn", {[(_this select 0)] call PiRrespawn0;}];
+						PIR0jipId = [_unitP, {
 						_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 						_this setVariable ["hitPartEhId", _ehId];
 						}] remoteExec ["call", 0, true];
-					};
-					IF (side _x == resistance ) then {
+					};	
+					IF (side _unitP == resistance ) then {
 						IF !(PiR_resistance_on) exitwith {};
-						PIR0jipId = [_x, {
+						_unitP addMPEventHandler ["MPRespawn", {[(_this select 0)] call PiRrespawn0;}];
+						PIR0jipId = [_unitP, {
 						_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 						_this setVariable ["hitPartEhId", _ehId];
 						}] remoteExec ["call", 0, true];
-					};				
-					IF (side _x == west ) then {
+					};						
+					IF (side _unitP == west ) then {
 						IF !(PiR_west_on) exitwith {};
-						PIR0jipId = [_x, {
+						_unitP addMPEventHandler ["MPRespawn", {[(_this select 0)] call PiRrespawn0;}];
+						PIR0jipId = [_unitP, {
 						_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 						_this setVariable ["hitPartEhId", _ehId];
 						}] remoteExec ["call", 0, true];
 					};
-					IF (side _x == east ) then {
+					IF (side _unitP == east ) then {
 						IF !(PiR_east_on) exitwith {};
-						PIR0jipId = [_x, {
+						_unitP addMPEventHandler ["MPRespawn", {[(_this select 0)] call PiRrespawn0;}];
+						PIR0jipId = [_unitP, {
 						_ehId = _this addEventHandler ["HitPart", {(_this select 0) call PiRredirect0;}];
 						_this setVariable ["hitPartEhId", _ehId];
 						}] remoteExec ["call", 0, true];
 					};
 				};
-			 };
-		};
 	};
-	} forEach (allUnits + vehicles);
+} forEach (allUnits + vehicles);
 
 	
-	sleep 30;
+[{call PiRstart;}, [], 30] call CBA_fnc_waitAndExecute;
 
-};
+
 
 
 

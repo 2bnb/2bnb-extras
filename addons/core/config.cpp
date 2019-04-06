@@ -30,10 +30,9 @@ class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf';";
 	};
 };
-
 class Extended_PostInit_EventHandlers
 {
-	class r0ed_SurvivableCrashes_XEH_PostInit
+	class bnb_e_survivable_crashes
 	{
 		init="call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
 	};

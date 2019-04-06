@@ -87,50 +87,10 @@ private _bnb_e_settings = [
 
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
 
-
-r0ed_SurvivableCrashes_OnVehicleCrash = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_onVehicleCrash.sqf";
-r0ed_SurvivableCrashes_VehicleInit = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_vehicleInit.sqf";
-r0ed_SurvivableCrashes_PlaySfx = compileFinal preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\fn_playSfx.sqf";
-
-
-
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_ModEnabled", true];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VisualEffectsEnabled", true];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_SoundEffectsEnabled", true];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_ExaggeratedEffectsEnabled", true];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_MedicalSystem", "ACE"];
-
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_CrewDamageMultiplier", bnb_e_sc_damage];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleKindWhitelist", bnb_e_sc_vehicles];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_OnCrashCode", ""];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_CrewPostCrashCode", ""];
-missionNamespace setVariable ["r0ed_SurvivableCrashesVar_VehicleRestCode", ""];
-
-private["_logic"];
-_logic = param [0,objNull,[objNull]];
-
-[	_logic getVariable "r0ed_SurvivableCrashesVar_ModEnabled",
-	_logic getVariable "r0ed_SurvivableCrashesVar_VisualEffectsEnabled",
-	_logic getVariable "r0ed_SurvivableCrashesVar_SoundEffectsEnabled",
-	_logic getVariable "r0ed_SurvivableCrashesVar_ExaggeratedEffectsEnabled",
-	_logic getVariable "r0ed_SurvivableCrashesVar_MedicalSystem",
-	_logic getVariable "r0ed_SurvivableCrashesVar_CrewDamageMultiplier",
-	call compile (_logic getVariable "VehicleKindWhitelist"),
-	compile (_logic getVariable "OnCrashCode"),
-	compile (_logic getVariable "CrewPostCrashCode"),
-	compile (_logic getVariable "VehicleRestCode")
-] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
-
-missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
-
-
-
 missionNamespace setVariable ["JSHK_contam_aiDamageEnabled", bnb_e_contam_aiDamage];
 missionNamespace setVariable ["JSHK_contam_addSpawnedAI", true];
 missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina", bnb_e_contam_equipment_enableMaskStaminaEffect];
 missionNamespace setVariable ["JSHK_contam_DEBUG", bnb_e_contam_enableDebug];
-
-
 
 //set gasmasks
 private _head = [bnb_e_contam_equipment_masks] call JSHK_contam_fnc_strToArray;

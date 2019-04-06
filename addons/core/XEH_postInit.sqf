@@ -1,4 +1,4 @@
-[	true,
+[	bnb_e_sc_enable,
 	true,
 	true,
 	true,

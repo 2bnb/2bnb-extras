@@ -3,7 +3,7 @@ class CfgPatches {
 		name = "2BNB Extras - Core";
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"achilles_modules_f_achilles"};
+		requiredAddons[] = {"achilles_modules_f_achilles","r0ed_SurvivableCrashes"};
 		author[] = {
 			"D. Ford",
 			"Arend"

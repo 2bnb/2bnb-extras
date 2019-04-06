@@ -68,6 +68,14 @@ private _bnb_e_settings = [
 		true
 	],
 	[
+		"bnb_e_sc_enable",
+		"CHECKBOX",
+		["Enable survivable crashes", "Tick to survivable crashes"],
+		"2BNB Survivable crashes",
+		true,
+		true
+	],
+	[
 		"bnb_e_sc_vehicles",
 		"EDITBOX",
 		["Vehicle classes", "vehicle classes in brackets and commas seperated by ,"],

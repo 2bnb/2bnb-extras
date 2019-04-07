@@ -148,5 +148,21 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\hammond.paa";
 		textureVehicle="";
 	};
+
+	class Order66
+	{
+		displayName="Order 66";
+		author="Farcry";
+		texture="x\bnb_e\custom_patches\img\Order66-2.paa";
+		textureVehicle="";
+	};
+
+	class KimmyJongyBoi
+	{
+		displayName="Kimmy Jongy Boi";
+		author="Farcry";
+		texture="x\bnb_e\custom_patches\img\KimmyJongyBoi.paa";
+		textureVehicle="";
+	};
 };
 

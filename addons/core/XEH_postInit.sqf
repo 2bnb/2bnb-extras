@@ -14,4 +14,3 @@
 		_veh setDamage 1;
 	}
 ] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
-

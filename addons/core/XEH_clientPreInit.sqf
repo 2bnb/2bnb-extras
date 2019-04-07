@@ -78,9 +78,9 @@ private _bnb_e_settings = [
 	[
 		"bnb_e_sc_vehicles",
 		"EDITBOX",
-		["Vehicle classes", "vehicle classes in brackets and commas seperated by ,"],
+		["Vehicle classes", "vehicle classes in square brackets, with quotation marks seperated by ,"],
 		"2BNB Survivable crashes",
-		"",
+		"[""Air""]",
 		true
 	],
 	[

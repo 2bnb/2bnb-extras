@@ -3,13 +3,12 @@ if (!isServer) exitWith {};
 params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_disT","_unitLdr"];
 
 
-IF (alive _unit) then {
-IF !(_unit getVariable ["dam_player_Drop0",false]) then {
-
+IF ((alive _unit) && !(_unit getVariable ["dam_player_Drop0",false])) then {
+_unit setVariable ["dam_player_DropW0",true,true];
 _unitGrp = group _unit;
 _unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
- 
+_ranpos = selectRandom [1,2,3]; 
 
 IF !(PiR_captive_on) then {
 [ _unit, true ] remoteExecCall [ "setcaptive", _unit ];
@@ -78,16 +77,15 @@ IF !(PiR_captive_on) then {
 	 deleteVehicle (_this select 0);
 	 }, [_weaponHolder0], 0.1] call CBA_fnc_waitAndExecute;
 
-	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
-	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0]; 
-	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];
+
 
 //______________________________________________________________________________________________________________________________
 
 //_________________________________________________Бежит в панике_______________________________________________________________
+	[{
+	 params ["_unit", "_ranpos"];
 
-	 _ranpos = selectRandom [1,2,3];
+	 
 
 		IF (alive _unit) then {
 			IF ("STAND" == stance _unit )  then {
@@ -160,17 +158,6 @@ IF !(PiR_captive_on) then {
 			};
 
 
-		 [ _unit, "AUTO" ] remoteExecCall [ "setUnitPos", _unit ];	
-		 [ _unit, "CARELESS" ] remoteExecCall [ "setBehaviour", _unit ];
-
-		 _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
-		 _Pos = [_unit, _dis,(((getDir _unit)-240) + (random 120))] call BIS_fnc_relPos;
-
-   
-		 _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));   
-		 [ _unit, _Pos ] remoteExecCall [ "domove", _unit ];		
-
-
 
 
 //__________________Добавляем действие на перетаскивание для игрока__________________________________________________	 
@@ -239,11 +226,24 @@ IF !(PiR_captive_on) then {
 
 
 
- _unit setVariable ["dam_player_Drop0",true,true];
-	 
 
+		};	
+	}, [_unit, _ranpos], 0.1] call CBA_fnc_waitAndExecute; 		
+
+	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
+	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0]; 
+	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];
 	
-		};		
+ [ _unit, "AUTO" ] remoteExecCall [ "setUnitPos", _unit ];	
+ [ _unit, "CARELESS" ] remoteExecCall [ "setBehaviour", _unit ];
+
+ _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
+ _Pos = [_unit, _dis,(((getDir _unit)-240) + (random 120))] call BIS_fnc_relPos;
+
+ _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));   
+ [ _unit, _Pos ] remoteExecCall [ "domove", _unit ];
+_unit setVariable ["dam_player_Drop0",true,true];
 };
  _disT = getPos _unit;
 
@@ -253,7 +253,6 @@ IF ((_unit distance _Pos < 5) or (!alive _unit) or (time >= _timer) or (_unit ge
 		 } ELSE {
 
 [{
-
 params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_disT","_unitLdr"];
 
 
@@ -290,12 +289,12 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 IF !(_unit getVariable ["dam_player_Drop0",false]) then {
 
-
+IF (_unit getVariable ["dam_player_DropW0",false]) then {
 	[_unit] remoteExecCall [ "removeAllActions", 0, true ];
 			 _unit setVariable ["dam_player_lecit0",false,true];
 
 		 _unit doMove getpos _unit;			 
-		
+};		
 [{
 params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon",  "_ranpos", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_unitLdr"];
 
@@ -324,10 +323,29 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_unitLdr"];		
 
-
 //_________________________________________________Выход________________________________________________________________________
 
+IF (_unit getVariable ["dam_player_DropW0",false]) then {
 
+_unit setVariable ["dam_player_DropW0",false,true];
+
+IF !(alive _unit) then {
+	IF 	( _weapon ==  _sWeapon ) then {
+	 _sWeapon = "";
+	};
+	
+	IF ( _weapon ==  _pWeapon ) then {
+	 _pWeapon = "";
+	};
+	
+	IF ( _weapon ==  _hWeapon ) then {
+	 _hWeapon = "";
+	};
+
+	IF ( _weapon ==  _binocs ) then {
+	 _binocs = "";
+	};	
+};
 
 			IF (_sWeapon != "") then {
 				IF ((_smag select 0) != "") then {
@@ -356,7 +374,6 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 			
 			 {_unit addMagazine [_x, 9999]} forEach _magsremove;
 
-
 	
 
 	 [ _unit, "AUTO" ] remoteExecCall [ "setUnitPos", _unit ];
@@ -368,6 +385,7 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 	 IF (_unit == _unitLdr) then {
 	 _unitGrp selectLeader _unit
 	 };
+};
 	 _unit setVariable ["dam_ignore_injured0",false,true];
 	 _unit setVariable ["dam_player_lecitsebia0",false,true];
  	 IF (alive _unit) then {
@@ -388,7 +406,7 @@ IF !(PiR_captive_on) then {
 
 };
 
-};
+
 
 
 

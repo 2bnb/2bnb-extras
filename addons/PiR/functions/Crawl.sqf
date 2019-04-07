@@ -172,9 +172,9 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 								 [_unit, _anim, _shans, _shooter] call Uncondition;
 
 									[{	
-									 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+									 params ["_unit"];
 									 _unit setVariable ["dam_player_Crawl0",false,true];
-									}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 6] call CBA_fnc_waitAndExecute; 
+									}, [_unit], 6] call CBA_fnc_waitAndExecute; 
 
 							} Else {
 
@@ -208,10 +208,10 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 								 _unit setVariable ["dam_ignore_injured0",false,true];
 				 
 									[{	
-									params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+									params ["_unit"];
 
 									 _unit setVariable ["dam_player_Crawl0",false,true];
-									}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 1] call CBA_fnc_waitAndExecute; 
+									}, [_unit], 1] call CBA_fnc_waitAndExecute; 
 
 								} Else {
 
@@ -219,7 +219,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 	
 									[{(AnimationState (_this select 0) == "UnconsciousReviveDefault") or (!alive (_this select 0))
 									}, {
-									 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+									 params ["_unit", "_unitLdr", "_unitGrp"];
 
 									 [ _unit, false ] remoteExecCall [ "setUnconscious", _unit ];
 									 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -245,7 +245,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 										IF !(PiR_captive_on) then {
 										 [ _unit, false ] remoteExecCall [ "setcaptive", _unit ];
 										};
-									}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr]] call CBA_fnc_waitUntilAndExecute;					
+									}, [_unit, _unitLdr, _unitGrp]] call CBA_fnc_waitUntilAndExecute;					
 								};
 							};
 
@@ -255,7 +255,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 					[{!((_this select 0) getVariable ["dam_player_Crawl0",false]) or (!alive (_this select 0))
 					}, {
 					 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
-
+					 _unit setVariable ["dam_player_Crawl0",false,true];
 						[{	
 						 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
 

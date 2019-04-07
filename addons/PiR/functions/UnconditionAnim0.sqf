@@ -6,5 +6,5 @@ params ["_unit","_anim"];
 	 _unit setVariable ["dam_uncondition_injured0",false,true]; 
 	};
 [_unit, _anim] remoteExecCall ["playMove", 0];
-[{call UnconditionAnim0;}, [_unit, _anim], ((random 4)+4)] call CBA_fnc_waitAndExecute;
+[{call UnconditionAnim0;}, [_unit, _anim], ((random 4)+2)] call CBA_fnc_waitAndExecute;
 		

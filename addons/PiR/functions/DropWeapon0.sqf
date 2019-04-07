@@ -7,6 +7,7 @@ IF (alive _unit) then {
 _unitGrp = group _unit;
 _unitLdr = leader _unit;
 _unitGrpPR = str side group _unit;
+_ranpos = selectRandom [1,2,3];
  
 IF !(PiR_captive_on) then {
 [ _unit, true ] remoteExecCall [ "setcaptive", _unit ];
@@ -73,15 +74,14 @@ IF !(PiR_captive_on) then {
 	 deleteVehicle (_this select 0);
 	 }, [_weaponHolder0], 0.1] call CBA_fnc_waitAndExecute;
 	 
-	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
-	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];		 
+	 
 //______________________________________________________________________________________________________________________________
 
 //_________________________________________________Бежит в панике_______________________________________________________________
+	[{
+	 params ["_unit", "_ranpos"];
+	
 
-	 _ranpos = selectRandom [1,2,3];
 
 		IF (alive _unit) then {
 			IF ("STAND" == stance _unit )  then {
@@ -138,11 +138,7 @@ IF !(PiR_captive_on) then {
 			};
 
 
-		 _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
-		 _Pos = getPos _unit;
-
-   
-		 _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));   		
+  		
 
 		 
 //__________________Добавляем действие на перетаскивание для игрока__________________________________________________	 
@@ -200,11 +196,18 @@ IF !(PiR_captive_on) then {
 	 
 	 
 	 
-	 
-	 
-	 
-	 
-}; 
+		};
+	}, [_unit, _ranpos], 0.1] call CBA_fnc_waitAndExecute;
+
+	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
+	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];	
+
+	
+ _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
+ _Pos = getPos _unit;
+ _timer = (time +  (((PiR_drop_on) * 2) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on))));
 	 
 //________________________________________________________________________________________________________________________________	 
 		 
@@ -220,27 +223,18 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 [{
 
-params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
-
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
 
 
 		IF (alive _unit) then {
 
-		IF (_ranpos == 1) then {
+		 [_unit, "Down"] remoteExecCall ["playAction", 0];
+			[{
+			 params ["_unit"];
 
-			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];			 
-			};
-			IF (_ranpos == 2) then {
-
-			 [_unit,"AmovPknlMstpSnonWnonDnon_AwopPknlMstpSoptWbinDnon"] remoteExecCall ["switchMove", 0];
-			};
-			IF (_ranpos == 3) then {
-
-			 [_unit,"AmovPpneMstpSnonWnonDnon_AinvPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
-			};			 
-
-			 [_unit,"AmovPercMstpSnonWnonDnon_AinvPknlMstpSnonWnonDnon"] remoteExecCall ["playMove", 0];
-		 
+			 [_unit,"AmovPpneMstpSnonWnonDnon_AinvPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];			 
+			 [_unit,"AmovPknlMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon"] remoteExecCall ["playMove", 0];
+			}, [_unit], 0.5] call CBA_fnc_waitAndExecute;	
 
 		};
 

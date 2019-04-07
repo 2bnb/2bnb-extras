@@ -143,7 +143,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits
 	localize "STR_Provide_medical_care",										// Название действия
 	"PiR\Icons\krest_CA.paa",	// Иконка действия
 	"PiR\Icons\estpuls_CA.paa",	// Иконка прогресса
-	"(_this distance _target < 2)&& (_this != _target) && !(_target getVariable ['dam_uncondition_injured0',false]) && ('PRONE' != stance _target) && !(_this getVariable ['dam_ignore_injured0',false]) || (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0))",						// Условие к созданию действия
+	"(_this distance _target < 2)&& (_this != _target) && !(_target getVariable ['dam_uncondition_injured0',false]) && ('PRONE' != stance _target) && !(_this getVariable ['dam_ignore_injured0',false]) || (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0) or ({'FirstAidKit' == _x} count (items _this) > 0) or ({'Medikit' == _x} count (items _this) > 0))",						// Условие к созданию действия
 	"(_this distance _target < 2) && ((inputAction 'Action') > 0) && (alive _this) && (alive _target) && !(_this getVariable ['dam_ignore_injured0',false])",						// Условие на выполнение действия
 	{// Старт
 	
@@ -174,6 +174,10 @@ params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits
 
 		IF ({"PiR_apteka" == _x} count (items _dragger) == 0) then {
 		 _dragger removeItem "PiR_bint";
+		};
+		
+		IF ({"Medikit" == _x} count (items _dragger) == 0) then {
+		 _dragger removeItem "FirstAidKit";
 		};
 	
 		[{

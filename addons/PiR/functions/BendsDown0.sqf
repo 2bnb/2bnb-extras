@@ -13,8 +13,12 @@ _stanceu = 0;
 _shar = "Land_Shar_Prozrachniy" createVehicle [0,0,0];
 _shar hideObjectGlobal true;
 _shar setPos (_unit modelToWorld [0,0,0]);
-_shar setDir (getdir _unit);
-_unit attachTo [_shar, [0,0,-0.095]];
+[{
+params [ "_unit", "_anim", "_shans", "_shooter", "_stanceu", "_shar"];
+
+IF  (alive _unit) then {
+	_shar setDir (getdir _unit);
+	_unit attachTo [_shar, [0,0,-0.095]];
 
 	IF ("STAND" == stance _unit )  then {
 	 [_unit,(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["playMove", 0];	
@@ -34,7 +38,8 @@ _unit attachTo [_shar, [0,0,-0.095]];
 			};
 		};
 	};
-
+};	
+}, [_unit, _anim, _shans, _shooter, _stanceu, _shar], 0.1] call CBA_fnc_waitAndExecute;
 
 	[{(AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed") or (AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed2") or (AnimationState (_this select 0) == "AmovPpneMstpSrasWrflDnon_healed") or (!alive (_this select 0))
 	}, {

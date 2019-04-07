@@ -9,7 +9,7 @@ _units pushBack _x;
 
 _unitP = _x;
 
-IF  (((({"FirstAidKit" == _x} count (itemCargo _unitP)) > 0) or (({"Medikit" == _x} count (itemCargo _unitP)) > 0)) && (PiR_injuriplayer_on)) then {
+IF  (PiR_injuriplayer_on) then {
  _numberOfKits = {"FirstAidKit" == _x} count (itemCargo _unitP);
 
 	IF (_numberOfKits > 0) then {

@@ -56,8 +56,9 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
 		
 		};
 
-		IF ({"PiR_apteka" == _x} count (items _dragger) == 0) then {
+		IF (({"PiR_apteka" == _x} count (items _dragger) == 0) && ({"Medikit" == _x} count (items _dragger) == 0)) then {
 		 _dragger removeItem "PiR_bint";
+		 _dragger removeItem "FirstAidKit";
 		 _unit setDamage 0.1;
 		} ELSE {
 		 _unit setDamage 0;
@@ -72,7 +73,7 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
     true, 
     true, 
     "",
-    "(_this distance _target < 2) && !(_target getVariable ['dam_ignore_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) && (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0)) && (vehicle _target == _target)", // _target, _this, _originalTarget
+    "(_this distance _target < 2) && !(_target getVariable ['dam_ignore_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) && (vehicle _target == _target) && (vehicle _this == _this) && (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0) or ({'FirstAidKit' == _x} count (items _this) > 0) or ({'Medikit' == _x} count (items _this) > 0))", // _target, _this, _originalTarget
     2,
     false,
     "",
@@ -91,8 +92,20 @@ _unit setVariable ["dam_player_lecitsebia0",false,true];
  		_unit setVariable ["dam_ignore_effect0",false,true];
 };
 
+IF ((alive _unit) && ((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
+	[_unit] remoteExecCall [ "removeAllActions", 0, true ];
+		_unit setVariable ["dam_ignore_injured0",true,true];	
+    remoteExecCall ["", PIRjipId];
+    [_unit, {
+     _ehId = _this getVariable ["hitPartEhId", -1];
+     if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
+    }] remoteExecCall ["call"];
 
-	IF ((damage _unit) < 0.89) then {
+	 [_unit, _anim, _shans, _shooter] call Uncondition;
+
+};
+
+	IF (((damage _unit) < 0.89) or (vehicle _unit != _unit)) then {
 	 _unit setDamage ((damage _unit) + (damage _unit)*0.06);
 	 
 		IF (_shans == 10)  then {
@@ -131,18 +144,7 @@ _unit setVariable ["dam_player_lecitsebia0",false,true];
 	};
 	_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];
 
-IF ((alive _unit) && ((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
-	[_unit] remoteExecCall [ "removeAllActions", 0, true ];
-		_unit setVariable ["dam_ignore_injured0",true,true];	
-    remoteExecCall ["", PIRjipId];
-    [_unit, {
-     _ehId = _this getVariable ["hitPartEhId", -1];
-     if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
-    }] remoteExecCall ["call"];
 
-	 [_unit, _anim, _shans, _shooter] call Uncondition;
-
-};
 
 [{
 

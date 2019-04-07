@@ -8,6 +8,8 @@ IF !(PiR_captive_on) then {
 };
 
 _unit setVariable ["dam_ignore_injured0",false,true];
+_unit setVariable ["dam_ignore_effect0",false,true];
+_unit setVariable ["dam_player_lecitsebia0",false,true];
 
 IF  ((({"FirstAidKit" == _x} count (itemCargo _unit)) > 0) or (({"Medikit" == _x} count (itemCargo _unit)) > 0)) then {
  _numberOfKits = {"FirstAidKit" == _x} count (itemCargo _unit);

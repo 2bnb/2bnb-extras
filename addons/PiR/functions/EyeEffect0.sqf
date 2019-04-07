@@ -8,20 +8,22 @@ IF !(_unit getVariable ["dam_player_lecitsebiaKR0",false]) then {
 
 
 _effect1 = ppEffectCreate ["ChromAberration", 200]; 
- 
-_effect1 ppeffectenable true;
-
 _effect2 = ppEffectCreate ["RadialBlur", 100]; 
- 
-_effect2 ppeffectenable true; 
-
 _effect3 = ppEffectCreate ["ColorCorrections", 1500];  
   
-_effect3 ppeffectenable true; 
-
 _unit setVariable ["dam_player_lecitsebiaKR0",true,true];
 };
 
+
+IF (isPlayer _unit) then {
+_effect1 ppeffectenable true;
+_effect2 ppeffectenable true; 
+_effect3 ppeffectenable true; 
+} ELSE {
+_effect1 ppeffectenable false;
+_effect2 ppeffectenable false; 
+_effect3 ppeffectenable false; 
+};
 
 IF ((alive _unit) && !(_unit getVariable ["dam_player_lecitsebia0",false])) then {
 
@@ -91,7 +93,7 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
     true, 
     true, 
     "",
-    "(_this distance _target < 2) && !(_target getVariable ['dam_ignore_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) && (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0)) && (vehicle _target == _target)", // _target, _this, _originalTarget
+    "(_this distance _target < 2) && !(_target getVariable ['dam_ignore_injured0',false]) && !(_this getVariable ['dam_ignore_injured0',false]) && (vehicle _target == _target) && (vehicle _this == _this) && (({'PiR_bint' == _x} count (items _this) > 0) or ({'PiR_apteka' == _x} count (items _this) > 0))", // _target, _this, _originalTarget
     2,
     false,
     "",
@@ -129,9 +131,19 @@ _unit setVariable ["dam_player_lecitsebiaKR0",false,true];
 
 };
 
+IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
+	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
+		_unit setVariable ["dam_ignore_injured0",true,true];	
+    remoteExecCall ["", PIR0jipId];
+    [_unit, {
+     _ehId = _this getVariable ["hitPartEhId", -1];
+     if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
+    }] remoteExecCall ["call"];
+	 [_unit, _anim, _shans, _shooter] remoteExecCall [ "Uncondition0", 2 ];
 
+};
 
-	IF ((damage _unit) < 0.89) then {
+	IF (((damage _unit) < 0.89) or (vehicle _unit != _unit)) then {
 	 _unit setDamage ((damage _unit) + (damage _unit)*0.06);
 	 
 		IF (_shans == 10)  then {
@@ -170,22 +182,11 @@ _unit setVariable ["dam_player_lecitsebiaKR0",false,true];
 	};
 	_unit setVariable ["dam_zdorovie_lecit0", (damage _unit) ,true];	
 
-IF (((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore_injured0",false]) && (vehicle _unit == _unit)) then {
-	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
-		_unit setVariable ["dam_ignore_injured0",true,true];	
-    remoteExecCall ["", PIR0jipId];
-    [_unit, {
-     _ehId = _this getVariable ["hitPartEhId", -1];
-     if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
-    }] remoteExecCall ["call"];
-	 [_unit, _anim, _shans, _shooter] remoteExecCall [ "Uncondition0", 2 ];
 
-};
+		IF (isPlayer _unit) then {
 
-
-				10 cutRsc ["PIR_SCREEN_BLOOD","PLAIN",(5-5*(damage _unit))];
-
-
+		 10 cutRsc ["PIR_SCREEN_BLOOD","PLAIN",(5-5*(damage _unit))];
+		};
 
 //___________________________Абберация_____________________________________
 

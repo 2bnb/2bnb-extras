@@ -30,12 +30,16 @@ IF !(_unit getVariable ["dam_ignore_injured0",false]) then {
 		
 _shans = 8;
 					
-	if ((vehicle _unit != _unit) or (str (surfaceIsWater position _unit) == "true")) exitWith {
-	
+	iF ((vehicle _unit != _unit) or (str (surfaceIsWater position _unit) == "true")) exitWith {
+
 		IF !(_unit getVariable ["dam_ignore_effect0",false]) then {
 
-		 _unit setVariable ["dam_ignore_injured0",true,true];	
-		 [_unit, _anim, _shans, _shooter] call EyeEffect;
+			[{
+			 params ["_unit", "_shooter", "_shans", "_anim"];	
+
+			 _unit setVariable ["dam_ignore_injured0",true,true];	
+			 [_unit, _anim, _shans, _shooter] call EyeEffect;
+			}, [_unit, _shooter, _shans, _anim], 0.1] call CBA_fnc_waitAndExecute;		 
 		};
 	
 	};					

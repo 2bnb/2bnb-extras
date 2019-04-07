@@ -11,6 +11,10 @@ IF  (alive _unit) then {
 [_unit] remoteExecCall [ "removeAllActions", 0, true ];	
 _stanceu = 0;
 
+[{
+params [ "_unit", "_anim", "_shans", "_shooter", "_stanceu"];
+
+IF  (alive _unit) then {
 	IF ("STAND" == stance _unit )  then {
 	 [_unit,(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["playMove", 0];	
 	 _stanceu = 1;
@@ -29,7 +33,8 @@ _stanceu = 0;
 			};
 		};
 	};
-
+};	
+}, [_unit, _anim, _shans, _shooter, _stanceu], 0.1] call CBA_fnc_waitAndExecute;
 
 	[{(AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed") or (AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed2") or (AnimationState (_this select 0) == "AmovPpneMstpSrasWrflDnon_healed") or (!alive (_this select 0))
 	}, {

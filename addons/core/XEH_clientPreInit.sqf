@@ -70,7 +70,7 @@ private _bnb_e_settings = [
 	[
 		"bnb_e_sc_enable",
 		"CHECKBOX",
-		["Enable survivable crashes", "Tick to survivable crashes"],
+		["Enable survivable crashes", "Tick to enable survivable crashes"],
 		"2BNB Survivable crashes",
 		true,
 		true
@@ -78,17 +78,17 @@ private _bnb_e_settings = [
 	[
 		"bnb_e_sc_vehicles",
 		"EDITBOX",
-		["Vehicle classes", "vehicle classes in square brackets, with quotation marks seperated by ,"],
+		["Vehicle classes", "Vehicle classes in square brackets, with quotation marks seperated by ,"],
 		"2BNB Survivable crashes",
 		"[""Air""]",
 		true
 	],
 	[
 		"bnb_e_sc_damage",
-		"EDITBOX",
-		["Damage multiplier", "decimal from 0 to 1 ex 0.5"],
+		"SLIDER",
+		["Damage multiplier", "The amount of damage to apply to crashed player"],
 		"2BNB Survivable crashes",
-		"0.3",
+		[0, 1, 0.3, 1],
 		true
 	]
 ];

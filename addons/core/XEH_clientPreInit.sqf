@@ -6,8 +6,13 @@
 	[_position, _objectUnderCursor] call bnb_e_core_fnc_zeusAddContamAreaDialog;
 
 	// Log the parameters
-	systemChat str _position;
-	systemChat str _objectUnderCursor;
+	diag_log str _position;
+	diag_log str _objectUnderCursor;
+}] call Ares_fnc_RegisterCustomModule;
+
+["2BNB Modules", "Export Recording Data",
+{
+	call bnb_e_core_fnc_exportOcapData;
 }] call Ares_fnc_RegisterCustomModule;
 
 private _bnb_e_settings = [

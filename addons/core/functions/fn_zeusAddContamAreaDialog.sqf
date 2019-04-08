@@ -19,10 +19,8 @@ Author:
 ---------------------------------------------------------------------------- */
 params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-private _dialogResult =
-[
-	"Add Contaminated Area",
-	[
+private _dialogResult = [
+	"Add Contaminated Area", [
 		// The last number is optional! If you want the first selection you can remove the number.
 		["Name of Area", "", "Zone_0"],
 		["Delete Area when Object Destroyed (Only if placed on an object)", ["No", "Yes"], 1],

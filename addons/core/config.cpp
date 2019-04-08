@@ -16,6 +16,7 @@ class CfgFunctions {
 		class functions {
 			file="\x\bnb_e\core\functions";
 			class zeusAddContamAreaDialog {};
+			class exportOcapData {};
 		};
 
 		class utilities {

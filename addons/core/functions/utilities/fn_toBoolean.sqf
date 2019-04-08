@@ -11,7 +11,7 @@ Returns:
 	Result of the cast <BOOLEAN>
 
 Examples:
-	[_number] call bnb_e_core_toBoolean;
+	[_number] call bnb_e_core_fnc_toBoolean;
 
 Author:
 	Arend

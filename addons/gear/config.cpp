@@ -29,7 +29,7 @@ class cfgWeapons
 	scope = 2;
 	displayName = "Adidas Uniform";
 	author = "Ford";
-	picture = "\gear\data\adidass.paa";
+	picture = "\x\bnb_e\gear\data\adidass.paa";
 
 
 	   class ItemInfo : UniformItem {
@@ -46,10 +46,10 @@ class cfgWeapons
 		scope = 2;
 		displayName = "Adidas Light Vest";
 		allowedSlots[] = {901}; // This means the vest can be put into a backpack.
-		picture = "\gear\data\adidass.paa";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\gear\data\adidasV.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidasV.paa"};
 		class ItemInfo: VestItem
 		{
 			uniformModel = "\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
@@ -103,10 +103,10 @@ class cfgWeapons
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas Berret";
-		picture = "\gear\data\adidass.paa";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\gear\data\adidasB.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\adidasB.paa" };
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
 		class ItemInfo: HeadgearItem
@@ -134,17 +134,17 @@ class cfgWeapons
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas Helmet";
-		picture = "\gear\data\adidass.paa";
-		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
+		model = "\rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\rhs_altyn_visordown";
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
 		//hiddenSelections[] = { "camo" };
-		//hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\gear\head\data\gay.paa"};
+		//hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\data\gay.paa"};
 
 		class ItemInfo: HeadgearItem
 		{
 			mass = 10;
-			uniformModel = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
+			uniformModel = "\rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\rhs_altyn_visordown";
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 
@@ -165,10 +165,10 @@ class cfgWeapons
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas BerretX";
-		picture = "\gear\data\adidass.paa";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\gear\data\adidasB.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\adidasB.paa" };
 		class ItemInfo: ItemInfo
 		{
 			class HitpointsProtectionInfo:HitpointsProtectionInfo
@@ -1345,8 +1345,8 @@ class CfgGlasses
 		ACE_Protection = 1;
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 		};
-	
-	
+
+
 	/*
 	class CUP_arifle_AK101;
 	class Adidas_AK:CUP_arifle_AK101
@@ -1377,7 +1377,7 @@ class CfgVehicles
 		nakedUniform = "U_BasicBody";
 		uniformClass = "Adidas_Uniform";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\gear\data\adidas.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidas.paa"};
 
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		side = 1;

@@ -3,11 +3,7 @@
 	// Array of position AGLS, ObjNull or the object under the module as it's placed
 	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-	[_position, _objectUnderCursor] call bnb_e_core_fnc_zeusAddContamAreaDialog;
-
-	// Log the parameters
-	diag_log str _position;
-	diag_log str _objectUnderCursor;
+	[_position, _objectUnderCursor] call bnb_e_core_fnc_addContaminationArea;
 }] call Ares_fnc_RegisterCustomModule;
 
 ["2BNB Modules", "Export Recording Data",

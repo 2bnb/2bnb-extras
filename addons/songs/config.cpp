@@ -196,7 +196,7 @@ class CfgMusic {
 		theme = "other";
 		duration = 257;
 		title = "Seven Nation Army";
-		artist = "Gltich Mob";
+		artist = "Glitch Mob";
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_speedy_speed_boy {

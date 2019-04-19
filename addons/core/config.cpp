@@ -13,9 +13,9 @@ class CfgPatches {
 
 class CfgFunctions {
 	class bnb_e_core {
-		class functions {
-			file="\x\bnb_e\core\functions";
-			class zeusAddContamAreaDialog {};
+		class zeus_modules {
+			file="\x\bnb_e\core\functions\zeus_modules";
+			class addContaminationArea {};
 			class exportOcapData {};
 		};
 
@@ -32,23 +32,16 @@ class Extended_PreInit_EventHandlers {
 	};
 };
 
-class Extended_PostInit_EventHandlers
-{
-	class bnb_e_survivable_crashes
-	{
+class Extended_PostInit_EventHandlers {
+	class bnb_e_survivable_crashes {
 		init="call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
 	};
 };
 
-class cfgWeapons
-{
+class cfgWeapons {
 	class ACE_ItemCore;
 	class CBA_MiscItem_ItemInfo;
-	class tfw_rf3080Item: ACE_ItemCore
-	{
-		class ItemInfo: CBA_MiscItem_ItemInfo
-		{
-		};
-
+	class tfw_rf3080Item: ACE_ItemCore {
+		class ItemInfo: CBA_MiscItem_ItemInfo {};
 	};
 };

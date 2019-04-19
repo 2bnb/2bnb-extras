@@ -1,8 +1,8 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_core_fnc_zeusAddContamAreaDialog
+Function: bnb_e_core_fnc_addContaminationArea
 
 Description:
-	Casts any Number or String to Boolean
+	Adds contamination area
 
 Parameters:
 	0: _position - of the module <ARRAY>
@@ -12,7 +12,7 @@ Returns:
 	Nothing
 
 Examples:
-	[_position, _objectUnderCursor] call bnb_e_core_fnc_zeusAddContamAreaDialog;
+	[_position, _objectUnderCursor] call bnb_e_core_fnc_addContaminationArea;
 
 Author:
 	Arend

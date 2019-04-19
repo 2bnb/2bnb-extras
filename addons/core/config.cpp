@@ -3,7 +3,13 @@ class CfgPatches {
 		name = "2BNB Extras - Core";
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"achilles_modules_f_achilles","r0ed_SurvivableCrashes"};
+		requiredAddons[] = {
+			"achilles_modules_f_ares",
+			"achilles_ui_f",
+			"achilles_functions_f_achilles",
+			"achilles_functions_f_ares",
+			"r0ed_SurvivableCrashes"
+		};
 		author[] = {
 			"D. Ford",
 			"Arend"
@@ -15,6 +21,7 @@ class CfgFunctions {
 	class bnb_e_core {
 		class zeus_modules {
 			file="\x\bnb_e\core\functions\zeus_modules";
+			class addArsenal {};
 			class addContaminationArea {};
 			class exportOcapData {};
 		};

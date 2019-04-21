@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="bnb_e">
+	<Package name="admin_messages">
+		<Container name="gui">
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDBOXTITLEPLAYER">
+				<Original>MESSAGE ADMIN</Original>
+				<English>MESSAGE ADMIN</English>
+				<German>NACHRICHT AN ADMIN</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDBOXTITLEADMIN">
+				<Original>MESSAGE PLAYER</Original>
+				<English>MESSAGE PLAYER</English>
+				<German>NACHRICHT AN SPIELER</German>
+			</Key>
+            <Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDBOXBUTTON">
+                <Original>SEND</Original>
+				<English>SEND</English>
+				<German>SENDEN</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SELECTVALIDRECIP">
+                <Original>SELECT VALID RECIPIENT</Original>
+				<English>SELECT VALID RECIPIENT</English>
+				<German>EMPFÄNGER AUSWÄHLEN</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDTO">
+                <Original>SEND TO %1</Original>
+				<English>SEND TO %1</English>
+				<German>SENDEN AN %1</German>
+			</Key>
+		</Container>
+		<Container name="listbox">
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_LATESTCONVOS">
+                <Original>LATEST CONVERSATIONS</Original>
+				<English>LATEST CONVERSATIONS</English>
+				<German>AKTUELLE GESPRÄCHE</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_BYCATEGORY">
+                <Original>CATEGORIES</Original>
+				<English>CATEGORIES</English>
+				<German>KATEGORIEN</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_EVERYONE">
+                <Original>EVERYONE</Original>
+				<English>EVERYONE</English>
+				<German>ALLE</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_OTHERADMINS">
+                <Original>OTHER ADMINS AND ZEUS</Original>
+				<English>OTHER ADMINS AND ZEUS</English>
+				<German>ANDERE ADMINS UND ZEUSE</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_BYPLAYER">
+                <Original>PLAYERS</Original>
+				<English>PLAYERS</English>
+				<German>SPIELER</German>
+			</Key>
+		</Container>
+        <Container name="functions">
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDCONFIRM">
+				<Original>Message sent.</Original>
+				<English>Message sent.</English>
+				<German>Nachricht gesendet.</German>
+			</Key>
+			<Key ID="STR_bnb_e_ADMIN_MESSAGES_SENDCONFIRM_CHANNEL">
+                <Original>Adminmessage:</Original>
+				<English>Adminmessage:</English>
+				<German>Adminnachricht:</German>
+			</Key>
+            <Key ID="STR_bnb_e_ADMIN_MESSAGES_RECEIVE_CHANNEL">
+                <Original>Adminmessage (%1):</Original>
+				<English>Adminmessage (%1):</English>
+				<German>Adminnachricht (%1):</German>
+			</Key>
+		</Container>
+	</Package>
+</Project>

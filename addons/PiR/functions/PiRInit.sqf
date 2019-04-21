@@ -21,7 +21,7 @@
 ["PiR_dropM_on", "SLIDER", ["STR_Turn_on_dropM", "STR_Turn_on_drop_backM"], "STR_PIR",[5, 260, 65, 0], true] call cba_settings_fnc_init;
 ["PiR_dragger_on", "SLIDER", ["STR_Turn_on_dragger", "STR_Turn_on_dragger_back"], "STR_PIR",[10, 600, 60, 0], true] call cba_settings_fnc_init;
 
-
+EyeEffect = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffect.sqf";
 EyeEffect0 = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffect0.sqf";
 PiRredirect = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect.sqf";
 PiRredirect0 = compile preprocessfilelinenumbers "\PiR\Functions\PiRredirect0.sqf";
@@ -36,7 +36,8 @@ CrawlAnim0 = compile preprocessfilelinenumbers "\PiR\Functions\CrawlAnim0.sqf";
 UnconditionFind = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionFind.sqf";
 UnconditionFind0 = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionFind0.sqf";
 UnconditionHill = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionHill.sqf";
-
+EyeEffectMedic = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffectMedic.sqf";
+EyeEffectMedic0 = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffectMedic0.sqf";
 
 Uncondition = compile preprocessfilelinenumbers "\PiR\Functions\Uncondition.sqf";
 Crawl = compile preprocessfilelinenumbers "\PiR\Functions\Crawl.sqf";
@@ -44,7 +45,6 @@ DropWeapon = compile preprocessfilelinenumbers "\PiR\Functions\DropWeapon.sqf";
 Helmet = compile preprocessfilelinenumbers "\PiR\Functions\Helmet.sqf";
 BendsDown = compile preprocessfilelinenumbers "\PiR\Functions\BendsDown.sqf";
 UnconditionAnim = compile preprocessfilelinenumbers "\PiR\Functions\UnconditionAnim.sqf";
-EyeEffect = compile preprocessfilelinenumbers "\PiR\Functions\EyeEffect.sqf";
 PiR = compile preprocessfilelinenumbers "\PiR\Functions\PiR.sqf";
 
 
@@ -58,7 +58,7 @@ UnconditionDrag0 = compile preprocessfilelinenumbers "\PiR\Functions\Uncondition
 PiR0 = compile preprocessfilelinenumbers "\PiR\Functions\PiR0.sqf";
 
 
-[{call PiRstart;}, [], 5] call CBA_fnc_waitAndExecute;
+[{call PiRstart;}, [], 6] call CBA_fnc_waitAndExecute;
 
 };
 

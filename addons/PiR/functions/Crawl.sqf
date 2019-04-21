@@ -1,6 +1,6 @@
 if (!isServer) exitWith {}; 
 
-params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];    
+params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];    
 
 IF  (alive _unit) then {
 
@@ -33,32 +33,37 @@ _binocs = binocular _unit;
 
 [{(AnimationState (_this select 0) == "UnconsciousReviveDefault") or (!alive (_this select 0))
 }, {	
-params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 
 	IF (alive _unit) then {
 	 _udalenie = 1;
 
-	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
-	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
-	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];
+	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", _unit];
+	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", _unit];		 
+	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", _unit];		 
+	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", _unit];
 		 
- 	 _magsremove = magazines _unit;
-	 {_unit removeMagazineGlobal _x} forEach magazines _unit;
+	 _magsremoveU = getMagazineCargo uniformContainer _unit;
+	 _magsremoveV = getMagazineCargo vestContainer _unit;
+	 _magsremoveB = getMagazineCargo backpackContainer _unit;
+
+	 clearMagazineCargoGlobal (uniformContainer _unit); 
+	 clearMagazineCargoGlobal (vestContainer _unit);
+	 clearMagazineCargoGlobal (backpackContainer _unit);
 
 	 [ _unit, false ] remoteExecCall [ "setUnconscious", _unit ];
 	 [_unit,"UnconsciousOutProne"] remoteExecCall ["switchMove", 0];
 	};
 
 	[{		
-	 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+	 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 
 		IF (alive _unit) then {
 		 [_unit, "ApanPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 		};
 
 		[{		
-		 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+		 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 			 
 			IF (alive _unit) then {
 		
@@ -78,7 +83,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 			};
 
 			[{		
-			 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+			 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 			 
 				IF (alive _unit) then {
 			 	 [ _unit, "DOWN" ] remoteExecCall [ "setUnitPos", _unit ];
@@ -140,7 +145,7 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 	 
 	 
 	 
-	 
+
 	 
 	 
 //________________________________________________________________________________________________________________________________	 
@@ -150,11 +155,13 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 
 				[{((_this select 0) getVariable ["dam_player_Crawl0",false]) or (!alive (_this select 0))
 				}, {	
-				 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+				 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 
 					 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 					 _unit setVariable ["dam_player_lecit0",false,true];
-					 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+					 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+					 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+					 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 
 					IF (alive _unit) then {
 
@@ -182,27 +189,27 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 								 _unit setdamage 1;
 
 									IF (_shans == 10)  then {
-									 _unit setHitPointDamage ["hitBody", 0];
-									 _unit setHitPointDamage ["hitHands", 0];
-									 _unit setHitPointDamage ["hitLegs", 0];
+									 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 									};
 
 									IF ((_shans == 7) or (_shans == 9))  then {
-									 _unit setHitPointDamage ["hitHead", 0];
-									 _unit setHitPointDamage ["hitHands", 0];
-									 _unit setHitPointDamage ["hitLegs", 0];
+									 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 									};
 
 									IF ((_shans == 1) or (_shans == 3)) then {
-									 _unit setHitPointDamage ["hitHead", 0];
-									 _unit setHitPointDamage ["hitBody", 0];
-									 _unit setHitPointDamage ["hitLegs", 0];
+									 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 									};
 
 									IF ((_shans == 2) or (_shans == 4) or (_shans == 6)) then {
-									 _unit setHitPointDamage ["hitHead", 0];
-									 _unit setHitPointDamage ["hitBody", 0];
-									 _unit setHitPointDamage ["hitHands", 0];
+									 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+									 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 									};
 	 
 								 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -254,10 +261,10 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 
 					[{!((_this select 0) getVariable ["dam_player_Crawl0",false]) or (!alive (_this select 0))
 					}, {
-					 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+					 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 					 _unit setVariable ["dam_player_Crawl0",false,true];
 						[{	
-						 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr"];
+						 params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_unitStance", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs", "_udalenie", "_unitLdr", "_magsremoveV", "_magsremoveB"];
 
 							IF (_udalenie == 1) then {
 
@@ -265,28 +272,28 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 									IF ((_smag select 0) != "") then {
 									 _unit addMagazine [(_smag select 0), 9999];
 									};	
-								 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
-								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
+								 [_unit, _sWeapon] remoteExecCall ["addWeapon", _unit];
+								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _sWItems;
 								};
 	
 								IF (_pWeapon != "") then {
 									IF ((_pmag select 0) != "") then {
 									 _unit addMagazine [(_pmag select 0), 9999];
 									};
-								 [_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
-								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
+								 [_unit, _pWeapon] remoteExecCall ["addWeapon", _unit];
+								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _pWItems;
 								};
 
 								IF (_hWeapon != "") then {
 									IF ((_hmag select 0) != "") then {
 									 _unit addMagazine [(_hmag select 0), 9999];
 									};
-								 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
-								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
+								 [_unit, _hWeapon] remoteExecCall ["addWeapon", _unit];
+								 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _hWItems;
 								};
 
 								IF (_binocs != "") then {
-								 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
+								 [_unit, _binocs] remoteExecCall ["addWeapon",_unit];
 								};
 							};	
 
@@ -297,13 +304,13 @@ params ["_unit", "_anim", "_shans", "_shooter", "_unitGrp", "_unitGrpPR", "_pWea
 								 [ _unit, false ] remoteExecCall [ "setcaptive", _unit ];
 								};
 							};
-						}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 2] call CBA_fnc_waitAndExecute;	
-					}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr]] call CBA_fnc_waitUntilAndExecute;	
-				}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr]] call CBA_fnc_waitUntilAndExecute;	
-			}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 2] call CBA_fnc_waitAndExecute;	
-		}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 2] call CBA_fnc_waitAndExecute;	
-	}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr], 5.033] call CBA_fnc_waitAndExecute; 
-}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr]] call CBA_fnc_waitUntilAndExecute;
+						}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB], 2] call CBA_fnc_waitAndExecute;	
+					}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;	
+				}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;	
+			}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB], 2] call CBA_fnc_waitAndExecute;	
+		}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB], 2] call CBA_fnc_waitAndExecute;	
+	}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB], 5.033] call CBA_fnc_waitAndExecute; 
+}, [_unit, _anim, _shans, _shooter, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _unitStance, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _udalenie, _unitLdr, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
 
 
 

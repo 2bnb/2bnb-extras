@@ -1,6 +1,6 @@
 if (!isServer) exitWith {};
 	 
-params ["_unitP", "_numberOfKits", "_numberOfItems", "_units"];
+params ["_unitP", "_numberOfKits", "_numberOfKitsU", "_numberOfKitsV", "_numberOfKitsB", "_numberOfItems", "_units"];
 
 //Добавляем  юнитам отслеживание попадания
 _units = [];
@@ -10,28 +10,68 @@ _units pushBack _x;
 _unitP = _x;
 
 IF  (PiR_injuriplayer_on) then {
+
  _numberOfKits = {"FirstAidKit" == _x} count (itemCargo _unitP);
 
 	IF (_numberOfKits > 0) then {
-	 _numberOfItems = itemCargo _unitP;
-	 _numberOfItems = _numberOfItems - ["FirstAidKit"]; 
-	 [_unitP, "FirstAidKit"] remoteExec ["removeItems", 0];
-	 clearItemCargoGlobal _unitP;
-		{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
-	 _unitP addItemCargoGlobal ["PiR_bint", _numberOfKits]; 
-		for "_i" from 1 to _numberOfKits do { _unitP addItem "PiR_bint"};
+	
+		IF  (_unitP isKindOf "Man") then {
+		 _numberOfKitsU = {"FirstAidKit" == _x} count (uniformItems _unitP);
+		 _numberOfKitsV = {"FirstAidKit" == _x} count (vestItems _unitP);
+		 _numberOfKitsB = {"FirstAidKit" == _x} count (backpackItems _unitP);
+
+		 [_unitP, "FirstAidKit"] remoteExec ["removeItems", 0];
+	 		 
+			IF (_numberOfKitsU > 0) then { 
+			 for "_i" from 1 to _numberOfKitsU do { [ _unitP, "PiR_bint"] remoteExecCall [ "addItemToUniform", _unitP ]};
+
+			};
+			IF (_numberOfKitsV > 0) then { 
+			 for "_i" from 1 to _numberOfKitsV do {[ _unitP, "PiR_bint"] remoteExecCall [ "addItemToVest", _unitP ]};
+
+			};
+			IF (_numberOfKitsB > 0) then { 
+			 for "_i" from 1 to _numberOfKitsB do {[ _unitP, "PiR_bint"] remoteExecCall [ "addItemToBackpack", _unitP ]};
+			
+			};
+
+		} ELSE {
+		 _numberOfItems = itemCargo _unitP;
+		 _numberOfItems = _numberOfItems - ["FirstAidKit"];
+		 clearItemCargoGlobal _unitP;
+		 {_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
+		 _unitP addItemCargoGlobal ["PiR_bint", _numberOfKits];
+
+		};
 	};
-
-	 _numberOfKits = {"Medikit" == _x} count (itemCargo _unitP);
-
+	
+ _numberOfKits = {"Medikit" == _x} count (itemCargo _unitP);	
+	
 	IF (_numberOfKits > 0) then {
-	 _numberOfItems = itemCargo _unitP;
-	 _numberOfItems = _numberOfItems - ["Medikit"]; 
-	 [_unitP, "Medikit"] remoteExec ["removeItems", 0];
-	 clearItemCargoGlobal _unitP;
-		{_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
-	 _unitP addItemCargoGlobal ["PiR_apteka", _numberOfKits]; 
-		for "_i" from 1 to _numberOfKits do { _unitP addItem "PiR_apteka"};
+	
+		IF  (_unitP isKindOf "Man") then {
+		 _numberOfKitsU = {"Medikit" == _x} count (uniformItems _unitP);
+		 _numberOfKitsV = {"Medikit" == _x} count (vestItems _unitP);
+		 _numberOfKitsB = {"Medikit" == _x} count (backpackItems _unitP);
+		 [_unitP, "Medikit"] remoteExec ["removeItems", 0];
+			IF (_numberOfKitsU > 0) then { 
+			 for "_i" from 1 to _numberOfKitsU do { [ _unitP, "PiR_apteka"] remoteExecCall [ "addItemToUniform", _unitP ]};
+			};
+			IF (_numberOfKitsV > 0) then { 
+			 for "_i" from 1 to _numberOfKitsV do {[ _unitP, "PiR_apteka"] remoteExecCall [ "addItemToVest", _unitP ]};
+			};
+			IF (_numberOfKitsB > 0) then { 
+			 for "_i" from 1 to _numberOfKitsB do {[ _unitP, "PiR_apteka"] remoteExecCall [ "addItemToBackpack", _unitP ]};
+			};
+
+		} ELSE {
+		 _numberOfItems = itemCargo _unitP;
+		 _numberOfItems = _numberOfItems - ["Medikit"];
+		 clearItemCargoGlobal _unitP;
+		 {_unitP addItemCargoGlobal [_x, 1]} forEach _numberOfItems;
+		 _unitP addItemCargoGlobal ["PiR_apteka", _numberOfKits];
+
+		};
 	};
 };	
 	

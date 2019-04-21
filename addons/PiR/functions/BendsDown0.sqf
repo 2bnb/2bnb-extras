@@ -13,6 +13,14 @@ _stanceu = 0;
 _shar = "Land_Shar_Prozrachniy" createVehicle [0,0,0];
 _shar hideObjectGlobal true;
 _shar setPos (_unit modelToWorld [0,0,0]);
+	IF ("STAND" == stance _unit )  then {
+	 _stanceu = 1;
+	};
+	IF ("CROUCH" == stance _unit ) then {
+	 _stanceu = 2;
+	};
+
+
 [{
 params [ "_unit", "_anim", "_shans", "_shooter", "_stanceu", "_shar"];
 
@@ -22,10 +30,8 @@ IF  (alive _unit) then {
 
 	IF ("STAND" == stance _unit )  then {
 	 [_unit,(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["playMove", 0];	
-	 _stanceu = 1;
 	} ELSE {
 		IF ("CROUCH" == stance _unit ) then {
-		 _stanceu = 2;
 		 [_unit,"AmovPknlMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon"] remoteExecCall ["switchMove", 0];		
 		 [{[(_this select 0),(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["switchMove", 0];}, [_unit], 0.76] call CBA_fnc_waitAndExecute;
 		} ELSE {
@@ -82,12 +88,12 @@ IF  (alive _unit) then {
 						[{
 						 params [ "_unit", "_anim", "_shans", "_shooter"];
 						 [_unit, _anim, _shans, _shooter] call Crawl0;
-						}, [_unit, _anim, _shans, _shooter], 0.05] call CBA_fnc_waitAndExecute;
+						}, [_unit, _anim, _shans, _shooter], 0.08] call CBA_fnc_waitAndExecute;
 					} ELSE {	
 						[{
 						 params [ "_unit", "_anim", "_shans", "_shooter"];
 						 [_unit, _anim, _shans, _shooter] call Uncondition0;
-						}, [_unit, _anim, _shans, _shooter], 0.05] call CBA_fnc_waitAndExecute;				  
+						}, [_unit, _anim, _shans, _shooter], 0.08] call CBA_fnc_waitAndExecute;				  
 					};
 
 				} ELSE {

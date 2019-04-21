@@ -1,6 +1,6 @@
 if (!isServer) exitWith {}; 
 
-params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 
 
@@ -15,7 +15,9 @@ IF (_unit getVariable ["dam_conec_istorii0",false]) exitWith {
 	 _unitGrp selectLeader _unit;
 	};
 	 
-{_unit addMagazine [_x, 9999]} forEach _magsremove;
+{(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+{(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+{(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 _unit setVariable ["dam_conec_istorii0",false,true];
 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -77,15 +79,17 @@ IF (alive _unit) then {
 };
 	IF ((_tashit != 1) && (alive _unit)) then {		
 		[{		
-		 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
-		 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;		
-		}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], 5] call CBA_fnc_waitAndExecute;
+		 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
+		 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;		
+		}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], 5] call CBA_fnc_waitAndExecute;
 	} else {
 //______________________________________________________________________________________
 
 
 	IF (!alive _unit) exitWith {
-	 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+	 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+	 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+	 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 	 _unit setVariable ["dam_conec_istorii0",false,true];
 	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 	 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -99,29 +103,31 @@ IF (alive _unit) then {
 	 _unit setDamage 1;
 
 		IF (_shans == 10)  then {
-		 _unit setHitPointDamage ["hitBody", 0];
-		 _unit setHitPointDamage ["hitHands", 0];
-		 _unit setHitPointDamage ["hitLegs", 0];
+		 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 		};
 
 		IF ((_shans == 7) or (_shans == 9))  then {
-		 _unit setHitPointDamage ["hitHead", 0];
-		 _unit setHitPointDamage ["hitHands", 0];
-		 _unit setHitPointDamage ["hitLegs", 0];
+		 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 		};
 
 		IF ((_shans == 1) or (_shans == 3)) then {
-		 _unit setHitPointDamage ["hitHead", 0];
-		 _unit setHitPointDamage ["hitBody", 0];
-		 _unit setHitPointDamage ["hitLegs", 0];
+		 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitLegs", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 		};
 
 		IF ((_shans == 2) or (_shans == 4) or (_shans == 6)) then {
-		 _unit setHitPointDamage ["hitHead", 0];
-		 _unit setHitPointDamage ["hitBody", 0];
-		 _unit setHitPointDamage ["hitHands", 0];
+		 [ _unit, ["hitHead", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitBody", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
+		 [ _unit, ["hitHands", 0]] remoteExecCall [ "setHitPointDamage", _unit ];
 		};
-	 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+	 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+	 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+	 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 	 _unit setVariable ["dam_conec_istorii0",false,true];
 	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 	 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -137,7 +143,9 @@ IF (alive _unit) then {
 		IF (_unit == _unitLdr) then {
 		 _unitGrp selectLeader _unit;
 		};
-	 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+	 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+	 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+	 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 	 _unit setVariable ["dam_conec_istorii0",false,true];
 	 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 	 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -166,18 +174,18 @@ IF (alive _unit) then {
 	 
 		[{(((_this select 7) distance (_this select 0) < 3) && ((((getPosatl (_this select 0)) select 2) - ((getPosatl (_this select 7)) select 2)) < 0.5)) or (!alive (_this select 0)) or (!alive (_this select 7)) or (time >= (_this select 17)) or ((_this select 7) getVariable ["dam_ignore_injured0",false]) or ((_this select 0) getVariable ["dam_conec_istorii0",false]) or ((_this select 0) getVariable ["dam_player_lecit0",false])
 		}, {	 
-		 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+		 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 			[{
-			 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+			 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 		
 				IF ((!alive _dragger) or (_dragger getVariable ["dam_ignore_injured0",false])) exitWith {
 				 _dragger setVariable ["dam_ignore_dragger0",false,true];
 				 	[{
-					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
-					 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;
-					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], (5 + (random 10))] call CBA_fnc_waitAndExecute;
+					 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;
+					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], (5 + (random 10))] call CBA_fnc_waitAndExecute;
 				}; 
 
 				IF ((!alive _unit) or (time >= _future) or (_unit getVariable ["dam_conec_istorii0",false]) or (_unit getVariable ["dam_player_lecit0",false])) exitWith {
@@ -186,10 +194,10 @@ IF (alive _unit) then {
 				 _dragger setVariable ["dam_ignore_dragger0",false,true];
 
 				 	[{
-					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 					
-					 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;
-					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], (5 + (random 10))] call CBA_fnc_waitAndExecute;
+					 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;
+					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], (5 + (random 10))] call CBA_fnc_waitAndExecute;
 				}; 
 
 			 _unit setVariable ["dam_player_lecit0",true,true];
@@ -251,7 +259,7 @@ IF (alive _unit) then {
 
 
 				[{
-				 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+				 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 				 [ _unit, (_unit getdir _dragger) ] remoteExecCall [ "setDir", _unit ];
 				 [_unit, "AinjPpneMrunSnonWnonDb_grab"] remoteExecCall ["switchMove", 0];
@@ -262,7 +270,7 @@ IF (alive _unit) then {
 
 					[{(AnimationState (_this select 7) == "amovpercmstpslowwrfldnon_acinpknlmwlkslowwrfldb_2") or (AnimationState (_this select 7) == "amovpercmstpsnonwnondnon_acinpknlmwlksnonwnondb_2") or (!alive (_this select 7)) or ((_this select 7) getVariable ["dam_ignore_injured0",false]) or (!alive (_this select 0))
 					}, {	 
-					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+					 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 				 
 						IF ((!alive _dragger) or (_dragger getVariable ["dam_ignore_injured0",false])) exitwith {	
 						 [ _dragger, "ANIM" ] remoteExecCall [ "enableAI", _dragger ];	
@@ -281,10 +289,10 @@ IF (alive _unit) then {
 							}, [_unit, _anim]] call CBA_fnc_waitUntilAndExecute;
 						 _statys = 1;
 						 	[{
-							 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+							 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
-							 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;
-							}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], (5 + (random 10))] call CBA_fnc_waitAndExecute;
+							 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;
+							}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], (5 + (random 10))] call CBA_fnc_waitAndExecute;
 						};
 
 						IF (!alive _unit) exitwith {
@@ -299,7 +307,9 @@ IF (alive _unit) then {
 						 [ _dragger, "AUTO" ] remoteExecCall [ "setUnitPos", _dragger ];
 						 _dragger setVariable ["dam_ignore_dragger0",false,true];
 						 _unit setVariable ["dam_player_lecit0",false,true];
-						 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+						 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+						 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+						 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 						 _unit setVariable ["dam_conec_istorii0",false,true];
 						 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 						 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -358,7 +368,7 @@ IF (alive _unit) then {
 
 						[{((_this select 5) distance (_this select 4) < 5) or (!alive (_this select 7)) or (!alive (_this select 0)) or ((_this select 7) getVariable ["dam_ignore_injured0",false]) or (time >= (_this select 17))
 						}, {	 
-						 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+						 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 							IF (_dummy distance _dummypos < 0.5) then {
 							 _pos = position _dummy;
@@ -368,7 +378,7 @@ IF (alive _unit) then {
 
 							[{((_this select 5) distance (_this select 4) < 5) or (!alive (_this select 7)) or (!alive (_this select 0)) or ((_this select 7) getVariable ["dam_ignore_injured0",false]) or (time >= (_this select 17)) or ((_this select 0) distance (_this select 7) > 1.5) or (AnimationState (_this select 7) != "acinpknlmwlksraswrfldb") or ((AnimationState (_this select 0) != "ainjppnemrunsnonwnondb") && (AnimationState (_this select 0) != "ainjppnemrunsnonwnondb_still"))
 							}, {	 
-							 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+							 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 //______________________________________________________________________________________
 		
 //__________________ Потаскун начинает лечение__________________________________________
@@ -402,10 +412,10 @@ IF (alive _unit) then {
 									 _statys = 1;
 									 
 										[{
-										 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+										 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
-										 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;
-										}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], (5 + (random 10))] call CBA_fnc_waitAndExecute;
+										 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;
+										}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], (5 + (random 10))] call CBA_fnc_waitAndExecute;
 									 };
 
 								} else {
@@ -426,7 +436,9 @@ IF (alive _unit) then {
 									 _unit setVariable ["dam_player_lecit0",false,true];
 
 										IF (true) exitwith {
-										 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+										 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+										 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+										 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 										 _unit setVariable ["dam_conec_istorii0",false,true];
 										 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 										 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -450,7 +462,7 @@ IF (alive _unit) then {
 										 [ _unit, true ] remoteExecCall [ "setUnconscious", _unit ];
 
 											[{
-											 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+											 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 											 _dis = 1;       
 											 _future = (time +  ((PiR_bloodhill_on) + random ((PiR_bloodhillM_on max PiR_bloodhill_on) - (PiR_bloodhill_on min PiR_bloodhillM_on))));
@@ -469,7 +481,7 @@ IF (alive _unit) then {
 
 												[{(!alive (_this select 7)) or (!alive (_this select 0)) or ((_this select 7) getVariable ["dam_ignore_injured0",false]) or (time >= (_this select 17))
 												}, {	 
-												 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+												 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
 
 													IF ((!alive _dragger) or (_dragger getVariable ["dam_ignore_injured0",false])) then {
@@ -494,10 +506,10 @@ IF (alive _unit) then {
 														 _statys = 1;
 														 
 														 	[{
-															 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremove"];
+															 params ["_unit", "_anim", "_shans", "_shooter", "_Pos", "_dummy", "_nearestunits", "_dragger", "_emptyHouse", "_nearesthouses", "_houseList", "_randomHouse", "_dis", "_randomSmoke", "_unitGrp", "_draggerGrp", "_ls", "_future", "_nearPlayers", "_isFriendly", "_bloodtime", "_tashit", "_statys", "_dummypos", "_unitGrpPR", "_pos0", "_dummyV", "_shooterV", "_unitLdr", "_magsremoveU", "_magsremoveV", "_magsremoveB"];
 
-															 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove] call UnconditionFind;
-															}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], (5 + (random 10))] call CBA_fnc_waitAndExecute;
+															 [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB] call UnconditionFind;
+															}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], (5 + (random 10))] call CBA_fnc_waitAndExecute;
 														};
 
 													} else {
@@ -528,7 +540,9 @@ IF (alive _unit) then {
 
 														IF (true) exitwith {
 														 _unit setVariable ["dam_conec_istorii0",true,true];
-														 {_unit addMagazine [_x, 9999]} forEach _magsremove;
+														 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+														 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+														 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);
 														 _unit setVariable ["dam_conec_istorii0",false,true];
 														 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
 														 _unit setVariable ["dam_ignore_injured0",false,true];
@@ -538,17 +552,17 @@ IF (alive _unit) then {
 															};
 														};
 													};
-												}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove]] call CBA_fnc_waitUntilAndExecute;
-											}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], 4] call CBA_fnc_waitAndExecute;
+												}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
+											}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], 4] call CBA_fnc_waitAndExecute;
 										};
 									};
 								};
-							}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove]] call CBA_fnc_waitUntilAndExecute;
-						}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove]] call CBA_fnc_waitUntilAndExecute;
-					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove]] call CBA_fnc_waitUntilAndExecute;	
-				}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], 0.4] call CBA_fnc_waitAndExecute; 
-			}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove], 1] call CBA_fnc_waitAndExecute; 
-		}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremove]] call CBA_fnc_waitUntilAndExecute;
+							}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
+						}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
+					}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;	
+				}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], 0.4] call CBA_fnc_waitAndExecute; 
+			}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB], 1] call CBA_fnc_waitAndExecute; 
+		}, [_unit, _anim, _shans, _shooter, _Pos, _dummy, _nearestunits, _dragger, _emptyHouse, _nearesthouses, _houseList, _randomHouse, _dis, _randomSmoke, _unitGrp, _draggerGrp, _ls, _future, _nearPlayers, _isFriendly, _bloodtime, _tashit, _statys, _dummypos, _unitGrpPR, _pos0, _dummyV, _shooterV, _unitLdr, _magsremoveU, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
 	};	
 //______________________________________________________________________________________
 };

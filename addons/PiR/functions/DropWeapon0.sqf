@@ -1,6 +1,6 @@
 if (!isServer) exitWith {}; 
 
-params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];    
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_weapon", "_weaponHolder", "_weaponHolder0", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr", "_magsremoveV", "_magsremoveB"];    
 
 IF (alive _unit) then {
 
@@ -28,8 +28,13 @@ IF !(PiR_captive_on) then {
 	 
 	 _binocs = binocular _unit;	 
 	 
-	 _magsremove = magazines _unit;
-	 {_unit removeMagazineGlobal _x} forEach magazines _unit;
+	 _magsremoveU = getMagazineCargo uniformContainer _unit;
+	 _magsremoveV = getMagazineCargo vestContainer _unit;
+	 _magsremoveB = getMagazineCargo backpackContainer _unit;
+
+	 clearMagazineCargoGlobal (uniformContainer _unit); 
+	 clearMagazineCargoGlobal (vestContainer _unit);
+	 clearMagazineCargoGlobal (backpackContainer _unit);
 
 	 _weapon = currentWeapon _unit;      
 
@@ -82,6 +87,10 @@ IF !(PiR_captive_on) then {
 	 params ["_unit", "_ranpos"];
 	
 
+     [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", _unit];
+	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", _unit];		 
+	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", _unit];
+	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", _unit];
 
 		IF (alive _unit) then {
 			IF ("STAND" == stance _unit )  then {
@@ -114,7 +123,6 @@ IF !(PiR_captive_on) then {
 					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPercMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 2) then {
-					[_unit, ""] remoteExecCall ["switchMove", _unit];
 					[_unit, "ApanPpneMstpSnonWnonDnon_ApanPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];
 					};
 					IF (_ranpos == 3) then {
@@ -197,12 +205,10 @@ IF !(PiR_captive_on) then {
 	 
 	 
 		};
+
 	}, [_unit, _ranpos], 0.1] call CBA_fnc_waitAndExecute;
 
-	 [_unit, (primaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (secondaryWeapon _unit)] remoteExecCall ["removeWeapon", 0];		 
-	 [_unit, (handgunWeapon _unit)] remoteExecCall ["removeWeapon", 0];
-	 [_unit, (binocular _unit)] remoteExecCall ["removeWeapon", 0];	
+	
 
 	
  _dis = ((PiR_drop_on) + random ((PiR_dropM_on max PiR_drop_on) - (PiR_drop_on min PiR_dropM_on)));  
@@ -213,7 +219,7 @@ IF !(PiR_captive_on) then {
 		 
 [{((_this select 0) distance (_this select 12) >= (_this select 11)) or (!alive (_this select 0)) or (time >= (_this select 13)) or ((_this select 0) getVariable ['dam_player_lecit0',false])
 }, {		 
-params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"];		 
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_weapon", "_ranpos", "_dis", "_Pos", "_timer", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr", "_magsremoveV", "_magsremoveB"];		 
 		 
  
 			 [_unit] remoteExecCall [ "removeAllActions", 0, true ];
@@ -223,7 +229,7 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 [{
 
-params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_ranpos", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_weapon", "_ranpos", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr", "_magsremoveV", "_magsremoveB"]; 
 
 
 		IF (alive _unit) then {
@@ -234,7 +240,7 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 			 [_unit,"AmovPpneMstpSnonWnonDnon_AinvPpneMstpSnonWnonDnon"] remoteExecCall ["switchMove", 0];			 
 			 [_unit,"AmovPknlMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon"] remoteExecCall ["playMove", 0];
-			}, [_unit], 0.5] call CBA_fnc_waitAndExecute;	
+			}, [_unit], 1] call CBA_fnc_waitAndExecute;	
 
 		};
 
@@ -245,7 +251,7 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 
 [{
 
-params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremove", "_weapon", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr"]; 
+params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWeapon", "_hWeapon", "_magsremoveU", "_weapon", "_pWItems", "_sWItems", "_hWItems", "_pmag", "_smag", "_hmag", "_binocs","_unitLdr", "_magsremoveV", "_magsremoveB"]; 
 
 
 	 
@@ -254,18 +260,18 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			 };
-		 [_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		 [_unit, _pWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _pWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			}; 
-		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _hWItems;
 		};	
 		IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", _unit];
 		};
 	};
 	
@@ -274,18 +280,18 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 			IF ((_smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			};
-		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _sWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			};
-		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _hWItems;
 		};	
 		IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", _unit];
 		};
 	};
 	
@@ -294,18 +300,18 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 			IF ((_Smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			}; 
-		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _sWItems;
 		};
 		IF (_pWeapon != "") then {
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			};
-		[_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		[_unit, _pWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _pWItems;
 		};
 		 IF (_binocs != "") then {
-		 [_unit, _binocs] remoteExecCall ["addWeapon", 0];
+		 [_unit, _binocs] remoteExecCall ["addWeapon", _unit];
 		};	
 	};
 
@@ -314,27 +320,29 @@ params ["_unit", "_anim", "_shans", "_unitGrp", "_unitGrpPR", "_pWeapon", "_sWea
 			IF ((_smag select 0) != "") then {
 			 _unit addMagazine [(_smag select 0), 9999];
 			};
-		 [_unit, _sWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _sWItems;
+		 [_unit, _sWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _sWItems;
 		};
 		IF (_pWeapon != "") then {
 			IF ((_pmag select 0) != "") then {
 			 _unit addMagazine [(_pmag select 0), 9999];
 			};
-		 [_unit, _pWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _pWItems;
+		 [_unit, _pWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _pWItems;
 		};
 		IF (_hWeapon != "") then {
 			IF ((_hmag select 0) != "") then {
 			 _unit addMagazine [(_hmag select 0), 9999];
 			}; 
-		 [_unit, _hWeapon] remoteExecCall ["addWeapon", 0];
-		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", 0]} forEach _hWItems;
+		 [_unit, _hWeapon] remoteExecCall ["addWeapon", _unit];
+		 {[_unit, _x] remoteExecCall ["addprimaryWeaponItem", _unit]} forEach _hWItems;
 		};
 	};	
 
 
-	{_unit addMagazine [_x, 9999]} forEach _magsremove;	
+	 {(uniformContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveU select 1) select _forEachIndex)]} forEach (_magsremoveU select 0);
+	 {(vestContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveV select 1) select _forEachIndex)]} forEach (_magsremoveV select 0);
+	 {(backpackContainer _unit) addMagazineCargoGlobal [_x,  ((_magsremoveB select 1) select _forEachIndex)]} forEach (_magsremoveB select 0);	
 	
 
 	 [_unit] joinSilent _unitGrp;
@@ -359,10 +367,10 @@ IF !(PiR_captive_on) then {
 };
 
 
-}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr], 2] call CBA_fnc_waitAndExecute; 
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _weapon, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr, _magsremoveV, _magsremoveB], 2] call CBA_fnc_waitAndExecute; 
 
-}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _ranpos, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr], 0.5] call CBA_fnc_waitAndExecute; 
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _weapon, _ranpos, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr, _magsremoveV, _magsremoveB], 0.5] call CBA_fnc_waitAndExecute; 
 
-}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremove, _weapon, _ranpos, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr]] call CBA_fnc_waitUntilAndExecute;
+}, [_unit, _anim, _shans, _unitGrp, _unitGrpPR, _pWeapon, _sWeapon, _hWeapon, _magsremoveU, _weapon, _ranpos, _dis, _Pos, _timer, _pWItems, _sWItems, _hWItems, _pmag, _smag, _hmag, _binocs, _unitLdr, _magsremoveV, _magsremoveB]] call CBA_fnc_waitUntilAndExecute;
 
 };

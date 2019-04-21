@@ -1,8 +1,8 @@
-if (!isServer) exitWith {}; 
+
 params [ "_unit", "_anim", "_shans", "_shooter"];
 
 	 
-   
+if !(local _unit) exitWith {};
 
 IF ((alive _unit) && !(_unit getVariable ["dam_player_lecitsebia0",false])) then {
 
@@ -22,23 +22,7 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
 		
 		params ["_unit", "_dragger"];
 
-		IF (_unit == _dragger) then {
-
-			IF ("PRONE" == stance _dragger ) then {
-				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPpneMstpSlayWpstDnon_medic"] remoteExecCall ["playMove", 0];
-				} ELSE {
-				 [_dragger, "AinvPpneMstpSlayWnonDnon_medic"] remoteExecCall ["playMove", 0];
-				};	
-			} ELSE {
-				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
-				 [_dragger, "AinvPknlMstpSlayWpstDnon_medic"] remoteExecCall ["playMove", 0];
-				} ELSE {
-				 [_dragger, "AinvPknlMstpSlayWrflDnon_medic"] remoteExecCall ["playMove", 0];
-				};	
-			};
-
-		} ELSE {
+	 [ _unit, "Path"] remoteExecCall [ "disableAI", _unit ];
 
 			IF ("PRONE" == stance _dragger ) then {
 				IF ((currentWeapon _dragger) == (handgunWeapon _dragger)) then {
@@ -54,8 +38,52 @@ _unit setVariable ["dam_player_lecitsebia0",true,true];
 				};	
 			};		
 		
-		};
 
+			 [ _unit, "ANIM" ] remoteExecCall [ "disableAI", _unit ];
+
+				IF (currentWeapon _unit == handgunWeapon _unit) then {
+
+					IF ("STAND" == stance _unit )  then {
+					 [_unit,"AinvPercMstpSrasWpstDnon_G01"] remoteExecCall ["switchMove", 0];
+					} ELSE {
+
+						IF ("CROUCH" == stance _unit ) then {
+						 [_unit,"AinvPknlMstpSrasWpstDnon_G01"] remoteExecCall ["switchMove", 0];
+						} ELSE {
+
+							IF ("PRONE" == stance _unit ) then {
+							 [ _dragger, "DOWN"] remoteExecCall [ "setUnitPos", _dragger ];					
+							 [_unit,"AinvPpneMstpSrasWpstDnon_G01"] remoteExecCall ["switchMove", 0];
+							}; 
+						};
+					};
+
+				} ELSE {
+		
+					IF ("STAND" == stance _unit )  then {
+					 [_unit,"AinvPercMstpSrasWrflDnon_G01"] remoteExecCall ["switchMove", 0];
+
+					} ELSE {
+
+						IF ("CROUCH" == stance _unit ) then {
+						 [_unit,"AinvPknlMstpSrasWrflDnon_G01"] remoteExecCall ["switchMove", 0];
+
+						} ELSE {
+
+							IF ("PRONE" == stance _unit ) then {	
+							 [ _dragger, "DOWN"] remoteExecCall [ "setUnitPos", _dragger ];
+							 [_unit,"AinvPpneMstpSrasWrflDnon_G01"] remoteExecCall ["switchMove", 0];
+							}; 
+						};
+					};
+				};	
+				
+							[{
+							 params ["_unit"];
+							 [_unit, "ANIM" ] remoteExecCall [ "enableAI", _unit ];
+							 [ _unit, "Path"] remoteExecCall [ "enableAI", _unit ];
+							}, [_unit], 5] call CBA_fnc_waitAndExecute;				
+				
 		IF (({"PiR_apteka" == _x} count (items _dragger) == 0) && ({"Medikit" == _x} count (items _dragger) == 0)) then {
 		 _dragger removeItem "PiR_bint";
 		 _dragger removeItem "FirstAidKit";
@@ -101,7 +129,7 @@ IF ((alive _unit) && ((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore
      if (_ehId >= 0) then {_this removeEventHandler ["HitPart", _ehId];}
     }] remoteExecCall ["call"];
 
-	 [_unit, _anim, _shans, _shooter] call Uncondition;
+	 [_unit, _anim, _shans, _shooter] remoteExecCall [ "Uncondition", 2 ];
 
 };
 
@@ -110,34 +138,25 @@ IF ((alive _unit) && ((damage _unit) > 0.79) && !(_unit getVariable ["dam_ignore
 	 
 		IF (_shans == 10)  then {
 		 _unit setHitPointDamage ["hitBody", 0];
-
 		 _unit setHitPointDamage ["hitHands", 0];
-
 		 _unit setHitPointDamage ["hitLegs", 0];
 		};
 
-
 		IF ((_shans == 7) or (_shans == 9))  then {
 		 _unit setHitPointDamage ["hitHead", 0];
-
 		 _unit setHitPointDamage ["hitHands", 0];
-
 		 _unit setHitPointDamage ["hitLegs", 0];
 		};
 
 		IF ((_shans == 1) or (_shans == 3)) then {
 		 _unit setHitPointDamage ["hitHead", 0];
-
 		 _unit setHitPointDamage ["hitBody", 0];
-
 		 _unit setHitPointDamage ["hitLegs", 0];
 		};
 
 		IF ((_shans == 2) or (_shans == 4) or (_shans == 6)) then {
 		 _unit setHitPointDamage ["hitHead", 0];
-
 		 _unit setHitPointDamage ["hitBody", 0];
-
 		 _unit setHitPointDamage ["hitHands", 0];
 		};
 	 
@@ -170,6 +189,10 @@ IF ((alive _unit) && (damage _unit > 0.6) && ({"PiR_bint" == _x} count (items _u
 };
 
 
+IF ((alive _unit) && (damage _unit > 0.4) && ({"PiR_bint" == _x} count (items _unit) == 0) && (vehicle _unit == _unit) && !(_unit getVariable ["dam_player_lecitmedic0",false])) then {
+_unit setVariable ["dam_player_lecitmedic0",true,true];
+[_unit] remoteExecCall [ "EyeEffectMedic", 2 ];
+};
 
 
 
@@ -177,8 +200,6 @@ IF ((alive _unit) && (damage _unit > 0.6) && ({"PiR_bint" == _x} count (items _u
 //_____________________________________________________________________________________________________________________________________
 
 
-	
-[_unit, _anim, _shans, _shooter] call EyeEffect;		
- 
+	 [_unit, _anim, _shans, _shooter] call EyeEffect;		
  }, [_unit, _anim, _shans, _shooter], (6 - (random 3))] call CBA_fnc_waitAndExecute;
 

@@ -10,17 +10,21 @@ IF  (alive _unit) then {
 
 [_unit] remoteExecCall [ "removeAllActions", 0, true ];	
 _stanceu = 0;
+	IF ("STAND" == stance _unit )  then {
+	 _stanceu = 1;
+	};
+	IF ("CROUCH" == stance _unit ) then {
+	 _stanceu = 2;
+	};
 
 [{
-params [ "_unit", "_anim", "_shans", "_shooter", "_stanceu"];
+params [ "_unit", "_anim", "_shans", "_shooter"];
 
 IF  (alive _unit) then {
 	IF ("STAND" == stance _unit )  then {
 	 [_unit,(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["playMove", 0];	
-	 _stanceu = 1;
 	} ELSE {
 		IF ("CROUCH" == stance _unit ) then {
-		 _stanceu = 2;
 		 [_unit,"AmovPknlMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon"] remoteExecCall ["switchMove", 0];		
 		 [{[(_this select 0),(selectRandom ["AinvPknlMstpSlayWrflDnon_healed", "AinvPknlMstpSlayWrflDnon_healed2"])] remoteExecCall ["switchMove", 0];}, [_unit], 0.76] call CBA_fnc_waitAndExecute;
 		} ELSE {
@@ -34,7 +38,7 @@ IF  (alive _unit) then {
 		};
 	};
 };	
-}, [_unit, _anim, _shans, _shooter, _stanceu], 0.1] call CBA_fnc_waitAndExecute;
+}, [_unit, _anim, _shans, _shooter], 0.1] call CBA_fnc_waitAndExecute;
 
 	[{(AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed") or (AnimationState (_this select 0) == "AinvPknlMstpSlayWrflDnon_healed2") or (AnimationState (_this select 0) == "AmovPpneMstpSrasWrflDnon_healed") or (!alive (_this select 0))
 	}, {
@@ -68,12 +72,12 @@ IF  (alive _unit) then {
 						[{
 						 params [ "_unit", "_anim", "_shans", "_shooter"];
 						 [_unit, _anim, _shans, _shooter] call Crawl;
-						}, [_unit, _anim, _shans, _shooter], 0.05] call CBA_fnc_waitAndExecute;
+						}, [_unit, _anim, _shans, _shooter], 0.08] call CBA_fnc_waitAndExecute;
 					} ELSE {	
 						[{
 						 params [ "_unit", "_anim", "_shans", "_shooter"];
 						 [_unit, _anim, _shans, _shooter] call Uncondition;
-						}, [_unit, _anim, _shans, _shooter], 0.05] call CBA_fnc_waitAndExecute;			  
+						}, [_unit, _anim, _shans, _shooter], 0.08] call CBA_fnc_waitAndExecute;			  
 					};
 
 				} ELSE {

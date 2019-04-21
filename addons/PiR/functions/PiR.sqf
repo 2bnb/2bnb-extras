@@ -226,7 +226,7 @@ IF ((((damage _unit) - (_unit getVariable "dam_zdorovie_lecit0") ) > 0.04) && (_
 IF !(_unit getVariable ["dam_ignore_effect0",false]) then {
 
 	 _unit setVariable ["dam_ignore_effect0",true,true];	
-	 [_unit, _anim, _shans, _shooter] call EyeEffect;
+	 [_unit, _anim, _shans, _shooter ] remoteExecCall [ "EyeEffect", _unit ];
 	
 
 //__________________________________________________________________________________________________________________________

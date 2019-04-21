@@ -51,14 +51,13 @@ onEachFrame {
 			onEachFrame {
 				_ctrlServerList = findDisplay IDD_MULTIPLAYER displayCtrl IDC_MULTI_SESSIONS;
 
-				_exit = for "_i" from 0 to ((lbSize _ctrlServerList) - 1) do {
+				for "_i" from 0 to ((lbSize _ctrlServerList) - 1) do {
 					([_ctrlServerList lbText _i,_ctrlServerList lbData _i]) call {
 						params [["_serverName", ""], ["_serverData", ""]];
 
 						if (diag_tickTime > (bnb_e_directConnectStartTime + UI_DIRECTCONNECTTIMEOUT)) exitWith {
 							diag_log (format ["Direct connect on %1:%2 timed out", bnb_e_directConnectAddress, bnb_e_directConnectPort]);
 							onEachFrame {};
-							true;
 						};
 
 						if (_serverData isEqualTo format ["%1:%2", bnb_e_directConnectAddress, bnb_e_directConnectPort]) exitWith {
@@ -91,14 +90,8 @@ onEachFrame {
 									};
 								};
 							};
-
-							true;
 						};
-
-						false;
 					};
-
-					if (_exit) exitWith {};
 				};
 			};
 		};

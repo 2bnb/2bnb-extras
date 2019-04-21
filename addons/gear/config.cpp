@@ -135,7 +135,7 @@ class cfgWeapons
 		scope = 2;
 		displayName = "Adidas Helmet";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
-		model = "\rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\rhs_altyn_visordown";
+		model = "\x\bnb_e\gear\head\rhs_altyn_visordown";
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
 		//hiddenSelections[] = { "camo" };
@@ -144,7 +144,7 @@ class cfgWeapons
 		class ItemInfo: HeadgearItem
 		{
 			mass = 10;
-			uniformModel = "\rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\rhs_altyn_visordown";
+			uniformModel = "\x\bnb_e\gear\head\rhs_altyn_visordown";
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 

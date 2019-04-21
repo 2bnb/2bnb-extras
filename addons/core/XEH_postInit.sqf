@@ -1,10 +1,12 @@
-[	bnb_e_sc_enable,
-	true,
-	true,
-	true,
-	"ACE",
-	bnb_e_sc_damage,
-	call compile (bnb_e_sc_vehicles),
+if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) exitWith {};
+
+[	bnb_e_sc_enable,  // Mod Enabled
+	true,   //VFX
+	true,   //SFX
+	true,   // Exag FX
+	"AUTO", // Med Sys
+	bnb_e_sc_damage,      // dmg Multi
+	["Air"],// Veh whitelist
 	{},     // On Crash Code
 	{},     // crew Post Crash code
 	{       // veh post crash code
@@ -14,3 +16,4 @@
 		_veh setDamage 1;
 	}
 ] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
+

@@ -30,18 +30,23 @@ class CfgFunctions {
 			file="\x\bnb_e\core\functions\utilities";
 			class toBoolean {};
 		};
+
+		class direct_connect {
+			file="\x\bnb_e\core\functions\direct_connect";
+			class connectToServer {};
+		};
 	};
 };
 
 class Extended_PreInit_EventHandlers {
 	class bnb_e_zeus_modules {
-        init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf';";
+        init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers {
 	class bnb_e_survivable_crashes {
-		init="call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
 	};
 };
 
@@ -51,4 +56,8 @@ class cfgWeapons {
 	class tfw_rf3080Item: ACE_ItemCore {
 		class ItemInfo: CBA_MiscItem_ItemInfo {};
 	};
+};
+
+class CfgMainMenuSpotlight {
+	#include "connectionData.hpp";
 };

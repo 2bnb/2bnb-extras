@@ -8,3 +8,4 @@ archives/
 *.log
 .build/
 .builds/
+addons/core/connectionData.hpp

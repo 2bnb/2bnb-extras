@@ -39,17 +39,18 @@ class CfgFunctions {
 };
 
 class Extended_PreInit_EventHandlers {
-	class bnb_e_zeus_modules {
-        init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_clientPreInit.sqf'";
+	class bnb_e_core_preInit {
+        init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_preInit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers {
-	class bnb_e_survivable_crashes {
+	class bnb_e_core_postInit {
 		init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_postInit.sqf'";
 	};
 };
 
+// Fix to register ILBE Satcom as a placeable item
 class cfgWeapons {
 	class ACE_ItemCore;
 	class CBA_MiscItem_ItemInfo;
@@ -58,6 +59,7 @@ class cfgWeapons {
 	};
 };
 
+// Add server direct connect tiles
 class CfgMainMenuSpotlight {
 	#include "connectionData.hpp";
 };

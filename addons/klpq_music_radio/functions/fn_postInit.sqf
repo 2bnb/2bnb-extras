@@ -122,6 +122,57 @@ if (!klpq_musicRadio_enable) exitWith {};
 
     klpq_musicRadio_startRadioSongs = (_allMusic select {(configName _x) in klpq_musicRadio_startRadioSongs});
 
+    private _ticker = 0;
+    private _shuffledMusicArray = [_musicArray, 4 * count _musicArray] call KK_fnc_arrayShufflePlus;
+    _shuffledMusicArray = klpq_musicRadio_startRadioSongs + _shuffledMusicArray;
+    private _musicIndex = 0;
+    while {true} do {
+        // If playNext/playPrevious has been invoked, play next or previous song
+        // If song playtime is greater than song duration, play next song
+            // Save klpq_musicRadio_nowPlaying to previousSong
+            // If shuffledMusicArray has no more music, re-randomise
+        // Add a second to the ticker
+        // Wait for a second before next loop
+
+        // if (klpq_musicRadio_playPrevious) then {
+        //     klpq_musicRadio_playPrevious = false;
+
+        //     if (klpq_musicRadio_previouslyPlayed == "") exitWith {
+        //     	["No previously played music found!", "klpq_music_radio\fn_postInit.sqf"] call bnb_e_core_fnc_log;
+        //     };
+
+        //     klpq_musicRadio_nowPlaying = klpq_musicRadio_previouslyPlayed;
+        //     _musicIndex =+ 1;
+        // };
+
+        // if (klpq_musicRadio_playNext) then {
+        // 	klpq_musicRadio_playNext = false;
+
+
+        //     if (count _shuffledMusicArray <= _musicIndex) then {
+        //     	["Re-shuffling songs!", "klpq_music_radio\fn_postInit.sqf"] call bnb_e_core_fnc_log;
+        //         _shuffledMusicArray = [_musicArray, 4 * count _musicArray] call KK_fnc_arrayShufflePlus;
+        //         _shuffledMusicArray = klpq_musicRadio_startRadioSongs + _shuffledMusicArray;
+        //         _musicIndex = 0;
+        //     };
+
+        //     klpq_musicRadio_nowPlaying = _musicIndex + 1;
+        // }
+
+
+        if (_songDuration < _durationPlayed) then {
+	    	klpq_musicRadio_previouslyPlayed = klpq_musicRadio_nowPlaying;
+	    	klpq_musicRadio_nowPlaying = _shuffledMusicArray select _musicIndex;
+        	klpq_musicRadio_timeStarted = CBA_missionTime;
+
+            publicVariable "klpq_musicRadio_nowPlaying";
+        	publicVariable "klpq_musicRadio_timeStarted";
+        };
+
+        _ticker =+ 1;
+        sleep 1;
+    };
+
     while {true} do {
         private _shuffledMusicArray = [_musicArray, 4 * count _musicArray] call KK_fnc_arrayShufflePlus;
         _shuffledMusicArray = klpq_musicRadio_startRadioSongs + _shuffledMusicArray;

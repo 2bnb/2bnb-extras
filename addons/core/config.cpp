@@ -29,6 +29,7 @@ class CfgFunctions {
 		class utilities {
 			file="\x\bnb_e\core\functions\utilities";
 			class toBoolean {};
+			class log {};
 		};
 
 		class direct_connect {

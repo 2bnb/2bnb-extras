@@ -21,6 +21,13 @@
 
 private _bnb_e_settings = [
 	[
+		"bnb_e_debug",
+		"CHECKBOX",
+		["Enable Debug", "Tick enable 2BNB debug messages to appear in RPT and systemChat"],
+		"2BNB Utilities",
+		false
+	],
+	[
 		"bnb_e_contam_aiDamage",
 		"CHECKBOX",
 		["Enable AI Damage", "Tick for AI to take damage from contamination areas"],
@@ -118,7 +125,7 @@ private _headArr = [];
 		_headArr pushBackUnique _x;
 	} else
 	{
-		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 	};
 } forEach _head;
 missionNamespace setVariable ["JSHK_contam_headgear",_headArr];
@@ -134,7 +141,7 @@ private _allMasks = [];
 			_allMasks pushBackUnique _x;
 		} else
 		{
-			[format ["fn_moduleMask: Mask classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+			[format ["fn_moduleMask: Mask classname provided does not exist: %1",_x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 		};
 	} forEach _arr;
 } forEach [_masks50];
@@ -151,7 +158,7 @@ private _uniArr = [];
 		_uniArr pushBackUnique _x;
 	} else
 	{
-		[format ["fn_moduleSettingsValues: Uniform classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+		[format ["fn_moduleSettingsValues: Uniform classname provided does not exist: %1",_x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 	};
 } forEach _uni;
 missionNamespace setVariable ["JSHK_contam_uniforms",_uniArr];
@@ -164,7 +171,7 @@ private _vestArr = [];
 		_vestArr pushBackUnique _x;
 	} else
 	{
-		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+		[format ["fn_moduleSettingsValues: Vest classname provided does not exist: %1",_x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 	};
 } forEach _vests;
 missionNamespace setVariable ["JSHK_contam_vests",_vestArr];
@@ -174,17 +181,17 @@ missionNamespace setVariable ["JSHK_contam_vests",_vestArr];
 //safe vehicles
 
 private _tempArr = [bnb_e_contam_equipment_vehicles] call JSHK_contam_fnc_strToArray;
-[format ["fn_moduleVehicles: _tempArr value pre-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
+[format ["fn_moduleVehicles: _tempArr value pre-synced objects: %1",_tempArr], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 {
 	if !(_x isKindOf "Man") then
 	{
 		_tempArr pushBackUnique _x;
 	} else
 	{
-		[format ["fn_moduleSettingsValues: Player or units cannot be added as safe vehicles: %1",typeOf _x],true] call JSHK_contam_fnc_logMessage;
+		[format ["fn_moduleSettingsValues: Player or units cannot be added as safe vehicles: %1",typeOf _x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 	};
 } forEach _units;
-[format ["fn_moduleVehicles: _tempArr value post-synced objects: %1",_tempArr]] call JSHK_contam_fnc_logMessage;
+[format ["fn_moduleVehicles: _tempArr value post-synced objects: %1",_tempArr], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 private _vehArr = [];
 {
 	if (typeName _x == "OBJECT") then
@@ -192,7 +199,7 @@ private _vehArr = [];
 		if (!isNull _x) then
 		{
 			_vehArr pushBackUnique _x;
-			["fn_moduleVehicles: Vehicle by object added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+			["fn_moduleVehicles: Vehicle by object added to safe vehicle pool", "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 		};
 	} else
 	{
@@ -201,21 +208,21 @@ private _vehArr = [];
 			if (isClass (configfile >> "CfgVehicles" >> _x)) then
 			{
 				_vehArr pushBackUnique _x;
-				["fn_moduleVehicles: Vehicle class added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+				["fn_moduleVehicles: Vehicle class added to safe vehicle pool", "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 			} else
 			{
 				private _vehObj = missionNamespace getVariable [_x,objNull];
 				if (!isNull _vehObj) then
 				{
 					_vehArr pushBackUnique _x;
-					["fn_moduleVehicles: Vehicle by variable name added to safe vehicle pool"] call JSHK_contam_fnc_logMessage;
+					["fn_moduleVehicles: Vehicle by variable name added to safe vehicle pool", "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 				} else
 				{
-					[format ["fn_moduleVehicles: Vehicle classname or object provided does not exist: %1",_x],true] call JSHK_contam_fnc_logMessage;
+					[format ["fn_moduleVehicles: Vehicle classname or object provided does not exist: %1",_x], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 				};
 			};
 		};
 	};
 } forEach _tempArr;
-[format ["fn_moduleVehicles: Final value of _vehArr - %1",_vehArr]] call JSHK_contam_fnc_logMessage;
+[format ["fn_moduleVehicles: Final value of _vehArr - %1",_vehArr], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 missionNamespace setVariable ["JSHK_contam_safeVehicles",_vehArr];

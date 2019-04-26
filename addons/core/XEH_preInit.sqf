@@ -28,6 +28,13 @@ private _bnb_e_settings = [
 		false
 	],
 	[
+		"bnb_e_arsenal_objects",
+		"EDITBOX",
+		["Arsenal Objects", "Classnames, separated by commas and without double quotations, of objects that are spawnable by ""Add Filtered Arsenal"" module"],
+		["2BNB Zeus", "Arsenal"],
+		"C_supplyCrate_F,B_Slingload_01_Ammo_F"
+	],
+	[
 		"bnb_e_contam_aiDamage",
 		"CHECKBOX",
 		["Enable AI Damage", "Tick for AI to take damage from contamination areas"],

@@ -6,7 +6,7 @@ Description:
 
 Parameters:
 	0: _position - of the module <ARRAY>
-	0: _objectUnderCursor - object the module was placed on <OBJECT>
+	1: _objectUnderCursor - object the module was placed on <OBJECT>
 
 Returns:
 	Nothing

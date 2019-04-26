@@ -1,5 +1,5 @@
 param(
-	  [string] $remove = $False
+	[string] $remove = $False
 )
 
 $projectRoot    = Split-Path -Parent $PSScriptRoot
@@ -43,7 +43,7 @@ function Get-FullFileHash {
 }
 
 
-function Get-DirHash {
+function Get-Hash {
 	[Cmdletbinding()]
 	param(
 		[Parameter(Mandatory=$True)]
@@ -62,13 +62,21 @@ function Get-DirHash {
 	)
 	$temp = [System.IO.Path]::GetTempFileName()
 
-	# Get child-file hashes
-	gci -File -Recurse $Path | Get-FullFileHash $Algo | select -ExpandProperty Hash | Out-File $temp -Append -NoNewline
-	# Hash directory in case that has changed
-	Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -Append -NoNewline
+	if (Test-Path -Path $Path -PathType Container) {
+		# Get child-file hashes
+		gci -File -Recurse $Path | Get-FullFileHash $Algo | select -ExpandProperty Hash | Out-File $temp -Append -NoNewline
+		# Hash directory in case that has changed
+		Get-Item $Path | Get-FileHash -Algorithm $Algo | Out-File $temp -Append -NoNewline
 
-	$hash = Get-FileHash $temp -Algorithm $Algo
-	Remove-Item $temp
+		$hash = Get-FileHash $temp -Algorithm $Algo
+		Remove-Item $temp
+
+	} elseif (Test-Path -Path $Path -PathType Leaf) {
+		$hash = Get-FileHash $Path -Algorithm $Algo
+
+	} else {
+		Write-Output "  [$timestamp] Get-Hash unknown PathType: $Path"
+	}
 
 	$hash.Path = $Path
 	return $hash
@@ -77,7 +85,7 @@ function Get-DirHash {
 
 function Get-Extras {
 	param (
-		   [string] $type = $False
+		[string] $type = $False
 	)
 
 	if (Test-Path -Path "$toolsPath\support-files.txt") {
@@ -145,7 +153,7 @@ function Compare-VersionNewerThan {
 
 
 function Get-InstalledArmakeVersion {
-	if (Test-Path $armake) {
+	if (Test-Path -Path $armake) {
 		$version = & $armake --version
 		$version = $version.Substring(1)
 	} else {
@@ -232,14 +240,20 @@ function Create-Private-Key {
 
 function Check-Obsolete {
 	param(
-		  [Parameter(Mandatory=$True)]
-		  $addonPbo
+		[Parameter(Mandatory=$True)]
+		$addonPbo
 	)
 
 	$pboName = $addonPbo.Name
 	$addon = $pboName.Replace($modPrefix, '').Replace('.pbo', '')
+	$sourcePath = "$projectRoot\addons\$addon"
 
-	if (!(Test-Path -Path "$projectRoot\addons\$addon")) {
+	if (Select-String -Pattern "optional_" -InputObject $pboName -SimpleMatch -Quiet) {
+		$addon = $pboName.Replace($modPrefix + "optional_", '')
+		$sourcePath = "$projectRoot\optionals\$addon"
+	}
+
+	if (!(Test-Path -Path $sourcePath)) {
 		Remove-Item "$buildPath\addons\$pboName"
 		Remove-Item "$buildPath\addons\$($pboName).$modPrefix$tag.bisign" -ErrorAction SilentlyContinue
 		Write-Output "  [$timestamp] Deleting obsolete PBO $pboName"
@@ -247,28 +261,39 @@ function Check-Obsolete {
 }
 
 
-function Build-Directory {
+function Build-PBO {
 	param(
 		[Parameter(Mandatory=$True)]
-		$directory
+		$Source,
+		$Parent = "addons",
+		$Prebuilt = $False
 	)
 
-	$component = $directory.Name
-	$fullPath  = $directory.FullName
-	$parent    = $directory.Parent
-	$dirHash   = Get-DirHash $fullPath | select -ExpandProperty Hash
-	$binPath   = "$buildPath\$parent\$modPrefix$component.pbo"
+	$otherPrefix = ""
+	if ($prebuilt) {
+		$otherPrefix = "optional_"
+	}
+
+	$component = $source.Name
+	$fullPath  = $source.FullName
+	$hash      = Get-Hash $fullPath | select -ExpandProperty Hash
+	$binPath   = "$buildPath\$Parent\$modPrefix$otherPrefix$component"
+
+	# If it's a directory, then it doesn't have it's own extension, so add it
+	if (!($prebuilt)) {
+		$binPath = $binPath + ".pbo"
+	}
 
 	if (Test-Path -Path "$cachePath\addons\$component") {
 		$cachedHash = Get-Content "$cachePath\addons\$component"
 
-		if ($dirHash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
+		if ($hash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
 			if (!(Test-Path -Path "$binPath.$modPrefix$tag.bisign")) {
 				Write-Output "  [$timestamp] Updating bisign for $component"
 				& $armake sign -f $privateKeyFile $binPath
 				return
 			} else {
-				return "  [$timestamp] Skipping PBO $component"
+				return "  [$timestamp] Skipping $component"
 			}
 		}
 	} else {
@@ -279,19 +304,33 @@ function Build-Directory {
 
 	if (Test-Path -Path $binPath) {
 		Remove-Item $binPath
-		Write-Output "  [$timestamp] Updating PBO $component"
-		& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
-	} else {
-		Write-Output "  [$timestamp] Creating PBO $component"
-		& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
-	}
 
-	# Store this for later comparisons
-	$dirHash | Out-File "$cachePath\addons\$component" -NoNewline
+		if ($prebuilt) {
+			Write-Output "  [$timestamp] Updating pre-built PBO $component"
+			Copy-Item -Path $fullPath -Destination $binPath -Force
+			& $armake sign -f $privateKeyFile $binPath
+		} else {
+			Write-Output "  [$timestamp] Updating PBO $component"
+			& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+		}
+	} else {
+
+		if ($prebuilt) {
+			Write-Output "  [$timestamp] Copying pre-built PBO $component"
+			Copy-Item -Path $fullPath -Destination $binPath -Force
+			& $armake sign -f $privateKeyFile $binPath
+		} else {
+			Write-Output "  [$timestamp] Creating PBO $component"
+			& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+		}
+	}
 
 	if ($LastExitCode -ne 0) {
 		Write-Error "[$timestamp] Failed to build $component."
 	}
+
+	# Store this for later comparisons
+	$hash | Out-File "$cachePath\addons\$component" -NoNewline
 }
 
 
@@ -343,8 +382,13 @@ function Main {
 
 	if (Test-Path -Path $privateKeyFile) {
 		New-Item "$buildPath\addons" -ItemType "directory" -Force | Out-Null
+
+		foreach ($component in Get-ChildItem -File "$projectRoot\optionals") {
+			Build-PBO $component -Prebuilt $True
+		}
+
 		foreach ($component in Get-ChildItem -Directory "$projectRoot\addons") {
-			Build-Directory $component
+			Build-PBO $component
 		}
 
 		foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {

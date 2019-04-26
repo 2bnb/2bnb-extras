@@ -117,7 +117,7 @@ missionNamespace setVariable ["JSHK_contamModuleVar_maskSoundStamina", bnb_e_con
 missionNamespace setVariable ["JSHK_contam_DEBUG", bnb_e_contam_enableDebug];
 
 //set gasmasks
-private _head = [bnb_e_contam_equipment_masks] call JSHK_contam_fnc_strToArray;
+private _head = [bnb_e_contam_equipment_masks] call bnb_e_core_fnc_strToArray;
 private _headArr = [];
 {
 	if (isClass (configFile >> "CfgWeapons" >> _x)) then
@@ -130,7 +130,7 @@ private _headArr = [];
 } forEach _head;
 missionNamespace setVariable ["JSHK_contam_headgear",_headArr];
 
-private _masks50 = [bnb_e_contam_equipment_masks] call JSHK_contam_fnc_strToArray;
+private _masks50 = [bnb_e_contam_equipment_masks] call bnb_e_core_fnc_strToArray;
 private _allMasks = [];
 {
 	private _arr = _x;
@@ -150,7 +150,7 @@ missionNamespace setVariable ["JSHK_contam_gasMasks",_allMasks];
 
 
 //other gear
-private _uni = [bnb_e_contam_equipment_uniforms] call JSHK_contam_fnc_strToArray;
+private _uni = [bnb_e_contam_equipment_uniforms] call bnb_e_core_fnc_strToArray;
 private _uniArr = [];
 {
 	if (isClass (configFile >> "CfgWeapons" >> _x)) then
@@ -163,7 +163,7 @@ private _uniArr = [];
 } forEach _uni;
 missionNamespace setVariable ["JSHK_contam_uniforms",_uniArr];
 
-private _vests = [bnb_e_contam_equipment_vests] call JSHK_contam_fnc_strToArray;
+private _vests = [bnb_e_contam_equipment_vests] call bnb_e_core_fnc_strToArray;
 private _vestArr = [];
 {
 	if (isClass (configFile >> "CfgWeapons" >> _x)) then
@@ -180,7 +180,7 @@ missionNamespace setVariable ["JSHK_contam_vests",_vestArr];
 
 //safe vehicles
 
-private _tempArr = [bnb_e_contam_equipment_vehicles] call JSHK_contam_fnc_strToArray;
+private _tempArr = [bnb_e_contam_equipment_vehicles] call bnb_e_core_fnc_strToArray;
 [format ["fn_moduleVehicles: _tempArr value pre-synced objects: %1",_tempArr], "core\XEH_preInit.sqf"] call bnb_e_core_fnc_log;
 {
 	if !(_x isKindOf "Man") then

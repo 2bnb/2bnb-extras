@@ -23,6 +23,7 @@ class CfgFunctions {
 			file="\x\bnb_e\core\functions\zeus_modules";
 			class addArsenal {};
 			class addContaminationArea {};
+			class addMusicRadio {};
 			class exportOcapData {};
 		};
 

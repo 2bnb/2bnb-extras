@@ -10,7 +10,8 @@ class CfgPatches {
 			"achilles_functions_f_ares",
 			"r0ed_SurvivableCrashes"
 		};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"D. Ford",
 			"Arend"
 		};

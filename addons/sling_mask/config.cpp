@@ -6,7 +6,8 @@ class CfgPatches {
 		version = 0.1;
 		requiredVersion = 0.1;
 		requiredAddons[] = {"GRAD_slingHelmet"};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"DerZade [A]",
 			"D. Ford",
 			"Arend"

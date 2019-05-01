@@ -4,7 +4,8 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {"CBA_main","DrongosAPS"};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"Drongo",
 			"D. Ford",
 			"Arend"

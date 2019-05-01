@@ -3,7 +3,8 @@ class CfgPatches {
 		name = "2BNB Extras - Gear";
 		units[] = {};
 		weapons[] = {};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"D. Ford",
 			"Arend"
 		};

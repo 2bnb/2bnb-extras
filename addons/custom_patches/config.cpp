@@ -4,6 +4,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {};
+		author = "2nd Battalion, Nord Brigade";
 		author[] = {
 			"D. Ford",
 			"Arend"

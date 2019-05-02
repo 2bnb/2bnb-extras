@@ -30,13 +30,15 @@ if (isNull (_objects select 0)) then {
 
 {
 	if (_x isKindOf "Man") then {
-		[_x] call klpq_musicRadio_fnc_addBackpackRadio;
+		[_x] remoteExec ["klpq_musicRadio_fnc_addBackpackRadio", 0];
 	} else {
-		[_x, true] call klpq_musicRadio_fnc_addRadio;
+		[_x, false] remoteExec ["klpq_musicRadio_fnc_addRadio", 0, true];
 	}
 } foreach _objects;
 
-[format ["Added music radio to %1", _objects], "core\functions\zeus_modules\fn_addArsenal.sqf"] call bnb_e_core_fnc_log;
+if (_objects isEqualTo []) exitWith {[localize "STR_AMAE_NO_OBJECT_SELECTED"] call Achilles_fnc_ShowZeusErrorMessage};
+
+[format ["Added music radio to %1", _objects], "core\functions\zeus_modules\fn_addMusicRadio.sqf"] call bnb_e_core_fnc_log;
 
 // Show Message
 ["Music Radio added!"] call Ares_fnc_ShowZeusMessage;

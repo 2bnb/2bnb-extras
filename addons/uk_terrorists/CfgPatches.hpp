@@ -15,7 +15,8 @@ class CfgPatches {
 			"A3_Characters_F",
 			"rhsgref_c_troops"
 		};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"D. Ford",
 			"Arend"
 		};

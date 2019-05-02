@@ -4,7 +4,8 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {"tfar_core"};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"D. Ford",
 			"Arend"
 		};

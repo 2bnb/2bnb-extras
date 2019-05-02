@@ -1,3 +1,5 @@
+missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
+
 if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) exitWith {};
 
 [	bnb_e_sc_enable,  // Mod Enabled

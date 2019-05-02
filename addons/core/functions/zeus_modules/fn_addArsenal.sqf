@@ -74,7 +74,7 @@ if (isNull (_objects select 0)) then {
 if (_objects isEqualTo []) exitWith {};
 
 // Add Arsenal - Remotely, since only the server has 2BNB Framework loaded
-[_availableFilters select _filter, _objects] remoteExec ["bnb_f_core_fnc_arsenal", 2];
+[[_availableFilters select _filter, _objects], bnb_f_core_fnc_arsenal, 2] call Achilles_fnc_spawn;
 [format ["Added %1 filtered arsenal to %2",_availableFilters select _filter, _objects], "core\functions\zeus_modules\fn_addArsenal.sqf"] call bnb_e_core_fnc_log;
 
 // Show Message

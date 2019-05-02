@@ -8,11 +8,9 @@ class CfgPatches {
 			"achilles_ui_f",
 			"achilles_functions_f_achilles",
 			"achilles_functions_f_ares",
-			"cba_settings",
 			"r0ed_SurvivableCrashes"
 		};
-		author = "2nd Battalion, Nord Brigade";
-		authors[] = {
+		author[] = {
 			"D. Ford",
 			"Arend"
 		};
@@ -25,7 +23,6 @@ class CfgFunctions {
 			file="\x\bnb_e\core\functions\zeus_modules";
 			class addArsenal {};
 			class addContaminationArea {};
-			class addMusicRadio {};
 			class exportOcapData {};
 		};
 

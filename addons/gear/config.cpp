@@ -3,7 +3,8 @@ class CfgPatches {
 		name = "2BNB Extras - Gear";
 		units[] = {};
 		weapons[] = {};
-		author[] = {
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
 			"D. Ford",
 			"Arend"
 		};
@@ -135,16 +136,16 @@ class cfgWeapons
 		scope = 2;
 		displayName = "Adidas Helmet";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
-		model = "\x\bnb_e\gear\head\rhs_altyn_visordown";
+		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
-		//hiddenSelections[] = { "camo" };
-		//hiddenSelectionsTextures[] = {"rhsafrf\addons\rhs_infantry2\x\bnb_e\gear\head\data\gay.paa"};
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidasH.paa"};
 
 		class ItemInfo: HeadgearItem
 		{
 			mass = 10;
-			uniformModel = "\x\bnb_e\gear\head\rhs_altyn_visordown";
+			uniformModel = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 

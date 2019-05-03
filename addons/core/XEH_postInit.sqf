@@ -1,24 +1,3 @@
-missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
-
-if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) exitWith {};
-
-[	bnb_e_sc_enable,  // Mod Enabled
-	true,   //VFX
-	true,   //SFX
-	true,   // Exag FX
-	"AUTO", // Med Sys
-	bnb_e_sc_damage,      // dmg Multi
-	["Air"],// Veh whitelist
-	{},     // On Crash Code
-	{},     // crew Post Crash code
-	{       // veh post crash code
-		params["_veh"];
-		sleep (40 + random 40);
-		_veh allowDamage true;
-		_veh setDamage 1;
-	}
-] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
-
 //------------------------- 2BNB AOR 1 Kits --------------------------------------
 ["2BNB IC/2IC AOR1",[["SMA_HK416GL","","SMA_SFPEQ_HKTOP_BLK","SMA_eotech552_3XDOWN",["ACE_30Rnd_556x45_Stanag_Mk262_mag",30],[],""],[],[],["VSM_AOR1_Camo",[["ACE_tourniquet",4],["ACE_elasticBandage",11],["ACE_EarPlugs",1],["ACE_epinephrine",4],["ACE_packingBandage",15],["ACE_MapTools",1],["ACE_IR_Strobe_Item",2],["ACE_morphine",6],["ACE_CableTie",5],["ACE_Flashlight_MX991",1]]],["VSM_FAPC_Operator_AOR1",[["ACE_30Rnd_556x45_Stanag_Mk318_mag",8,30],["ACE_30Rnd_556x45_Stanag_Mk262_mag",7,30],["HandGrenade",2,1],["SmokeShellBlue",2,1],["SmokeShellGreen",3,1],["SmokeShell",6,1],["SmokeShellRed",2,1],["SmokeShellOrange",2,1]]],["tfw_ilbe_coy",[["ACE_EntrenchingTool",1],["ACE_HuntIR_monitor",1],["1Rnd_Smoke_Grenade_shell",5,1],["1Rnd_SmokeRed_Grenade_shell",5,1],["Chemlight_green",2,1],["ACE_HuntIR_M203",5,1],["1Rnd_HE_Grenade_shell",10,1]]],"VSM_Mich2000_2_aor1","VSM_Shemagh_Balaclava2_tan_Peltor_Goggles",["ACE_VectorDay","","","",[],[],""],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ACE_Altimeter","A3_GPNVG18_F"]]] call ace_arsenal_fnc_addDefaultLoadout;
 ["2BNB AT AOR1",[["SMA_HK416CUSTOMvfgB","","SMA_SFPEQ_HKTOP_BLK","SMA_eotech552",["ACE_30Rnd_556x45_Stanag_Mk318_mag",30],[],""],["launch_MRAWS_sand_rail_F","","","",["MRAWS_HEAT_F",1],[],""],[],["VSM_AOR1_Crye_SS_Camo",[["ACE_packingBandage",15],["ACE_morphine",7],["ACE_tourniquet",4],["ACE_epinephrine",6],["ACE_EarPlugs",2],["ACE_CableTie",5],["ACE_elasticBandage",14],["ACE_IR_Strobe_Item",2],["ACE_MapTools",1],["ACE_Flashlight_MX991",1]]],["VSM_FAPC_Operator_AOR1",[["ACE_EntrenchingTool",1],["ACE_30Rnd_556x45_Stanag_Mk318_mag",10,30],["SmokeShell",5,1],["SmokeShellGreen",3,1],["Chemlight_green",2,1],["HandGrenade",2,1],["ACE_30Rnd_556x45_Stanag_Mk262_mag",4,30],["SmokeShellBlue",2,1]]],["VSM_AOR1_Backpack_Kitbag",[["MRAWS_HEAT_F",4,1],["MRAWS_HE_F",1,1]]],"VSM_Mich2000_2_aor1","VSM_Shemagh_Balaclava2_tan_Peltor_Goggles",["ACE_VectorDay","","","",[],[],""],["ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter","A3_GPNVG18_F"]]] call ace_arsenal_fnc_addDefaultLoadout;
@@ -40,3 +19,25 @@ if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) e
 ["2BNB Medic M81",[["SMA_HK416CUSTOMvfgB","","SMA_SFPEQ_HKTOP_BLK","SMA_eotech552",["ACE_30Rnd_556x45_Stanag_Mk318_mag",30],[],""],[],[],["VSM_M81_Camo",[["ACE_packingBandage",13],["ACE_morphine",6],["ACE_tourniquet",4],["ACE_IR_Strobe_Item",2],["ACE_epinephrine",4],["ACE_EarPlugs",1],["ACE_CableTie",5],["ACE_elasticBandage",13],["ACE_MapTools",1],["ACE_Flashlight_MX991",1]]],["VSM_FAPC_Operator_M81",[["ACE_elasticBandage",5],["ACE_packingBandage",5],["ACE_salineIV_500",4],["ACE_salineIV",1],["ACE_epinephrine",1],["ACE_morphine",1],["HandGrenade",1,1],["SmokeShell",10,1],["SmokeShellGreen",3,1],["ACE_30Rnd_556x45_Stanag_Mk318_mag",6,30],["ACE_30Rnd_556x45_Stanag_Mk262_mag",6,30]]],["VSM_M81_Backpack_Kitbag",[["ACE_surgicalKit",1],["ACE_salineIV_250",4],["ACE_salineIV_500",11],["ACE_salineIV",4],["ACE_elasticBandage",30],["ACE_packingBandage",30],["ACE_quikclot",25],["ACE_fieldDressing",15],["ACE_tourniquet",2],["ACE_morphine",10],["ACE_epinephrine",10],["adv_aceCPR_AED",1],["SmokeShellBlue",2,1]]],"VSM_Mich2000_2_M81","VSM_Shemagh_Balaclava2_OD_Peltor_Goggles",[],["ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter","A3_GPNVG18_F"]]] call ace_arsenal_fnc_addDefaultLoadout;
 ["2BNB Rifleman M81",[["SMA_HK416CUSTOMvfgB","","SMA_SFPEQ_HKTOP_BLK","SMA_eotech552",["ACE_30Rnd_556x45_Stanag_Mk318_mag",30],[],""],["rhs_weap_M136","","","",[],[],""],[],["VSM_M81_Camo",[["ACE_packingBandage",13],["ACE_morphine",6],["ACE_tourniquet",4],["ACE_IR_Strobe_Item",2],["ACE_epinephrine",4],["ACE_EarPlugs",1],["ACE_CableTie",5],["ACE_elasticBandage",13],["ACE_MapTools",1],["ACE_Flashlight_MX991",1]]],["VSM_FAPC_Operator_M81",[["HandGrenade",2,1],["SmokeShell",5,1],["SmokeShellGreen",3,1],["Chemlight_green",2,1],["ACE_30Rnd_556x45_Stanag_Mk318_mag",10,30],["ACE_30Rnd_556x45_Stanag_Mk262_mag",8,30]]],["VSM_M81_Backpack_Kitbag",[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["SmokeShellBlue",2,1]]],"VSM_Mich2000_2_M81","VSM_Shemagh_Balaclava2_OD_Peltor_Goggles",[],["ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter","A3_GPNVG18_F"]]] call ace_arsenal_fnc_addDefaultLoadout;
 //-------------------------------------------------------------------------------
+
+missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
+
+if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) exitWith {};
+
+[	bnb_e_sc_enable,  // Mod Enabled
+	true,   //VFX
+	true,   //SFX
+	true,   // Exag FX
+	"AUTO", // Med Sys
+	bnb_e_sc_damage,      // dmg Multi
+	["Air"],// Veh whitelist
+	{},     // On Crash Code
+	{},     // crew Post Crash code
+	{       // veh post crash code
+		params["_veh"];
+		sleep (40 + random 40);
+		_veh allowDamage true;
+		_veh setDamage 1;
+	}
+] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
+

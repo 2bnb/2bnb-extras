@@ -89,30 +89,6 @@ private _bnb_e_settings = [
 		["2BNB Contamination", "MOPP Equipment"],
 		"",
 		true
-	],
-	[
-		"bnb_e_sc_enable",
-		"CHECKBOX",
-		["Enable survivable crashes", "Tick to enable survivable crashes"],
-		"2BNB Survivable crashes",
-		true,
-		true
-	],
-	[
-		"bnb_e_sc_vehicles",
-		"EDITBOX",
-		["Vehicle classes", "Vehicle classes in square brackets, with quotation marks seperated by ,"],
-		"2BNB Survivable crashes",
-		"[""Air""]",
-		true
-	],
-	[
-		"bnb_e_sc_damage",
-		"SLIDER",
-		["Damage multiplier", "The amount of damage to apply to crashed player"],
-		"2BNB Survivable crashes",
-		[0, 1, 0.3, 1],
-		true
 	]
 ];
 

@@ -8,8 +8,7 @@ class CfgPatches {
 			"achilles_ui_f",
 			"achilles_functions_f_achilles",
 			"achilles_functions_f_ares",
-			"cba_settings",
-			"r0ed_SurvivableCrashes"
+			"cba_settings"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {

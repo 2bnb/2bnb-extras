@@ -94,7 +94,12 @@ function Get-Extras {
 		$supportFilesRegex = "mod.cpp"
 	}
 
-	$supportFiles = @(Get-ChildItem -Path "$projectRoot\extras\*")
+	$supportFiles = @()
+
+	if (Test-Path -Path "$projectRoot\extras") {
+		$supportFiles += Get-ChildItem -Path "$projectRoot\extras\*"
+	}
+
 	$supportFiles += Get-ChildItem -Path "$projectRoot\*" | Where-Object -FilterScript {$_.Name -match $supportFilesRegex}
 
 	if ($type -ne $False) {

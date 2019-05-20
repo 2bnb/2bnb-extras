@@ -31,24 +31,3 @@
 ["2BNB Arctic Rifleman",[["SMA_HK416CUSTOMvfgB","","SMA_SFPEQ_HKTOP_BLK","SMA_eotech552",["ACE_30Rnd_556x45_Stanag_Mk318_mag",30],[],""],["rhs_weap_M136","","","",[],[],""],[],["UK3CB_BAF_U_Smock_Arctic",[["ACE_packingBandage",13],["ACE_morphine",6],["ACE_tourniquet",4],["ACE_IR_Strobe_Item",2],["ACE_epinephrine",4],["ACE_EarPlugs",1],["ACE_CableTie",5],["ACE_elasticBandage",5]]],["UK3CB_BAF_V_PLCE_Webbing_Plate_Winter",[["HandGrenade",2,1],["SmokeShell",5,1],["SmokeShellGreen",3,1],["Chemlight_green",2,1],["ACE_30Rnd_556x45_Stanag_Mk318_mag",10,30]]],["UK3CB_BAF_B_Kitbag_Arctic",[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["SmokeShellBlue",2,1]]],"UK3CB_BAF_H_Mk7_Win_A","UK3CB_BAF_G_Balaclava_Win",[],["ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter","A3_GPNVG18_BLK_F"]]] call ace_arsenal_fnc_addDefaultLoadout;
 //-------------------------------------------------------------------------------
 
-missionNamespace setVariable["r0ed_SurvivableCrashes_Initialized", true];
-
-if(missionNamespace getVariable ["r0ed_SurvivableCrashes_Initialized", false]) exitWith {};
-
-[	bnb_e_sc_enable,  // Mod Enabled
-	true,   //VFX
-	true,   //SFX
-	true,   // Exag FX
-	"AUTO", // Med Sys
-	bnb_e_sc_damage,      // dmg Multi
-	["Air"],// Veh whitelist
-	{},     // On Crash Code
-	{},     // crew Post Crash code
-	{       // veh post crash code
-		params["_veh"];
-		sleep (40 + random 40);
-		_veh allowDamage true;
-		_veh setDamage 1;
-	}
-] call compile preprocessFileLineNumbers "\r0ed_SurvivableCrashes\functions\init\init_survivableCrashes.sqf";
-

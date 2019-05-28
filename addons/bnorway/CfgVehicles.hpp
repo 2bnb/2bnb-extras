@@ -241,6 +241,7 @@ class CfgVehicles {
 	// Woodland //
 	//////////////
 
+	// Infantry
 	class B_NorwayArmy_Man_Woodland : B_NorwayArmy_Man {
 		displayName = "Man";
 		editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Man_Woodland.jpg";
@@ -461,8 +462,8 @@ class CfgVehicles {
 
 		uniformClass = "VSM_M81_Camo";
 
-		linkedItems[] = {"VSM_FAPC_Operator_M81","VSM_ProjectHonor_OPS_2","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
-		respawnlinkedItems[] = {"VSM_FAPC_Operator_M81","VSM_ProjectHonor_OPS_2","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
+		linkedItems[] = {"VSM_FAPC_Operator_M81","H_HelmetCrew_I","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
+		respawnlinkedItems[] = {"VSM_FAPC_Operator_M81","H_HelmetCrew_I","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
 
 		weapons[] = {"SMA_HK416CUSTOMCQBafgB"};
 		respawnWeapons[] = {"SMA_HK416CUSTOMCQBafgB"};
@@ -470,7 +471,7 @@ class CfgVehicles {
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 		respawnMagazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 
-		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"VSM_ProjectHonor_OPS_2","VSM_Thermal",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
+		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"H_HelmetCrew_I","VSM_Thermal",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
 	};
 
 	class B_NorwayArmy_Pilot_Woodland : B_NorwayArmy_Man_Woodland {
@@ -479,8 +480,8 @@ class CfgVehicles {
 
 		uniformClass = "VSM_M81_Camo";
 
-		linkedItems[] = {"VSM_FAPC_Operator_M81","VSM_M81_OPS_2","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
-		respawnlinkedItems[] = {"VSM_FAPC_Operator_M81","VSM_M81_OPS_2","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
+		linkedItems[] = {"VSM_FAPC_Operator_M81","rhsusf_hgu56p_visor","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
+		respawnlinkedItems[] = {"VSM_FAPC_Operator_M81","rhsusf_hgu56p_visor","ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter"};
 
 		weapons[] = {"SMA_HK416CUSTOMCQBafgB"};
 		respawnWeapons[] = {"SMA_HK416CUSTOMCQBafgB"};
@@ -488,9 +489,10 @@ class CfgVehicles {
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 		respawnMagazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 
-		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"VSM_M81_OPS_2","rhsusf_shemagh_gogg_tan",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
+		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"rhsusf_hgu56p_visor","rhsusf_shemagh_gogg_tan",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
 	};
 
+	// Vehicles
 	class B_NorwayArmy_Jackal_2HMG_Woodland : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_02 {
 		editorPreview = "\x\addons\bnorway2bnb\data\preview\B_NorwayArmy_Jackal_2HMG_Woodland.jpg";
 		author = "Jebby";
@@ -499,11 +501,11 @@ class CfgVehicles {
 		displayName = "Jackal 2 HMG Woodland";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
-			class L111A1_MainTurret : L111A1_MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
-			class L7A2_1_Turret : L7A2_1_Turret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
+			class L111A1_MainTurret : L111A1_MainTurret { gunnerType = "B_NorwayArmy_Rifleman_Woodland"; };
+			class L7A2_1_Turret : L7A2_1_Turret { gunnerType = "B_NorwayArmy_1IC_Woodland"; };
 			class Right_Passenger_Cabin : Right_Passenger_Cabin { gunnerType = ""; };
 			class Left_Passenger_Cabin : Left_Passenger_Cabin { gunnerType = ""; };
 		};
@@ -527,7 +529,7 @@ class CfgVehicles {
 		displayName = "Land Rover HardTop FFR (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class Passenger_Turret : Passenger_Turret { gunnerType = ""; };
@@ -552,11 +554,11 @@ class CfgVehicles {
 		displayName = "Land Rover WMIK HMG FFR (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
-			class GPMG_Turret : GPMG_Turret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
-			class HMG_Turret : HMG_Turret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
+			class GPMG_Turret : GPMG_Turret { gunnerType = "B_NorwayArmy_Rifleman_Woodland"; };
+			class HMG_Turret : HMG_Turret { gunnerType = "B_NorwayArmy_1IC_Woodland"; };
 		};
 
 		class EventHandlers : EventHandlers {
@@ -578,7 +580,7 @@ class CfgVehicles {
 		displayName = "MAN HX60 4x4 Fuel (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -603,7 +605,7 @@ class CfgVehicles {
 		displayName = "MAN HX60 4x4 Repair (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -628,7 +630,7 @@ class CfgVehicles {
 		displayName = "MAN HX60 4x4 Transport (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -653,10 +655,10 @@ class CfgVehicles {
 		displayName = "Panther CLV GPMG (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "B_NorwayArmy_Crew_Woodland";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
-			class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
+			class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_NorwayArmy_Rifleman_Woodland"; };
 			class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
 		};
 
@@ -679,10 +681,10 @@ class CfgVehicles {
 		displayName = "FV432/3 Bulldog HMG-RWS (Green)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "UK3CB_BAF_Crewman_Tropical";
+		crew = "B_NorwayArmy_Crew_Woodland";
 
 		class Turrets : Turrets {
-			class Gunner_HMGRWS : Gunner_HMGRWS { gunnerType = ""; };
+			class Gunner_HMGRWS : Gunner_HMGRWS { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
 			class CargoTurret_03 : CargoTurret_03 { gunnerType = ""; };
 			class CargoTurret_04 : CargoTurret_04 { gunnerType = ""; };
 			class CargoTurret_05 : CargoTurret_05 { gunnerType = ""; };
@@ -951,7 +953,7 @@ class CfgVehicles {
 		displayName = "L111A1 (High)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "UK3CB_BAF_GunnerStatic_Tropical";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class MainTurret : MainTurret { gunnerType = ""; };
@@ -977,7 +979,7 @@ class CfgVehicles {
 		displayName = "L134A1 (High)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "UK3CB_BAF_GunnerStatic_Tropical";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class MainTurret : MainTurret { gunnerType = ""; };
@@ -1003,7 +1005,7 @@ class CfgVehicles {
 		displayName = "L16";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "UK3CB_BAF_GunnerStatic_Tropical";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class MainTurret : MainTurret { gunnerType = ""; };
@@ -1029,7 +1031,7 @@ class CfgVehicles {
 		displayName = "L7A2 (High)";
 		side = 1;
 		faction = "B_NorwayArmy_Woodland";
-		crew = "UK3CB_BAF_GunnerStatic_Tropical";
+		crew = "B_NorwayArmy_Rifleman_Woodland";
 
 		class Turrets : Turrets {
 			class MainTurret : MainTurret { gunnerType = ""; };

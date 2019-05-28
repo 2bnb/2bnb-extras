@@ -213,6 +213,10 @@ class CfgVehicles {
 		};
 	};
 
+	class RHS_A10;
+	class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
+	class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
+
 	class B_NorwayArmy_Man : B_Soldier_F_OCimport_02 {
 		author = "Capt. Arend";
 		scope = 0;
@@ -489,7 +493,7 @@ class CfgVehicles {
 		magazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 		respawnMagazines[] = {"SMA_30Rnd_556x45_M855A1","SMA_30Rnd_556x45_M855A1"};
 
-		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"rhsusf_hgu56p_visor","rhsusf_shemagh_gogg_tan",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
+		ALiVE_orbatCreator_loadout[] = {{"SMA_HK416CUSTOMCQBafgB","","","",{"SMA_30Rnd_556x45_M855A1",30},{},""},{},{},{"VSM_M81_Camo",{{"ACE_packingBandage",13},{"ACE_morphine",6},{"ACE_tourniquet",4},{"ACE_IR_Strobe_Item",2},{"ACE_epinephrine",4},{"ACE_EarPlugs",1},{"ACE_CableTie",5},{"ACE_elasticBandage",13},{"ACE_MapTools",1},{"ACE_Flashlight_XL50",1}}},{"VSM_FAPC_Operator_M81",{{"SMA_30Rnd_556x45_M855A1",8,30},{"UK3CB_BAF_SmokeShell",2,1},{"UK3CB_BAF_SmokeShellGreen",1,1},{"UK3CB_BAF_SmokeShellRed",1,1}}},{},"rhsusf_hgu56p_visor","VMS_Shemagh_OD",{},{"ItemMap","ItemGPS","TFAR_rf7800str","ItemCompass","ACE_Altimeter",""}};
 	};
 
 	// Vehicles
@@ -859,11 +863,9 @@ class CfgVehicles {
 
 		class EventHandlers : EventHandlers {
 			class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
 			class ALiVE_orbatCreator {
 				init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 			};
-
 		};
 
 		// custom attributes (do not delete)
@@ -933,11 +935,9 @@ class CfgVehicles {
 
 		class EventHandlers : EventHandlers {
 			class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
 			class ALiVE_orbatCreator {
 				init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 			};
-
 		};
 
 		// custom attributes (do not delete)
@@ -1016,7 +1016,6 @@ class CfgVehicles {
 			class ALiVE_orbatCreator {
 				init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 			};
-
 		};
 
 		// custom attributes (do not delete)
@@ -1042,14 +1041,13 @@ class CfgVehicles {
 			class ALiVE_orbatCreator {
 				init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 			};
-
 		};
 
 		// custom attributes (do not delete)
 		ALiVE_orbatCreator_owned = 1;
 	};
 
-	class B_NorwayArmy_A10_Woodland : RHS_A10 {
+	class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
 		author = "Jebby";
 		scope = 2;
 		scopeCurator = 2;

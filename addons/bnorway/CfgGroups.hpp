@@ -18,13 +18,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                 };
 
@@ -39,49 +39,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_1IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_2IC_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Woodland_01";
+                        vehicle = "B_NorwayArmy_Medic_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                 };
 
@@ -96,49 +96,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit5 {
                         position[] = {0,5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit6 {
                         position[] = {0,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                     class Unit7 {
                         position[] = {0,10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Woodland_01";
+                        vehicle = "B_NorwayArmy_Man_Woodland";
                     };
                 };
 
@@ -153,25 +153,25 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_1IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Woodland_01";
+                        vehicle = "B_NorwayArmy_Medic_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Woodland";
                     };
                 };
 
@@ -186,25 +186,25 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_2IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Marksman_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Woodland";
                     };
                 };
 
@@ -219,13 +219,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                 };
 
@@ -240,13 +240,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_AT_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                 };
 
@@ -261,13 +261,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Marksman_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                 };
 
@@ -282,49 +282,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_1IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Woodland_01";
+                        vehicle = "B_NorwayArmy_Medic_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_AT_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_2IC_Woodland";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Marksman_Woodland";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Woodland";
                     };
                 };
 
@@ -339,49 +339,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_1IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Woodland_01";
+                        vehicle = "B_NorwayArmy_Medic_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Engineer_EOD_Woodland_01";
+                        vehicle = "B_NorwayArmy_Engineer_EOD_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_2IC_Woodland";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Marksman_Woodland";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Woodland";
                     };
                 };
 
@@ -396,49 +396,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_1IC_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Woodland_01";
+                        vehicle = "B_NorwayArmy_Medic_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Woodland_01";
+                        vehicle = "B_NorwayArmy_2IC_Woodland";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Woodland_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Woodland";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Woodland";
                     };
                 };
             class Motorized {
@@ -912,13 +912,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                 };
 
@@ -933,49 +933,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Desert_01";
+                        vehicle = "B_NorwayArmy_1IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Desert_01";
+                        vehicle = "B_NorwayArmy_2IC_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Desert_01";
+                        vehicle = "B_NorwayArmy_Medic_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                 };
 
@@ -990,49 +990,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit1 {
                         position[] = {5,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit3 {
                         position[] = {10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit4 {
                         position[] = {-10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit5 {
                         position[] = {0,5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit6 {
                         position[] = {0,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                     class Unit7 {
                         position[] = {0,10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Man_Desert_01";
+                        vehicle = "B_NorwayArmy_Man_Desert";
                     };
                 };
 
@@ -1047,25 +1047,25 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Desert_01";
+                        vehicle = "B_NorwayArmy_1IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Desert_01";
+                        vehicle = "B_NorwayArmy_Medic_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Desert";
                     };
                 };
 
@@ -1080,25 +1080,25 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Desert_01";
+                        vehicle = "B_NorwayArmy_2IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Desert_01";
+                        vehicle = "B_NorwayArmy_Marksman_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Desert";
                     };
                 };
 
@@ -1113,13 +1113,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                 };
 
@@ -1134,13 +1134,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_AT_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                 };
 
@@ -1155,13 +1155,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Desert_01";
+                        vehicle = "B_NorwayArmy_Marksman_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                 };
 
@@ -1176,49 +1176,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Desert_01";
+                        vehicle = "B_NorwayArmy_1IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Desert_01";
+                        vehicle = "B_NorwayArmy_Medic_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_AT_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Desert";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Desert_01";
+                        vehicle = "B_NorwayArmy_2IC_Desert";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Desert_01";
+                        vehicle = "B_NorwayArmy_Marksman_Desert";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Desert";
                     };
                 };
 
@@ -1233,49 +1233,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Desert_01";
+                        vehicle = "B_NorwayArmy_1IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Desert_01";
+                        vehicle = "B_NorwayArmy_Medic_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Engineer_EOD_Desert_01";
+                        vehicle = "B_NorwayArmy_Engineer_EOD_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Desert_01";
+                        vehicle = "B_NorwayArmy_2IC_Desert";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Marksman_Desert_01";
+                        vehicle = "B_NorwayArmy_Marksman_Desert";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Desert";
                     };
                 };
 
@@ -1290,49 +1290,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_NorwayArmy_1IC_Desert_01";
+                        vehicle = "B_NorwayArmy_1IC_Desert";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Medic_Desert_01";
+                        vehicle = "B_NorwayArmy_Medic_Desert";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_556_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_556_Desert";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_NorwayArmy_2IC_Desert_01";
+                        vehicle = "B_NorwayArmy_2IC_Desert";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_Rifleman_Desert_01";
+                        vehicle = "B_NorwayArmy_Rifleman_Desert";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_NorwayArmy_LMG_762_Desert_01";
+                        vehicle = "B_NorwayArmy_LMG_762_Desert";
                     };
                 };
 

@@ -50,14 +50,12 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 1.62;
 		requiredAddons[] = {
-			"B_NorwayArmy",
 			"UK3CB_BAF_Units_Tropical",
 			"A3_Armor_F_EPB_MBT_03",
 			"UK3CB_BAF_Vehicles_Chinook",
 			"UK3CB_BAF_Vehicles_Hercules",
 			"rhs_c_mig29",
-			"rhsusf_a2port_air",
-			"rhsusf_c_a2port_air"
+			"A3_Air_F_EPC_Plane_CAS_01"
 		};
 		author = "Maj. D. Ford";
 		authors[] = {

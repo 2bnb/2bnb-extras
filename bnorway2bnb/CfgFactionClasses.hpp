@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 class CfgFactionClasses {
-    class B_Norway2BNB {
+    class B_NorwayArmy {
         displayName = "Norwegian Forces";
         side = 1;
         flag = "\A3\ui_f\data\map\markers\flags\Norway_ca.paa";

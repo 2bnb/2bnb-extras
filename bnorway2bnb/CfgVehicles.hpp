@@ -51,8 +51,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Jackal2_L2A1_W_Tropical;
     class UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_01 : UK3CB_BAF_Jackal2_L2A1_W_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_02 : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_02 : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class L111A1_MainTurret;
             class L7A2_1_Turret;
@@ -63,8 +63,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical;
     class UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_01 : UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_02 : UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_02 : UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class Passenger_Turret;
         };
@@ -72,8 +72,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical;
     class UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_01 : UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_02 : UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_02 : UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class GPMG_Turret;
             class HMG_Turret;
@@ -82,8 +82,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical;
     class UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_01 : UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class TopCover_Turret;
         };
@@ -91,8 +91,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_MAN_HX60_Repair_Green_Tropical;
     class UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_01 : UK3CB_BAF_MAN_HX60_Repair_Green_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class TopCover_Turret;
         };
@@ -100,8 +100,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_MAN_HX60_Transport_Green_Tropical;
     class UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_01 : UK3CB_BAF_MAN_HX60_Transport_Green_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_02 : UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class TopCover_Turret;
         };
@@ -109,8 +109,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Panther_GPMG_Green_A_Tropical;
     class UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_01 : UK3CB_BAF_Panther_GPMG_Green_A_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_02 : UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_02 : UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class Gunner_GPMG;
             class CargoTurret_01;
@@ -119,8 +119,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical;
     class UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_01 : UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_02 : UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_02 : UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class Gunner_HMGRWS;
             class CargoTurret_03;
@@ -132,8 +132,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical;
     class UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_01 : UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_02 : UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_02 : UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class Gunner_GPMG;
             class CargoTurret_03;
@@ -145,8 +145,8 @@ class CfgVehicles {
 
     class I_MBT_03_cannon_F;
     class I_MBT_03_cannon_F_OCimport_01 : I_MBT_03_cannon_F { scope = 0; class EventHandlers; class Turrets; };
-    class I_MBT_03_cannon_F_OCimport_02 : I_MBT_03_cannon_F_OCimport_01 { 
-        class EventHandlers; 
+    class I_MBT_03_cannon_F_OCimport_02 : I_MBT_03_cannon_F_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
@@ -154,8 +154,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical;
     class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_01 : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CargoTurret_01;
@@ -165,8 +165,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical;
     class UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_01 : UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_02 : UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_02 : UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CargoTurret_01;
@@ -176,8 +176,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Merlin_HC3_18_Tropical;
     class UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_01 : UK3CB_BAF_Merlin_HC3_18_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_02 : UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_02 : UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class CopilotTurret;
             class CargoTurret_13;
@@ -187,8 +187,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Chinook_HC2_Tropical;
     class UK3CB_BAF_Chinook_HC2_Tropical_OCimport_01 : UK3CB_BAF_Chinook_HC2_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class CopilotTurret;
             class MainTurret;
@@ -200,8 +200,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Apache_AH1_Tropical;
     class UK3CB_BAF_Apache_AH1_Tropical_OCimport_01 : UK3CB_BAF_Apache_AH1_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 : UK3CB_BAF_Apache_AH1_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 : UK3CB_BAF_Apache_AH1_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
@@ -209,8 +209,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Hercules_C4_Tropical;
     class UK3CB_BAF_Hercules_C4_Tropical_OCimport_01 : UK3CB_BAF_Hercules_C4_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 : UK3CB_BAF_Hercules_C4_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 : UK3CB_BAF_Hercules_C4_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class CopilotTurret;
         };
@@ -222,8 +222,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Static_L111A1_Deployed_High_Tropical;
     class UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_01 : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
@@ -231,8 +231,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Static_L134A1_Deployed_High_Tropical;
     class UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_01 : UK3CB_BAF_Static_L134A1_Deployed_High_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
@@ -240,8 +240,8 @@ class CfgVehicles {
 
     class UK3CB_BAF_Static_L16_Deployed_Tropical;
     class UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_01 : UK3CB_BAF_Static_L16_Deployed_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_02 : UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_02 : UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
@@ -249,22 +249,22 @@ class CfgVehicles {
 
     class UK3CB_BAF_Static_L7A2_Deployed_High_Tropical;
     class UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_01 : UK3CB_BAF_Static_L7A2_Deployed_High_Tropical { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_01 { 
-        class EventHandlers; 
+    class UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_02 : UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
     };
 
 
-    class B_Norway2BNB_LMG_762_01 : B_NorwayArmy_LMG_762_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_LMG_762_01.JPG;
+    class B_NorwayArmy_Woodland_LMG_762_01 : B_NorwayArmy_LMG_762_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_LMG_762_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "LMG 7.62";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -298,14 +298,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Man_01 : B_NorwayArmy_Man_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Man_01.JPG;
+    class B_NorwayArmy_Woodland_Man_01 : B_NorwayArmy_Man_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Man_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Man";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -337,14 +337,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Rifleman_01 : B_NorwayArmy_Rifleman_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Rifleman_01.JPG;
+    class B_NorwayArmy_Woodland_Rifleman_01 : B_NorwayArmy_Rifleman_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Rifleman_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -378,14 +378,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Rifleman_AT_01 : B_NorwayArmy_Rifleman_AT_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Rifleman_AT_01.JPG;
+    class B_NorwayArmy_Woodland_Rifleman_AT_01 : B_NorwayArmy_Rifleman_AT_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Rifleman_AT_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Rifleman AT";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -419,14 +419,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Engineer_EOD_01 : B_NorwayArmy_Engineer_EOD_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Engineer_EOD_01.JPG;
+    class B_NorwayArmy_Woodland_Engineer_EOD_01 : B_NorwayArmy_Engineer_EOD_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Engineer_EOD_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Engineer/EOD";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -460,14 +460,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_1IC_01 : B_NorwayArmy_1IC_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_1IC_01.JPG;
+    class B_NorwayArmy_Woodland_1IC_01 : B_NorwayArmy_1IC_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_1IC_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "1IC";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -501,14 +501,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_2IC_01 : B_NorwayArmy_2IC_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_2IC_01.JPG;
+    class B_NorwayArmy_Woodland_2IC_01 : B_NorwayArmy_2IC_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_2IC_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "2IC";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -542,14 +542,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Marksman_01 : B_NorwayArmy_Marksman_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Marksman_01.JPG;
+    class B_NorwayArmy_Woodland_Marksman_01 : B_NorwayArmy_Marksman_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Marksman_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Marksman";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -583,14 +583,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_LMG_556_01 : B_NorwayArmy_LMG_556_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_LMG_556_01.JPG;
+    class B_NorwayArmy_Woodland_LMG_556_01 : B_NorwayArmy_LMG_556_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_LMG_556_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "LMG 5.56";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -624,14 +624,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Medic_01 : B_NorwayArmy_Medic_Woodland_01_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Medic_01.JPG;
+    class B_NorwayArmy_Woodland_Medic_01 : B_NorwayArmy_Medic_Woodland_01_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Medic_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Medic";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -665,19 +665,19 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Jackal_2HMG_Wd : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Jackal_2HMG_Wd.JPG;
+    class B_NorwayArmy_Woodland_Jackal_2HMG_Wd : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Jackal_2HMG_Wd.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Jackal 2 HMG Woodland";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
-            class L111A1_MainTurret : L111A1_MainTurret { gunnerType = "B_Norway2BNB_Crew_01"; };
-            class L7A2_1_Turret : L7A2_1_Turret { gunnerType = "B_Norway2BNB_Crew_01"; };
+            class L111A1_MainTurret : L111A1_MainTurret { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
+            class L7A2_1_Turret : L7A2_1_Turret { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
             class Right_Passenger_Cabin : Right_Passenger_Cabin { gunnerType = ""; };
             class Left_Passenger_Cabin : Left_Passenger_Cabin { gunnerType = ""; };
         };
@@ -698,14 +698,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Crew_01 : B_Norway2BNB_Man_01 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Crew_01.JPG;
+    class B_NorwayArmy_Woodland_Crew_01 : B_NorwayArmy_Woodland_Man_01 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Crew_01.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Crew";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -738,15 +738,15 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_LRover_HardTop_FFR_G : UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_LRover_HardTop_FFR_G.JPG;
+    class B_NorwayArmy_Woodland_LRover_HardTop_FFR_G : UK3CB_BAF_LandRover_Hard_FFR_Green_B_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_LRover_HardTop_FFR_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Land Rover HardTop FFR (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
             class Passenger_Turret : Passenger_Turret { gunnerType = ""; };
@@ -768,19 +768,19 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_LRover_WMIK_HMG_FFR_G : UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_LRover_WMIK_HMG_FFR_G.JPG;
+    class B_NorwayArmy_Woodland_LRover_WMIK_HMG_FFR_G : UK3CB_BAF_LandRover_WMIK_HMG_FFR_Green_B_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_LRover_WMIK_HMG_FFR_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Land Rover WMIK HMG FFR (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
-            class GPMG_Turret : GPMG_Turret { gunnerType = "B_Norway2BNB_Crew_01"; };
-            class HMG_Turret : HMG_Turret { gunnerType = "B_Norway2BNB_Crew_01"; };
+            class GPMG_Turret : GPMG_Turret { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
+            class HMG_Turret : HMG_Turret { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
         };
 
 
@@ -799,15 +799,15 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_MAN_HX60_4x4_Fuel_G : UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_MAN_HX60_4x4_Fuel_G.JPG;
+    class B_NorwayArmy_Woodland_MAN_HX60_4x4_Fuel_G : UK3CB_BAF_MAN_HX60_Fuel_Green_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_MAN_HX60_4x4_Fuel_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "MAN HX60 4x4 Fuel (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
             class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -829,15 +829,15 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_MAN_HX60_4x4_Repair_G : UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_MAN_HX60_4x4_Repair_G.JPG;
+    class B_NorwayArmy_Woodland_MAN_HX60_4x4_Repair_G : UK3CB_BAF_MAN_HX60_Repair_Green_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_MAN_HX60_4x4_Repair_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "MAN HX60 4x4 Repair (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
             class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -859,15 +859,15 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_MAN_HX60_4x4_Transport_G : UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_MAN_HX60_4x4_Transport_G.JPG;
+    class B_NorwayArmy_Woodland_MAN_HX60_4x4_Transport_G : UK3CB_BAF_MAN_HX60_Transport_Green_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_MAN_HX60_4x4_Transport_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "MAN HX60 4x4 Transport (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
             class TopCover_Turret : TopCover_Turret { gunnerType = ""; };
@@ -889,18 +889,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Panther_CLV_GPMG_G : UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Panther_CLV_GPMG_G.JPG;
+    class B_NorwayArmy_Woodland_Panther_CLV_GPMG_G : UK3CB_BAF_Panther_GPMG_Green_A_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Panther_CLV_GPMG_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Panther CLV GPMG (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
-            class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_Norway2BNB_Crew_01"; };
+            class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
             class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
         };
 
@@ -920,14 +920,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_FV432_3Bulldog_HMG_RWS_G : UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_FV432_3Bulldog_HMG_RWS_G.JPG;
+    class B_NorwayArmy_Woodland_FV432_3Bulldog_HMG_RWS_G : UK3CB_BAF_FV432_Mk3_RWS_Green_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_FV432_3Bulldog_HMG_RWS_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "FV432/3 Bulldog HMG-RWS (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
         crew = "UK3CB_BAF_Crewman_Tropical";
 
         class Turrets : Turrets {
@@ -954,18 +954,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_FV432_3Bulldog_GPMG_G : UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_FV432_3Bulldog_GPMG_G.JPG;
+    class B_NorwayArmy_Woodland_FV432_3Bulldog_GPMG_G : UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_FV432_3Bulldog_GPMG_G.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "FV432/3 Bulldog GPMG (Green)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
-            class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_Norway2BNB_Crew_01"; };
+            class Gunner_GPMG : Gunner_GPMG { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
             class CargoTurret_03 : CargoTurret_03 { gunnerType = ""; };
             class CargoTurret_04 : CargoTurret_04 { gunnerType = ""; };
             class CargoTurret_05 : CargoTurret_05 { gunnerType = ""; };
@@ -988,18 +988,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Leopard_2SG : I_MBT_03_cannon_F_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Leopard_2SG.JPG;
+    class B_NorwayArmy_Woodland_Leopard_2SG : I_MBT_03_cannon_F_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Leopard_2SG.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Leopard 2SG";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Crew_01";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Crew_01";
 
         class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "B_Norway2BNB_Crew_01"; };
+            class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Woodland_Crew_01"; };
         };
 
 
@@ -1018,18 +1018,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Wildcat_AH1_8CAS : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Wildcat_AH1_8CAS.JPG;
+    class B_NorwayArmy_Woodland_Wildcat_AH1_8CAS : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Wildcat_AH1_8CAS.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Wildcat AH1 8 CAS";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "B_Norway2BNB_Pilot"; };
+            class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
             class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
             class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
         };
@@ -1050,14 +1050,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Pilot : B_Norway2BNB_Crew_01 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Pilot.JPG;
+    class B_NorwayArmy_Woodland_Pilot : B_NorwayArmy_Woodland_Crew_01 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Pilot.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Pilot";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
 
         identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
 
@@ -1090,18 +1090,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Wildcat_AH18_Transport : UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Wildcat_AH18_Transport.JPG;
+    class B_NorwayArmy_Woodland_Wildcat_AH18_Transport : UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Wildcat_AH18_Transport.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Wildcat AH1 8 Transport";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "B_Norway2BNB_Pilot"; };
+            class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
             class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
             class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
         };
@@ -1122,18 +1122,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Merlin_HC3_18 : UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Merlin_HC3_18.JPG;
+    class B_NorwayArmy_Woodland_Merlin_HC3_18 : UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Merlin_HC3_18.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Merlin HC3 18";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class CopilotTurret : CopilotTurret { gunnerType = "B_Norway2BNB_Pilot"; };
+            class CopilotTurret : CopilotTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
             class CargoTurret_13 : CargoTurret_13 { gunnerType = ""; };
             class CargoTurret_14 : CargoTurret_14 { gunnerType = ""; };
         };
@@ -1154,20 +1154,20 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Chinook_HC2 : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Chinook_HC2.JPG;
+    class B_NorwayArmy_Woodland_Chinook_HC2 : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Chinook_HC2.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Chinook HC2";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class CopilotTurret : CopilotTurret { gunnerType = "B_Norway2BNB_Pilot"; };
-            class MainTurret : MainTurret { gunnerType = "B_Norway2BNB_Pilot"; };
-            class RightDoorGun : RightDoorGun { gunnerType = "B_Norway2BNB_Pilot"; };
+            class CopilotTurret : CopilotTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
+            class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
+            class RightDoorGun : RightDoorGun { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
             class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
             class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
         };
@@ -1188,18 +1188,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Apache_AH1_Multi : UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Apache_AH1_Multi.JPG;
+    class B_NorwayArmy_Woodland_Apache_AH1_Multi : UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Apache_AH1_Multi.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Apache AH1 Multi";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "B_Norway2BNB_Pilot"; };
+            class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
         };
 
 
@@ -1218,18 +1218,18 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_Hercules_C4 : UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_Hercules_C4.JPG;
+    class B_NorwayArmy_Woodland_Hercules_C4 : UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_Hercules_C4.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "Hercules C4";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
         class Turrets : Turrets {
-            class CopilotTurret : CopilotTurret { gunnerType = "B_Norway2BNB_Pilot"; };
+            class CopilotTurret : CopilotTurret { gunnerType = "B_NorwayArmy_Woodland_Pilot"; };
         };
 
 
@@ -1248,15 +1248,15 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_L18_101_CAP : rhssaf_airforce_l_18_101_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_L18_101_CAP.JPG;
+    class B_NorwayArmy_Woodland_L18_101_CAP : rhssaf_airforce_l_18_101_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_L18_101_CAP.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "L-18 (101/CAP)";
         side = 1;
-        faction = "B_Norway2BNB";
-        crew = "B_Norway2BNB_Pilot";
+        faction = "B_NorwayArmy_Woodland";
+        crew = "B_NorwayArmy_Woodland_Pilot";
 
 
         class EventHandlers : EventHandlers {
@@ -1273,14 +1273,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_L111A1_H : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_L111A1_H.JPG;
+    class B_NorwayArmy_Woodland_L111A1_H : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_L111A1_H.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "L111A1 (High)";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
         crew = "UK3CB_BAF_GunnerStatic_Tropical";
 
         class Turrets : Turrets {
@@ -1303,14 +1303,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_L134A1_High : UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_L134A1_High.JPG;
+    class B_NorwayArmy_Woodland_L134A1_High : UK3CB_BAF_Static_L134A1_Deployed_High_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_L134A1_High.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "L134A1 (High)";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
         crew = "UK3CB_BAF_GunnerStatic_Tropical";
 
         class Turrets : Turrets {
@@ -1333,14 +1333,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_L16 : UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_L16.JPG;
+    class B_NorwayArmy_Woodland_L16 : UK3CB_BAF_Static_L16_Deployed_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_L16.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "L16";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
         crew = "UK3CB_BAF_GunnerStatic_Tropical";
 
         class Turrets : Turrets {
@@ -1363,14 +1363,14 @@ class CfgVehicles {
 
     };
 
-    class B_Norway2BNB_L7A2_High : UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_02 {
-        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_Norway2BNB_L7A2_High.JPG;
+    class B_NorwayArmy_Woodland_L7A2_High : UK3CB_BAF_Static_L7A2_Deployed_High_Tropical_OCimport_02 {
+        editorPreview = \x\\addons\bnorway2bnb\data\preview\B_NorwayArmy_Woodland_L7A2_High.JPG;
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
         displayName = "L7A2 (High)";
         side = 1;
-        faction = "B_Norway2BNB";
+        faction = "B_NorwayArmy_Woodland";
         crew = "UK3CB_BAF_GunnerStatic_Tropical";
 
         class Turrets : Turrets {

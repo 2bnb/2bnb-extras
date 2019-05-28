@@ -7,16 +7,16 @@
 class CfgGroups {
     class WEST {
 
-        class B_Norway2BNB {
+        class B_NorwayArmy {
             name = "Norwegian Forces";
 
             class Infantry {
                 name = "Infantry";
 
-                class b_norway2bnb_infantry_sentry {
+                class b_norwayarmy_infantry_sentry {
                     name = "Sentry";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -24,20 +24,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_section_base {
+                class b_norwayarmy_infantry_section_base {
                     name = "Section (Base)";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -45,56 +45,56 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_section_blank {
+                class b_norwayarmy_infantry_section_blank {
                     name = "Section (Blank)";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -102,56 +102,56 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit1 {
                         position[] = {5,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit2 {
                         position[] = {-5,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit3 {
                         position[] = {10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit4 {
                         position[] = {-10,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit5 {
                         position[] = {0,5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit6 {
                         position[] = {0,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                     class Unit7 {
                         position[] = {0,10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Man_01";
+                        vehicle = "B_NorwayArmy_Man_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_fireteam_charlie {
+                class b_norwayarmy_infantry_fireteam_charlie {
                     name = "Fireteam Charlie";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -159,32 +159,32 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_556_01";
+                        vehicle = "B_NorwayArmy_LMG_556_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_fireteam_delta {
+                class b_norwayarmy_infantry_fireteam_delta {
                     name = "Fireteam Delta";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -192,32 +192,32 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_buddy_team_lmg_762 {
+                class b_norwayarmy_infantry_buddy_team_lmg_762 {
                     name = "Buddy Team - LMG 7.62";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -225,20 +225,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_buddy_team_at {
+                class b_norwayarmy_infantry_buddy_team_at {
                     name = "Buddy Team - AT";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -246,20 +246,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_AT_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_buddy_team_marksman {
+                class b_norwayarmy_infantry_buddy_team_marksman {
                     name = "Buddy Team - Marksman";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -267,20 +267,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_1section {
+                class b_norwayarmy_infantry_1section {
                     name = "1 Section";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -288,56 +288,56 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_AT_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_556_01";
+                        vehicle = "B_NorwayArmy_LMG_556_01";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_2section {
+                class b_norwayarmy_infantry_2section {
                     name = "2 Section";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -345,56 +345,56 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Engineer_EOD_01";
+                        vehicle = "B_NorwayArmy_Engineer_EOD_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                 };
 
-                class b_norway2bnb_infantry_3section {
+                class b_norwayarmy_infantry_3section {
                     name = "3 Section";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_inf.paa";
                     rarityGroup = 0.5;
 
@@ -402,49 +402,49 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_556_01";
+                        vehicle = "B_NorwayArmy_LMG_556_01";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "CORPORAL";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                 };
 
@@ -458,10 +458,10 @@ class CfgGroups {
             class Motorized {
                 name = "Motorized Infantry";
 
-                class b_norway2bnb_motorized_infantry_squad {
+                class b_norwayarmy_motorized_infantry_squad {
                     name = "Infantry Squad";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";
                     rarityGroup = 0.5;
 
@@ -469,56 +469,56 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_MAN_HX60_4x4_Transport_G";
+                        vehicle = "B_NorwayArmy_MAN_HX60_4x4_Transport_G_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_AT_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_01";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit6 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit7 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                 };
 
-                class b_norway2bnb_motorized_land_rover_team {
+                class b_norwayarmy_motorized_land_rover_team {
                     name = "Land Rover Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";
                     rarityGroup = 0.5;
 
@@ -526,43 +526,43 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LRover_WMIK_HMG_FFR_G";
+                        vehicle = "B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-9,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LRover_HardTop_FFR_G";
+                        vehicle = "B_NorwayArmy_LRover_HardTop_FFR_G_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-9,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit3 {
                         position[] = {-10,-14,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit4 {
                         position[] = {15,-19,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit5 {
                         position[] = {-15,-19,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit6 {
                         position[] = {15,-19,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_556_01";
+                        vehicle = "B_NorwayArmy_LMG_556_01";
                     };
                 };
 
@@ -581,10 +581,10 @@ class CfgGroups {
             class Mechanized {
                 name = "Mechanized Infantry";
 
-                class b_norway2bnb_mechanized_infantry_scout {
+                class b_norwayarmy_mechanized_infantry_scout {
                     name = "Infantry Scout";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
                     rarityGroup = 0.5;
 
@@ -592,26 +592,26 @@ class CfgGroups {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LRover_WMIK_HMG_FFR_G";
+                        vehicle = "B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                 };
 
-                class b_norway2bnb_mechanized_jackal_hmg_team {
+                class b_norwayarmy_mechanized_jackal_hmg_team {
                     name = "Jackal HMG Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
                     rarityGroup = 0.5;
 
@@ -619,20 +619,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Jackal_2HMG_Wd";
+                        vehicle = "B_NorwayArmy_Jackal_2HMG_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Jackal_2HMG_Wd";
+                        vehicle = "B_NorwayArmy_Jackal_2HMG_Woodland";
                     };
                 };
 
-                class b_norway2bnb_mechanized_bulldog_hmg_team {
+                class b_norwayarmy_mechanized_bulldog_hmg_team {
                     name = "Bulldog HMG Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
                     rarityGroup = 0.5;
 
@@ -640,20 +640,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_FV432_3Bulldog_HMG_RWS_G";
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland";
                     };
                     class Unit1 {
                         position[] = {6,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_FV432_3Bulldog_HMG_RWS_G";
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland";
                     };
                 };
 
-                class b_norway2bnb_mechanized_bulldog_gpmg {
+                class b_norwayarmy_mechanized_bulldog_gpmg {
                     name = "Bulldog GPMG";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
                     rarityGroup = 0.5;
 
@@ -661,13 +661,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_FV432_3Bulldog_GPMG_G";
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland";
                     };
                     class Unit1 {
                         position[] = {6,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_FV432_3Bulldog_GPMG_G";
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland";
                     };
                 };
 
@@ -676,10 +676,10 @@ class CfgGroups {
             class Armored {
                 name = "Armor";
 
-                class b_norway2bnb_armored_tank_platoon {
+                class b_norwayarmy_armored_tank_platoon {
                     name = "Tank Platoon";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_armor.paa";
                     rarityGroup = 0.5;
 
@@ -687,13 +687,13 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Leopard_2SG";
+                        vehicle = "B_NorwayArmy_Leopard_2SG_Woodland";
                     };
                     class Unit1 {
                         position[] = {10,-17,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Leopard_2SG";
+                        vehicle = "B_NorwayArmy_Leopard_2SG_Woodland";
                     };
                 };
 
@@ -702,10 +702,10 @@ class CfgGroups {
             class Artillery {
                 name = "Artillery";
 
-                class b_norway2bnb_artillery_mortar_squad {
+                class b_norwayarmy_artillery_mortar_squad {
                     name = "Mortar Squad";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_art.paa";
                     rarityGroup = 0.5;
 
@@ -713,37 +713,37 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_L16";
+                        vehicle = "B_NorwayArmy_L16_Woodland";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_L16";
+                        vehicle = "B_NorwayArmy_L16_Woodland";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_L16";
+                        vehicle = "B_NorwayArmy_L16_Woodland";
                     };
                     class Unit3 {
                         position[] = {10,-10,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Crew_01";
+                        vehicle = "B_NorwayArmy_Crew_Woodland";
                     };
                     class Unit4 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Crew_01";
+                        vehicle = "B_NorwayArmy_Crew_Woodland";
                     };
                     class Unit5 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Crew_01";
+                        vehicle = "B_NorwayArmy_Crew_Woodland";
                     };
                 };
 
@@ -757,10 +757,10 @@ class CfgGroups {
             class Air {
                 name = "Air";
 
-                class b_norway2bnb_air_apache_multi_team {
+                class b_norwayarmy_air_apache_multi_team {
                     name = "Apache Multi Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
                     rarityGroup = 0.5;
 
@@ -768,20 +768,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Apache_AH1_Multi";
+                        vehicle = "B_NorwayArmy_Apache_AH1_Multi_Woodland";
                     };
                     class Unit1 {
                         position[] = {20,-26,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Apache_AH1_Multi";
+                        vehicle = "B_NorwayArmy_Apache_AH1_Multi_Woodland";
                     };
                 };
 
-                class b_norway2bnb_air_wildcat_cas_team {
+                class b_norwayarmy_air_wildcat_cas_team {
                     name = "Wildcat CAS Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
                     rarityGroup = 0.5;
 
@@ -789,20 +789,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Wildcat_AH1_8CAS";
+                        vehicle = "B_NorwayArmy_Wildcat_AH1_8CAS_Woodland";
                     };
                     class Unit1 {
                         position[] = {17,-21,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Wildcat_AH1_8CAS";
+                        vehicle = "B_NorwayArmy_Wildcat_AH1_8CAS_Woodland";
                     };
                 };
 
-                class b_norway2bnb_air_fighter_team {
+                class b_norwayarmy_air_fighter_team {
                     name = "Fighter Team";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_plane.paa";
                     rarityGroup = 0.5;
 
@@ -810,20 +810,20 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_L18_101_CAP";
+                        vehicle = "B_NorwayArmy_L18_101_CAP_Woodland";
                     };
                     class Unit1 {
                         position[] = {17,-29,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_L18_101_CAP";
+                        vehicle = "B_NorwayArmy_L18_101_CAP_Woodland";
                     };
                 };
 
-                class b_norway2bnb_air_infantry_air_squad {
+                class b_norwayarmy_air_infantry_air_squad {
                     name = "Infantry Air Squad";
                     side = 1;
-                    faction = "B_Norway2BNB";
+                    faction = "B_NorwayArmy";
                     icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
                     rarityGroup = 0.5;
 
@@ -831,79 +831,79 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Chinook_HC2";
+                        vehicle = "B_NorwayArmy_Chinook_HC2_Woodland";
                     };
                     class Unit1 {
                         position[] = {28,-43,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Chinook_HC2";
+                        vehicle = "B_NorwayArmy_Chinook_HC2_Woodland";
                     };
                     class Unit2 {
                         position[] = {-28,-43,0};
                         rank = "SERGEANT";
                         side = 1;
-                        vehicle = "B_Norway2BNB_1IC_01";
+                        vehicle = "B_NorwayArmy_1IC_01";
                     };
                     class Unit3 {
                         position[] = {33,-48,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_2IC_01";
+                        vehicle = "B_NorwayArmy_2IC_01";
                     };
                     class Unit4 {
                         position[] = {-33,-48,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Medic_01";
+                        vehicle = "B_NorwayArmy_Medic_01";
                     };
                     class Unit5 {
                         position[] = {38,-53,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_AT_01";
+                        vehicle = "B_NorwayArmy_Rifleman_AT_01";
                     };
                     class Unit6 {
                         position[] = {-38,-53,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Marksman_01";
+                        vehicle = "B_NorwayArmy_Marksman_01";
                     };
                     class Unit7 {
                         position[] = {43,-58,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_762_01";
+                        vehicle = "B_NorwayArmy_LMG_762_01";
                     };
                     class Unit8 {
                         position[] = {-43,-58,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_LMG_556_01";
+                        vehicle = "B_NorwayArmy_LMG_556_01";
                     };
                     class Unit9 {
                         position[] = {48,-63,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit10 {
                         position[] = {-48,-63,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit11 {
                         position[] = {53,-68,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                     class Unit12 {
                         position[] = {-53,-68,0};
                         rank = "PRIVATE";
                         side = 1;
-                        vehicle = "B_Norway2BNB_Rifleman_01";
+                        vehicle = "B_NorwayArmy_Rifleman_01";
                     };
                 };
 

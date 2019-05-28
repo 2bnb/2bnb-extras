@@ -441,6 +441,457 @@ class CfgGroups {
                         vehicle = "B_NorwayArmy_LMG_762_Woodland_01";
                     };
                 };
+            class Motorized {
+                name = "Motorized Infantry";
+
+                class b_norwayarmy_motorized_infantry_squad {
+                    name = "Infantry Squad";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_MAN_HX60_4x4_Transport_G_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {5,-5,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_1IC_01";
+                    };
+                    class Unit2 {
+                        position[] = {-5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_2IC_01";
+                    };
+                    class Unit3 {
+                        position[] = {10,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Medic_01";
+                    };
+                    class Unit4 {
+                        position[] = {-10,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_AT_01";
+                    };
+                    class Unit5 {
+                        position[] = {15,-15,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit6 {
+                        position[] = {-15,-15,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit7 {
+                        position[] = {20,-20,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_LMG_762_01";
+                    };
+                };
+
+                class b_norwayarmy_motorized_land_rover_team {
+                    name = "Land Rover Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_motor_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {5,-9,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_LRover_HardTop_FFR_G_Woodland";
+                    };
+                    class Unit2 {
+                        position[] = {-5,-9,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_1IC_01";
+                    };
+                    class Unit3 {
+                        position[] = {-10,-14,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Medic_01";
+                    };
+                    class Unit4 {
+                        position[] = {15,-19,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit5 {
+                        position[] = {-15,-19,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit6 {
+                        position[] = {15,-19,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_LMG_556_01";
+                    };
+                };
+
+            };
+
+            class Motorized_MTP {
+                name = "Motorized Infantry (MTP)";
+
+            };
+
+            class Support {
+                name = "Support Infantry";
+
+            };
+
+            class Mechanized {
+                name = "Mechanized Infantry";
+
+                class b_norwayarmy_mechanized_infantry_scout {
+                    name = "Infantry Scout";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {-5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit1 {
+                        position[] = {5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland";
+                    };
+                    class Unit2 {
+                        position[] = {-5,-5,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Marksman_01";
+                    };
+                };
+
+                class b_norwayarmy_mechanized_jackal_hmg_team {
+                    name = "Jackal HMG Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Jackal_2HMG_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {5,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Jackal_2HMG_Woodland";
+                    };
+                };
+
+                class b_norwayarmy_mechanized_bulldog_hmg_team {
+                    name = "Bulldog HMG Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {6,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland";
+                    };
+                };
+
+                class b_norwayarmy_mechanized_bulldog_gpmg {
+                    name = "Bulldog GPMG";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {6,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland";
+                    };
+                };
+
+            };
+
+            class Armored {
+                name = "Armor";
+
+                class b_norwayarmy_armored_tank_platoon {
+                    name = "Tank Platoon";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_armor.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Leopard_2SG_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {10,-17,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Leopard_2SG_Woodland";
+                    };
+                };
+
+            };
+
+            class Artillery {
+                name = "Artillery";
+
+                class b_norwayarmy_artillery_mortar_squad {
+                    name = "Mortar Squad";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_art.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_L16_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_L16_Woodland";
+                    };
+                    class Unit2 {
+                        position[] = {-5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_L16_Woodland";
+                    };
+                    class Unit3 {
+                        position[] = {10,-10,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Crew_01";
+                    };
+                    class Unit4 {
+                        position[] = {-10,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Crew_01";
+                    };
+                    class Unit5 {
+                        position[] = {15,-15,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Crew_01";
+                    };
+                };
+
+            };
+
+            class Naval {
+                name = "Naval";
+
+            };
+
+            class Air {
+                name = "Air";
+
+                class b_norwayarmy_air_apache_multi_team {
+                    name = "Apache Multi Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Apache_AH1_Multi_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {20,-26,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Apache_AH1_Multi_Woodland";
+                    };
+                };
+
+                class b_norwayarmy_air_wildcat_cas_team {
+                    name = "Wildcat CAS Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Wildcat_AH1_8CAS_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {17,-21,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Wildcat_AH1_8CAS_Woodland";
+                    };
+                };
+
+                class b_norwayarmy_air_fighter_team {
+                    name = "Fighter Team";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_plane.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorB_NorwayArmy_L18_101_CAP_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {17,-29,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorB_NorwayArmy_L18_101_CAP_Woodland";
+                    };
+                };
+
+                class b_norwayarmy_air_infantry_air_squad {
+                    name = "Infantry Air Squad";
+                    side = 1;
+                    faction = "B_NorwayArmy_Woodland";
+                    icon = "\A3\ui_f\data\map\markers\nato\b_air.paa";
+                    rarityGroup = 0.5;
+
+                    class Unit0 {
+                        position[] = {0,0,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Chinook_HC2_Woodland";
+                    };
+                    class Unit1 {
+                        position[] = {28,-43,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Chinook_HC2_Woodland";
+                    };
+                    class Unit2 {
+                        position[] = {-28,-43,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_1IC_01";
+                    };
+                    class Unit3 {
+                        position[] = {33,-48,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_2IC_01";
+                    };
+                    class Unit4 {
+                        position[] = {-33,-48,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Medic_01";
+                    };
+                    class Unit5 {
+                        position[] = {38,-53,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_AT_01";
+                    };
+                    class Unit6 {
+                        position[] = {-38,-53,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Marksman_01";
+                    };
+                    class Unit7 {
+                        position[] = {43,-58,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_LMG_762_01";
+                    };
+                    class Unit8 {
+                        position[] = {-43,-58,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_LMG_556_01";
+                    };
+                    class Unit9 {
+                        position[] = {48,-63,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit10 {
+                        position[] = {-48,-63,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit11 {
+                        position[] = {53,-68,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                    class Unit12 {
+                        position[] = {-53,-68,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_NorwayArmy_Woodland_Rifleman_01";
+                    };
+                };
             };
         };
 

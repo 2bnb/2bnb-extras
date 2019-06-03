@@ -22,6 +22,8 @@ class CfgPatches {
 			"B_NorwayArmy_2IC_Desert",
 			"B_NorwayArmy_Rifleman_AT_Desert",
 			"B_NorwayArmy_Rifleman_Desert",
+			"B_NorwayArmy_Crew_Desert",
+			"B_NorwayArmy_Pilot_Desert",
 			"B_NorwayArmy_Jackal_2HMG_Woodland",
 			"B_NorwayArmy_Crew_Woodland",
 			"B_NorwayArmy_LRover_HardTop_FFR_G_Woodland",

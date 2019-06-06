@@ -8,7 +8,8 @@ class CfgPatches {
 			"achilles_ui_f",
 			"achilles_functions_f_achilles",
 			"achilles_functions_f_ares",
-			"cba_settings"
+			"cba_settings",
+			"tfw_radios_rf3080"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
@@ -54,6 +55,13 @@ class Extended_PostInit_EventHandlers {
 	};
 };
 
+class cfgWeapons {
+	class ACE_ItemCore;
+	class CBA_MiscItem_ItemInfo;
+	class tfw_rf3080Item: ACE_ItemCore {
+		class ItemInfo: CBA_MiscItem_ItemInfo{};
+	};
+};
 
 // Add server direct connect tiles
 class CfgMainMenuSpotlight {

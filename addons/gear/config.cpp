@@ -121,15 +121,13 @@ class cfgWeapons
 			{
 				class Head
 				{
-					hitPointName = "HitHead";
-					armor = 6;
-					passThrough = 0.5;
+					hitpointName="HitHead";
+					armor=30;
+					passThrough=0.1;
 				};
 			};
 		};
 	};
-
-
 	class Adidas_Helmet: ItemCore
 	{
 		author = "Ford";
@@ -137,11 +135,10 @@ class cfgWeapons
 		displayName = "Adidas Helmet";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
-		ace_hearing_protection = 0.75;
-        ace_hearing_lowerVolume = 0;
+		ace_hearing_protection = 0.8;
+        ace_hearing_lowerVolume = 0.25;
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidasH.paa"};
-
 		class ItemInfo: HeadgearItem
 		{
 			mass = 10;
@@ -153,14 +150,19 @@ class cfgWeapons
 			{
 				class Head
 				{
-					hitPointName = "HitHead";
-					armor = 15;
-					passThrough = 0.5;
+					hitpointName="HitHead";
+					armor=90;
+					passThrough=0.1;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor=60;
+					passThrough=0.1;
 				};
 			};
 		};
 	};
-
 	class Adidas_BerretX: Adidas_Berret
 	{
 		author = "Ford";
@@ -168,6 +170,7 @@ class cfgWeapons
 		displayName = "Adidas BerretX";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		ace_hearing_lowerVolume = 0.80;
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\adidasB.paa" };
 		class ItemInfo: ItemInfo
@@ -180,7 +183,16 @@ class cfgWeapons
 			};
 		};
 	};
-
+	class H_mas_nor_opscore: ItemCore
+	{
+		ace_hearing_protection = 0.75;
+        ace_hearing_lowerVolume = 0;
+	};
+	class H_mas_nor_Cap_fsk_f: ItemCore
+	{
+		ace_hearing_protection = 0.75;
+        ace_hearing_lowerVolume = 0;
+	};	
 	class VSM_Mich2000_MulticamTropic: ItemCore
 	{
 		ace_hearing_protection = 0.75;

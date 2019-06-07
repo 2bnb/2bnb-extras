@@ -19,6 +19,21 @@ class CfgPatches {
 	};
 };
 
+
+class CfgFunctions
+{
+	class TFAR
+	{
+		class TFAR_overrides
+		{
+			file="\x\bnb_e\core\functions\TFAR_overrides";
+			tag="TFAR";			
+			class lrRadiosList {
+			};
+		};
+	};
+};
+
 class CfgFunctions {
 	class bnb_e_core {
 		class zeus_modules {

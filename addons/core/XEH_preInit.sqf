@@ -93,5 +93,3 @@ private _bnb_e_settings = [
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
-
-

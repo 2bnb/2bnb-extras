@@ -181,16 +181,6 @@ class CfgGroups {
 
             };
 
-            class Motorized_MTP {
-                name = "Motorized Infantry (MTP)";
-
-            };
-
-            class Support {
-                name = "Support Infantry";
-
-            };
-
             class Mechanized {
                 name = "Mechanized Infantry";
 
@@ -260,11 +250,6 @@ class CfgGroups {
                         vehicle = "I_Chernarus_Ural_BM21_Winter";
                     };
                 };
-
-            };
-
-            class Naval {
-                name = "Naval";
 
             };
 

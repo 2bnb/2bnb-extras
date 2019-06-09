@@ -73,6 +73,14 @@ if (isNull (_objects select 0)) then {
 
 if (_objects isEqualTo []) exitWith {};
 
+// Give server the object, so that everything in future can be applied to the object locally
+if (isServer) then {
+	{
+		if (owner _x != 2 || owner _x != 0) then { _x setOwner 2; };
+		[format["Changed ownership of %1 to %2", _x, owner _x], "core\functions\zeus_modules\fn_addArsenal.sqf"] call bnb_e_core_fnc_log;
+	} foreach _objects;
+};
+
 // Add Arsenal - Remotely, since only the server has 2BNB Framework loaded
 [_availableFilters select _filter, _objects] remoteExec ["bnb_f_core_fnc_arsenal", 2];
 

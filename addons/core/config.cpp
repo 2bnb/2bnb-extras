@@ -36,8 +36,13 @@ class CfgFunctions
 
 class CfgFunctions {
 	class bnb_e_core {
+		class common {
+			file = "\x\bnb_e\core\functions\common";
+			class addFullHeal {};
+		};
+
 		class zeus_modules {
-			file="\x\bnb_e\core\functions\zeus_modules";
+			file = "\x\bnb_e\core\functions\zeus_modules";
 			class addArsenal {};
 			class addContaminationArea {};
 			class addMusicRadio {};
@@ -45,14 +50,14 @@ class CfgFunctions {
 		};
 
 		class utilities {
-			file="\x\bnb_e\core\functions\utilities";
+			file = "\x\bnb_e\core\functions\utilities";
 			class log {};
 			class strToArray {};
 			class toBoolean {};
 		};
 
 		class direct_connect {
-			file="\x\bnb_e\core\functions\direct_connect";
+			file = "\x\bnb_e\core\functions\direct_connect";
 			class connectToServer {};
 		};
 	};

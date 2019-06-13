@@ -466,7 +466,7 @@ class CfgVehicles {
 	class B_NorwayArmy_Pilot_Woodland : B_NorwayArmy_Man_Woodland {
 		author = "Jebby";
 		displayName = "Pilot";
-		editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Pilot_WoDesert.jpg";
+		editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Pilot_Woodland.jpg";
 
 		uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 

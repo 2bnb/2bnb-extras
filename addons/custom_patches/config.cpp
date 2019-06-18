@@ -5,9 +5,15 @@ class CfgPatches {
 		weapons[] = {};
 		requiredAddons[] = {};
 		author = "2nd Battalion, Nord Brigade";
-		author[] = {
-			"D. Ford",
-			"Arend"
+		authors[] = {
+			"2BNB",
+			"Ford",
+			"Arend",
+			"Farcry",
+			"Wolfpack",
+			"Elkku",
+			"Jackson",
+			"Psycho"
 		};
 	};
 };
@@ -163,6 +169,14 @@ class CfgUnitInsignia
 		displayName="Kimmy Jongy Boi";
 		author="Farcry";
 		texture="x\bnb_e\custom_patches\img\KimmyJongyBoi.paa";
+		textureVehicle="";
+	};
+
+	class WolfpackInsignia
+	{
+		displayName="Wolfpack Insignia";
+		author="Wolfpack";
+		texture="x\bnb_e\custom_patches\img\wolfpack-insignia.paa";
 		textureVehicle="";
 	};
 };

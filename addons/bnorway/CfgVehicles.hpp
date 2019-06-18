@@ -721,6 +721,13 @@ class CfgVehicles {
 		faction = "B_NorwayArmy_Woodland";
 		crew = "B_NorwayArmy_Crew_Woodland";
 
+		hiddenSelectionsTextures[] = {
+			"\x\bnb_e\bnorway\data\textures\Leopard_Hull.paa", // Hull (ext01)
+			"\x\bnb_e\bnorway\data\textures\Leopard_Main_Turret.paa", // Main Turret (ext02)
+			"\x\bnb_e\bnorway\data\textures\Leopard_Com_Turret.paa", // Commander Turret (RCWS_CO)
+			"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
+		};
+
 		class Turrets : Turrets {
 			class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
 		};

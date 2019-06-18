@@ -59,7 +59,9 @@ class CfgPatches {
 			"B_NorwayArmy_L134A1_High_Woodland",
 			"B_NorwayArmy_L16_Woodland",
 			"B_NorwayArmy_L7A2_High_Woodland",
-			"B_NorwayArmy_A10_Woodland"
+			"B_NorwayArmy_A10_Woodland",
+			"B_NorwayArmy_F16_Woodland",
+			"B_NorwayArmy_F16_CFT_Woodland"
 		};
 		weapons[] = {};
 		requiredVersion = 1.62;
@@ -69,7 +71,8 @@ class CfgPatches {
 			"UK3CB_BAF_Vehicles_Chinook",
 			"UK3CB_BAF_Vehicles_Hercules",
 			"rhs_c_mig29",
-			"A3_Air_F_EPC_Plane_CAS_01"
+			"A3_Air_F_EPC_Plane_CAS_01",
+			"FIR_AirWeaponSystem_US"
 		};
 		author = "Maj. D. Ford";
 		authors[] = {

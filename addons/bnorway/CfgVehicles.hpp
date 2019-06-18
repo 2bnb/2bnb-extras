@@ -217,6 +217,9 @@ class CfgVehicles {
 	class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
 	class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
 
+	class FIR_F16C;
+	class FIR_F16C_CFTTEST : FIR_F16C{};
+
 	class B_NorwayArmy_Man : B_Soldier_F_OCimport_02 {
 		author = "Capt. Arend";
 		scope = 0;
@@ -1030,6 +1033,61 @@ class CfgVehicles {
 
 		// custom attributes (do not delete)
 		ALiVE_orbatCreator_owned = 1;
+	};
+
+	class B_NorwayArmy_F16C_Woodland : FIR_F16C
+	{
+		author = "Capt. Arend";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "F-16C Fighting Falcon";
+		side = 1;
+		faction = "B_NorwayArmy_Woodland";
+		editorSubcategory = "EdSubcat_Planes";
+		/*first is body texture, second is wing, third is CFT texture. last is insignia and just leave the blank.*/
+		hiddenselectionstextures[] = {"\x\bnb_e\bnorway\data\textures\FIR_F16C_Body_co.paa","\x\bnb_e\bnorway\data\textures\FIR_F16C_Wing_co.paa","",""};
+		/* master arm switch is added */
+		weapons[] = {"FIR_MasterArm","FIR_M61A2","FIR_CMLauncher","FIR_AIM9L","FIR_AIM120"};
+		/* updated 2016-01-05 : add magazine for SDB Slot*/
+		magazines[] = {"FIR_M61A2_511rnd_M","FIR_240rnd_CMFlare_Chaff_Magazine","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_AIM9L_1rnd_M","FIR_AIM9L_1rnd_M","FIR_AIM120_1rnd_M","FIR_AIM120_1rnd_M","FIR_AIM120_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_AIM120_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_f16C_Fueltank_1rnd_M","FIR_f16C_Fueltank_1rnd_M","FIR_F16C_center_Fueltank_1rnd_M"};
+
+		/*Custom Skin into Skin Dialog*/
+		/*fir_f16_custom_skin = 1 is enable, 0 or other number is disable */
+		/*fir_f16_custom_name = Skin Name on Skin Dialog*/
+		/*fir_f16_custom_code = custom code is must same the classname */
+		/*fir_f16_custom_preview_pic = preview picture path. if blank, system will be display "preview not available" into dialog. */
+		fir_f16_custom_skin = 1;
+		fir_f16_custom_name = "Royal Norwegian Air Force";
+		fir_f16_custom_code = "B_NorwayArmy_F16C_Woodland";
+		// fir_f16_custom_preview_pic = "\your_f16_path\your_preview_picture.paa";
+
+	};
+	/*B_NorwayArmy_F16C_Woodland is example, so i suggest of change the name for that. because prevent of conflict with other f-16 reskin addon. FOR F-16C CFT Version*/
+	class B_NorwayArmy_F16C_CFT_Woodland : FIR_F16C_CFTTEST
+	{
+		author = "Capt. Arend";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "F-16C Fighting Falcon w/ Conformal Fuel Tanks";
+		side = 1;
+		faction = "B_NorwayArmy_Woodland";
+		editorSubcategory = "EdSubcat_Planes";
+		/*first is body texture, second is wing, third is CFT texture. last is insignia and just leave the blank.*/
+		hiddenselectionstextures[] = {"\x\bnb_e\bnorway\data\textures\FIR_F16C_Body_co.paa","\x\bnb_e\bnorway\data\textures\FIR_F16C_Wing_co.paa","\x\bnb_e\bnorway\data\textures\FIR_F16C_CFT_co.paa",""};
+		/* master arm switch is added */
+		weapons[] = {"FIR_MasterArm","FIR_M61A2","FIR_CMLauncher","FIR_AIM9L","FIR_AIM120"};
+		/* updated 2016-01-05 : add magazine for SDB Slot*/
+		magazines[] = {"FIR_M61A2_511rnd_M","FIR_240rnd_CMFlare_Chaff_Magazine","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_AIM9L_1rnd_M","FIR_AIM9L_1rnd_M","FIR_AIM120_1rnd_M","FIR_AIM120_1rnd_M","FIR_AIM120_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_AIM120_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_empty_1rnd_M","FIR_f16C_Fueltank_1rnd_M","FIR_f16C_Fueltank_1rnd_M","FIR_F16C_center_Fueltank_1rnd_M"};
+
+		/*Custom Skin into Skin Dialog*/
+		/*fir_f16_cft_custom_skin = 1 is enable, 0 or other number is disable. its add for CFT Version */
+		/*fir_f16_custom_name = Skin Name on Skin Dialog*/
+		/*fir_f16_custom_code = custom code is must same the classname */
+		/*fir_f16_custom_preview_pic = preview picture path. if blank, system will be display "preview not available" into dialog. */
+		fir_f16_cft_custom_skin = 1;
+		fir_f16_custom_name = "Royal Norwegian Air Force CFT";
+		fir_f16_custom_code = "B_NorwayArmy_F16C_CFT_Woodland";
+		// fir_f16_custom_preview_pic = "\your_f16_path\your_preview_picture.paa";
 	};
 
 	////////////

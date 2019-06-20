@@ -13,7 +13,8 @@ class CfgPatches {
 			"Wolfpack",
 			"Elkku",
 			"Jackson",
-			"Psycho"
+			"Psycho",
+			"Eden"
 		};
 	};
 };
@@ -179,5 +180,28 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\wolfpack-insignia.paa";
 		textureVehicle="";
 	};
-};
 
+	class JebbyInsignia
+	{
+		displayName="Jebby Insignia";
+		author="Jebby";
+		texture="x\bnb_e\custom_patches\img\jebby-insignia.paa";
+		textureVehicle="";
+	};
+
+	class FarcryInsignia
+	{
+		displayName="Farcry Insignia";
+		author="Farcry";
+		texture="x\bnb_e\custom_patches\img\farcry-insignia.paa";
+		textureVehicle="";
+	};
+
+	class TomJerry
+	{
+		displayName="Tom & Jerry wut";
+		author="Eden";
+		texture="x\bnb_e\custom_patches\img\tom-jerry.paa";
+		textureVehicle="";
+	};
+};

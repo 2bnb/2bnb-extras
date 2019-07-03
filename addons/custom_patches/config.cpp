@@ -204,4 +204,12 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\tom-jerry.paa";
 		textureVehicle="";
 	};
+
+	class MedicPatch
+	{
+		displayName="2BNB Medic Patch";
+		author="Badger";
+		texture="x\bnb_e\custom_patches\img\2bnbMedicPatch.paa";
+		textureVehicle="";
+	};
 };

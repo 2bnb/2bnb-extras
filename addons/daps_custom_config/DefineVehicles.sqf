@@ -4,11 +4,9 @@
 dapsLight=[];
 dapsMedium=["O_APC_Tracked_02_cannon_F","O_APC_Wheeled_02_rcws_v2_F","O_T_APC_Tracked_02_cannon_ghex_F","O_T_APC_Wheeled_02_rcws_v2_ghex_F"];
 dapsHeavy=[];
-dapsTrophyLV=["CUP_B_FV432_Bulldog_GB_D_RWS","CUP_B_FV432_Bulldog_GB_W_RWS","CUP_B_FV432_Bulldog_GB_D","CUP_B_FV432_Bulldog_GB_W","B_MRAP_01_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_T_MRAP_01_F","B_T_MRAP_01_gmg_F","B_T_MRAP_01_hmg_F",
+dapsTrophyLV=["B_MRAP_01_F","B_MRAP_01_gmg_F","B_MRAP_01_hmg_F","B_T_MRAP_01_F","B_T_MRAP_01_gmg_F","B_T_MRAP_01_hmg_F",
 "I_MRAP_03_F","I_MRAP_03_gmg_F","I_MRAP_03_hmg_F"];
 dapsTrophyMV=[
-"CUP_B_FV510_GB_D","CUP_B_FV510_GB_D_SLAT","CUP_B_FV510_GB_W_SLAT","CUP_B_FV510_GB_W",
-"CUP_B_MCV80_GB_D","CUP_B_MCV80_GB_D_SLAT","CUP_B_MCV80_GB_W_SLAT","CUP_B_MCV80_GB_W",
 "B_APC_Wheeled_01_cannon_F","B_T_APC_Wheeled_01_cannon_F",
 "B_AFV_Wheeled_01_cannon_F","B_AFV_Wheeled_01_up_cannon_F","B_T_AFV_Wheeled_01_cannon_F","B_T_AFV_Wheeled_01_up_cannon_F",
 "I_APC_Wheeled_03_cannon_F","I_APC_tracked_03_cannon_F",
@@ -43,9 +41,7 @@ dapsTrophyHV=[
 "rhsusf_m1a2sep1tuskiwd_usarmy",
 "rhsusf_m1a2sep1tuskid_usarmy",
 "rhsusf_m1a2sep1tuskiiwd_usarmy",
-"rhsusf_m1a2sep1tuskiid_usarmy",
-"MEC_IDF_Merkava",
-"MEC_IDF_Merkava4"
+"rhsusf_m1a2sep1tuskiid_usarmy"
 ];
 dapsTrophyHVe=[];
 dapsArena=[];
@@ -53,6 +49,6 @@ dapsDrozd=[];
 dapsDrozd2=["O_MBT_02_cannon_F","O_T_MBT_02_cannon_ghex_F"];
 dapsAfganit=[];
 dapsAfganitE=["O_MBT_04_cannon_F","O_MBT_04_command_F","O_T_MBT_04_cannon_F","O_T_MBT_04_command_F"];
-dapsDazzler=["CUP_O_T90_RU","MEC_SAA_T72","MEC_SAA_T90"];
+dapsDazzler=["MEC_SAA_T72","MEC_SAA_T90"];
 dapsIronFist=[];
 dapsAMAP=["I_MBT_03_cannon_F"];

@@ -1,8 +1,3 @@
-["2BNB Modules", "Export Recording Data",
-{
-	call bnb_e_core_fnc_exportOcapData;
-}] call Ares_fnc_RegisterCustomModule;
-
 ["2BNB Modules", "Add Filtered Arsenal",
 {
 	// Array of position AGLS, ObjNull or the object under the module as it's placed

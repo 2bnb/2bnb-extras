@@ -26,8 +26,8 @@ if (isNil "_this") exitWith {};
 if (_this isEqualTo []) exitWith {};
 
 //execute on server to make sure that only one client (server) is writing to array at the same time
-if (! isServer) exitWith {
-    _this remoteExecCall ["bnb_e_sling_mask_addMaskToWhitelist", 2];
+if (!isServer) exitWith {
+    _this remoteExec ["bnb_e_sling_mask_addMaskToWhitelist", 2];
 };
 
 //init variable if isn't yet

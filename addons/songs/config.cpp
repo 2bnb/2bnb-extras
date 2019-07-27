@@ -217,6 +217,15 @@ class CfgMusic {
 		artist = "John Denver";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_take_me_home_country_roads_2bnb {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 61;
+		title = "Take me Home, Country Roads";
+		artist = "2BNB";
+		klpq_ignoreTrack = 0;
+	};
 	class bnb_e_song_take_on_me {
 		sound[] = {"x\bnb_e\songs\other\Take_On_Me_-_a-ha.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -981,6 +990,34 @@ class CfgSounds {
 	};
 	class bnb_e_song_take_me_home_country_roads_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_John_Denver.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_take_me_home_country_roads_2bnb_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Take_Me_Home_Country_Roads_-_2BNB.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_take_on_me {

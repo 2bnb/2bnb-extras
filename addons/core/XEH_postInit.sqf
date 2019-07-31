@@ -41,4 +41,4 @@
 //-------------------------------------------------------------------------------
 
 // Event Handlers
-["addFullHeal", {_this call bnb_e_core_fnc_addFullHeal;}] call CBA_fnc_addEventHandler;
+["bnb_e_event_addFullHeal", {_this call bnb_e_core_fnc_addFullHeal}] call CBA_fnc_addEventHandler;

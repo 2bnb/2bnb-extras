@@ -23,7 +23,6 @@ class CfgFunctions {
 	class bnb_e_core {
 		class common {
 			file = "\x\bnb_e\core\functions\common";
-			class addFullHeal {};
 		};
 
 		class zeus_modules {

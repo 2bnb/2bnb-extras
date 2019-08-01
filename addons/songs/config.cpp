@@ -289,6 +289,24 @@ class CfgMusic {
 		artist = "The Who";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_etzlenu_bagan {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 186;
+		title = "Etzlenu Bagan";
+		artist = "Shai Le Atri";
+		klpq_ignoreTrack = 0;
+	};
+	class bnb_e_song_hatikva {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 106;
+		title = "Hatikva";
+		artist = "Naftali Herz Imber";
+		klpq_ignoreTrack = 0;
+	};
 	class bnb_e_song_black_betty {
 		sound[] = {"x\bnb_e\songs\vietnam\Black_Betty_-_Ram_Jam.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -1214,6 +1232,62 @@ class CfgSounds {
 	};
 	class bnb_e_song_wont_get_fooled_again_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_etzlenu_bagan_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Etzlenu_Bagan_-_Shai_le_Atri.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_hatikva_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Hatikva_-_Naftali_Herz_Imber.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_black_betty {

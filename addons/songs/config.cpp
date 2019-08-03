@@ -73,6 +73,15 @@ class CfgMusic {
 		artist = "Queen";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_bad_guy {
+		sound[] = {"x\bnb_e\songs\Alternative\bad_guy_-_Billie_Eilish.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 194;
+		title = "bad guy";
+		artist = "Billie Eilish";
+		klpq_ignoreTrack = 0;
+	};	
 	class bnb_e_song_battlefield_1942 {
 		sound[] = {"x\bnb_e\songs\other\Battlefield_1942.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -560,6 +569,34 @@ class CfgSounds {
 	};
 	class bnb_e_song_another_one_bites_the_dust_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Another_One_Bites_The_Dust_-_Queen.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_vol0 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_vol1 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_vol2 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_guy_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\bad_guy_-_Billie_Eilish.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_battlefield_1942 {

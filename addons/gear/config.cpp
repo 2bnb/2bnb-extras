@@ -25,6 +25,105 @@ class cfgWeapons
 
 	class U_I_CombatUniform;
 
+	class H_HelmetB_TI_tna_F;
+	class V_PlateCarrier2_wdl;
+	class U_B_CTRG_Soldier_F;
+
+	class U_B_CTRG_Soldier_Fx: U_B_CTRG_Soldier_F
+	{
+		author = "Ford";
+		scope = 2;
+		displayName = "SUPAR STEALTH";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "B_CTRG_Soldier_F";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
+
+	class H_HelmetB_TI_tna_Fx:H_HelmetB_TI_tna_F
+	{
+		author = "Ford";
+		scope = 2;
+		displayName = "SUPAR STEALTH";
+
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\A3\Characters_F_Exp\BLUFOR\H_HelmetB_TI_tna_F.p3d";
+			hiddenSelections[] = {"camo"};
+			modelSides[] = {0,3};
+			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			{
+				class Face {
+					armor = 10;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+					};
+				class Head {
+					armor = 30;
+					hitpointName = "HitHead";
+					passThrough = 0.1;
+					};
+			};
+		};
+	};
+
+	class V_PlateCarrier2_wdlXXX:V_PlateCarrier2_wdl
+	{
+		author = "Ford";
+		displayName = "SUPAR STEALTH";
+		class ItemInfo: VestItem
+		{
+			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01";
+			hiddenSelections[] = {"camo"};
+			containerClass = Supply220;
+			mass = 60;
+
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck"; // reference to the hit point class defined in the man base class
+					armor = 8; // addition to armor of referenced hitpoint
+					passThrough = 0.5; // multiplier of base passThrough defined in referenced hitpoint
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 24;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 24;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 24;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.1;
+				};
+			};
+		};
+
+	};
+
 	class Adidas_Uniform: U_I_CombatUniform //Edited
 	{
 	scope = 2;
@@ -192,7 +291,7 @@ class cfgWeapons
 	{
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
-	};	
+	};
 	class VSM_Mich2000_MulticamTropic: ItemCore
 	{
 		ace_hearing_protection = 0.75;

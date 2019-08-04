@@ -127,6 +127,24 @@ class CfgMusic {
 		artist = "Queen";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_carmen_aragonaise {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 130;
+		title = "Carmen Aragonaise";
+		artist = "Bizet";
+		klpq_ignoreTrack = 0;
+	};
+	class bnb_e_song_community_intro {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 3;
+		title = "Community Intro";
+		artist = "P***hub";
+		klpq_ignoreTrack = 0;
+	};
 	class bnb_e_song_crab_cave {
 		sound[] = {"x\bnb_e\songs\other\Crab_Rave_-_Noisestorm.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -199,6 +217,24 @@ class CfgMusic {
 		artist = "AC/DC";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_I_Wanna_Be_500_Miles {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 105;
+		title = "I Wanna Be 500 Miles";
+		artist = "The Proclaimers";
+		klpq_ignoreTrack = 0;
+	};
+	class bnb_e_song_kickapoo {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 254;
+		title = "Kickapoo (Bears Favorite)";
+		artist = "Tenacious-D";
+		klpq_ignoreTrack = 0;
+	};
 	class bnb_e_song_livin_on_a_prayer {
 		sound[] = {"x\bnb_e\songs\other\Livin_On_a_Prayer_-_Bon_Jovi.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -215,6 +251,15 @@ class CfgMusic {
 		duration = 228;
 		title = "Move Bitch";
 		artist = "Ludacris";
+		klpq_ignoreTrack = 0;
+	};
+	class bnb_e_song_national_anthem_of_ussr {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 244;
+		title = "National Anthem of USSR (Elkki's favorite)";
+		artist = "The Red Army Choir";
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_paranoid {
@@ -368,6 +413,15 @@ class CfgMusic {
 		duration = 513;
 		title = "Won't Get Fooled Again";
 		artist = "The Who";
+		klpq_ignoreTrack = 0;
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 189;
+		title = "X Gon' Give It To Ya";
+		artist = "Thomas ft. DMX";
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_you_shook_me_all_night_long {
@@ -820,6 +874,62 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Bohemian_Rhapsody_-_Queen.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
+	class bnb_e_song_carmen_aragonaise {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro{
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_community_intro_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
 	class bnb_e_song_crab_cave {
 		sound[] = {"x\bnb_e\songs\other\Crab_Rave_-_Noisestorm.ogg", db+6, 1, 100};
 		titles[] = {};
@@ -1044,6 +1154,62 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Highway_to_Hell_-_ACDC.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
+	class bnb_e_song_I_Wanna_Be_500_Miles {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_vol0 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_vol1 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_vol2 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_vol1 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_I_Wanna_Be_500_Miles_vol2 {
+		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_kickapoo_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
 	class bnb_e_song_livin_on_a_prayer {
 		sound[] = {"x\bnb_e\songs\other\Livin_On_a_Prayer_-_Bon_Jovi.ogg", db+6, 1, 100};
 		titles[] = {};
@@ -1098,6 +1264,34 @@ class CfgSounds {
 	};
 	class bnb_e_song_move_bitch_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Move_Bitch_-_Ludacris.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_vol0 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_vol1 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_vol2 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_national_anthem_of_ussr_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\National_Anthem_of_USSR_-_The_Red_Army_Choir.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_paranoid {
@@ -1574,6 +1768,34 @@ class CfgSounds {
 	};
 	class bnb_e_song_wont_get_fooled_again_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_vol0 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_vol1 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_vol2 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_you_shook_me_all_night_long {

@@ -19,34 +19,16 @@ class CfgPatches {
 	};
 };
 
-
-class CfgFunctions
-{
-	class TFAR
-	{
-		class TFAR_overrides
-		{
-			file="\x\bnb_e\core\functions\TFAR_overrides";
-			tag="TFAR";			
-			class lrRadiosList {
-			};
-		};
-	};
-};
-
 class CfgFunctions {
 	class bnb_e_core {
 		class common {
 			file = "\x\bnb_e\core\functions\common";
-			class addFullHeal {};
 		};
 
 		class zeus_modules {
 			file = "\x\bnb_e\core\functions\zeus_modules";
 			class addArsenal {};
-			class addContaminationArea {};
 			class addMusicRadio {};
-			class exportOcapData {};
 		};
 
 		class utilities {

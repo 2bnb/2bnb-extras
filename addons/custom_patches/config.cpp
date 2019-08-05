@@ -5,9 +5,16 @@ class CfgPatches {
 		weapons[] = {};
 		requiredAddons[] = {};
 		author = "2nd Battalion, Nord Brigade";
-		author[] = {
-			"D. Ford",
-			"Arend"
+		authors[] = {
+			"2BNB",
+			"Ford",
+			"Arend",
+			"Farcry",
+			"Wolfpack",
+			"Elkku",
+			"Jackson",
+			"Psycho",
+			"Eden"
 		};
 	};
 };
@@ -165,5 +172,44 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\KimmyJongyBoi.paa";
 		textureVehicle="";
 	};
-};
 
+	class WolfpackInsignia
+	{
+		displayName="Wolfpack Insignia";
+		author="Wolfpack";
+		texture="x\bnb_e\custom_patches\img\wolfpack-insignia.paa";
+		textureVehicle="";
+	};
+
+	class JebbyInsignia
+	{
+		displayName="Jebby Insignia";
+		author="Jebby";
+		texture="x\bnb_e\custom_patches\img\jebby-insignia.paa";
+		textureVehicle="";
+	};
+
+	class FarcryInsignia
+	{
+		displayName="Farcry Insignia";
+		author="Farcry";
+		texture="x\bnb_e\custom_patches\img\farcry-insignia.paa";
+		textureVehicle="";
+	};
+
+	class TomJerry
+	{
+		displayName="Tom & Jerry wut";
+		author="Eden";
+		texture="x\bnb_e\custom_patches\img\tom-jerry.paa";
+		textureVehicle="";
+	};
+
+	class MedicPatch
+	{
+		displayName="2BNB Medic Patch";
+		author="Badger";
+		texture="x\bnb_e\custom_patches\img\2bnbMedicPatch.paa";
+		textureVehicle="";
+	};
+};

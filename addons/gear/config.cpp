@@ -183,6 +183,25 @@ class cfgWeapons
 			};
 		};
 	};
+
+	class 2BNB_Berret: Adidas_Berret
+	{
+		author = "FarGay";
+		displayName = "2BNB Berret";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\2BNB_Berret.paa" };
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo:HitpointsProtectionInfo
+			{
+				class Head:Head
+				{
+				};
+			};
+		};
+	};
 	class H_mas_nor_opscore: ItemCore
 	{
 		ace_hearing_protection = 0.75;
@@ -192,7 +211,7 @@ class cfgWeapons
 	{
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
-	};	
+	};
 	class VSM_Mich2000_MulticamTropic: ItemCore
 	{
 		ace_hearing_protection = 0.75;

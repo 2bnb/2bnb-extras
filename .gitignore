@@ -2,10 +2,9 @@ tools/armake.exe
 tools/tmp/
 tools/inc.tmp
 archives/
-*.pbo
 *texHeaders.bin
 .vscode
 *.log
 .build/
 .builds/
-addons/core/connectionData.hpp
+

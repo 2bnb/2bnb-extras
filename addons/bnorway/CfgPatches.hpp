@@ -54,7 +54,7 @@ class CfgPatches {
 			"B_NorwayArmy_Chinook_HC2_Woodland",
 			"B_NorwayArmy_Apache_AH1_Multi_Woodland",
 			"B_NorwayArmy_Hercules_C4_Woodland",
-			"B_NorwayArmy_L18_101_CAP_Woodland",
+			"B_NorwayArmy_JAS_39_Gripen_Woodland",
 			"B_NorwayArmy_L111A1_H_Woodland",
 			"B_NorwayArmy_L134A1_High_Woodland",
 			"B_NorwayArmy_L16_Woodland",
@@ -75,7 +75,8 @@ class CfgPatches {
 		authors[] = {
 			"Maj. D. Ford",
 			"Capt. Arend",
-			"Rct. Jebby"
+			"Pvt. Jebby",
+			"Sp. Ezpez"
 		};
 	};
 };

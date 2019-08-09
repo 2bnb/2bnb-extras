@@ -1267,13 +1267,10 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Pilot_Woodland";
 
+	hiddenSelections[] = {"Camo_01", "Camo_02"};
 	hiddenSelectionsTextures[] = {
 		"x\bnb_e\bnorway\textures\Gripen_fuselage_01_co.paa",
-		"x\bnb_e\bnorway\textures\Gripen_fuselage_02_co.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Fighter_04_misc_01_co.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_04_ca.paa",
-		"a3\air_f_jets\plane_fighter_04\data\Numbers\Fighter_04_number_08_ca.paa"
+		"x\bnb_e\bnorway\textures\Gripen_fuselage_02_co.paa"
 	};
 
 	class EventHandlers : EventHandlers {
@@ -1285,7 +1282,6 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
-
 };
 
 class B_NorwayArmy_L111A1_H_Woodland : UK3CB_BAF_Static_L111A1_Deployed_High_Tropical_OCimport_02 {

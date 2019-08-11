@@ -10,6 +10,33 @@ class CfgPatches {
 class CfgMusic {
 	tracks[] = {};
 
+	class bnb_e_song_bad_apple {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "march";
+		duration = 185;
+		title = "Bad Apple";
+		artist = "Idisi";
+		klpq_ignoreTrack = 1;
+	};
+	class bnb_e_song_carmen_aragonaise {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 130;
+		title = "Carmen Aragonaise";
+		artist = "Bizet";
+		klpq_ignoreTrack = 1;
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "march";
+		duration = 228;
+		title = "The March of the Varangian Guard";
+		artist = "Turisa";
+		klpq_ignoreTrack = 1;
+	};
 	class bnb_e_song_7th_element {
 		sound[] = {"x\bnb_e\songs\other\7th_Element_-_Vitas.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -127,15 +154,6 @@ class CfgMusic {
 		artist = "Queen";
 		klpq_ignoreTrack = 0;
 	};
-	class bnb_e_song_carmen_aragonaise {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1};
-		tag = "klpq_musicRadio_v1";
-		theme = "other";
-		duration = 130;
-		title = "Carmen Aragonaise";
-		artist = "Bizet";
-		klpq_ignoreTrack = 0;
-	};
 	class bnb_e_song_community_intro {
 		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -224,7 +242,7 @@ class CfgMusic {
 		duration = 105;
 		title = "I Wanna Be 500 Miles";
 		artist = "The Proclaimers";
-		klpq_ignoreTrack = 0;
+		klpq_ignoreTrack = 1;
 	};
 	class bnb_e_song_kickapoo {
 		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+3, 1};
@@ -233,7 +251,7 @@ class CfgMusic {
 		duration = 254;
 		title = "Kickapoo (Bears Favorite)";
 		artist = "Tenacious-D";
-		klpq_ignoreTrack = 0;
+		klpq_ignoreTrack = 1;
 	};
 	class bnb_e_song_livin_on_a_prayer {
 		sound[] = {"x\bnb_e\songs\other\Livin_On_a_Prayer_-_Bon_Jovi.ogg", db+3, 1};
@@ -406,6 +424,24 @@ class CfgMusic {
 		artist = "Daler Mehndi";
 		klpq_ignoreTrack = 0;
 	};
+	class bnb_e_song_white_death {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 248;
+		title = "White Death";
+		artist = "Sabaton";
+		klpq_ignoreTrack = 1;
+	};
+	class bnb_e_song_wolfpack {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+3, 1};
+		tag = "klpq_musicRadio_v1";
+		theme = "other";
+		duration = 355;
+		title = "Wolfpack (Wolfpacks favorite)";
+		artist = "Sabaton";
+		klpq_ignoreTrack = 1;
+	};
 	class bnb_e_song_wont_get_fooled_again {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -415,14 +451,14 @@ class CfgMusic {
 		artist = "The Who";
 		klpq_ignoreTrack = 0;
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya {
+	class bnb_e_song_x_gon_give_it_to_ya {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 189;
 		title = "X Gon' Give It To Ya";
 		artist = "Thomas ft. DMX";
-		klpq_ignoreTrack = 0;
+		klpq_ignoreTrack = 1;
 	};
 	class bnb_e_song_you_shook_me_all_night_long {
 		sound[] = {"x\bnb_e\songs\other\You_Shook_Me_All_Night_Long_-_AC_DC.ogg", db+3, 1};
@@ -510,6 +546,90 @@ class CfgMusic {
 class CfgSounds {
 	tracks[] = {};
 
+	class bnb_e_song_bad_apple {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_vol0 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_vol1 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_vol2 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_bad_apple_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\march\Bad_Apple_-_Idisi.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol0 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol1 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_vol2 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_carmen_aragonaise_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_vol0 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_vol1 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_vol2 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_the_march_of_the_varangian_guard_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
 	class bnb_e_song_7th_element {
 		sound[] = {"x\bnb_e\songs\other\7th_Element_-_Vitas.ogg", db+6, 1, 100};
 		titles[] = {};
@@ -874,34 +994,6 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Bohemian_Rhapsody_-_Queen.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_carmen_aragonaise {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_loud_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+0, 1, 500};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_loud_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+6, 1, 500};
-		titles[] = {};
-	};
-	class bnb_e_song_carmen_aragonaise_loud_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Carmen_Aragonaise_-_Bizet.ogg", db+12, 1, 500};
-		titles[] = {};
-	};
 	class bnb_e_song_community_intro{
 		sound[] = {"x\bnb_e\songs\other\Community_Intro_-_Pornhub.ogg", db+6, 1, 100};
 		titles[] = {};
@@ -1154,31 +1246,31 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Highway_to_Hell_-_ACDC.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles {
+	class bnb_e_song_i_wanna_be_500_miles {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_vol0 {
+	class bnb_e_song_i_wanna_be_500_miles_vol0 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+0, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_vol1 {
+	class bnb_e_song_i_wanna_be_500_miles_vol1 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+3, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_vol2 {
+	class bnb_e_song_i_wanna_be_500_miles_vol2 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_loud_vol0 {
+	class bnb_e_song_i_wanna_be_500_miles_loud_vol0 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+0, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_vol1 {
+	class bnb_e_song_i_wanna_be_500_miles_vol1 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+6, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_I_Wanna_Be_500_Miles_vol2 {
+	class bnb_e_song_i_wanna_be_500_miles_vol2 {
 		sound[] = {"x\bnb_e\songs\other\I_Wanna_Be_500_Miles_-_The_Proclaimers.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
@@ -1742,6 +1834,62 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Tunak_Tunak_Tun_Video_-_Daler_Mehndi.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
+	class bnb_e_song_white_death {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_vol0 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_vol1 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_vol2 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_white_death_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\White_Death_-_Sabaton.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+0, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+3, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+6, 1, 100};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+0, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+6, 1, 500};
+		titles[] = {};
+	};
+	class bnb_e_song_wolfpack_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+12, 1, 500};
+		titles[] = {};
+	};
 	class bnb_e_song_wont_get_fooled_again {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+6, 1, 100};
 		titles[] = {};
@@ -1770,31 +1918,31 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya {
+	class bnb_e_song_x_gon_give_it_to_ya {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_vol0 {
+	class bnb_e_song_x_gon_give_it_to_ya_vol0 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+0, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_vol1 {
+	class bnb_e_song_x_gon_give_it_to_ya_vol1 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+3, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_vol2 {
+	class bnb_e_song_x_gon_give_it_to_ya_vol2 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol0 {
+	class bnb_e_song_x_gon_give_it_to_ya_loud_vol0 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+0, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol1 {
+	class bnb_e_song_x_gon_give_it_to_ya_loud_vol1 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+6, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_X_Gon_Give_It_To_Ya_loud_vol2 {
+	class bnb_e_song_x_gon_give_it_to_ya_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\X_Gon_Give_It_To_Ya_-_Thomas_ft_DMX.ogg", db+12, 1, 500};
 		titles[] = {};
 	};

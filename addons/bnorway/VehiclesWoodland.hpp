@@ -471,11 +471,19 @@ class B_NorwayArmy_Jackal_2HMG_Woodland : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCim
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
+				count = 7;
+			};
+			class _xx_UK3CB_BAF_127_100Rnd {
+				magazine = "UK3CB_BAF_127_100Rnd";
+				count = 9;
+			};
+			class _xx_UK3CB_BAF_762_200Rnd_T {
+				magazine = "UK3CB_BAF_762_200Rnd_T";
+				count = 9;
 			};
 			class _xx_MRAWS_HEAT_F {
 				magazine = "MRAWS_HEAT_F";
@@ -488,13 +496,13 @@ class B_NorwayArmy_Jackal_2HMG_Woodland : UK3CB_BAF_Jackal2_L2A1_W_Tropical_OCim
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
 			};
 			class _xx_launch_MRAWS_olive_rail_F {
 				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+				count = 1;
 			};
 	};
 
@@ -551,30 +559,22 @@ class B_NorwayArmy_LRover_HardTop_FFR_G_Woodland : UK3CB_BAF_LandRover_Hard_FFR_
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
-			};
-			class _xx_MRAWS_HEAT_F {
-				magazine = "MRAWS_HEAT_F";
-				count = 5;
-			};
-			class _xx_MRAWS_HE_F {
-				magazine = "MRAWS_HE_F";
-				count = 5;
+				count = 7;
 			};
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 1;
 			};
-			class _xx_launch_MRAWS_olive_rail_F {
-				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
+				count = 1;
 			};
 	};
 
@@ -634,11 +634,19 @@ class B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland : UK3CB_BAF_LandRover_WMIK_HMG
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
+				count = 7;
+			};
+			class _xx_UK3CB_BAF_127_100Rnd {
+				magazine = "UK3CB_BAF_127_100Rnd";
+				count = 6;
+			};
+			class _xx_UK3CB_BAF_762_200Rnd_T {
+				magazine = "UK3CB_BAF_762_200Rnd_T";
+				count = 6;
 			};
 			class _xx_MRAWS_HEAT_F {
 				magazine = "MRAWS_HEAT_F";
@@ -651,13 +659,13 @@ class B_NorwayArmy_LRover_WMIK_HMG_FFR_G_Woodland : UK3CB_BAF_LandRover_WMIK_HMG
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 1;
 			};
 			class _xx_launch_MRAWS_olive_rail_F {
 				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+				count = 1;
 			};
 	};
 
@@ -713,6 +721,47 @@ class B_NorwayArmy_MAN_HX60_4x4_Fuel_G_Woodland : UK3CB_BAF_MAN_HX60_Fuel_Green_
 		};
 	};
 
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 5;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
@@ -735,6 +784,47 @@ class B_NorwayArmy_MAN_HX60_4x4_Repair_G_Woodland : UK3CB_BAF_MAN_HX60_Repair_Gr
 		class ALiVE_orbatCreator {
 			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
+	};
+
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 5;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
 	};
 
 	// custom attributes (do not delete)
@@ -764,29 +854,21 @@ class B_NorwayArmy_MAN_HX60_4x4_Transport_G_Woodland : UK3CB_BAF_MAN_HX60_Transp
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
-			};
-			class _xx_MRAWS_HEAT_F {
-				magazine = "MRAWS_HEAT_F";
-				count = 5;
-			};
-			class _xx_MRAWS_HE_F {
-				magazine = "MRAWS_HE_F";
-				count = 5;
+				count = 7;
 			};
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 1;
 			};
-			class _xx_launch_MRAWS_olive_rail_F {
-				weapon = "launch_MRAWS_olive_rail_F";
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
 				count = 2;
 			};
 	};
@@ -847,11 +929,15 @@ class B_NorwayArmy_Panther_CLV_GPMG_G_Woodland : UK3CB_BAF_Panther_GPMG_Green_A_
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
+				count = 7;
+			};
+			class _xx_UK3CB_BAF_762_200Rnd_T {
+				magazine = "UK3CB_BAF_762_200Rnd_T";
+				count = 9;
 			};
 			class _xx_MRAWS_HEAT_F {
 				magazine = "MRAWS_HEAT_F";
@@ -864,13 +950,13 @@ class B_NorwayArmy_Panther_CLV_GPMG_G_Woodland : UK3CB_BAF_Panther_GPMG_Green_A_
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
 			};
 			class _xx_launch_MRAWS_olive_rail_F {
 				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+				count = 1;
 			};
 	};
 
@@ -933,11 +1019,15 @@ class B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland : UK3CB_BAF_FV432_Mk3_RWS_G
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
+				count = 7;
+			};
+			class _xx_UK3CB_BAF_127_100Rnd {
+				magazine = "UK3CB_BAF_127_100Rnd";
+				count = 9;
 			};
 			class _xx_MRAWS_HEAT_F {
 				magazine = "MRAWS_HEAT_F";
@@ -950,13 +1040,13 @@ class B_NorwayArmy_FV432_3Bulldog_HMG_RWS_G_Woodland : UK3CB_BAF_FV432_Mk3_RWS_G
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
 			};
 			class _xx_launch_MRAWS_olive_rail_F {
 				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+				count = 1;
 			};
 	};
 
@@ -1019,11 +1109,15 @@ class B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland : UK3CB_BAF_FV432_Mk3_GPMG_Gre
 	class TransportMagazines {
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
 				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 20;
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-				count = 15;
+				count = 7;
+			};
+			class _xx_UK3CB_BAF_762_200Rnd_T {
+				magazine = "UK3CB_BAF_762_200Rnd_T";
+				count = 9;
 			};
 			class _xx_MRAWS_HEAT_F {
 				magazine = "MRAWS_HEAT_F";
@@ -1036,13 +1130,13 @@ class B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland : UK3CB_BAF_FV432_Mk3_GPMG_Gre
 	};
 
 	class TransportWeapons {
-			class _xx_SMA_HK416CUSTOMvfgB {
-				weapon = "SMA_HK416CUSTOMvfgB";
-				count = 5;
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
 			};
 			class _xx_launch_MRAWS_olive_rail_F {
 				weapon = "launch_MRAWS_olive_rail_F";
-				count = 2;
+				count = 1;
 			};
 	};
 
@@ -1098,6 +1192,51 @@ class B_NorwayArmy_Leopard_2SG_Woodland : I_MBT_03_cannon_F_OCimport_02 {
 		};
 	};
 
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 15;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 3;
+			};
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
@@ -1122,6 +1261,71 @@ class B_NorwayArmy_Wildcat_AH1_8CAS_Woodland : UK3CB_BAF_Wildcat_AH1_CAS_8A_Trop
 		class ALiVE_orbatCreator {
 			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
+	};
+
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 10;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 2;
+			};
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellBlue";
+				count = 2;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
+			};
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+			class _xx_Toolkit {
+				name = "ToolKit";
+				count = 1;
+			};
+			class _xx_ItemGPS {
+				name = "ItemGPS";
+				count = 1;
+			};
+			class _xx_B_Parachute {
+				name = "B_Parachute";
+				count = 10;
+			};
 	};
 
 	// custom attributes (do not delete)
@@ -1150,6 +1354,71 @@ class B_NorwayArmy_Wildcat_AH18_Transport_Woodland : UK3CB_BAF_Wildcat_AH1_TRN_8
 		};
 	};
 
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 10;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 2;
+			};
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellBlue";
+				count = 2;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
+			};
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+			class _xx_Toolkit {
+				name = "ToolKit";
+				count = 1;
+			};
+			class _xx_ItemGPS {
+				name = "ItemGPS";
+				count = 1;
+			};
+			class _xx_B_Parachute {
+				name = "B_Parachute";
+				count = 10;
+			};
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
@@ -1176,6 +1445,75 @@ class B_NorwayArmy_Merlin_HC3_18_Woodland : UK3CB_BAF_Merlin_HC3_18_Tropical_OCi
 		};
 	};
 
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 10;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 2;
+			};
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellGreen";
+				count = 2;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
+			};
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
+				count = 1;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_bloodIV {
+				name = "ACE_bloodIV";
+				count = 4;
+			};
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 30;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 30;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+			class _xx_Toolkit {
+				name = "ToolKit";
+				count = 1;
+			};
+			class _xx_ItemGPS {
+				name = "ItemGPS";
+				count = 1;
+			};
+			class _xx_B_Parachute {
+				name = "B_Parachute";
+				count = 20;
+			};
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
@@ -1196,8 +1534,6 @@ class B_NorwayArmy_Chinook_HC2_Woodland : UK3CB_BAF_Chinook_HC2_Tropical_OCimpor
 		class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
 		class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
 	};
-
-
 
 	class EventHandlers : EventHandlers {
 		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
@@ -1228,6 +1564,67 @@ class B_NorwayArmy_Apache_AH1_Multi_Woodland : UK3CB_BAF_Apache_AH1_Tropical_OCi
 		class ALiVE_orbatCreator {
 			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
+	};
+
+	class TransportMagazines {
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
+				count = 10;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 2;
+			};
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellBlue";
+				count = 2;
+			};
+	};
+
+	class TransportWeapons {
+			class _xx_rhs_weap_hk416d10 {
+				weapon = "rhs_weap_hk416d10";
+				count = 2;
+			};
+	};
+
+	class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+			class _xx_ACE_EarPlugs {
+				name = "ACE_EarPlugs";
+				count = 5;
+			};
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 10;
+			};
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 10;
+			};
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 10;
+			};
+			class _xx_Toolkit {
+				name = "ToolKit";
+				count = 1;
+			};
+			class _xx_ItemGPS {
+				name = "ItemGPS";
+				count = 1;
+			};
+			class _xx_B_Parachute {
+				name = "B_Parachute";
+				count = 2;
+			};
 	};
 
 	// custom attributes (do not delete)

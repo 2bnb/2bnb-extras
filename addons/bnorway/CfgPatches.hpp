@@ -59,7 +59,8 @@ class CfgPatches {
 			"B_NorwayArmy_L134A1_High_Woodland",
 			"B_NorwayArmy_L16_Woodland",
 			"B_NorwayArmy_L7A2_High_Woodland",
-			"B_NorwayArmy_A10_Woodland"
+			"B_NorwayArmy_A10_Woodland",
+			"B_NorwayArmy_Leopard_2SG_Kompis_Woodland"
 		};
 		weapons[] = {};
 		requiredVersion = 1.62;

@@ -1173,7 +1173,7 @@ class B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland : UK3CB_BAF_FV432_Mk3_GPMG_Gre
 };
 
 class B_NorwayArmy_Leopard_2SG_Woodland : I_MBT_03_cannon_F_OCimport_02 {
-	author = "Jebby";
+	author = "EzPez";
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "Leopard 2SG";
@@ -1183,6 +1183,44 @@ class B_NorwayArmy_Leopard_2SG_Woodland : I_MBT_03_cannon_F_OCimport_02 {
 
 	class Turrets : Turrets {
 		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
+	};
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Leopard_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\Leopard_Main_Turret.paa", // Main Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Com_Turret.paa", // Commander Turret
+		"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
+	};
+
+	class EventHandlers : EventHandlers {
+		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
+		class ALiVE_orbatCreator {
+			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		};
+	};
+
+	// custom attributes (do not delete)
+	ALiVE_orbatCreator_owned = 1;
+};
+
+class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : I_MBT_03_cannon_F_OCimport_02 {
+	author = "Ezpez";
+	scope = 2;
+	scopeCurator = 2;
+	displayName = "Leopard 2SG (Kompis)";
+	side = 1;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Crew_Woodland";
+
+	class Turrets : Turrets {
+		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
+	};
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Main_Turret.paa", // Main Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Com_Turret.paa", // Commander Turret
+		"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
 	};
 
 	class EventHandlers : EventHandlers {

@@ -17,7 +17,7 @@ class CfgMusic {
 		duration = 185;
 		title = "Bad Apple";
 		artist = "Idisi";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_carmen_aragonaise {
 		sound[] = {"x\bnb_e\songs\march\Carmen_Aragonaise_-_Bizet.ogg", db+3, 1};
@@ -26,7 +26,7 @@ class CfgMusic {
 		duration = 130;
 		title = "Carmen Aragonaise";
 		artist = "Bizet";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_the_march_of_the_varangian_guard {
 		sound[] = {"x\bnb_e\songs\march\The_March_of_the_Varangian_Guard_-_Turisa.ogg", db+3, 1};
@@ -35,7 +35,7 @@ class CfgMusic {
 		duration = 228;
 		title = "The March of the Varangian Guard";
 		artist = "Turisa";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_7th_element {
 		sound[] = {"x\bnb_e\songs\other\7th_Element_-_Vitas.ogg", db+3, 1};
@@ -108,7 +108,7 @@ class CfgMusic {
 		title = "bad guy";
 		artist = "Billie Eilish";
 		klpq_ignoreTrack = 0;
-	};	
+	};
 	class bnb_e_song_bad_karma {
 		sound[] = {"x\bnb_e\songs\other\Bad_Karma_-_Axel_Thesleff.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -217,15 +217,6 @@ class CfgMusic {
 		artist = "DJ Blyatman";
 		klpq_ignoreTrack = 0;
 	};
-	class bnb_e_song_fichtls_lied {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+3, 1};
-		tag = "klpq_musicRadio_v1";
-		theme = "other";
-		duration = 143;
-		title = "Fichtls Lied";
-		artist = "Die Woodys";
-		klpq_ignoreTrack = 0;
-	};
 	class bnb_e_song_highway_to_hell {
 		sound[] = {"x\bnb_e\songs\other\Highway_to_Hell_-_ACDC.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
@@ -242,7 +233,7 @@ class CfgMusic {
 		duration = 105;
 		title = "I Wanna Be 500 Miles";
 		artist = "The Proclaimers";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_kickapoo {
 		sound[] = {"x\bnb_e\songs\other\Kickapoo_-_Tenacious_-_D.ogg", db+3, 1};
@@ -251,7 +242,7 @@ class CfgMusic {
 		duration = 254;
 		title = "Kickapoo (Bears Favorite)";
 		artist = "Tenacious-D";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_livin_on_a_prayer {
 		sound[] = {"x\bnb_e\songs\other\Livin_On_a_Prayer_-_Bon_Jovi.ogg", db+3, 1};
@@ -431,16 +422,16 @@ class CfgMusic {
 		duration = 248;
 		title = "White Death";
 		artist = "Sabaton";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_wolfpack {
 		sound[] = {"x\bnb_e\songs\other\Wolfpack_-_Sabaton.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 355;
-		title = "Wolfpack (Wolfpacks favorite)";
+		title = "Wolfpack (Wolfpack's favourite)";
 		artist = "Sabaton";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_wont_get_fooled_again {
 		sound[] = {"x\bnb_e\songs\other\Wont_Get_Fooled_Again_-_The_Who.ogg", db+3, 1};
@@ -458,7 +449,7 @@ class CfgMusic {
 		duration = 189;
 		title = "X Gon' Give It To Ya";
 		artist = "Thomas ft. DMX";
-		klpq_ignoreTrack = 1;
+		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_you_shook_me_all_night_long {
 		sound[] = {"x\bnb_e\songs\other\You_Shook_Me_All_Night_Long_-_AC_DC.ogg", db+3, 1};
@@ -1188,34 +1179,6 @@ class CfgSounds {
 	};
 	class bnb_e_song_ez_katka_loud_vol2 {
 		sound[] = {"x\bnb_e\songs\other\Ez_Katka_-_DJ_Blyatman.ogg", db+12, 1, 500};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+6, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+0, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+3, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+6, 1, 100};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_loud_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+0, 1, 500};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_loud_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+6, 1, 500};
-		titles[] = {};
-	};
-	class bnb_e_song_fichtls_lied_loud_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Fichtls_Lied_-_Die_Woodys.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_highway_to_hell {

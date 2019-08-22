@@ -1,7 +1,11 @@
 class CfgPatches {
 	class bnb_e_core {
 		name = "2BNB Extras - Core";
-		units[] = {};
+		units[] = {
+			"BNB_E_Resupply_Class_A",
+			"BNB_E_Resupply_Class_B",
+			"BNB_E_Resupply_Class_C"
+		};
 		weapons[] = {};
 		requiredAddons[] = {
 			"achilles_modules_f_ares",
@@ -47,7 +51,7 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers {
 	class bnb_e_core_preInit {
-        init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_preInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\bnb_e\core\XEH_preInit.sqf'";
 	};
 };
 
@@ -63,6 +67,10 @@ class cfgWeapons {
 	class tfw_rf3080Item: ACE_ItemCore {
 		class ItemInfo: CBA_MiscItem_ItemInfo{};
 	};
+};
+
+class CfgVehicles {
+	#include "CfgVehicles.hpp";
 };
 
 // Add server direct connect tiles

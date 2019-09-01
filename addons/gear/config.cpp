@@ -1476,7 +1476,22 @@ class CfgGlasses
 		ACE_Protection = 1;
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 		};
-
+	class G_Blindfold_01_white_F
+	{
+		ACE_Color[] = {0,0,0};
+		ACE_TintAmount = 16.0;
+		ACE_Overlay = "\x\bnb_e\gear\data\Blindfold.paa";
+		ACE_Resistance = 2;
+		ACE_Protection = 1;
+		};
+	class G_Blindfold_01_black_F
+	{
+		ACE_Color[] = {0,0,0};
+		ACE_TintAmount = 16.0;
+		ACE_Overlay = "\x\bnb_e\gear\data\Blindfold.paa";
+		ACE_Resistance = 2;
+		ACE_Protection = 1;
+		};
 
 	/*
 	class CUP_arifle_AK101;

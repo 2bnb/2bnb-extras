@@ -301,6 +301,46 @@ class cfgWeapons
 			};
 		};
 	};
+
+	class RUS1: Adidas_Berret
+	{
+		author = "Ford";
+		displayName = "2BNB RUSB";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\RUSB.paa" };
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo:HitpointsProtectionInfo
+			{
+				class Head:Head
+				{
+				};
+			};
+		};
+	};
+
+	class RUS2: Adidas_Berret
+	{
+		author = "Ford";
+		displayName = "2BNB RUSB1";
+		picture = "\x\bnb_e\gear\data\adidass.paa";
+		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\RUSB1.paa" };
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo:HitpointsProtectionInfo
+			{
+				class Head:Head
+				{
+				};
+			};
+		};
+	};
+
+
 	class H_mas_nor_opscore: ItemCore
 	{
 		ace_hearing_protection = 0.75;

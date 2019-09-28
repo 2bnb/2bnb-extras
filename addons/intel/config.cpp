@@ -175,19 +175,57 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class adv_intel {
-                    displayName = "Intel";
+                    displayName = "Read Intel";
                     condition = TRUE;
                     statement = "";
                     showDisabled = 0;
                     priority = 3;
                     // icon = "z\ace\addons\trenches\UI\w_entrchtool_ca.paa";
                     exceptions[] = {"notOnMap"};
+						class D_intel {
+							displayName = "Documents";
+							condition = TRUE;
+							statement = "";
+							showDisabled = 0;
+							priority = 3;
+							// icon = "z\ace\addons\trenches\UI\w_entrchtool_ca.paa";
+							exceptions[] = {"notOnMap"};
 
-                    class Intel1 {
-						displayName = 'Intel';
-						statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx1;
-						condition = ("Intel_FileDoc" in (items player));
+							class Intel1 {
+								displayName = 'Docs 1';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx1;
+								condition = ("Intel_FileDoc" in (items player));
 
+							};
+							class Intel2 {
+								displayName = 'Docs 2';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx2;
+								condition = ("Intel_FileDoc" in (items player));
+
+							};
+							class Intel3 {
+								displayName = 'Docs 3';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx3;
+								condition = ("Intel_FileDoc" in (items player));
+
+							};
+							class Intel4 {
+								displayName = 'Docs 4';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx4;
+								condition = ("Intel_FileDoc" in (items player));
+
+							};
+							class Intel5 {
+								displayName = 'Docs 5';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx5;
+								condition = ("Intel_FileDoc" in (items player));
+
+							};
+							class Intel6 {
+								displayName = 'Docs 6';
+								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx6;
+								condition = ("Intel_FileDoc" in (items player));
+							};
                     };
                 };
             };

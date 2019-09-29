@@ -1,4 +1,4 @@
-private _bnb_intel_settings = [
+private _bnb_e_intel_settings = [
 	[
 		"Intelx1",
 		"EDITBOX",
@@ -49,4 +49,4 @@ private _bnb_intel_settings = [
 	]
 ];
 
-{_x call CBA_Settings_fnc_init;} forEach _bnb_intel_settings;
+{_x call CBA_Settings_fnc_init;} forEach _bnb_e_intel_settings;

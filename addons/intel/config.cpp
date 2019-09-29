@@ -1,14 +1,8 @@
-#include "Intel1.hpp"
-class Extended_PreInit_EventHandlers {
-	class bnb_e_intel_preInit {
-		init = "call compile preprocessFileLineNumbers '\x\bnb_e\intel\XEH_preInit.sqf'";
-	};
-};
-
 class CfgPatches
 {
 	class bnb_e_intel
 	{
+		name = "2BNB Extras - Intel";
 		units[]={};
 		weapons[]=
 		{
@@ -28,6 +22,7 @@ class CfgPatches
 		{
 			"A3_Characters_F",
 			"A3_Weapons_F",
+			"cba_settings"
 		};
 		author[]=
 		{
@@ -35,6 +30,15 @@ class CfgPatches
 		};
 	};
 };
+
+class Extended_PreInit_EventHandlers {
+	class bnb_e_intel_preInit {
+		init = "call compile preprocessFileLineNumbers '\x\bnb_e\intel\XEH_preInit.sqf'";
+	};
+};
+
+#include "Intel1.hpp"
+
 class cfgWeapons
 {
 	class ItemCore;
@@ -193,38 +197,38 @@ class CfgVehicles {
 
 							class Intel1 {
 								displayName = 'Docs 1';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx1;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_1";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 
 							};
 							class Intel2 {
 								displayName = 'Docs 2';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx2;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_2";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 
 							};
 							class Intel3 {
 								displayName = 'Docs 3';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx3;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_3";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 
 							};
 							class Intel4 {
 								displayName = 'Docs 4';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx4;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_4";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 
 							};
 							class Intel5 {
 								displayName = 'Docs 5';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx5;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_5";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 
 							};
 							class Intel6 {
 								displayName = 'Docs 6';
-								statement = createDialog "Intel1",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText Intelx6;
-								condition = ("Intel_FileDoc" in (items player));
+								statement = "createDialog \"Intel1\",_display = findDisplay 6699,( _display displayCtrl 7777 ) ctrlSetStructuredText parseText bnb_e_intel_6";
+								condition = "(\"Intel_FileDoc\" in (items player))";
 							};
                     };
                 };

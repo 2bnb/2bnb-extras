@@ -656,6 +656,26 @@ class cfgWeapons
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
 	};
+	class launch_MRAWS_green_F;
+    class launch_MRAWS_green_rail_f;
+    class SAW_W_MAAWS0: launch_MRAWS_green_rail_f
+    { 
+        scope = 2;
+        baseWeapon = "SAW_W_MAAWS0";
+        displayName = "MAAWS Mk4 Mod 0 (White)"; 
+        picture = "\x\bnb_e\gear\data\whitemaawsicon.paa"; 
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\maaws.paa"};
+    };
+    class SAW_W_MAAWS1: launch_MRAWS_green_F
+    { 
+        scope = 2;
+        baseWeapon = "SAW_W_MAAWS1";
+        displayName = "MAAWS Mk4 Mod 1 (White)"; 
+        picture = "\x\bnb_e\gear\data\whitemaawsicon.paa"; 
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\maaws.paa"};
+    };
 };
 class CfgGlasses
 {

@@ -1,6 +1,6 @@
 private _bnb_e_intel_settings = [
 	[
-		"Intelx1",
+		"bnb_e_intel_1",
 		"EDITBOX",
 		["1."],
 		["2BNB Intel", "Documents"],
@@ -8,7 +8,7 @@ private _bnb_e_intel_settings = [
 		true
 	],
 	[
-		"Intelx2",
+		"bnb_e_intel_2",
 		"EDITBOX",
 		["2."],
 		["2BNB Intel", "Documents"],
@@ -16,7 +16,7 @@ private _bnb_e_intel_settings = [
 		true
 	],
 	[
-		"Intelx3",
+		"bnb_e_intel_3",
 		"EDITBOX",
 		["3."],
 		["2BNB Intel", "Documents"],
@@ -24,7 +24,7 @@ private _bnb_e_intel_settings = [
 		true
 	],
 	[
-		"Intelx4",
+		"bnb_e_intel_4",
 		"EDITBOX",
 		["4."],
 		["2BNB Intel", "Documents"],
@@ -32,7 +32,7 @@ private _bnb_e_intel_settings = [
 		true
 	],
 	[
-		"Intelx5",
+		"bnb_e_intel_5",
 		"EDITBOX",
 		["5."],
 		["2BNB Intel", "Documents"],
@@ -40,7 +40,7 @@ private _bnb_e_intel_settings = [
 		true
 	],
 	[
-		"Intelx6",
+		"bnb_e_intel_6",
 		"EDITBOX",
 		["6."],
 		["2BNB Intel", "Documents"],

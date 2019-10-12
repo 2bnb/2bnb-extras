@@ -80,38 +80,32 @@ class cfgWeapons
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01";
 			hiddenSelections[] = {"camo"};
 			containerClass = Supply220;
-			mass = 60;
+			mass = 40;
 
 			class HitpointsProtectionInfo
 			{
 				class Neck
 				{
-					hitpointName = "HitNeck"; // reference to the hit point class defined in the man base class
-					armor = 8; // addition to armor of referenced hitpoint
-					passThrough = 0.5; // multiplier of base passThrough defined in referenced hitpoint
-				};
-				class Arms
-				{
-					hitpointName = "HitArms";
-					armor = 8;
-					passThrough = 0.5;
+					hitpointName = "HitNeck";
+					armor = 50;
+					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Body
@@ -161,9 +155,9 @@ class cfgWeapons
 			{
 				class Neck
 				{
-					hitpointName = "HitNeck"; // reference to the hit point class defined in the man base class
-					armor = 8; // addition to armor of referenced hitpoint
-					passThrough = 0.5; // multiplier of base passThrough defined in referenced hitpoint
+					hitpointName = "HitNeck";
+					armor = 8;
+					passThrough = 0.5;
 				};
 				class Arms
 				{
@@ -216,7 +210,7 @@ class cfgWeapons
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			class HitpointsProtectionInfo
 			{
 				class Head
 				{
@@ -245,7 +239,7 @@ class cfgWeapons
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			class HitpointsProtectionInfo
 			{
 				class Head
 				{

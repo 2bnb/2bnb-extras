@@ -1,9 +1,9 @@
 class bnb_e_public_server {
-	text = "2BNB Public Server";
+	text = "2BNB 2nd Server";
 	textIsQuote = 0;
 	picture = "\x\bnb_e\core\2bnb-tile.paa";
 	video = "\x\bnb_e\core\2bnb-tile.ogv";
-	action = "[""5.9.108.39"", 2350] call compile preprocessFileLineNumbers '\x\bnb_e\core\functions\direct_connect\fn_connectToServer.sqf'";
+	action = "[""5.9.108.39"", 2369] call compile preprocessFileLineNumbers '\x\bnb_e\core\functions\direct_connect\fn_connectToServer.sqf'";
 	actionText = "Connect";
 	condition = true;
 };

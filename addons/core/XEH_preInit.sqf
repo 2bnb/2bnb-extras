@@ -24,10 +24,8 @@
 
 ["2BNB Modules", "Force Respawn",
 {
-	// Array of position AGLS, ObjNull or the object under the module as it's placed
-	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-	[_position, _objectUnderCursor] call bnb_e_core_fnc_forceRespaawn;
+	params [];
+	[] call bnb_e_core_fnc_forceRespawn;
 }] call Ares_fnc_RegisterCustomModule;
 
 private _bnb_e_settings = [

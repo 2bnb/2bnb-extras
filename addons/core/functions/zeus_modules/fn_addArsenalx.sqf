@@ -47,9 +47,8 @@ switch (_comboBoxResult) do {
 	case 7: { _type = "Land_Laptop_02_unfolded_F" };
     default { _type = "Land_File1_F" };
 };
-
 _obj = _type createVehicle _position;
 _obj setVariable ["IntelText",_typedText,true];
 _action = ["ReadIntel","Read Intel","",{createDialog "Intel1";_display = findDisplay 6699;( _display displayCtrl 7777 ) ctrlSetStructuredText parseText (_target getVariable "IntelText");},{true}] call ace_interact_menu_fnc_createAction;
-[_obj, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+{[_obj, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;} remoteExec ["bis_fnc_call", 0];
 [[_obj]] call Ares_fnc_AddUnitsToCurator;

@@ -22,9 +22,8 @@
 	[_position, _objectUnderCursor] call bnb_e_core_fnc_addArsenalx;
 }] call Ares_fnc_RegisterCustomModule;
 
-["2BNB Modules", "Force Respawn",
+["2BNB Modules", "Force Respawn All",
 {
-	params [];
 	[] call bnb_e_core_fnc_forceRespawn;
 }] call Ares_fnc_RegisterCustomModule;
 

@@ -17,6 +17,5 @@ Author:
 	Arend
 ---------------------------------------------------------------------------- */
 
-params [];
 
 {setPlayerRespawnTime 2; sleep 6; setPlayerRespawnTime 99999;} remoteExec ["bis_fnc_call", 0];

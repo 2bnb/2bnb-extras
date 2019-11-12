@@ -18,4 +18,4 @@ Author:
 ---------------------------------------------------------------------------- */
 
 
-{setPlayerRespawnTime 2; sleep 6; setPlayerRespawnTime 99999;} remoteExec ["bis_fnc_call", 0];
+{setPlayerRespawnTime 2; sleep 6; setPlayerRespawnTime bnb_e_respawn_timer;} remoteExec ["bis_fnc_call", 0];

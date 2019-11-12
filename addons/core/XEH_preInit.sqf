@@ -41,6 +41,13 @@ private _bnb_e_settings = [
 		["Arsenal Objects", "Classnames, separated by commas and without double quotations, of objects that are spawnable by ""Add Filtered Arsenal"" module"],
 		["2BNB Zeus", "Arsenal"],
 		"C_supplyCrate_F,B_Slingload_01_Ammo_F"
+	],
+	[
+		"bnb_e_respawn_timer",
+		"SLIDER",
+		["Respawn Timer (seconds)", "Number of seconds player waves need to wait before respawn (set to 99999 for infinite!)"],
+		["2BNB Zeus", "Respawn"],
+		[1, 99999, 2, 0]
 	]
 ];
 

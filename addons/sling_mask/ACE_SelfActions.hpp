@@ -23,3 +23,11 @@ class bnb_e_sling_mask_swap : GRAD_slingHelmet_sling
 	condition = "!(goggles _player isEqualTo '') && !([_player] call GRAD_slingHelmet_fnc_getSlungHelmet isEqualTo '') && (_player getVariable ['bnb_e_sling_mask_slung', 0] isEqualTo 1)";
 	statement = "[_player] call bnb_e_sling_mask_fnc_actionSwap";
 };
+
+// TEMPORARY until https://github.com/DerZade/grad_slinghelmet/pull/23 is merged
+class GRAD_slingHelmet_swap : GRAD_slingHelmet_sling
+{
+    displayName = "Swap Headgear with slung Helmet";
+    condition = "!(headgear _player isEqualTo '') && !([_player] call GRAD_slingHelmet_fnc_getSlungHelmet isEqualTo '') && (_player getVariable ['bnb_e_sling_mask_slung', 0] isEqualTo 0)";
+    statement = "[_player] call GRAD_slingHelmet_fnc_actionSwap";
+};

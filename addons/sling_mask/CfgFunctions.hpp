@@ -10,4 +10,11 @@ class CfgFunctions {
 			class whitelist {};
 		};
 	};
+
+	class GRAD_slingHelmet {
+		class temp {
+			file = "\x\bnb_e\sling_mask\functions\temp";
+			class actionSwap {};
+		};
+	};
 };

@@ -1,3 +1,8 @@
+// Register the m112(x4) explosive charges (RHS) with ACE Explosives
+class ACE_Explosives_Place;
+class rhsusf_explosive_m112 : ACE_Explosives_Place {};
+class rhsusf_explosive_m112x4 : ACE_Explosives_Place {};
+
 class C_supplyCrate_F;
 class BNB_E_Resupply : C_supplyCrate_F {
 	displayName = "Resupply Crate - Class A";

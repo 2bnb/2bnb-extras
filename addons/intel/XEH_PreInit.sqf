@@ -1,3 +1,11 @@
+["2BNB Modules", "Add Static Intel",
+{
+	// Array of position AGLS, ObjNull or the object under the module as it's placed
+	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+	[_position, _objectUnderCursor] call bnb_e_intel_fnc_addIntel;
+}] call Ares_fnc_RegisterCustomModule;
+
 private _bnb_e_intel_settings = [
 	[
 		"bnb_e_intel_1",

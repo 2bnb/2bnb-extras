@@ -14,14 +14,6 @@
 	[_position, _objectUnderCursor] call bnb_e_core_fnc_addMusicRadio;
 }] call Ares_fnc_RegisterCustomModule;
 
-["2BNB Modules", "Add Static Intel",
-{
-	// Array of position AGLS, ObjNull or the object under the module as it's placed
-	params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
-
-	[_position, _objectUnderCursor] call bnb_e_core_fnc_addArsenalx;
-}] call Ares_fnc_RegisterCustomModule;
-
 ["2BNB Modules", "Force Respawn All",
 {
 	[] call bnb_e_core_fnc_forceRespawn;

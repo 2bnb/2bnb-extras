@@ -31,6 +31,15 @@ class CfgPatches
 	};
 };
 
+class CfgFunctions {
+	class bnb_e_intel {
+		class functions {
+			file = "\x\bnb_e\intel\functions";
+			class addIntel {};
+		};
+	};
+};
+
 class Extended_PreInit_EventHandlers {
 	class bnb_e_intel_preInit {
 		init = "call compile preprocessFileLineNumbers '\x\bnb_e\intel\XEH_preInit.sqf'";

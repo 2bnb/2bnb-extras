@@ -15,5 +15,11 @@ class CfgPatches {
 	};
 };
 
+class Extended_PreInit_EventHandlers {
+	class bnb_e_sling_mask_preInit {
+		init = "call compile preprocessFileLineNumbers '\x\bnb_e\sling_mask\XEH_preInit.sqf'";
+	};
+};
+
 #include "CfgFunctions.hpp"
 #include "CfgVehicles.hpp"

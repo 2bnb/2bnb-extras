@@ -32,7 +32,6 @@ class CfgFunctions {
 		class zeus_modules {
 			file = "\x\bnb_e\core\functions\zeus_modules";
 			class addArsenal {};
-			class forceRespawn {};
 			class addMusicRadio {};
 		};
 

@@ -14,11 +14,6 @@
 	[_position, _objectUnderCursor] call bnb_e_core_fnc_addMusicRadio;
 }] call Ares_fnc_RegisterCustomModule;
 
-["2BNB Modules", "Force Respawn All",
-{
-	[] call bnb_e_core_fnc_forceRespawn;
-}] call Ares_fnc_RegisterCustomModule;
-
 private _bnb_e_settings = [
 	[
 		"bnb_e_debug",
@@ -33,13 +28,6 @@ private _bnb_e_settings = [
 		["Arsenal Objects", "Classnames, separated by commas and without double quotations, of objects that are spawnable by ""Add Filtered Arsenal"" module"],
 		["2BNB Zeus", "Arsenal"],
 		"C_supplyCrate_F,B_Slingload_01_Ammo_F"
-	],
-	[
-		"bnb_e_respawn_timer",
-		"SLIDER",
-		["Respawn Timer (seconds)", "Number of seconds player waves need to wait before respawn (set to 99999 for infinite!)"],
-		["2BNB Zeus", "Respawn"],
-		[1, 99999, 2, 0]
 	]
 ];
 

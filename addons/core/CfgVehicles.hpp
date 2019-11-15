@@ -3,17 +3,21 @@ class ACE_Explosives_Place;
 class rhsusf_explosive_m112 : ACE_Explosives_Place {};
 class rhsusf_explosive_m112x4 : ACE_Explosives_Place {};
 
-class C_supplyCrate_F;
-class BNB_E_Resupply : C_supplyCrate_F {
-	displayName = "Resupply Crate - Class A";
+class B_supplyCrate_F;
+class BNB_E_Resupply : B_supplyCrate_F {
 	author = "Arend";
-	weaponsGroup1 = 0;
-	weaponsGroup2 = 0;
-	weaponsGroup3 = 0;
-	weaponsGroup4 = 0;
+	vehicleClass="Ammo";
+	scope = 0;
+	transportMaxWeapons = 9002;
+	transportMaxMagazines = 9002;
+	transportMaxItems = 9002;
+	maximumload = 9002;
 };
 
 class BNB_E_Resupply_Class_A : BNB_E_Resupply {
+	displayName = "Resupply Crate - Class A";
+	scope = 2;
+
 	class TransportItems {
 		class _xx_ACE_salineIV {
 			name = "ACE_salineIV";
@@ -67,6 +71,9 @@ class BNB_E_Resupply_Class_A : BNB_E_Resupply {
 };
 
 class BNB_E_Resupply_Class_B : BNB_E_Resupply {
+	displayName = "Resupply Crate - Class B";
+	scope = 2;
+
 	class TransportMagazines {
 		class _xx_rhsusf_200rnd_556x45_mixed_box {
 			magazine = "rhsusf_200rnd_556x45_mixed_box";
@@ -143,6 +150,9 @@ class BNB_E_Resupply_Class_B : BNB_E_Resupply {
 };
 
 class BNB_E_Resupply_Class_C : BNB_E_Resupply {
+	displayName = "Resupply Crate - Class C";
+	scope = 2;
+
 	class TransportMagazines {
 		class _xx_1Rnd_HE_Grenade_shell {
 			magazine = "1Rnd_HE_Grenade_shell";

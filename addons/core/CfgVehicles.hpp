@@ -12,6 +12,10 @@ class BNB_E_Resupply : B_supplyCrate_F {
 	transportMaxMagazines = 9002;
 	transportMaxItems = 9002;
 	maximumload = 9002;
+	class TransportMagazines {};
+	class TransportWeapons {};
+	class TransportBackpacks {};
+	class TransportItems {};
 };
 
 class BNB_E_Resupply_Class_A : BNB_E_Resupply {

@@ -2,6 +2,7 @@ class CfgPatches {
 	class bnb_e_core {
 		name = "2BNB Extras - Core";
 		units[] = {
+			"BNB_E_Resupply",
 			"BNB_E_Resupply_Class_A",
 			"BNB_E_Resupply_Class_B",
 			"BNB_E_Resupply_Class_C"

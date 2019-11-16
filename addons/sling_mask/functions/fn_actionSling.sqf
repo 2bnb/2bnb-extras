@@ -16,14 +16,13 @@ Examples:
 Author:
 	DerZade, Arend
 ---------------------------------------------------------------------------- */
-
 params ["_unit"];
 
-private _helmetClass = goggles _unit;
+private _maskClass = goggles _unit;
 
 //can't sling a non existent helmet
-if (_helmetClass isEqualTo "") exitWith {};
+if (_maskClass isEqualTo "") exitWith {};
 
-[_unit, _helmetClass] call GRAD_slingHelmet_fnc_addSlungHelmet;
+[_unit, _maskClass] call bnb_e_sling_mask_fnc_addSlungMask;
 _unit setVariable ["bnb_e_sling_mask_slung", 1];
 removegoggles _unit;

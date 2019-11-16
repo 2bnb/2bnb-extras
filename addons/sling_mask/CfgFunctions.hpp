@@ -8,6 +8,8 @@ class CfgFunctions {
 			class actionSwap {};
 			class addMaskToWhitelist {};
 			class whitelist {};
+			class addSlungMask {};
+			class EHGetOut {};
 		};
 	};
 

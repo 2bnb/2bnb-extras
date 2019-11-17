@@ -19,7 +19,7 @@ class BNB_E_Resupply : B_supplyCrate_F {
 };
 
 class BNB_E_Resupply_Class_A : BNB_E_Resupply {
-	displayName = "Resupply Crate - Class A";
+	displayName = "[2BNB] Resupply Crate - Class A";
 	scope = 2;
 
 	class TransportItems {
@@ -75,7 +75,7 @@ class BNB_E_Resupply_Class_A : BNB_E_Resupply {
 };
 
 class BNB_E_Resupply_Class_B : BNB_E_Resupply {
-	displayName = "Resupply Crate - Class B";
+	displayName = "[2BNB] Resupply Crate - Class B";
 	scope = 2;
 
 	class TransportMagazines {
@@ -154,7 +154,7 @@ class BNB_E_Resupply_Class_B : BNB_E_Resupply {
 };
 
 class BNB_E_Resupply_Class_C : BNB_E_Resupply {
-	displayName = "Resupply Crate - Class C";
+	displayName = "[2BNB] Resupply Crate - Class C";
 	scope = 2;
 
 	class TransportMagazines {

@@ -8,6 +8,10 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"D. Ford"
+		};
 	};
 };
 class cfgFactionClasses

@@ -72,12 +72,12 @@ class CfgPatches {
 			"rhs_c_mig29",
 			"A3_Air_F_EPC_Plane_CAS_01"
 		};
-		author = "Maj. D. Ford";
+		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
-			"Maj. D. Ford",
-			"Capt. Arend",
-			"Pvt. Jebby",
-			"Sp. Ezpez"
+			"D. Ford",
+			"Arend",
+			"Jebby",
+			"Ezpez"
 		};
 	};
 };

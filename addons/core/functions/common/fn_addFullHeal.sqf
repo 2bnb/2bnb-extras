@@ -38,6 +38,7 @@ if (isNil "bnb_e_EHIDs") then {
 };
 
 private _action = [];
+
 {
 	_object = _x;
 	if (isMultiplayer && ({_object in _x} count bnb_e_EHIDs) == 0) then {
@@ -63,8 +64,8 @@ private _action = [];
 			100
 		] call ace_interact_menu_fnc_createAction;
 
-		// [_object, 0, ["ACE_MainActions"], _action] remoteExec ["ace_interact_menu_fnc_addActionToObject"];
-		[_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
-		[format["Added full heal interaction to %1. Action: %2", _object, _action], "core\functions\common\fn_addFulleHeal.sqf"] call bnb_e_core_fnc_log;
+		// [_object, 0, ["ACE_MainActions"], _action] remoteExec ["ace_interact_menu_fnc_addActionToObject		
+		[[_object, _action], {[(_this select 0), 0, ["ACE_MainActions"], (_this select 1)] call ace_interact_menu_fnc_addActionToObject;}] remoteExec ["BIS_fnc_call", 0];	
+		[format["Added full heal interaction to %1. Action: %2", _object, _action], "core\functions\common\fn_addFulleHeal.sqf"] call bnb_e_core_fnc_log;		
 	};
 } foreach _objects;

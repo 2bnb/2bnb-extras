@@ -16,7 +16,6 @@ Examples:
 Author:
 	DerZade, Arend
 ---------------------------------------------------------------------------- */
-
 params ["_unit"];
 
 //unit has to have goggles

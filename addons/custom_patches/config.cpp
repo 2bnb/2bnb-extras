@@ -6,7 +6,6 @@ class CfgPatches {
 		requiredAddons[] = {};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
-			"2BNB",
 			"Ford",
 			"Arend",
 			"Farcry",

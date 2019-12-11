@@ -7,7 +7,6 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 - CBA
 - TFAR 1.0 (BETA)
 - RHS GREF
-- DrongosAPS
 - GRAD Sling Helmet
 
 
@@ -19,6 +18,14 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 # For Developers of this mod
 ## Install
 We have a build system to allow for key signing and addon compiling.
+
+### Requirements
+1. Git for Windows
+1. Windows PowerShell v5.1 or higher
+
+To set up your system to use the build script:
+- Open Windows PowerShell as Administrator and execute `set-executionpolicy remotesigned`
+- In the future, always use PowerShell as Admin
 
 ### Windows
 If on Windows, use the `tools\make.ps1` file to build the mod for you. It will build the mod, sign the addons, include the public key in the `keys` folder, and also copy across all files found in the `extras` folder, as well as the files specified in the file `tools\support-files.txt`.

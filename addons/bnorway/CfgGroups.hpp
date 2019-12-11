@@ -780,13 +780,13 @@ class CfgGroups {
 						position[] = {0,0,0};
 						rank = "SERGEANT";
 						side = 1;
-						vehicle = "B_NorB_NorwayArmy_L18_101_CAP_Woodland";
+						vehicle = "B_NorwayArmy_JAS_39_Gripen_Woodland";
 					};
 					class Unit1 {
 						position[] = {17,-29,0};
 						rank = "PRIVATE";
 						side = 1;
-						vehicle = "B_NorB_NorwayArmy_L18_101_CAP_Woodland";
+						vehicle = "B_NorwayArmy_JAS_39_Gripen_Woodland";
 					};
 				};
 

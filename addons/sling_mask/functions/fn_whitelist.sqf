@@ -16,7 +16,6 @@ Examples:
 Author:
 	DerZade, Arend
 ---------------------------------------------------------------------------- */
-
 #include "..\allowedMasks.hpp"
 
 if (isNil "bnb_e_sling_mask_whitelist") then {

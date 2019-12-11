@@ -54,12 +54,13 @@ class CfgPatches {
 			"B_NorwayArmy_Chinook_HC2_Woodland",
 			"B_NorwayArmy_Apache_AH1_Multi_Woodland",
 			"B_NorwayArmy_Hercules_C4_Woodland",
-			"B_NorwayArmy_L18_101_CAP_Woodland",
+			"B_NorwayArmy_JAS_39_Gripen_Woodland",
 			"B_NorwayArmy_L111A1_H_Woodland",
 			"B_NorwayArmy_L134A1_High_Woodland",
 			"B_NorwayArmy_L16_Woodland",
 			"B_NorwayArmy_L7A2_High_Woodland",
-			"B_NorwayArmy_A10_Woodland"
+			"B_NorwayArmy_A10_Woodland",
+			"B_NorwayArmy_Leopard_2SG_Kompis_Woodland"
 		};
 		weapons[] = {};
 		requiredVersion = 1.62;
@@ -71,11 +72,12 @@ class CfgPatches {
 			"rhs_c_mig29",
 			"A3_Air_F_EPC_Plane_CAS_01"
 		};
-		author = "Maj. D. Ford";
+		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
-			"Maj. D. Ford",
-			"Capt. Arend",
-			"Rct. Jebby"
+			"D. Ford",
+			"Arend",
+			"Jebby",
+			"Ezpez"
 		};
 	};
 };

@@ -13,31 +13,20 @@ class CfgVehicles {
     class LOP_UKR_Infantry_officer_OCimport_01 : LOP_UKR_Infantry_officer { scope = 0; class EventHandlers; };
     class LOP_UKR_Infantry_officer_OCimport_02 : LOP_UKR_Infantry_officer_OCimport_01 { class EventHandlers; };
 
-    class UK3CB_CCM_I_UAZ_Dshkm;
-    class UK3CB_CCM_I_UAZ_Dshkm_OCimport_01 : UK3CB_CCM_I_UAZ_Dshkm { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_CCM_I_UAZ_Dshkm_OCimport_02 : UK3CB_CCM_I_UAZ_Dshkm_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_uaz_dshkm;
+    class rhsgref_ins_uaz_dshkm_OCimport_01 : rhsgref_ins_uaz_dshkm { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_uaz_dshkm_OCimport_02 : rhsgref_ins_uaz_dshkm_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CargoTurret_01;
         };
     };
 
-    class UK3CB_CCM_I_Datsun_Pkm;
-    class UK3CB_CCM_I_Datsun_Pkm_OCimport_01 : UK3CB_CCM_I_Datsun_Pkm { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_CCM_I_Datsun_Pkm_OCimport_02 : UK3CB_CCM_I_Datsun_Pkm_OCimport_01 { 
-        class EventHandlers; 
-        class Turrets : Turrets {
-            class MainTurret;
-            class CargoTurret_01;
-            class CargoTurret_02;
-        };
-    };
-
-    class UK3CB_TKA_I_BMP1;
-    class UK3CB_TKA_I_BMP1_OCimport_01 : UK3CB_TKA_I_BMP1 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_BMP1_OCimport_02 : UK3CB_TKA_I_BMP1_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_g_bmp1;
+    class rhsgref_ins_g_bmp1_OCimport_01 : rhsgref_ins_g_bmp1 { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_g_bmp1_OCimport_02 : rhsgref_ins_g_bmp1_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class Com_BMP1;
@@ -54,10 +43,10 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_BTR60;
-    class UK3CB_TKA_I_BTR60_OCimport_01 : UK3CB_TKA_I_BTR60 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_BTR60_OCimport_02 : UK3CB_TKA_I_BTR60_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_g_btr60;
+    class rhsgref_ins_g_btr60_OCimport_01 : rhsgref_ins_g_btr60 { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_g_btr60_OCimport_02 : rhsgref_ins_g_btr60_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CommanderOptics;
@@ -73,10 +62,10 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_Ural_Zu23;
-    class UK3CB_TKA_I_Ural_Zu23_OCimport_01 : UK3CB_TKA_I_Ural_Zu23 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_Ural_Zu23_OCimport_02 : UK3CB_TKA_I_Ural_Zu23_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_g_ural_Zu23;
+    class rhsgref_ins_g_ural_Zu23_OCimport_01 : rhsgref_ins_g_ural_Zu23 { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_g_ural_Zu23_OCimport_02 : rhsgref_ins_g_ural_Zu23_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CargoTurret_01;
@@ -85,19 +74,19 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_BM21;
-    class UK3CB_TKA_I_BM21_OCimport_01 : UK3CB_TKA_I_BM21 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_BM21_OCimport_02 : UK3CB_TKA_I_BM21_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_g_BM21;
+    class rhsgref_ins_g_BM21_OCimport_01 : rhsgref_ins_g_BM21 { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_g_BM21_OCimport_02 : rhsgref_ins_g_BM21_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
     };
 
-    class UK3CB_TKA_I_Mi_24P;
-    class UK3CB_TKA_I_Mi_24P_OCimport_01 : UK3CB_TKA_I_Mi_24P { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_Mi_24P_OCimport_02 : UK3CB_TKA_I_Mi_24P_OCimport_01 { 
-        class EventHandlers; 
+    class LOP_UKR_Mi24V_AT;
+    class LOP_UKR_Mi24V_AT_OCimport_01 : LOP_UKR_Mi24V_AT { scope = 0; class EventHandlers; class Turrets; };
+    class LOP_UKR_Mi24V_AT_OCimport_02 : LOP_UKR_Mi24V_AT_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
             class CargoTurret_01;
@@ -107,10 +96,10 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_Mi8;
-    class UK3CB_TKA_I_Mi8_OCimport_01 : UK3CB_TKA_I_Mi8 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_Mi8_OCimport_02 : UK3CB_TKA_I_Mi8_OCimport_01 { 
-        class EventHandlers; 
+    class RHS_Mi8mt_vv;
+    class RHS_Mi8mt_vv_OCimport_01 : RHS_Mi8mt_vv { scope = 0; class EventHandlers; class Turrets; };
+    class RHS_Mi8mt_vv_OCimport_02 : RHS_Mi8mt_vv_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class CopilotTurret;
             class MainTurret;
@@ -118,10 +107,10 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_Mi8AMTSh;
-    class UK3CB_TKA_I_Mi8AMTSh_OCimport_01 : UK3CB_TKA_I_Mi8AMTSh { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_Mi8AMTSh_OCimport_02 : UK3CB_TKA_I_Mi8AMTSh_OCimport_01 { 
-        class EventHandlers; 
+    class RHS_Mi8AMTSh_vvsc;
+    class RHS_Mi8AMTSh_vvsc_OCimport_01 : RHS_Mi8AMTSh_vvsc { scope = 0; class EventHandlers; class Turrets; };
+    class RHS_Mi8AMTSh_vvsc_OCimport_02 : RHS_Mi8AMTSh_vvsc_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class CopilotTurret;
             class SideTurret;
@@ -130,70 +119,39 @@ class CfgVehicles {
         };
     };
 
-    class UK3CB_TKA_I_Su25SM_Cluster;
-    class UK3CB_TKA_I_Su25SM_Cluster_OCimport_01 : UK3CB_TKA_I_Su25SM_Cluster { scope = 0; class EventHandlers; };
-    class UK3CB_TKA_I_Su25SM_Cluster_OCimport_02 : UK3CB_TKA_I_Su25SM_Cluster_OCimport_01 { scope = 0; class EventHandlers; };
+    class RHS_Su25SM_vvs;
+    class RHS_Su25SM_vvs_OCimport_01 : RHS_Su25SM_vvs { scope = 0; class EventHandlers; };
+    class RHS_Su25SM_vvs_OCimport_02 : RHS_Su25SM_vvs_OCimport_01 { scope = 0; class EventHandlers; };
 
-    class UK3CB_TKA_I_L39_AA;
-    class UK3CB_TKA_I_L39_AA_OCimport_01 : UK3CB_TKA_I_L39_AA { scope = 0; class EventHandlers; };
-    class UK3CB_TKA_I_L39_AA_OCimport_02 : UK3CB_TKA_I_L39_AA_OCimport_01 { scope = 0; class EventHandlers; };
+    class I_Plane_Fighter_03_dynamicLoadout_F;
+    class I_Plane_Fighter_03_dynamicLoadout_F_OCimport_01 : I_Plane_Fighter_03_dynamicLoadout_F { scope = 0; class EventHandlers; };
+    class I_Plane_Fighter_03_dynamicLoadout_F_OCimport_02 : I_Plane_Fighter_03_dynamicLoadout_F_OCimport_01 { scope = 0; class EventHandlers; };
 
-    class UK3CB_TKA_I_T55;
-    class UK3CB_TKA_I_T55_OCimport_01 : UK3CB_TKA_I_T55 { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_T55_OCimport_02 : UK3CB_TKA_I_T55_OCimport_01 { 
-        class EventHandlers; 
+    class LOP_AFR_T55;
+    class LOP_AFR_T55_OCimport_01 : LOP_AFR_T55 { scope = 0; class EventHandlers; class Turrets; };
+    class LOP_AFR_T55_OCimport_02 : LOP_AFR_T55_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
     };
 
-    class UK3CB_TKA_I_T72A;
-    class UK3CB_TKA_I_T72A_OCimport_01 : UK3CB_TKA_I_T72A { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_T72A_OCimport_02 : UK3CB_TKA_I_T72A_OCimport_01 { 
-        class EventHandlers; 
+    class rhsgref_ins_g_t72bc;
+    class rhsgref_ins_g_t72bc_OCimport_01 : rhsgref_ins_g_t72bc { scope = 0; class EventHandlers; class Turrets; };
+    class rhsgref_ins_g_t72bc_OCimport_02 : rhsgref_ins_g_t72bc_OCimport_01 {
+        class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
         };
     };
 
-    class UK3CB_TKA_I_GAZ_Vodnik;
-    class UK3CB_TKA_I_GAZ_Vodnik_OCimport_01 : UK3CB_TKA_I_GAZ_Vodnik { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_GAZ_Vodnik_OCimport_02 : UK3CB_TKA_I_GAZ_Vodnik_OCimport_01 { 
-        class EventHandlers; 
-        class Turrets : Turrets {
-            class Passenger_Turret_01;
-            class Passenger_Turret_02;
-        };
-    };
-
-    class UK3CB_TKA_I_LR_Closed;
-    class UK3CB_TKA_I_LR_Closed_OCimport_01 : UK3CB_TKA_I_LR_Closed { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_LR_Closed_OCimport_02 : UK3CB_TKA_I_LR_Closed_OCimport_01 { 
-        class EventHandlers; 
-        class Turrets : Turrets {
-            class Passenger_Turret;
-            class CargoTurret_1;
-            class CargoTurret_2;
-        };
-    };
-
-    class UK3CB_TKA_I_UAZ_Closed;
-    class UK3CB_TKA_I_UAZ_Closed_OCimport_01 : UK3CB_TKA_I_UAZ_Closed { scope = 0; class EventHandlers; };
-    class UK3CB_TKA_I_UAZ_Closed_OCimport_02 : UK3CB_TKA_I_UAZ_Closed_OCimport_01 { scope = 0; class EventHandlers; };
-
-    class UK3CB_TKA_I_V3S_Closed;
-    class UK3CB_TKA_I_V3S_Closed_OCimport_01 : UK3CB_TKA_I_V3S_Closed { scope = 0; class EventHandlers; class Turrets; };
-    class UK3CB_TKA_I_V3S_Closed_OCimport_02 : UK3CB_TKA_I_V3S_Closed_OCimport_01 { 
-        class EventHandlers; 
-        class Turrets : Turrets {
-            class CargoTurret_1;
-            class CargoTurret_2;
-        };
-    };
+    class rhsgref_ins_uaz;
+    class rhsgref_ins_uaz_OCimport_01 : rhsgref_ins_uaz { scope = 0; class EventHandlers; };
+    class rhsgref_ins_uaz_OCimport_02 : rhsgref_ins_uaz_OCimport_01 { scope = 0; class EventHandlers; };
 
 
     class I_Chernarus_Man_Winter : LOP_UKR_Infantry_officer_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Man_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Man_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -234,7 +192,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Rifleman_Winter : I_Chernarus_Man_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Rifleman_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Rifleman_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -275,7 +233,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Rifleman_AT_Winter : I_Chernarus_Rifleman_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Rifleman_AT_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Rifleman_AT_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -316,7 +274,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Crew_Winter : I_Chernarus_Man_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Crew_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Crew_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -357,7 +315,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Pilot_Winter : I_Chernarus_Crew_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Pilot_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Pilot_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -398,7 +356,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Sniper_Winter : I_Chernarus_Man_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Sniper_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Sniper_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -439,7 +397,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Medic_Winter : I_Chernarus_Rifleman_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Medic_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Medic_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -480,7 +438,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Machinegunner : I_Chernarus_Rifleman_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Machinegunner.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Machinegunner.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -521,7 +479,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_Officer_Winter : I_Chernarus_Man_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Officer_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Officer_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -560,7 +518,7 @@ class CfgVehicles {
     };
 
     class I_Chernarus_TLeader_Winter : I_Chernarus_Rifleman_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_TLeader_Winter.JPG;
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_TLeader_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -600,12 +558,12 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Grenadire_Winter : I_Chernarus_TLeader_Winter {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Grenadire_Winter.JPG;
+    class I_Chernarus_Grenadier_Winter : I_Chernarus_TLeader_Winter {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Grenadier_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
-        displayName = "Grenadire";
+        displayName = "Grenadier";
         side = 2;
         faction = "I_Chernarus_Winter";
 
@@ -641,8 +599,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_UAZ_DShKM_Winter : UK3CB_CCM_I_UAZ_Dshkm_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_UAZ_DShKM_Winter.JPG;
+    class I_Chernarus_UAZ_DShKM_Winter : rhsgref_ins_uaz_dshkm_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_UAZ_DShKM_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -660,11 +618,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_uaz\data\uaz_main_civil1_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_uaz\data\uaz_mount_white_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -673,41 +626,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Pickup_PKM_Winter : UK3CB_CCM_I_Datsun_Pkm_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Pickup_PKM_Winter.JPG;
-        author = "Jebby";
-        scope = 2;
-        scopeCurator = 2;
-        displayName = "Pickup PKM";
-        side = 2;
-        faction = "I_Chernarus_Winter";
-        crew = "I_Chernarus_Crew_Winter";
-
-        class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "I_Chernarus_Rifleman_Winter"; };
-            class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
-            class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
-        };
-
-
-
-        class EventHandlers : EventHandlers {
-            class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_datsun\data\datsun_trup3_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
-        };
-
-        // custom attributes (do not delete)
-        ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_texture = "Camo_5";
-
-    };
-
-    class I_Chernarus_BMP_1_Winter : UK3CB_TKA_I_BMP1_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_BMP_1_Winter.JPG;
+    class I_Chernarus_BMP_1_Winter : rhsgref_ins_g_bmp1_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_BMP_1_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -735,11 +655,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_1_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_2_co.paa'];_unit setObjectTextureGlobal [2,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_3_co.paa'];_unit setObjectTextureGlobal [3,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_4_co.paa'];_unit setObjectTextureGlobal [4,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_5_co.paa'];_unit setObjectTextureGlobal [5,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\apc\UK3CB_Factions_Vehicles_BMP\data\ana_b_bmp_6_co.paa'];_unit setObjectTextureGlobal [6,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [7,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [8,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [9,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [10,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [11,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [12,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [13,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -748,8 +663,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_BTR_60_Winter : UK3CB_TKA_I_BTR60_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_BTR_60_Winter.JPG;
+    class I_Chernarus_BTR_60_Winter : rhsgref_ins_g_btr60_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_BTR_60_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -776,11 +691,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_btr\btr60\data\tkm_o_btr60_body_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_btr\btr60\data\tkm_o_btr60_details_co.paa'];_unit setObjectTextureGlobal [2,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [3,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [4,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [5,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [6,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [7,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [8,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [9,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [10,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [11,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [12,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [13,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [14,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [15,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [16,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [17,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [18,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [19,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [20,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [21,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [22,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [23,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\UK3CB_Factions_Vehicles_common\decal\no_ca.paa'];_unit setObjectTextureGlobal [24,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_btr\btr60\data\tkm_o_sa_gear_02_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -789,8 +699,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Ural_ZU23 : UK3CB_TKA_I_Ural_Zu23_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Ural_ZU23.JPG;
+    class I_Chernarus_Ural_ZU23 : rhsgref_ins_g_ural_Zu23_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Ural_ZU23.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -810,11 +720,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_ural\data\ural_kabina_rus_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_ural\data\ural_open_co.paa'];_unit setObjectTextureGlobal [2,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [3,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [4,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [5,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [6,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [7,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [8,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [9,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [10,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [11,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -823,8 +728,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Ural_BM21_Winter : UK3CB_TKA_I_BM21_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Ural_BM21_Winter.JPG;
+    class I_Chernarus_Ural_BM21_Winter : rhsgref_ins_g_BM21_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Ural_BM21_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -841,11 +746,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_ural\data\ural_kabina_rus_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_ural\data\ural_bm21_rus_co.paa'];_unit setObjectTextureGlobal [2,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [3,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [4,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [5,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [6,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [7,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [8,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [9,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [10,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];_unit setObjectTextureGlobal [11,'\rhsafrf\addons\RHS_Decals\Data\Labels\Misc\no_ca.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -854,8 +754,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Mi_24_Winter : UK3CB_TKA_I_Mi_24P_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Mi_24_Winter.JPG;
+    class I_Chernarus_Mi_24_Winter : LOP_UKR_Mi24V_AT_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Mi_24_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -863,6 +763,8 @@ class CfgVehicles {
         side = 2;
         faction = "I_Chernarus_Winter";
         crew = "I_Chernarus_Pilot_Winter";
+        // hiddenSelections[] = {"camo1","camo2","exhaust","tail_decals","n1","n2","moving_map"};
+        hiddenSelections[] = {"Camo3"};
 
         class Turrets : Turrets {
             class MainTurret : MainTurret { gunnerType = "I_Chernarus_Pilot_Winter"; };
@@ -876,21 +778,15 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI24\data\grey_mi35_001_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI24\data\grey_mi35_002_co.paa'];_unit setObjectTextureGlobal [2,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI24\data\grey_mi8_det_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
         ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_texture = "GREY";
 
     };
 
-    class I_Chernarus_Mi8_Transport_Winter : UK3CB_TKA_I_Mi8_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Mi8_Transport_Winter.JPG;
+    class I_Chernarus_Mi8_Transport_Winter : RHS_Mi8mt_vv_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Mi8_Transport_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -909,11 +805,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI8\data\grey_mi8_body_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI8\data\grey_mi8_det_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -922,8 +813,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Mi8_Rockets_Winter : UK3CB_TKA_I_Mi8AMTSh_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Mi8_Rockets_Winter.JPG;
+    class I_Chernarus_Mi8_Rockets_Winter : RHS_Mi8AMTSh_vvsc_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Mi8_Rockets_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -943,11 +834,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI8\data\grey_mi8_body_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_MI8\data\grey_mi8_det_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -956,8 +842,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_Su25_Cluster_Winter : UK3CB_TKA_I_Su25SM_Cluster_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_Su25_Cluster_Winter.JPG;
+    class I_Chernarus_Su25_Cluster_Winter : RHS_Su25SM_vvs_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_Su25_Cluster_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -969,11 +855,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_SU25\data\tka_su25_body1_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_SU25\data\tka_su25_body2_co.paa'];_unit setObjectTextureGlobal [2,'a3\data_f\clear_empty.paa'];_unit setObjectTextureGlobal [3,'a3\data_f\clear_empty.paa'];_unit setObjectTextureGlobal [4,'a3\data_f\clear_empty.paa'];_unit setObjectTextureGlobal [5,'a3\data_f\clear_empty.paa'];_unit setObjectTextureGlobal [6,'a3\data_f\clear_empty.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -982,8 +863,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_L39_AA_Winter : UK3CB_TKA_I_L39_AA_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_L39_AA_Winter.JPG;
+    class I_Chernarus_L39_AA_Winter : I_Plane_Fighter_03_dynamicLoadout_F_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_L39_AA_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -995,11 +876,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_L39\data\grey_l-39_body_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\air\UK3CB_Factions_Vehicles_L39\data\grey_l-39_body_1_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -1008,8 +884,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_T55_Winter : UK3CB_TKA_I_T55_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_T55_Winter.JPG;
+    class I_Chernarus_T55_Winter : LOP_AFR_T55_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_T55_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -1026,11 +902,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\armour\UK3CB_Factions_Vehicles_T-series\t55\data\ana_b_t55_body_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\armour\UK3CB_Factions_Vehicles_T-series\t55\data\ana_b_t55_tower_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -1039,8 +910,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_T72_Winter : UK3CB_TKA_I_T72A_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_T72_Winter.JPG;
+    class I_Chernarus_T72_Winter : rhsgref_ins_g_t72bc_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_T72_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -1057,11 +928,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\armour\UK3CB_Factions_Vehicles_T-series\t72\data\ana_b_t72_1_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\armour\UK3CB_Factions_Vehicles_T-series\t72\data\ana_b_t72_2_co.paa'];_unit setObjectTextureGlobal [2,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\armour\UK3CB_Factions_Vehicles_T-series\t72\data\ana_b_t72_3_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -1070,73 +936,8 @@ class CfgVehicles {
 
     };
 
-    class I_Chernarus_GAZV_Unarmed_Winter : UK3CB_TKA_I_GAZ_Vodnik_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_GAZV_Unarmed_Winter.JPG;
-        author = "Jebby";
-        scope = 2;
-        scopeCurator = 2;
-        displayName = "GAZ Vodnik Unarmed";
-        side = 2;
-        faction = "I_Chernarus_Winter";
-        crew = "I_Chernarus_Crew_Winter";
-
-        class Turrets : Turrets {
-            class Passenger_Turret_01 : Passenger_Turret_01 { gunnerType = ""; };
-            class Passenger_Turret_02 : Passenger_Turret_02 { gunnerType = ""; };
-        };
-
-
-
-        class EventHandlers : EventHandlers {
-            class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_vodnik\data\gaz39371_vodnik_basis_01_co.paa'];_unit setObjectTextureGlobal [1,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_vodnik\data\gaz39371_vodnik_cabin_co.paa'];_unit setObjectTextureGlobal [2,'UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_vodnik\data\gaz39371_vodnik_mod_out_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
-        };
-
-        // custom attributes (do not delete)
-        ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_texture = "Russian";
-
-    };
-
-    class I_Chernarus_LR_110Closed_Winter_01 : UK3CB_TKA_I_LR_Closed_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_LR_110Closed_Winter_01.JPG;
-        author = "Jebby";
-        scope = 2;
-        scopeCurator = 2;
-        displayName = "Land Rover 110 Closed";
-        side = 2;
-        faction = "I_Chernarus_Winter";
-        crew = "I_Chernarus_Crew_Winter";
-
-        class Turrets : Turrets {
-            class Passenger_Turret : Passenger_Turret { gunnerType = ""; };
-            class CargoTurret_1 : CargoTurret_1 { gunnerType = ""; };
-            class CargoTurret_2 : CargoTurret_2 { gunnerType = ""; };
-        };
-
-
-
-        class EventHandlers : EventHandlers {
-            class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_landrover\data\lr_base_silver_co.paa'];_unit setObjectTextureGlobal [1,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_landrover\data\civ_lr_special_blk_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
-        };
-
-        // custom attributes (do not delete)
-        ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_texture = "Silver";
-
-    };
-
-    class I_Chernarus_UAZ32_Closed_Winter : UK3CB_TKA_I_UAZ_Closed_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_UAZ32_Closed_Winter.JPG;
+    class I_Chernarus_UAZ32_Closed_Winter : rhsgref_ins_uaz_OCimport_02 {
+        editorPreview = "\x\addons\ichernaruswinter\data\preview\I_Chernarus_UAZ32_Closed_Winter.jpg";
         author = "Jebby";
         scope = 2;
         scopeCurator = 2;
@@ -1148,11 +949,6 @@ class CfgVehicles {
 
         class EventHandlers : EventHandlers {
             class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'\UK3CB_Factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_uaz\data\uaz_main_civil1_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
         };
 
         // custom attributes (do not delete)
@@ -1160,37 +956,4 @@ class CfgVehicles {
         ALiVE_orbatCreator_texture = "White";
 
     };
-
-    class I_Chernarus_PragaV3S_TClosed_Winter : UK3CB_TKA_I_V3S_Closed_OCimport_02 {
-        editorPreview = \x\\addons\ichernaruswinter\data\preview\I_Chernarus_PragaV3S_TClosed_Winter.JPG;
-        author = "Jebby";
-        scope = 2;
-        scopeCurator = 2;
-        displayName = "Praga V3S Transport Closed";
-        side = 2;
-        faction = "I_Chernarus_Winter";
-        crew = "I_Chernarus_Crew_Winter";
-
-        class Turrets : Turrets {
-            class CargoTurret_1 : CargoTurret_1 { gunnerType = ""; };
-            class CargoTurret_2 : CargoTurret_2 { gunnerType = ""; };
-        };
-
-
-
-        class EventHandlers : EventHandlers {
-            class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-
-            class ALiVE_orbatCreator {
-                init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;_unit setObjectTextureGlobal [0,'uk3cb_factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_v3s\data\v3s_kabpar_egue_co.paa'];_unit setObjectTextureGlobal [1,'uk3cb_factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_v3s\data\v3s_intkor_egue_co.paa'];_unit setObjectTextureGlobal [2,'uk3cb_factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_v3s\data\v3s_koloint02_egue_co.paa'];_unit setObjectTextureGlobal [3,'uk3cb_factions\addons\UK3CB_Factions_Vehicles\wheeled\UK3CB_Factions_Vehicles_v3s\data\v3s_reammo_egue_co.paa'];};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-            };
-
-        };
-
-        // custom attributes (do not delete)
-        ALiVE_orbatCreator_owned = 1;
-        ALiVE_orbatCreator_texture = "Olive";
-
-    };
-
 };

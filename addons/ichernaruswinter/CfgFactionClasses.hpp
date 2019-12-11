@@ -8,8 +8,6 @@ class CfgFactionClasses {
     class I_Chernarus_Winter {
         displayName = "Chernarus Winter Force";
         side = 2;
-        flag = "\UK3CB_Factions\addons\UK3CB_Factions_CCM\Flag\ccm_i_marker_co.paa";
-        icon = "\UK3CB_Factions\addons\UK3CB_Factions_CCM\Flag\ccm_i_marker_co.paa";
         priority = 0;
     };
 };

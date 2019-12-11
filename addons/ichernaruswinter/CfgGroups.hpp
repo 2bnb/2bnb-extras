@@ -30,7 +30,7 @@ class CfgGroups {
                         position[] = {5,-5,0};
                         rank = "PRIVATE";
                         side = 2;
-                        vehicle = "I_Chernarus_Grenadire_Winter";
+                        vehicle = "I_Chernarus_Grenadier_Winter";
                     };
                     class Unit2 {
                         position[] = {-5,-5,0};
@@ -81,7 +81,7 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "SERGEANT";
                         side = 2;
-                        vehicle = "I_Chernarus_Grenadire_Winter";
+                        vehicle = "I_Chernarus_Grenadier_Winter";
                     };
                     class Unit1 {
                         position[] = {5,-5,0};
@@ -112,45 +112,51 @@ class CfgGroups {
                         position[] = {0,0,0};
                         rank = "PRIVATE";
                         side = 2;
-                        vehicle = "I_Chernarus_PragaV3S_TClosed_Winter";
+                        vehicle = "I_Chernarus_UAZ32_Closed_Winter";
                     };
                     class Unit1 {
+                        position[] = {0,0,0};
+                        rank = "PRIVATE";
+                        side = 2;
+                        vehicle = "I_Chernarus_UAZ_DShKM_Winter";
+                    };
+                    class Unit2 {
                         position[] = {5,-5,0};
                         rank = "SERGEANT";
                         side = 2;
                         vehicle = "I_Chernarus_TLeader_Winter";
                     };
-                    class Unit2 {
+                    class Unit3 {
                         position[] = {-5,-5,0};
                         rank = "PRIVATE";
                         side = 2;
-                        vehicle = "I_Chernarus_Grenadire_Winter";
+                        vehicle = "I_Chernarus_Grenadier_Winter";
                     };
-                    class Unit3 {
+                    class Unit4 {
                         position[] = {10,-10,0};
                         rank = "PRIVATE";
                         side = 2;
                         vehicle = "I_Chernarus_Machinegunner";
                     };
-                    class Unit4 {
+                    class Unit5 {
                         position[] = {-10,-10,0};
                         rank = "PRIVATE";
                         side = 2;
                         vehicle = "I_Chernarus_Medic_Winter";
                     };
-                    class Unit5 {
+                    class Unit6 {
                         position[] = {15,-15,0};
                         rank = "PRIVATE";
                         side = 2;
                         vehicle = "I_Chernarus_Rifleman_AT_Winter";
                     };
-                    class Unit6 {
+                    class Unit7 {
                         position[] = {-15,-15,0};
                         rank = "PRIVATE";
                         side = 2;
                         vehicle = "I_Chernarus_Rifleman_Winter";
                     };
-                    class Unit7 {
+                    class Unit8 {
                         position[] = {20,-20,0};
                         rank = "PRIVATE";
                         side = 2;

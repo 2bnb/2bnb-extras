@@ -44,3 +44,25 @@ private _bnb_e_settings = [
 ];
 
 {_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
+
+// Create a climate select setting for each detected world
+private _name = "";
+private _prettyName = "";
+{
+	_name = configName _x;
+	_prettyName = getText (configfile >> "CfgWorlds" >> _name >> "description");
+	[
+		format["bnb_e_climate_%1", _name],
+		"LIST",
+		[format["Map Climate - %1", _prettyName], "Select the appropriate climate for this map"],
+		["2BNB Arsenal", "World Climates"],
+		[
+			["all", "woodland", "desert", "arctic"],
+			["All", "Woodland", "Desert", "Arctic"],
+			0
+		],
+		true,
+		{},
+		true
+	] call CBA_Settings_fnc_init;
+} forEach ("true" configClasses (configfile >> "CfgWorldList"));

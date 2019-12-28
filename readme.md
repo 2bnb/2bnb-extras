@@ -6,7 +6,10 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 ## Dependencies
 - CBA
 - TFAR 1.0 (BETA)
+- RHS AFRF
+- RHS USAF
 - RHS GREF
+- Project OPFOR
 - GRAD Sling Helmet
 
 

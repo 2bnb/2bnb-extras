@@ -29,7 +29,7 @@ removeGoggles _unit;
 // Check if _goggles is a slingable item
 if (_goggles in ([] call bnb_e_sling_mask_fnc_whitelist)) then {
 
-	[_unit, _goggles] call GRAD_slingHelmet_fnc_addSlungHelmet;
+	[_unit, _goggles] call bnb_e_sling_mask_fnc_addSlungMask;
 	_unit setVariable ["bnb_e_sling_mask_slung", 1];
 
 } else {

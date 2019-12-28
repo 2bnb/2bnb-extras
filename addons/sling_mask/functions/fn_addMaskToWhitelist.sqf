@@ -21,7 +21,6 @@ Examples:
 Author:
 	DerZade, Arend
 ---------------------------------------------------------------------------- */
-
 if (isNil "_this") exitWith {};
 if (_this isEqualTo []) exitWith {};
 

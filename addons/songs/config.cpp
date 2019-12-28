@@ -4,6 +4,12 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 1;
 		requiredAddons[] = {};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"D. Ford",
+			"Arend",
+			"Wolfpack"
+		};
 	};
 };
 

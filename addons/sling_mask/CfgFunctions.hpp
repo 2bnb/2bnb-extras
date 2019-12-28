@@ -8,6 +8,15 @@ class CfgFunctions {
 			class actionSwap {};
 			class addMaskToWhitelist {};
 			class whitelist {};
+			class addSlungMask {};
+			class EHGetOut {};
+		};
+	};
+
+	class GRAD_slingHelmet {
+		class temp {
+			file = "\x\bnb_e\sling_mask\functions\temp";
+			class actionSwap {};
 		};
 	};
 };

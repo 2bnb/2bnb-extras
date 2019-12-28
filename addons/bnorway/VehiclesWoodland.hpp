@@ -134,19 +134,6 @@ class UK3CB_BAF_Merlin_HC3_18_Tropical_OCimport_02 : UK3CB_BAF_Merlin_HC3_18_Tro
 	};
 };
 
-class UK3CB_BAF_Chinook_HC2_Tropical;
-class UK3CB_BAF_Chinook_HC2_Tropical_OCimport_01 : UK3CB_BAF_Chinook_HC2_Tropical { scope = 0; class EventHandlers; class Turrets; };
-class UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_01 {
-	class EventHandlers;
-	class Turrets : Turrets {
-		class CopilotTurret;
-		class MainTurret;
-		class RightDoorGun;
-		class CargoTurret_01;
-		class CargoTurret_02;
-	};
-};
-
 class UK3CB_BAF_Apache_AH1_Tropical;
 class UK3CB_BAF_Apache_AH1_Tropical_OCimport_01 : UK3CB_BAF_Apache_AH1_Tropical { scope = 0; class EventHandlers; class Turrets; };
 class UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 : UK3CB_BAF_Apache_AH1_Tropical_OCimport_01 {
@@ -1549,34 +1536,6 @@ class B_NorwayArmy_Merlin_HC3_18_Woodland : UK3CB_BAF_Merlin_HC3_18_Tropical_OCi
 		class _xx_B_Parachute {
 			name = "B_Parachute";
 			count = 20;
-		};
-	};
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
-};
-
-class B_NorwayArmy_Chinook_HC2_Woodland : UK3CB_BAF_Chinook_HC2_Tropical_OCimport_02 {
-	author = "Jebby";
-	scope = 2;
-	scopeCurator = 2;
-	displayName = "Chinook HC2";
-	side = 1;
-	faction = "B_NorwayArmy_Woodland";
-	crew = "B_NorwayArmy_Pilot_Woodland";
-
-	class Turrets : Turrets {
-		class CopilotTurret : CopilotTurret { gunnerType = "B_NorwayArmy_Pilot_Woodland"; };
-		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Pilot_Woodland"; };
-		class RightDoorGun : RightDoorGun { gunnerType = "B_NorwayArmy_Pilot_Woodland"; };
-		class CargoTurret_01 : CargoTurret_01 { gunnerType = ""; };
-		class CargoTurret_02 : CargoTurret_02 { gunnerType = ""; };
-	};
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
 	};
 

@@ -80,38 +80,32 @@ class cfgWeapons
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01";
 			hiddenSelections[] = {"camo"};
 			containerClass = Supply220;
-			mass = 60;
+			mass = 40;
 
 			class HitpointsProtectionInfo
 			{
 				class Neck
 				{
-					hitpointName = "HitNeck"; // reference to the hit point class defined in the man base class
-					armor = 8; // addition to armor of referenced hitpoint
-					passThrough = 0.5; // multiplier of base passThrough defined in referenced hitpoint
-				};
-				class Arms
-				{
-					hitpointName = "HitArms";
-					armor = 8;
-					passThrough = 0.5;
+					hitpointName = "HitNeck";
+					armor = 50;
+					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 24;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Body
@@ -161,9 +155,9 @@ class cfgWeapons
 			{
 				class Neck
 				{
-					hitpointName = "HitNeck"; // reference to the hit point class defined in the man base class
-					armor = 8; // addition to armor of referenced hitpoint
-					passThrough = 0.5; // multiplier of base passThrough defined in referenced hitpoint
+					hitpointName = "HitNeck";
+					armor = 8;
+					passThrough = 0.5;
 				};
 				class Arms
 				{
@@ -216,7 +210,7 @@ class cfgWeapons
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			class HitpointsProtectionInfo
 			{
 				class Head
 				{
@@ -245,7 +239,7 @@ class cfgWeapons
 			modelSides[] = { TCivilian, TWest };
 			hiddenSelections[] = { "camo" };
 
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3_Soldier_Protection
+			class HitpointsProtectionInfo
 			{
 				class Head
 				{
@@ -655,6 +649,62 @@ class cfgWeapons
 	{
 		ace_hearing_protection = 0.75;
         ace_hearing_lowerVolume = 0;
+	};
+	class launch_MRAWS_green_F;
+    class launch_MRAWS_green_rail_f;
+    class SAW_W_MAAWS0: launch_MRAWS_green_rail_f
+    {
+        scope = 2;
+        baseWeapon = "SAW_W_MAAWS0";
+        displayName = "MAAWS Mk4 Mod 0 (White)";
+        picture = "\x\bnb_e\gear\data\whitemaawsicon.paa";
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\maaws.paa"};
+    };
+    class SAW_W_MAAWS1: launch_MRAWS_green_F
+    {
+        scope = 2;
+        baseWeapon = "SAW_W_MAAWS1";
+        displayName = "MAAWS Mk4 Mod 1 (White)";
+        picture = "\x\bnb_e\gear\data\whitemaawsicon.paa";
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\maaws.paa"};
+    };
+    class rhs_weap_ak74m;
+	class SAW_W_AK_Adidas: rhs_weap_ak74m
+	{
+		scope = 2;
+		baseWeapon = "SAW_W_AK_Adidas";
+		displayName = "AK-74M (Adidas)";
+		picture = "\x\bnb_e\gear\data\akadidasicon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\akadidas.paa"};
+	};
+	class rhs_weap_ak74m_npz;
+	class SAW_W_AK_Adidas_npz: rhs_weap_ak74m_npz
+	{
+		scope = 2;
+		baseWeapon = "SAW_W_AK_Adidas_npz";
+		displayName = "AK-74M (Adidas/B-13)";
+		picture = "\x\bnb_e\gear\data\akadidasicon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\akadidas.paa"};
+	};
+	class rhs_weap_ak74m_gp25;
+	class SAW_W_AK_Adidas_gp25: rhs_weap_ak74m_gp25
+	{
+		scope = 2;
+		baseWeapon = "SAW_W_AK_Adidas_gp25";
+		displayName = "AK-74M (Adidas/GP-25)";
+		picture = "\x\bnb_e\gear\data\akadidasicon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\akadidas.paa"};
+	};
+	class rhs_weap_ak74m_gp25_npz;
+	class SAW_W_AK_Adidas_gp25_npz: rhs_weap_ak74m_gp25_npz
+	{
+		scope = 2;
+		baseWeapon = "SAW_W_AK_Adidas_gp25_npz";
+		displayName = "AK-74M (Adidas/GP-25/B-13)";
+		picture = "\x\bnb_e\gear\data\akadidasicon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\akadidas.paa"};
 	};
 };
 class CfgGlasses

@@ -15,7 +15,8 @@ class CfgPatches {
 			"achilles_functions_f_ares",
 			"cba_settings",
 			"tfw_radios_rf3080",
-			"ace_explosives"
+			"ace_explosives",
+			"ace_medical"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {

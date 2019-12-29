@@ -1,5 +1,6 @@
 class CfgPatches {
 	class bnb_e_songs {
+		name = "2BNB Extras - Songs";
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1;

@@ -1,7 +1,7 @@
 class CfgPatches {
 	class bnb_e_screenshotMode {
 		author = "$STR_grad_Author";
-		name = "bnb_e_screenshotMode";
+		name = "2BNB Extras - Screenshot Mode";
 		url = "$STR_grad_URL";
 		requiredVersion = 1.0;
 		requiredAddons[] = {"bnb_e_core"};

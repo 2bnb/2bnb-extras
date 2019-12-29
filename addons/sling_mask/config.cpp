@@ -1,6 +1,6 @@
 class CfgPatches {
 	class bnb_e_sling_mask {
-		name = "2BNB Extras - GRAD Sling Mask";
+		name = "2BNB Extras - Sling Mask";
 		units[] = {};
 		weapons[] = {};
 		version = 0.1;

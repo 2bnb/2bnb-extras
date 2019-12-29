@@ -13,7 +13,7 @@ Returns:
 	Nothing
 
 Examples:
-	["arma.2bnb.com", 2302] call bnb_e_core_fnc_connectToServer;
+	["2bnb.eu", 2302] call bnb_e_core_fnc_connectToServer;
 
 Author:
 	Arend

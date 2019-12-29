@@ -31,6 +31,7 @@ class CfgFunctions {
 		class common {
 			file = "\x\bnb_e\core\functions\common";
 			class addFullHeal {};
+			class connectToServer {};
 		};
 
 		class zeus_modules {
@@ -45,11 +46,6 @@ class CfgFunctions {
 			class log {};
 			class strToArray {};
 			class toBoolean {};
-		};
-
-		class direct_connect {
-			file = "\x\bnb_e\core\functions\direct_connect";
-			class connectToServer {};
 		};
 	};
 };
@@ -66,61 +62,9 @@ class Extended_PostInit_EventHandlers {
 	};
 };
 
-class CfgWeapons {
-	class ACE_ItemCore;
-	class CBA_MiscItem_ItemInfo;
-	class tfw_rf3080Item: ACE_ItemCore {
-		class ItemInfo: CBA_MiscItem_ItemInfo{};
-	};
-
-	// ACE Barrel Swap fixes
-	class Rifle_Long_Base_F;
-	class UK3CB_BAF_L110_Base : Rifle_Long_Base_F {
-		ace_overheating_allowSwapBarrel = 1;
-	};
-	class UK3CB_BAF_L7A2 : Rifle_Long_Base_F {
-		ace_overheating_allowSwapBarrel = 1;
-	};
-
-	class LMG_03_base_F;
-	class LMG_03_F : LMG_03_base_F {
-		ace_overheating_allowSwapBarrel = 1;
-	};
-};
-
-class CfgMagazines {
-	// Register the m112(x4) explosive charges (RHS) with ACE Explosives
-	class CA_Magazine;
-	class rhsusf_m112_mag : CA_Magazine {
-		ACE_Explosives_Placeable = 1;
-		useAction = 0;
-		ACE_Explosives_SetupObject = "rhsusf_explosive_m112";
-		ACE_Explosives_DelayTime = 1.5;
-
-		class ACE_Triggers {
-			SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
-			class Timer {
-				FuseTime = 0.5;
-			};
-
-			class Command {
-				FuseTime = 0.5;
-			};
-
-			class MK16_Transmitter : Command {};
-			class DeadmanSwitch : Command {};
-		};
-	};
-	class rhsusf_m112x4_mag : rhsusf_m112_mag {
-		ACE_Explosives_SetupObject = "rhsusf_explosive_m112x4";
-	};
-};
-
-class CfgVehicles {
-	#include "CfgVehicles.hpp";
-};
-
-// Add server direct connect tiles
-class CfgMainMenuSpotlight {
-	#include "connectionData.hpp";
-};
+// Config features/fixes
+#include "configs\CfgBarrelSwaps.hpp";
+#include "configs\CfgDirectConnect.hpp";
+#include "configs\CfgExplosives.hpp";
+#include "configs\CfgSatcom.hpp";
+#include "configs\CfgSupplyCrates.hpp";

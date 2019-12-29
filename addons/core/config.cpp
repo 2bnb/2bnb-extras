@@ -2,10 +2,14 @@ class CfgPatches {
 	class bnb_e_core {
 		name = "2BNB Extras - Core";
 		units[] = {
+			// CfgSupplyCrates
 			"BNB_E_Resupply",
 			"BNB_E_Resupply_Class_A",
 			"BNB_E_Resupply_Class_B",
-			"BNB_E_Resupply_Class_C"
+			"BNB_E_Resupply_Class_C",
+
+			// CfgEdenModules
+			"BNB_E_Supports_Module"
 		};
 		weapons[] = {};
 		requiredAddons[] = {
@@ -16,7 +20,8 @@ class CfgPatches {
 			"cba_settings",
 			"tfw_radios_rf3080",
 			"ace_explosives",
-			"ace_medical"
+			"ace_medical",
+			"A3_Modules_F"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
@@ -36,9 +41,14 @@ class CfgFunctions {
 
 		class zeus_modules {
 			file = "\x\bnb_e\core\functions\zeus_modules";
-			class addArsenal {};
+			class addBarracks {};
 			class forceRespawn {};
 			class addMusicRadio {};
+		};
+
+		class eden_modules {
+			file = "\x\bnb_e\core\functions\eden_modules";
+			class barracksModule {};
 		};
 
 		class utilities {
@@ -65,6 +75,7 @@ class Extended_PostInit_EventHandlers {
 // Config features/fixes
 #include "configs\CfgBarrelSwaps.hpp";
 #include "configs\CfgDirectConnect.hpp";
+#include "configs\CfgEdenModules.hpp";
 #include "configs\CfgExplosives.hpp";
 #include "configs\CfgSatcom.hpp";
 #include "configs\CfgSupplyCrates.hpp";

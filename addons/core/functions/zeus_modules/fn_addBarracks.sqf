@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_core_fnc_addArsenal
+Function: bnb_e_core_fnc_addBarracks
 
 Description:
 	Adds filtered Arsenal, and other 2BNB functions such as "Full Heal", etc.
@@ -13,7 +13,7 @@ Returns:
 	Nothing
 
 Examples:
-	[_position, _objectUnderCursor] call bnb_e_core_fnc_addArsenal;
+	[_position, _objectUnderCursor] call bnb_e_core_fnc_addBarracks;
 
 Author:
 	Arend
@@ -21,6 +21,7 @@ Author:
 params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
 private _objects = [_objectUnderCursor];
+
 
 // Show Filter Dialog
 private _availableFilters = [
@@ -45,6 +46,11 @@ if (isNull (_objects select 0)) then {
 
 	_dialogControls = [["_arsenalObject", 0]] + _dialogControls;
 };
+
+
+// Add Full Heal?
+_dialogOptions = _dialogOptions + [["Add Full Heal?", ["Yes", "No"]]];
+_dialogControls = _dialogControls + [["_hasFullHeal", 0]];
 
 private _dialogResult = ["Add Filtered Arsenal", _dialogOptions] call Ares_fnc_showChooseDialog;
 
@@ -73,16 +79,25 @@ if (isNull (_objects select 0)) then {
 
 if (_objects isEqualTo []) exitWith {};
 
+
 // Give server the object, so that everything in future can be applied to the object locally
-if (isServer) then {
+if (!isServer) then {
 	{
-		if (owner _x != 2 || owner _x != 0) then { _x setOwner 2; };
-		[format["Changed ownership of %1 to %2", _x, owner _x], "core\functions\zeus_modules\fn_addArsenal.sqf"] call bnb_e_core_fnc_log;
+		if (_x setOwner 2) then {
+			[format["Changed ownership of %1 to %2", _x, owner _x], "core\functions\zeus_modules\fn_addBarracks.sqf"] call bnb_e_core_fnc_log;
+		} else {
+			[format["Could not change ownership of %1 to %2", _x, owner _x], "core\functions\zeus_modules\fn_addBarracks.sqf"] call bnb_e_core_fnc_log;
+		};
 	} foreach _objects;
 };
+
 
 // Add Arsenal - Remotely, since only the server has 2BNB Framework loaded
 [_availableFilters select _filter, _objects] remoteExec ["bnb_f_core_fnc_arsenal", 2];
 
+if (_hasFullHeal isEqualTo 0) then {
+	[_objects] remoteExec ["bnb_f_core_fnc_fullHeal", 2];
+};
+
 // Show Message
-[localize "STR_AMAE_ARSENAL_ADDED"] call Ares_fnc_ShowZeusMessage;
+["Barracks functions added!"] call Ares_fnc_ShowZeusMessage;

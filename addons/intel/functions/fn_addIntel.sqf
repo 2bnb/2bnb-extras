@@ -70,6 +70,16 @@ _action = [
 	{true}
 ] call ace_interact_menu_fnc_createAction;
 
+_actionD = [
+	"ReadIntel",
+	"Destroy Intel",
+	"",
+	{
+		deleteVehicle _target;
+	},
+	{true}
+] call ace_interact_menu_fnc_createAction;
 
 [[_obj, _action], {[(_this select 0), 0, ["ACE_MainActions"], (_this select 1)] call ace_interact_menu_fnc_addActionToObject;}] remoteExec ["BIS_fnc_call", 0, netId _obj];
+[[_obj, _actionD], {[(_this select 0), 0, ["ACE_MainActions"], (_this select 1)] call ace_interact_menu_fnc_addActionToObject;}] remoteExec ["BIS_fnc_call", 0, netId _obj+"D"];
 [[_obj]] call Ares_fnc_AddUnitsToCurator;

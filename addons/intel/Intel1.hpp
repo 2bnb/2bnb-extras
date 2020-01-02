@@ -16,10 +16,10 @@ class Intel1
 			y = safeZoneY + safeZoneH * 0.02888889;
 			w = safeZoneW * 0.5625;
 			h = safeZoneH * 0.96555556;
-			style = 2096;
-			text = "\a3\ui_f\data\map\mapcontrol\waypoint_ca.paa";
-			colorBackground[] = {0.9137,0.9255,0.8471,1};
-			colorText[] = {0.0314,0.9333,0.698,1};
+			style = 48;
+			text = "\x\bnb_e\intel\img\paper.paa";
+			colorBackground[]={0,0,0,0};
+			colorText[]={1,1,1,1};
 			font = "PuristaMedium";
 			sizeEx = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			
@@ -36,15 +36,12 @@ class Intel1
 			y = safeZoneY + safeZoneH * 0.05333334;
 			w = safeZoneW * 0.5125;
 			h = safeZoneH * 0.91666667;
-			style = 0;
+			style = 16;
 			text = "test";
-			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 			colorBackground[] = {1,1,1,0};
-			class Attributes
-			{
-				
-			};
-			
+			colorText[] = {0,0,0,1};
+			font = "PuristaMedium";
+			size = (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1);
 		};
 		
 	};

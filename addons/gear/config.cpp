@@ -144,8 +144,10 @@ class cfgWeapons
 		model = "\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidasV.paa"};
+		editorPreview = "\A3\EditorPreviews_F\Data\add.jpg";
 		class ItemInfo: VestItem
 		{
+			editorPreview = "\A3\EditorPreviews_F\Data\add11.jpg";
 			uniformModel = "\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
 			hiddenSelections[] = {"camo"};
 			containerClass = Supply220;
@@ -227,17 +229,17 @@ class cfgWeapons
 		scope = 2;
 		displayName = "Adidas Helmet";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
-		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
+		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";		
 		ace_hearing_protection = 0.8;
         ace_hearing_lowerVolume = 0.25;
-		hiddenSelections[] = { "camo" };
+		hiddenSelections[] = { "Camo1" };
 		hiddenSelectionsTextures[] = {"\x\bnb_e\gear\data\adidasH.paa"};
 		class ItemInfo: HeadgearItem
 		{
 			mass = 10;
 			uniformModel = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
 			modelSides[] = { TCivilian, TWest };
-			hiddenSelections[] = { "camo" };
+			hiddenSelections[] = { "Camo1" };
 
 			class HitpointsProtectionInfo
 			{
@@ -260,7 +262,7 @@ class cfgWeapons
 	{
 		author = "Ford";
 		scope = 2;
-		displayName = "Adidas BerretX";
+		displayName = "Adidas Berret (Muffeled)";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		ace_hearing_lowerVolume = 0.80;

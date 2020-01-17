@@ -37,6 +37,8 @@ class CfgFunctions {
 			file = "\x\bnb_e\core\functions\common";
 			class addFullHeal {};
 			class connectToServer {};
+			class getDeadPlayers {};
+			class listDeadPlayers {};
 		};
 
 		class zeus_modules {
@@ -81,3 +83,4 @@ class Extended_PostInit_EventHandlers {
 #include "configs\CfgSatcom.hpp";
 #include "configs\CfgSupplyCrates.hpp";
 #include "configs\CfgEnableDebug.hpp";
+#include "configs\CfgZeusActions.hpp";

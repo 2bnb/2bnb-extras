@@ -79,3 +79,4 @@ class Extended_PostInit_EventHandlers {
 #include "configs\CfgExplosives.hpp";
 #include "configs\CfgSatcom.hpp";
 #include "configs\CfgSupplyCrates.hpp";
+#include "configs\CfgEnableDebug.hpp";

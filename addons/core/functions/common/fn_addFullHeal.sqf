@@ -38,11 +38,10 @@ private _action = [];
 		_action = [
 			"bnb_e_fullHeal",
 			"Full Heal",
-			"z\ace\addons\medical\ui\icons\medical_crossRed.paa",
-			{[player, player] call ACE_medical_fnc_treatmentAdvanced_fullHealLocal;},
+			"z\ace\addons\medical_gui\ui\cross.paa",
+			{[player, player] call ace_medical_treatment_fnc_fullHeal;},
 			{true}
 		] call ace_interact_menu_fnc_createAction;
-		[format["Created action: %1", _action]] call bnb_e_core_fnc_log;
 
 		if !(_action isEqualTo []) then {
 			[_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;

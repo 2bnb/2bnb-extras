@@ -19,3 +19,4 @@ class CfgPatches {
 #include "gui\defines.hpp"
 #include "gui\sendBoxBase.hpp"
 #include "gui\interruptMenu.hpp"
+#include "gui\rscTitles.hpp"

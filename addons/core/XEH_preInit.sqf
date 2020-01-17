@@ -39,7 +39,11 @@ private _bnb_e_settings = [
 		"SLIDER",
 		["Respawn Timer (seconds)", "Number of seconds player waves need to wait before respawn (set to 99999 for infinite!)"],
 		["2BNB Zeus", "Respawn"],
-		[1, 99999, 2, 0]
+		[1, 99999, 2, 0],
+		1,
+		{
+			setPlayerRespawnTime _this;
+		}
 	]
 ];
 

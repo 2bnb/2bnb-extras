@@ -51,3 +51,8 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 	["2BNB Woodland - Rifleman",[["rhs_weap_hk416d145","","","RKSL_optic_EOT552",["rhs_mag_30Rnd_556x45_Mk318_Stanag",30],[],""],["rhs_weap_m72a7","","","",[],[],""],[],["U_mas_nor_B_CombatUniform_S_aor2",[["ACE_packingBandage",13],["ACE_morphine",6],["ACE_tourniquet",4],["ACE_IR_Strobe_Item",2],["ACE_epinephrine",4],["ACE_EarPlugs",1],["ACE_CableTie",5],["ACE_elasticBandage",13],["ACE_MapTools",1],["ACE_Flashlight_MX991",1]]],["V_mas_nor_PlateCarrier1_tan",[["HandGrenade",2,1],["SmokeShell",5,1],["SmokeShellGreen",3,1],["Chemlight_green",2,1],["ACE_30Rnd_556x45_Stanag_Mk318_mag",10,30],["ACE_30Rnd_556x45_Stanag_Mk262_mag",7,30]]],["B_mas_nor_Kitbag_d",[["ACE_EntrenchingTool",1],["ACE_wirecutter",1],["SmokeShellBlue",2,1]]],"H_mas_nor_ach_aor2","VSM_Shemagh_Balaclava2_OD_Goggles",[],["ItemMap","ItemGPS","TFAR_anprc152","ItemCompass","ACE_Altimeter",""]]] call ace_arsenal_fnc_addDefaultLoadout;
 	//-------------------------------------------------------------------------------
 };
+
+player addEventHandler ["Killed", {
+	params ["_unit"];
+	[format["%1 just died!", name _x]] remoteExec ["Ares_fnc_ShowZeusMessage"];
+}];

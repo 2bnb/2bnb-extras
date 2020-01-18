@@ -54,5 +54,5 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 
 player addEventHandler ["Killed", {
 	params ["_unit"];
-	[format["%1 just died!", name _x]] remoteExec ["Ares_fnc_ShowZeusMessage"];
+	[format["%1 just died!", name _unit]] remoteExec ["Ares_fnc_ShowZeusMessage"];
 }];

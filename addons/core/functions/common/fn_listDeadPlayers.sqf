@@ -32,8 +32,10 @@ if (_deadPlayers isEqualTo []) exitWith {
 	hint "There aren't any dead players.";
 };
 
+[format["Listing dead players: %1", _deadPlayers], "core\functions\common\fn_listDeadPlayers.sqf"] call bnb_e_core_fnc_log;
 private _message = "Dead players:\n";
 {
+	[format["Dead: %1 in %2", name _x, side group _x], "core\functions\common\fn_listDeadPlayers.sqf"] call bnb_e_core_fnc_log;
 	_message = _message + name _x + " [" + side group _x + "]\n";
 } foreach _deadPlayers;
 

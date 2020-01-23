@@ -97,6 +97,13 @@ class CfgVehicles {
 				defaultValue = true;
 			};
 
+			class HasSpectator : Checkbox {
+				property = "BNB_E_Barracks_Module_HasSpectator";
+				displayName = "Spectator";
+				tooltip = "Add Spectator to object";
+				defaultValue = true;
+			};
+
 			class ModuleDescription : ModuleDescription {};
 		};
 

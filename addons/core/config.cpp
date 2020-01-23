@@ -36,6 +36,7 @@ class CfgFunctions {
 		class common {
 			file = "\x\bnb_e\core\functions\common";
 			class addFullHeal {};
+			class addSpectator {};
 			class connectToServer {};
 			class getDeadPlayers {};
 			class listDeadPlayers {};

@@ -52,6 +52,11 @@ if (isNull (_objects select 0)) then {
 _dialogOptions = _dialogOptions + [["Add Full Heal?", ["Yes", "No"]]];
 _dialogControls = _dialogControls + [["_hasFullHeal", 0]];
 
+
+// Add Spectator?
+_dialogOptions = _dialogOptions + [["Add Spectator?", ["Yes", "No"]]];
+_dialogControls = _dialogControls + [["_hasSpectator", 0]];
+
 private _dialogResult = ["Add Filtered Arsenal", _dialogOptions] call Ares_fnc_showChooseDialog;
 
 // If the dialog was closed.
@@ -66,7 +71,8 @@ if (isNull (_objects select 0)) then {
 	if (_arsenalObject == 0) then {
 		// No object selected to be spawned
 		_objects = [localize "STR_AMAE_OBJECTS"] call Achilles_fnc_SelectUnits;
-		if (_objects isEqualTo []) exitWith {[localize "STR_AMAE_NO_OBJECT_SELECTED"] call Achilles_fnc_ShowZeusErrorMessage};
+		[format["No objects selected: %1", _objects], "core\functions\zeus_modules\fn_addBarracks.sqf"] call bnb_e_core_fnc_log;
+		if (_objects isEqualTo [] || !(_objects isEqualType [])) exitWith {[localize "STR_AMAE_NO_OBJECT_SELECTED"] call Achilles_fnc_ShowZeusErrorMessage};
 
 	} else {
 		// Object selected to be spawned
@@ -97,6 +103,12 @@ if (!isServer) then {
 
 if (_hasFullHeal isEqualTo 0) then {
 	[_objects] remoteExec ["bnb_f_core_fnc_fullHeal", 2];
+};
+
+if (_hasSpectator isEqualTo 0) then {
+	{
+		[[_x], {[_this select 0] call bnb_e_core_fnc_addSpectator;}] remoteExec ["BIS_fnc_call", 0, _x];
+	} foreach _objects;
 };
 
 // Show Message

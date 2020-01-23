@@ -54,7 +54,8 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 
 player addEventHandler ["Killed", {
 	params ["_unit"];
-	_curators = allCurators apply {getAssignedCuratorUnit _x};
+	private _curators = allCurators apply {getAssignedCuratorUnit _x};
 
 	[format["%1 just died!", name _unit]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
+	_unit setVariable ["bnb_e_diedAt", serverTime];
 }];

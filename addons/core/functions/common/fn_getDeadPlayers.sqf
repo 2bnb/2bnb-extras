@@ -30,7 +30,7 @@ private _side = 0;
 			(_deadPlayers select _side) pushBack _x;
 		};
 	};
-} foreach (allPlayers - entities "HeadlessClient_F");
+} foreach ([] call CBA_fnc_players);
 
 [format["Got dead players %1", _deadPlayers], "core\functions\common\fn_getDeadPlayers.sqf"] call bnb_e_core_fnc_log;
 _deadPlayers;

@@ -28,8 +28,10 @@ if (!isServer) exitWith {
 };
 
 if (_logic getVariable ["HasArsenal", false]) then {
-	// Add Arsenal - Remotely, since only the server has 2BNB Framework loaded
-	[_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
+	// Add Arsenal - Only if we're the server, since the Arsenal functions are GlobalJIP
+	if (isServer) then {
+		[_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
+	};
 };
 
 if (_logic getVariable ["HasFullHeal", false]) then {

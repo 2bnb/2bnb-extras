@@ -1,6 +1,7 @@
 tools/armake.exe
 tools/tmp/
 tools/inc.tmp
+tools/user.txt
 archives/
 *texHeaders.bin
 .vscode

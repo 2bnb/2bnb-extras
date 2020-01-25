@@ -179,15 +179,15 @@ class CfgVehicles {
 
     class O_Soldier_F;
     class O_Soldier_F_OCimport_01 : O_Soldier_F { scope = 0; class EventHandlers; };
-    class O_Soldier_F_OCimport_02 : O_Soldier_F_OCimport_01 { class EventHandlers; };
+    class O_Soldier_F_OCimport_02 : O_Soldier_F_OCimport_01 { class EventHandlers; editorSubcategory  = "rhs_EdSubcat_infantry"; };
 
     class rhsgref_ins_medic;
     class rhsgref_ins_medic_OCimport_01 : rhsgref_ins_medic { scope = 0; class EventHandlers; };
-    class rhsgref_ins_medic_OCimport_02 : rhsgref_ins_medic_OCimport_01 { class EventHandlers; };
+    class rhsgref_ins_medic_OCimport_02 : rhsgref_ins_medic_OCimport_01 { class EventHandlers; editorSubcategory  = "rhs_EdSubcat_infantry"; };
 
     class rhsgref_ins_grenadier_rpg;
     class rhsgref_ins_grenadier_rpg_OCimport_01 : rhsgref_ins_grenadier_rpg { scope = 0; class EventHandlers; };
-    class rhsgref_ins_grenadier_rpg_OCimport_02 : rhsgref_ins_grenadier_rpg_OCimport_01 { class EventHandlers; };
+    class rhsgref_ins_grenadier_rpg_OCimport_02 : rhsgref_ins_grenadier_rpg_OCimport_01 { class EventHandlers; editorSubcategory  = "rhs_EdSubcat_infantry"; };
 
 
     class O_UKTerrorists_Rifleman_Black_01 : O_Soldier_F_OCimport_02 {
@@ -272,13 +272,13 @@ class CfgVehicles {
     };
 
     class O_UKTerrorists_AT_Black_01 : rhsgref_ins_grenadier_rpg_OCimport_02 {
-        author = "Maj. D. Ford";
-        scope = 2;
-        scopeCurator = 2;
-		vehicleclass = "ASTR_Infanrty";
-        displayName = "AT";
         side = 0;
         faction = "O_UKTerrorists_Black";
+		author = "Maj. D. Ford";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "AT";
+        
 
         identityTypes[] = {"Head_Euro","LanguageENGB_F","VSM_FaceMask_black","G_CIVIL_male"};
 

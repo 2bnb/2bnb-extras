@@ -1606,6 +1606,45 @@ class CfgVehicles
 {
 	class I_Soldier_base_F;
 	class I_soldier_F;
+	class Heli_Light_02_base_F;
+	
+	class O_Heli_Light_02_unarmed_F : Heli_Light_02_base_F
+	{
+		class textureSources 
+		{
+			class Black {
+				author = "Bohemia Interactive";
+				displayName = "Black";
+				faction[] = {"OPF_F"};
+				textures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_CO.paa"};
+			};
+			class Blackcustom {
+				author = "Bohemia Interactive";
+				displayName = "Black Custom";
+				faction[] = {"OPF_F"};
+				textures[] = {"\A3\Air_F_Heli\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_V2_CO.paa"};
+			};
+			class Blue {
+				author = "Bohemia Interactive";
+				displayName = "Blue";
+				factions[] = {"CIV_F"};
+				textures[] = {"\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"};
+			};
+			class Opfor {
+				author = "Bohemia Interactive";
+				displayName = "OPFOR";
+				faction[] = {"OPF_F"};
+				textures[] = {"\A3\Air_F\Heli_Light_02\Data\Heli_Light_02_ext_OPFOR_CO.paa"};
+			};
+			class Russki
+			{
+				displayName = "Russki";
+				author = "Ford";
+				textures[] = {"\x\bnb_e\gear\data\rr.paa"};
+				factions[] = {};
+			};
+		};
+	};
 
 	class Irish_Peacekeeper : I_soldier_F
 	{

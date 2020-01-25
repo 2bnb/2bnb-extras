@@ -39,7 +39,10 @@ private _action = [];
 			"bnb_e_fullHeal",
 			"Full Heal",
 			"x\bnb_e\core\red-cross.paa",
-			{[player, player] call ace_medical_treatment_fnc_fullHeal;},
+			{
+				[player, player] call ace_medical_treatment_fnc_fullHeal;
+				hint "Healed!";
+			},
 			{true}
 		] call ace_interact_menu_fnc_createAction;
 

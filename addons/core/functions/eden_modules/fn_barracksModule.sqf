@@ -18,6 +18,7 @@ Author:
 	Arend
 ---------------------------------------------------------------------------- */
 params [["_logic", objNull, [objNull]], ["_objects", [], [[]]]];
+[format["_logic: %1 :: _objects:", _logic, _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call bnb_e_core_fnc_log;
 
 if (_objects isEqualTo []) exitWith {
 	[format["Module Error: No objects synced! %1", _objects], "core\functions\eden_modules\fn_barracksModule.sqf"] call bnb_e_core_fnc_log;
@@ -28,10 +29,7 @@ if (!isServer) exitWith {
 };
 
 if (_logic getVariable ["HasArsenal", false]) then {
-	// Add Arsenal - Only if we're the server, since the Arsenal functions are GlobalJIP
-	if (isServer) then {
-		[_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
-	};
+	[_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
 };
 
 if (_logic getVariable ["HasFullHeal", false]) then {

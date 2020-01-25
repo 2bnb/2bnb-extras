@@ -19,6 +19,7 @@ class CfgPatches {
 			"achilles_functions_f_ares",
 			"cba_settings",
 			"tfw_radios_rf3080",
+			"ace_arsenal",
 			"ace_explosives",
 			"ace_medical",
 			"A3_Modules_F"

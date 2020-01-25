@@ -34,7 +34,7 @@ private _action = [];
 {
 	_object = _x;
 
-	if ({(_x select 0) select 0 isEqualTo "bnb_e_fullHeal"} count (_object getVariable ["ace_interact_menu_actions", []]) == 0) then {
+	if ({(_x select 0) select 0 isEqualTo "bnb_e_spectate"} count (_object getVariable ["ace_interact_menu_actions", []]) == 0) then {
 		_action = [
 			"bnb_e_spectate",
 			"Spectate",

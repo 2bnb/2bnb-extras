@@ -1682,8 +1682,8 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 
 	hiddenSelections[] = {"Camo_01", "Camo_02"};
 	hiddenSelectionsTextures[] = {
-		"x\bnb_e\bnorway\textures\Gripen_fuselage_01_co.paa",
-		"x\bnb_e\bnorway\textures\Gripen_fuselage_02_co.paa"
+		"x\bnb_e\bnorway\data\textures\Gripen_fuselage_01_co.paa",
+		"x\bnb_e\bnorway\data\textures\Gripen_fuselage_02_co.paa"
 	};
 
 	class EventHandlers : EventHandlers {

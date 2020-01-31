@@ -258,6 +258,54 @@ class CfgGroups {
                         side = 1;
                         vehicle = "B_JapanArmy_M113A3_M2_01";
                     };
+                    class Unit1 {
+                        position[] = {0,0,0};
+                        rank = "SERGEANT";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Section_Leader_01";
+                    };
+                    class Unit2 {
+                        position[] = {5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Team_Leader_01";
+                    };
+                    class Unit3 {
+                        position[] = {-5,-5,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Combat_Life_Saver_01";
+                    };
+                    class Unit4 {
+                        position[] = {10,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_LMG_762_01";
+                    };
+                    class Unit5 {
+                        position[] = {-10,-10,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_LMG_556_01";
+                    };
+                    class Unit6 {
+                        position[] = {15,-15,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Anti_Tank_01";
+                    };
+                    class Unit7 {
+                        position[] = {-15,-15,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Marksman_01";
+                    };
+                    class Unit8 {
+                        position[] = {20,-20,0};
+                        rank = "PRIVATE";
+                        side = 1;
+                        vehicle = "B_JapanArmy_Rifleman_01";
+                    };
                 };
 
             };

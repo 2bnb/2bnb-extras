@@ -251,3 +251,22 @@ class B_NorwayArmy_Pilot_Desert : B_NorwayArmy_Man_Desert {
 	linkedItems[] = {"V_mas_nor_PlateCarrier1_tan","rhsusf_hgu56p_visor_green","ItemMap","ItemCompass","ACE_Altimeter","TFAR_anprc152","ItemGPS"};
 	respawnLinkedItems[] = {"V_mas_nor_PlateCarrier1_tan","rhsusf_hgu56p_visor_green","ItemMap","ItemCompass","ACE_Altimeter","TFAR_anprc152","ItemGPS"};
 };
+
+
+// Vehicles
+class B_NorwayArmy_Leopard_2SG_Desert: B_NorwayArmy_Leopard {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	displayName = "Leopard 2SG";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Desert" };
+
+	hiddenSelections[] = {"Camo1","Camo2","Camo3","CamoNet"};
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Main_Turret.paa", // Main Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Com_Turret.paa", // Commander Turret
+		"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
+	};
+};

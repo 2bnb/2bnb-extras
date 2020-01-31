@@ -250,3 +250,22 @@ class B_NorwayArmy_Pilot_Arctic : B_NorwayArmy_Man_Arctic {
 	linkedItems[] = {"V_mas_nor_PlateCarrier1_wint","rhsusf_hgu56p_visor_white","G_mas_nor_Bandanna_W","ItemMap","ItemCompass","ACE_Altimeter","TFAR_anprc152","ItemGPS"};
 	respawnLinkedItems[] = {"V_mas_nor_PlateCarrier1_wint","rhsusf_hgu56p_visor_white","G_mas_nor_Bandanna_W","ItemMap","ItemCompass","ACE_Altimeter","TFAR_anprc152","ItemGPS"};
 };
+
+
+// Vehicles
+class B_NorwayArmy_Leopard_2SG_Arctic: B_NorwayArmy_Leopard {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Arctic";
+	displayName = "Leopard 2SG";
+	crew = "B_NorwayArmy_Crew_Arctic";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Arctic" };
+
+	hiddenSelections[] = {"Camo1","Camo2","Camo3","CamoNet"};
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Main_Turret.paa", // Main Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Com_Turret.paa", // Commander Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Arctic_Camonet.paa"
+	};
+};

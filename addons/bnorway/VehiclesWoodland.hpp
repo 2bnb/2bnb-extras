@@ -92,15 +92,6 @@ class UK3CB_BAF_FV432_Mk3_GPMG_Green_Tropical_OCimport_02 : UK3CB_BAF_FV432_Mk3_
 	};
 };
 
-class I_MBT_03_cannon_F;
-class I_MBT_03_cannon_F_OCimport_01 : I_MBT_03_cannon_F { scope = 0; class EventHandlers; class Turrets; };
-class I_MBT_03_cannon_F_OCimport_02 : I_MBT_03_cannon_F_OCimport_01 {
-	class EventHandlers;
-	class Turrets : Turrets {
-		class MainTurret;
-	};
-};
-
 class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical;
 class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_01 : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical { scope = 0; class EventHandlers; class Turrets; };
 class UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_01 {
@@ -140,15 +131,6 @@ class UK3CB_BAF_Apache_AH1_Tropical_OCimport_02 : UK3CB_BAF_Apache_AH1_Tropical_
 	class EventHandlers;
 	class Turrets : Turrets {
 		class MainTurret;
-	};
-};
-
-class UK3CB_BAF_Hercules_C4_Tropical;
-class UK3CB_BAF_Hercules_C4_Tropical_OCimport_01 : UK3CB_BAF_Hercules_C4_Tropical { scope = 0; class EventHandlers; class Turrets; };
-class UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 : UK3CB_BAF_Hercules_C4_Tropical_OCimport_01 {
-	class EventHandlers;
-	class Turrets : Turrets {
-		class CopilotTurret;
 	};
 };
 
@@ -1178,38 +1160,24 @@ class B_NorwayArmy_FV432_3Bulldog_GPMG_G_Woodland : UK3CB_BAF_FV432_Mk3_GPMG_Gre
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_NorwayArmy_Leopard_2SG_Woodland : I_MBT_03_cannon_F_OCimport_02 {
-	author = "EzPez";
+class B_NorwayArmy_Leopard_2SG_Woodland : B_NorwayArmy_Leopard {
 	scope = 2;
 	scopeCurator = 2;
 	displayName = "Leopard 2SG";
-	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Crew_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Woodland" };
 
-	class Turrets : Turrets {
-		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
-	};
-
+	hiddenSelections[] = {"Camo1","Camo2","Camo3","CamoNet"};
 	hiddenSelectionsTextures[] = {
-		"\x\bnb_e\bnorway\data\textures\Leopard_Hull.paa", // Hull
-		"\x\bnb_e\bnorway\data\textures\Leopard_Main_Turret.paa", // Main Turret
-		"\x\bnb_e\bnorway\data\textures\Leopard_Com_Turret.paa", // Commander Turret
-		"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Main_Turret.paa", // Main Turret
+		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Com_Turret.paa", // Commander Turret
+		"A3\Armor_F\Data\camonet_greenbeige_co.paa"
 	};
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
-	};
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : I_MBT_03_cannon_F_OCimport_02 {
+class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : B_NorwayArmy_Leopard {
 	author = "Ezpez";
 	scope = 2;
 	scopeCurator = 2;
@@ -1217,72 +1185,15 @@ class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : I_MBT_03_cannon_F_OCimport_02 {
 	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Crew_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Woodland" };
 
-	class Turrets : Turrets {
-		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
-	};
-
+	hiddenSelections[] = {"Camo1","Camo2","Camo3","CamoNet"};
 	hiddenSelectionsTextures[] = {
 		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Hull.paa", // Hull
 		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Main_Turret.paa", // Main Turret
 		"\x\bnb_e\bnorway\data\textures\Leopard_Kompis_Com_Turret.paa", // Commander Turret
-		"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
+		"A3\Armor_F\Data\camonet_greenbeige_co.paa"
 	};
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
-	};
-
-	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 15;
-		};
-	};
-
-	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 3;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 1;
-		};
-	};
-
-	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
-	};
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
 };
 
 class B_NorwayArmy_Wildcat_AH1_8CAS_Woodland : UK3CB_BAF_Wildcat_AH1_CAS_8A_Tropical_OCimport_02 {
@@ -1647,7 +1558,8 @@ class B_NorwayArmy_Apache_AH1_Multi_Woodland : UK3CB_BAF_Apache_AH1_Tropical_OCi
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class B_NorwayArmy_Hercules_C4_Woodland : UK3CB_BAF_Hercules_C4_Tropical_OCimport_02 {
+class UK3CB_BAF_Hercules_C4_Tropical;
+class B_NorwayArmy_Hercules_C4_Woodland : UK3CB_BAF_Hercules_C4_Tropical {
 	author = "Jebby";
 	scope = 2;
 	scopeCurator = 2;
@@ -1655,16 +1567,11 @@ class B_NorwayArmy_Hercules_C4_Woodland : UK3CB_BAF_Hercules_C4_Tropical_OCimpor
 	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Pilot_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Woodland" };
 
-	class Turrets : Turrets {
-		class CopilotTurret : CopilotTurret { gunnerType = "B_NorwayArmy_Pilot_Woodland"; };
-	};
-
+	class EventHandlers;
 	class EventHandlers : EventHandlers {
 		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
 	};
 
 	// custom attributes (do not delete)

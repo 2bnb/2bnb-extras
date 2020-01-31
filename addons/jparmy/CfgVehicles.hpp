@@ -17,9 +17,9 @@ class CfgVehicles {
         };
     };
 
-    class LeopardTank1;
-    class LeopardTank1_OCimport_01 : LeopardTank1 { scope = 0; class EventHandlers; class Turrets; };
-    class LeopardTank1_OCimport_02 : LeopardTank1_OCimport_01 {
+    class B_NorwayArmy_Leopard_2SG_Woodland;
+    class B_NorwayArmy_Leopard_2SG_Woodland_OCimport_01 : B_NorwayArmy_Leopard_2SG_Woodland { scope = 0; class EventHandlers; class Turrets; };
+    class B_NorwayArmy_Leopard_2SG_Woodland_OCimport_02 : B_NorwayArmy_Leopard_2SG_Woodland_OCimport_01 {
         class EventHandlers;
         class Turrets : Turrets {
             class MainTurret;
@@ -428,7 +428,7 @@ class CfgVehicles {
 
     };
 
-    class B_JapanArmy_Type_89_MBT_01 : LeopardTank1_OCimport_02 {
+    class B_JapanArmy_Type_89_MBT_01 : B_NorwayArmy_Leopard_2SG_Woodland_OCimport_02 {
         author = "OLt. FarCry";
         scope = 2;
         scopeCurator = 2;
@@ -569,7 +569,7 @@ class CfgVehicles {
 			"\x\bnb_e\jparmy\data\textures\ch47_ext_mlod_co.paa"
 		};
 
-		class textureSources {
+		class TextureSources {
 			class JapanStandard {
 				displayName="Standard - JSDF";
 				author = "2nd Battalion, Nord Brigade";

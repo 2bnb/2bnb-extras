@@ -35,10 +35,7 @@ class CfgPatches
 			"WRUS_Veh_s_igla",
 			"WRUS_Veh_s_kord",
 			"WRUS_Veh_s_spg9",
-			"WRUS_Veh_s_zu23",
-			"LeopardTank1",
-			"LeopardTank2",
-			"LeopardTank3",
+			"WRUS_Veh_s_zu23"
 		};
 
 		weapons[] =
@@ -524,44 +521,6 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] =
 		{"\x\bnb_e\WRUS\addons\Data\ural1.paa","\x\bnb_e\WRUS\addons\Data\uralo.paa"};
-	};
-	class I_MBT_03_cannon_f;
-	class LeopardTank1: I_MBT_03_cannon_f
-	{
-		crew = "B_NorwayArmy_crew_woodland";
-		side = 1;
-		scope = 2;
-		faction = "B_NorwayArmy_Woodland";
-		displayName = "Leopard 2SG";
-		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
-		hiddenSelectionsTextures[] =
-		{"\x\bnb_e\WRUS\addons\Data\leo0.paa","\x\bnb_e\WRUS\addons\Data\leo1.paa","\x\bnb_e\WRUS\addons\Data\leo2.paa"};
-	};
-	class LeopardTank2: I_MBT_03_cannon_f
-	{
-		crew = "B_NorwayArmy_crew_desert";
-		side = 1;
-		scope = 2;
-		faction = "B_NorwayArmy_desert";
-		displayName = "Leopard 2SG";
-		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
-		hiddenSelectionsTextures[] =
-		{"\x\bnb_e\WRUS\addons\Data\leo0.paa","\x\bnb_e\WRUS\addons\Data\leo1.paa","\x\bnb_e\WRUS\addons\Data\leo2.paa"};
-	};
-	class LeopardTank3: I_MBT_03_cannon_f
-	{
-		crew = "B_NorwayArmy_crew_arctic";
-		side = 1;
-		scope = 2;
-		faction = "B_NorwayArmy_arctic";
-		displayName = "Leopard 2SG";
-		hiddenSelections[] = {"Camo1","Camo2","Camo3","camo4"};
-		hiddenSelectionsTextures[] =
-		{"\x\bnb_e\WRUS\addons\Data\leo0.paa","\x\bnb_e\WRUS\addons\Data\leo1.paa","\x\bnb_e\WRUS\addons\Data\leo2.paa","\x\bnb_e\WRUS\addons\Data\camonet.paa"};
-
-			class EventHandlers{
-			init = 	"[(_this select 0), false,[""showCamonetHull"",1,""showCamonetTurret"",1]] call BIS_fnc_initVehicle ;";
-			};
 	};
 	//************************************************************************************************************************************************************************************************
 	//*****             Backpacks               *********************************************************************************************************************************************************

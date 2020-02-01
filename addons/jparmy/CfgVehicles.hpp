@@ -550,10 +550,10 @@ class CfgVehicles {
 
 	class RHS_CH_47F;
     class B_JapanArmy_Chinook : RHS_CH_47F {
-    	author = "OLt. FarCry";
+    	author = "Arend";
         scope = 2;
         scopeCurator = 2;
-    	displayName = "Chinook";
+    	displayName = "CH-47F Chinook";
     	side = 1;
     	faction = "B_JapanArmy";
         crew = "B_JapanArmy_Section_Leader_01";
@@ -591,6 +591,42 @@ class CfgVehicles {
 					"\x\bnb_e\jparmy\data\textures\ch47_ext_2_light_co.paa",
 					"\x\bnb_e\jparmy\data\textures\ch47f_nalepky_ca.paa",
 					"\x\bnb_e\jparmy\data\textures\ch47_ext_light_mlod_co.paa"
+				};
+				factions[] = {
+					"B_JapanArmy"
+				};
+			};
+		};
+    };
+
+	class RHS_AH64D;
+    class B_JapanArmy_AH64D : RHS_AH64D {
+    	author = "Arend";
+        scope = 2;
+        scopeCurator = 2;
+    	displayName = "AH-64D Apache";
+    	side = 1;
+    	faction = "B_JapanArmy";
+        crew = "B_JapanArmy_Section_Leader_01";
+		typicalCargo[] = {
+			"B_JapanArmy_Section_Leader_01"
+		};
+
+		hiddenSelectionsTextures[] =
+		{
+			"\x\bnb_e\jparmy\data\textures\ah64d_body_co.paa",
+			"\rhsusf\addons\rhsusf_a2port_air\ah64\data\ah64d_details_co.paa",
+			"\x\bnb_e\jparmy\data\textures\ah64d_alfa_ca.paa"
+		};
+
+		class TextureSources {
+			class Standard {
+				displayName="Standard - JSDF";
+				author = "2nd Battalion, Nord Brigade";
+				textures[] = {
+					"\x\bnb_e\jparmy\data\textures\ah64d_body_co.paa",
+					"\rhsusf\addons\rhsusf_a2port_air\ah64\data\ah64d_details_co.paa",
+					"\x\bnb_e\jparmy\data\textures\ah64d_alfa_ca.paa"
 				};
 				factions[] = {
 					"B_JapanArmy"

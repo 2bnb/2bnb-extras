@@ -14,7 +14,8 @@ class CfgPatches {
             "B_JapanArmy_Type_10_IFV_01",
             "B_JapanArmy_Type_22_MRAP_01",
             "B_JapanArmy_OH_6M_01",
-            "B_JapanArmy_Chinook"
+            "B_JapanArmy_Chinook",
+            "B_JapanArmy_AH64D"
         };
         weapons[] = {};
         requiredVersion = 1.62;

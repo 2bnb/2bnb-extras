@@ -66,4 +66,5 @@ player addEventHandler ["Killed", {
 
 	[format["%1 just died!", name _unit]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
 	_unit setVariable ["bnb_e_diedAt", serverTime];
+	[format["Unit died at: %1", _unit getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];

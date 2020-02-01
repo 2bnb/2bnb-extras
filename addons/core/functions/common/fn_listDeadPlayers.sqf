@@ -39,7 +39,7 @@ private _diedAt = 0;
 {
 	_diedAt = _x getVariable ["bnb_e_diedAt", serverTime];
 	_deathDuration = [(serverTime - _diedAt), "M:SS"] call CBA_fnc_formatElapsedTime;
-	[format["Dead: %1 in %2 at %3", name _x, side group _x, _diedAt], "core\functions\common\fn_listDeadPlayers.sqf"] call bnb_e_core_fnc_log;
+	[format["Dead: %1 in %2 at %3 out of %4 (%5)", name _x, side group _x, _diedAt, serverTime, _deathDuration], "core\functions\common\fn_listDeadPlayers.sqf"] call bnb_e_core_fnc_log;
 	_message = "[" + str (side group _x) + "] " + _message + name _x + " (" + _deathDuration + "mins)\n";
 } foreach _deadPlayers;
 

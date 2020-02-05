@@ -423,12 +423,12 @@ class CfgMusic {
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_swallowing_dust {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+3, 1};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 332;
 		title = "Swallowing Dust";
-		artist = "Пыль_глотаю";
+		artist = "";
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_take_me_home_country_roads {
@@ -557,13 +557,13 @@ class CfgMusic {
 		artist = "AC/DC";
 		klpq_ignoreTrack = 0;
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+3, 1};
+	class bnb_e_song_russian_song_2 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 192;
-		title = "Вечно Молодой Брат 2";
-		artist = "Смысловые_Галлюцинации.";
+		title = "Russian Song 2";
+		artist = "";
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_etzlenu_bagan {
@@ -1913,31 +1913,31 @@ class CfgSounds {
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+6, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+0, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+0, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+3, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+3, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+6, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_loud_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+0, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+0, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_loud_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+6, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+6, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_swallowing_dust_loud_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust_-_Пыль_глотаю.ogg", db+12, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Swallowing_Dust.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_take_me_home_country_roads {
@@ -2332,32 +2332,32 @@ class CfgSounds {
 		sound[] = {"x\bnb_e\songs\other\You_Shook_Me_All_Night_Long_-_AC_DC.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+6, 1, 100};
+	class bnb_e_song_russian_song_2 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+0, 1, 100};
+	class bnb_e_song_russian_song_2_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+0, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+3, 1, 100};
+	class bnb_e_song_russian_song_2_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+3, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+6, 1, 100};
+	class bnb_e_song_russian_song_2_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_loud_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+0, 1, 500};
+	class bnb_e_song_russian_song_2_loud_vol0 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+0, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_loud_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+6, 1, 500};
+	class bnb_e_song_russian_song_2_loud_vol1 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+6, 1, 500};
 		titles[] = {};
 	};
-	class bnb_e_song_Вечно_Молодой_Брат_2_loud_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Вечно_Молодой_Брат_2_-_Смысловые_Галлюцинации.ogg", db+12, 1, 500};
+	class bnb_e_song_russian_song_2_loud_vol2 {
+		sound[] = {"x\bnb_e\songs\other\Russian_Song_2.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_etzlenu_bagan {

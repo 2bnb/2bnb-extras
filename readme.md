@@ -14,7 +14,6 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 
 
 # Credits
-- [Project injury Reaction (PiR) authors, which was modified to work better with ace](https://steamcommunity.com/sharedfiles/filedetails/?id=1665585720)
 - GRAD developer, for their [gruppe_adler_mod](https://github.com/gruppe-adler/gruppe_adler_mod) and allowing us to use parts of it for the basis of some of our addons
 
 

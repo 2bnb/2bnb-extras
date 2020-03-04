@@ -26,10 +26,10 @@ private _objects = [_objectUnderCursor];
 // Show Filter Dialog
 private _availableFilters = [
 	"None",
+	"Standard",
 	"West",
 	"East",
 	"Independent",
-	"Loadouts",
 	"Mission"
 ];
 

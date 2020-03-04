@@ -67,25 +67,25 @@ class CfgVehicles {
 						value = "";
 						default = 1;
 					};
+					class Standard {
+						name = "Standard";
+						value = "standard";
+					};
 					class West {
 						name = "West";
-						value = "WEST";
+						value = "west";
 					};
 					class East {
 						name = "East";
-						value = "EAST";
+						value = "east";
 					};
 					class Independent {
 						name = "Independent";
-						value = "INDEPENDENT";
-					};
-					class Loadouts {
-						name = "Loadouts";
-						value = "LOADOUTS";
+						value = "independent";
 					};
 					class Mission {
 						name = "Mission";
-						value = "MISSION";
+						value = "mission";
 					};
 				};
 			};

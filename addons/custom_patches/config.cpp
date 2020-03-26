@@ -211,4 +211,12 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\2bnbMedicPatch.paa";
 		textureVehicle="";
 	};
+
+	class ArendsBrother
+	{
+		displayName="Arend's Brother";
+		author="Krieg";
+		texture="x\bnb_e\custom_patches\img\arends-brother.paa";
+		textureVehicle="";
+	};
 };

@@ -219,4 +219,12 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\arends-brother.paa";
 		textureVehicle="";
 	};
+
+	class DeathKorpsOfKrieg
+	{
+		displayName="Death Korps of Krieg";
+		author="Krieg";
+		texture="x\bnb_e\custom_patches\img\death-korps-of-krieg.paa";
+		textureVehicle="";
+	};
 };

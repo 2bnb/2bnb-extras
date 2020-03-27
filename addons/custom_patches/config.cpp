@@ -227,4 +227,12 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\death-korps-of-krieg.paa";
 		textureVehicle="";
 	};
+
+	class Goat
+	{
+		displayName="Goat";
+		author="Krieg";
+		texture="x\bnb_e\custom_patches\img\goat.paa";
+		textureVehicle="";
+	};
 };

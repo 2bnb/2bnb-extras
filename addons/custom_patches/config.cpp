@@ -235,4 +235,12 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\goat.paa";
 		textureVehicle="";
 	};
+
+	class ReconWolves
+	{
+		displayName="Recon Wolves";
+		author="Krieg";
+		texture="x\bnb_e\custom_patches\img\recon-wolves.paa";
+		textureVehicle="";
+	};
 };

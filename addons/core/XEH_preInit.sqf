@@ -61,8 +61,8 @@ private _prettyName = "";
 		[format["Map Climate - %1", _prettyName], "Select the appropriate climate for this map"],
 		["2BNB Arsenal", "World Climates"],
 		[
-			["all", "woodland", "desert", "arctic"],
-			["All", "Woodland", "Desert", "Arctic"],
+			["all", "woodland", "multicam", "desert", "arctic"],
+			["All", "Woodland", "Multicam", "Desert", "Arctic"],
 			0
 		],
 		true,

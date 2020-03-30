@@ -142,7 +142,8 @@ class CfgVehicles {
 		};
 	};
 
-	#include "VehiclesWoodland.hpp"
-	#include "VehiclesDesert.hpp"
 	#include "VehiclesArctic.hpp"
+	#include "VehiclesDesert.hpp"
+	#include "VehiclesMulticam.hpp"
+	#include "VehiclesWoodland.hpp"
 };

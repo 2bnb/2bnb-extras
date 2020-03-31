@@ -9,6 +9,7 @@ $cachePath      = "$projectRoot\.build\cache"
 $modPrefix      = "bnb_e_"
 $releasePage    = "https://github.com/KoffeinFlummi/armake/releases"
 $downloadPage   = "https://github.com/KoffeinFlummi/armake/releases/download/v{0}/armake_v{0}.zip"
+$armake2         = "$projectRoot\tools\armake2.exe"
 $armake         = "$projectRoot\tools\armake.exe"
 $tag            = git describe --tag | %{$_ -replace "-.*-", "-"}
 $privateKeyFile = "$cachePath\keys\$modPrefix$tag.biprivatekey"
@@ -230,7 +231,7 @@ function Create-Private-Key {
 
 	if (!((Test-Path -Path $privateKeyFile) -And (Test-Path -Path $publicKeyFile))) {
 		Write-Output "  [$timestamp] Creating key pairs for $tag"
-		& $armake keygen -f "$buildPath\keys\$modPrefix$tag"
+		& $armake2 keygen "$buildPath\keys\$modPrefix$tag"
 
 		New-Item "$cachePath\keys" -ItemType "directory" -ErrorAction SilentlyContinue | Out-Null
 		Move-Item -Path "$buildPath\keys\$modPrefix$tag.biprivatekey" -Destination $privateKeyFile -Force
@@ -295,7 +296,7 @@ function Build-PBO {
 		if ($hash -eq $cachedHash -And @(Test-Path -Path $binPath)) {
 			if (!(Test-Path -Path "$binPath.$modPrefix$tag.bisign")) {
 				Write-Output "  [$timestamp] Updating bisign for $component"
-				& $armake sign -f $privateKeyFile $binPath
+				& $armake2 sign $privateKeyFile $binPath
 				return
 			} else {
 				return "  [$timestamp] Skipping $component"
@@ -313,20 +314,22 @@ function Build-PBO {
 		if ($prebuilt) {
 			Write-Output "  [$timestamp] Updating pre-built PBO $component"
 			Copy-Item -Path $fullPath -Destination $binPath -Force
-			& $armake sign -f $privateKeyFile $binPath
+			& $armake2 sign $privateKeyFile $binPath
 		} else {
 			Write-Output "  [$timestamp] Updating PBO $component"
-			& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+			& $armake build -f -w unquoted-string $fullPath $binPath
+			& $armake2 sign $privateKeyFile $binPath
 		}
 	} else {
 
 		if ($prebuilt) {
 			Write-Output "  [$timestamp] Copying pre-built PBO $component"
 			Copy-Item -Path $fullPath -Destination $binPath -Force
-			& $armake sign -f $privateKeyFile $binPath
+			& $armake2 sign $privateKeyFile $binPath
 		} else {
 			Write-Output "  [$timestamp] Creating PBO $component"
-			& $armake build -f -w unquoted-string -k $privateKeyFile $fullPath $binPath
+			& $armake build -f -w unquoted-string $fullPath $binPath
+			& $armake2 sign $privateKeyFile $binPath
 		}
 	}
 

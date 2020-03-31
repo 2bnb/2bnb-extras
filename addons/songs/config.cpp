@@ -117,7 +117,7 @@ class CfgMusic {
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_assburger {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+3, 1};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 155;
@@ -961,31 +961,31 @@ class CfgSounds {
 		titles[] = {};
 	};
 	class bnb_e_song_assburger {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+6, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+0, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+0, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+3, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+3, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+6, 1, 100};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+6, 1, 100};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_loud_vol0 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+0, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+0, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_loud_vol1 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+6, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+6, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_assburger_loud_vol2 {
-		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kädet.ogg", db+12, 1, 500};
+		sound[] = {"x\bnb_e\songs\other\Assburger_-_Casey_Ryback_&_Katkotut_Kadet.ogg", db+12, 1, 500};
 		titles[] = {};
 	};
 	class bnb_e_song_bad_guy {

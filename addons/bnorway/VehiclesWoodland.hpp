@@ -407,52 +407,15 @@ class B_NorwayArmy_Command_Humvee_Woodland : rhsusf_m998_w_s_2dr_fulltop_OCimpor
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -478,60 +441,15 @@ class B_NorwayArmy_Armed_Humvee_M2_Woodland : rhsusf_m1043_w_s_m2_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -557,60 +475,15 @@ class B_NorwayArmy_Armed_Humvee_Mk19_Woodland : rhsusf_m1043_w_s_mk19_OCimport_0
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -636,44 +509,15 @@ class B_NorwayArmy_HEMTT_Ammo_Woodland : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimp
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 	// custom attributes (do not delete)
@@ -698,44 +542,15 @@ class B_NorwayArmy_HEMTT_Fuel_Woodland : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_0
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 	// custom attributes (do not delete)
@@ -760,44 +575,15 @@ class B_NorwayArmy_HEMTT_Repair_Woodland : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_O
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 	// custom attributes (do not delete)
@@ -822,52 +608,15 @@ class B_NorwayArmy_FMTV_Transport_Woodland : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_O
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 1;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 2;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -893,60 +642,15 @@ class B_NorwayArmy_Hunter_M2_Woodland : rhsusf_m1240a1_m2_usmc_wd_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -972,60 +676,15 @@ class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -1057,60 +716,15 @@ class B_NorwayArmy_M113_M2_Woodland : rhsusf_m113_usarmy_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -1136,60 +750,15 @@ class B_NorwayArmy_M113_Mk19_Woodland : rhsusf_m113_usarmy_MK19_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-			magazine = "rhsusf_100Rnd_762x51_m62_tracer";
-			count = 7;
-		};
-		class _xx_MRAWS_HEAT_F {
-			magazine = "MRAWS_HEAT_F";
-			count = 5;
-		};
-		class _xx_MRAWS_HE_F {
-			magazine = "MRAWS_HE_F";
-			count = 5;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_launch_MRAWS_olive_rail_F {
-			weapon = "launch_MRAWS_olive_rail_F";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 
@@ -1251,68 +820,15 @@ class B_NorwayArmy_Huey_Gunship_Woodland : rhs_uh1h_hidf_gunship_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_SmokeShell {
-			magazine = "SmokeShell";
-			count = 2;
-		};
-		class _xx_SmokeShellBlue {
-			magazine = "SmokeShellBlue";
-			count = 2;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
-		class _xx_Toolkit {
-			name = "ToolKit";
-			count = 1;
-		};
-		class _xx_ItemGPS {
-			name = "ItemGPS";
-			count = 1;
-		};
-		class _xx_B_Parachute {
-			name = "B_Parachute";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 	// custom attributes (do not delete)
@@ -1337,68 +853,15 @@ class B_NorwayArmy_Huey_Transport_Woodland : rhs_uh1h_hidf_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_SmokeShell {
-			magazine = "SmokeShell";
-			count = 2;
-		};
-		class _xx_SmokeShellBlue {
-			magazine = "SmokeShellBlue";
-			count = 2;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
-		class _xx_Toolkit {
-			name = "ToolKit";
-			count = 1;
-		};
-		class _xx_ItemGPS {
-			name = "ItemGPS";
-			count = 1;
-		};
-		class _xx_B_Parachute {
-			name = "B_Parachute";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 	};
 
 	// custom attributes (do not delete)
@@ -1433,71 +896,18 @@ class B_NorwayArmy_Blackhawk_Woodland : RHS_UH60M_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_SmokeShell {
-			magazine = "SmokeShell";
-			count = 2;
-		};
-		class _xx_SmokeShellBlue {
-			magazine = "SmokeShellGreen";
-			count = 2;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-		class _xx_rhs_weap_m72a7 {
-			weapon = "rhs_weap_m72a7";
-			count = 1;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		class _xx_ACE_bloodIV {
-			name = "ACE_bloodIV";
-			count = 4;
-		};
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 30;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 30;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
+		VEHICLE_ITEMS
 		class _xx_Toolkit {
 			name = "ToolKit";
 			count = 1;
-		};
-		class _xx_ItemGPS {
-			name = "ItemGPS";
-			count = 1;
-		};
-		class _xx_B_Parachute {
-			name = "B_Parachute";
-			count = 20;
 		};
 	};
 
@@ -1523,64 +933,11 @@ class B_NorwayArmy_Littlebird_CAS_Woodland : RHS_MELB_AH6M_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_SmokeShell {
-			magazine = "SmokeShell";
-			count = 2;
-		};
-		class _xx_SmokeShellBlue {
-			magazine = "SmokeShellBlue";
-			count = 2;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-	};
-
-	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
-		class _xx_Toolkit {
-			name = "ToolKit";
-			count = 1;
-		};
-		class _xx_ItemGPS {
-			name = "ItemGPS";
-			count = 1;
-		};
-		class _xx_B_Parachute {
-			name = "B_Parachute";
-			count = 2;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	// custom attributes (do not delete)
@@ -1606,64 +963,11 @@ class B_NorwayArmy_Littlebird_Transport_Woodland : RHS_MELB_MH6M {
 	};
 
 	class TransportMagazines {
-		class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-			magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-			count = 10;
-		};
-		class _xx_SmokeShell {
-			magazine = "SmokeShell";
-			count = 2;
-		};
-		class _xx_SmokeShellBlue {
-			magazine = "SmokeShellBlue";
-			count = 2;
-		};
+		VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		class _xx_rhs_weap_hk416d10 {
-			weapon = "rhs_weap_hk416d10";
-			count = 2;
-		};
-	};
-
-	class TransportItems {
-		class _xx_ACE_elasticBandage {
-			name = "ACE_elasticBandage";
-			count = 15;
-		};
-		class _xx_ACE_EarPlugs {
-			name = "ACE_EarPlugs";
-			count = 5;
-		};
-		class _xx_ACE_epinephrine {
-			name = "ACE_epinephrine";
-			count = 10;
-		};
-		class _xx_ACE_morphine {
-			name = "ACE_morphine";
-			count = 10;
-		};
-		class _xx_ACE_packingBandage {
-			name = "ACE_packingBandage";
-			count = 15;
-		};
-		class _xx_ACE_tourniquet {
-			name = "ACE_tourniquet";
-			count = 10;
-		};
-		class _xx_Toolkit {
-			name = "ToolKit";
-			count = 1;
-		};
-		class _xx_ItemGPS {
-			name = "ItemGPS";
-			count = 1;
-		};
-		class _xx_B_Parachute {
-			name = "B_Parachute";
-			count = 2;
-		};
+		VEHICLE_WEAPONS
 	};
 
 	// custom attributes (do not delete)

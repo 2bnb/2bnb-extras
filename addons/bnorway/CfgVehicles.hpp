@@ -1,4 +1,51 @@
 class CBA_Extended_EventHandlers_base;
+// Standard Vehicle inventory
+#define VEHICLE_MAGAZINES \
+class _xx_hlc_30rnd_556x45_SPR_PMAG { \
+	magazine = "hlc_30rnd_556x45_SPR_PMAG"; \
+	count = 15; \
+};
+
+#define VEHICLE_WEAPONS \
+class _xx_hlc_rifle_416D10C { \
+	weapon = "hlc_rifle_416D10C"; \
+	count = 3; \
+}; \
+class _xx_rhs_weap_m72a7 { \
+	weapon = "rhs_weap_m72a7"; \
+	count = 1; \
+};
+
+#define VEHICLE_ITEMS \
+class _xx_ACE_elasticBandage { \
+	name = "ACE_elasticBandage"; \
+	count = 15; \
+}; \
+class _xx_ACE_packingBandage { \
+	name = "ACE_packingBandage"; \
+	count = 15; \
+}; \
+class _xx_ACE_epinephrine { \
+	name = "ACE_epinephrine"; \
+	count = 10; \
+}; \
+class _xx_ACE_morphine { \
+	name = "ACE_morphine"; \
+	count = 10; \
+}; \
+class _xx_ACE_adenosine { \
+	name = "ACE_adenosine"; \
+	count = 10; \
+}; \
+class _xx_ACE_tourniquet { \
+	name = "ACE_tourniquet"; \
+	count = 10; \
+}; \
+class _xx_ACE_EarPlugs { \
+	name = "ACE_EarPlugs"; \
+	count = 5; \
+};
+
 
 class CfgVehicles {
 
@@ -97,48 +144,15 @@ class CfgVehicles {
 		};
 
 		class TransportMagazines {
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-				count = 15;
-			};
+			VEHICLE_MAGAZINES
 		};
 
 		class TransportWeapons {
-			class _xx_rhs_weap_hk416d10 {
-				weapon = "rhs_weap_hk416d10";
-				count = 3;
-			};
-			class _xx_rhs_weap_m72a7 {
-				weapon = "rhs_weap_m72a7";
-				count = 1;
-			};
+			VEHICLE_WEAPONS
 		};
 
 		class TransportItems {
-			class _xx_ACE_elasticBandage {
-				name = "ACE_elasticBandage";
-				count = 15;
-			};
-			class _xx_ACE_EarPlugs {
-				name = "ACE_EarPlugs";
-				count = 5;
-			};
-			class _xx_ACE_epinephrine {
-				name = "ACE_epinephrine";
-				count = 10;
-			};
-			class _xx_ACE_morphine {
-				name = "ACE_morphine";
-				count = 10;
-			};
-			class _xx_ACE_packingBandage {
-				name = "ACE_packingBandage";
-				count = 15;
-			};
-			class _xx_ACE_tourniquet {
-				name = "ACE_tourniquet";
-				count = 10;
-			};
+			VEHICLE_ITEMS
 		};
 	};
 

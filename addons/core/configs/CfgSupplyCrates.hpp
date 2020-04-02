@@ -24,7 +24,7 @@ class CfgVehicles {
 	};
 
 	class BNB_E_Resupply_Class_A : BNB_E_Resupply {
-		displayName = "[2BNB] Resupply Crate - Class A";
+		displayName = "[2BNB] Resupply Crate (Medical) - Class A";
 		scope = 2;
 
 		class TransportItems {
@@ -66,21 +66,17 @@ class CfgVehicles {
 			};
 			class _xx_ACE_adenosine {
 				name = "ACE_adenosine";
-				count = 10;
-			};
-			class _xx_ACE_atropine {
-				name = "ACE_atropine";
-				count = 10;
+				count = 30;
 			};
 			class _xx_ACE_bodyBag {
 				name = "ACE_bodyBag";
-				count = 5;
+				count = 10;
 			};
 		};
 	};
 
 	class BNB_E_Resupply_Class_B : BNB_E_Resupply {
-		displayName = "[2BNB] Resupply Crate - Class B";
+		displayName = "[2BNB] Resupply Crate (Ammo) - Class B";
 		scope = 2;
 
 		class TransportMagazines {
@@ -100,29 +96,33 @@ class CfgVehicles {
 				magazine = "rhsusf_100Rnd_762x51_m80a1epr";
 				count = 10;
 			};
-			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag {
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+			class _xx_hlc_30rnd_556x45_SPR_PMAG {
+				magazine = "hlc_30rnd_556x45_SPR_PMAG";
 				count = 70;
 			};
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 50;
-			};
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-				count = 50;
-			};
-			class _xx_rhsusf_20Rnd_762x51_SR25_m118_special_Mag {
-				magazine = "rhsusf_20Rnd_762x51_SR25_m118_special_Mag";
+			class _xx_hlc_30rnd_556x45_SOST_PMAG {
+				magazine = "hlc_30rnd_556x45_SOST_PMAG";
 				count = 15;
 			};
-			class _xx_rhsusf_20Rnd_762x51_SR25_m993_Mag {
-				magazine = "rhsusf_20Rnd_762x51_SR25_m993_Mag";
-				count = 5;
+			class _xx_hlc_30rnd_556x45_t_PMAG {
+				magazine = "hlc_30rnd_556x45_t_PMAG";
+				count = 15;
 			};
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 50;
+			class _xx_hlc_30rnd_556x45_TDim_PMAG {
+				magazine = "hlc_30rnd_556x45_TDim_PMAG";
+				count = 15;
+			};
+			class _xx_hlc_30rnd_556x45_MDim_PMAG {
+				magazine = "hlc_30rnd_556x45_MDim_PMAG";
+				count = 15;
+			};
+			class _xx_ACE_20Rnd_762x51_Mk319_Mod_0_Mag {
+				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+				count = 15;
+			};
+			class _xx_ACE_20Rnd_762x51_M993_AP_Mag {
+				magazine = "ACE_20Rnd_762x51_M993_AP_Mag";
+				count = 5;
 			};
 			class _xx_rhs_mag_m67 {
 				magazine = "rhs_mag_m67";
@@ -159,20 +159,36 @@ class CfgVehicles {
 	};
 
 	class BNB_E_Resupply_Class_C : BNB_E_Resupply {
-		displayName = "[2BNB] Resupply Crate - Class C";
+		displayName = "[2BNB] Resupply Crate (Special) - Class C";
 		scope = 2;
 
 		class TransportMagazines {
-			class _xx_1Rnd_HE_Grenade_shell {
-				magazine = "1Rnd_HE_Grenade_shell";
-				count = 50;
+			class _xx_rhs_mag_M441_HE {
+				magazine = "rhs_mag_M441_HE";
+				count = 25;
+			};
+			class _xx_rhs_mag_M433_HEDP {
+				magazine = "rhs_mag_M433_HEDP";
+				count = 25;
 			};
 			class _xx_1Rnd_Smoke_Grenade_shell {
 				magazine = "1Rnd_Smoke_Grenade_shell";
 				count = 10;
 			};
-			class _xx_UK3CB_BAF_UGL_FlareWhite_F {
-				magazine = "UK3CB_BAF_UGL_FlareWhite_F";
+			class _xx_1Rnd_SmokeRed_Grenade_shell {
+				magazine = "1Rnd_SmokeRed_Grenade_shell";
+				count = 5;
+			};
+			class _xx_1Rnd_SmokeBlue_Grenade_shell {
+				magazine = "1Rnd_SmokeBlue_Grenade_shell";
+				count = 5;
+			};
+			class _xx_rhs_mag_m662_red {
+				magazine = "rhs_mag_m662_red";
+				count = 10;
+			};
+			class _xx_ACE_40mm_Flare_ir {
+				magazine = "ACE_40mm_Flare_ir";
 				count = 10;
 			};
 			class _xx_ACE_HuntIR_M203 {
@@ -181,20 +197,20 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_m7a3_cs {
 				magazine = "rhs_mag_m7a3_cs";
-				count = 20;
+				count = 10;
 			};
 		};
 
 		class TransportWeapons {
 			class _xx_rhs_weap_m72a7 {
 				weapon = "rhs_weap_m72a7";
-				count = 4;
+				count = 8;
 			};
 		};
 
 		class TransportItems {
-			class _xx_DemoCharge_Remote_Mag {
-				name = "DemoCharge_Remote_Mag";
+			class _xx_rhsusf_m112_mag {
+				name = "rhsusf_m112_mag";
 				count = 10;
 			};
 			class _xx_ACE_Clacker {

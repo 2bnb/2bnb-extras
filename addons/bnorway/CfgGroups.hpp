@@ -559,7 +559,7 @@ class CfgGroups {
 				name = "Mechanized Infantry";
 
 				class b_norwayarmy_mechanized_infantry_scout {
-					name = "Infantry Scout";
+					name = "Humvee Scout";
 					side = 1;
 					faction = "B_NorwayArmy_Woodland";
 					icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";
@@ -586,7 +586,7 @@ class CfgGroups {
 				};
 
 				class b_norwayarmy_mechanized_stryker_section {
-					name = "Bulldog HMG Team";
+					name = "Stryker Section";
 					side = 1;
 					faction = "B_NorwayArmy_Woodland";
 					icon = "\A3\ui_f\data\map\markers\nato\b_mech_inf.paa";

@@ -27,7 +27,6 @@ class CfgPatches {
             "ace_realisticnames",
             "A3_Sounds_F_Tank",
             "A3_Armor_F_Tank_AFV_Wheeled_01",
-            "UK3CB_BAF_Units_Woodland",
             "A3_Air_F_Heli_Light_01"
         };
 		author = "2nd Battalion, Nord Brigade";

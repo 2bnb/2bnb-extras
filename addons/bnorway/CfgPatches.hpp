@@ -16,6 +16,7 @@ class CfgPatches {
 			"B_NorwayArmy_Crew_Arctic",
 			"B_NorwayArmy_Pilot_Arctic",
 			"B_NorwayArmy_Leopard_2SG_Arctic",
+
 			// Desert
 			"B_NorwayArmy_Man_Desert",
 			"B_NorwayArmy_Medic_Desert",
@@ -30,6 +31,7 @@ class CfgPatches {
 			"B_NorwayArmy_Crew_Desert",
 			"B_NorwayArmy_Pilot_Desert",
 			"B_NorwayArmy_Leopard_2SG_Desert",
+
 			// Multicam
 			"B_NorwayArmy_Man_Multicam",
 			"B_NorwayArmy_Medic_Multicam",
@@ -43,6 +45,7 @@ class CfgPatches {
 			"B_NorwayArmy_Rifleman_Multicam",
 			"B_NorwayArmy_Crew_Multicam",
 			"B_NorwayArmy_Pilot_Multicam",
+
 			// Woodland
 			"B_NorwayArmy_Rifleman_Woodland",
 			"B_NorwayArmy_Rifleman_AT_Woodland",
@@ -79,6 +82,7 @@ class CfgPatches {
 			"B_NorwayArmy_Static_MG_Low_Woodland",
 			"B_NorwayArmy_Mortar_Woodland",
 			"B_NorwayArmy_Static_GMG_Woodland",
+			"B_NorwayArmy_Static_TOW_Woodland",
 			"B_NorwayArmy_A10_Woodland"
 		};
 		weapons[] = {};

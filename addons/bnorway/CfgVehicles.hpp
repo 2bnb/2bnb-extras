@@ -46,6 +46,12 @@ class _xx_ACE_EarPlugs { \
 	count = 5; \
 };
 
+#define VEHICLE_TOOLKIT_BACKPACK \
+class _xx_B_NorwayArmy_Tookit_Backpack { \
+	name = "B_NorwayArmy_Tookit_Backpack"; \
+	count = 1; \
+};
+
 
 class CfgVehicles {
 
@@ -68,6 +74,15 @@ class CfgVehicles {
 		};
 	};
 
+	class B_mas_nor_Kitbag_d;
+	class B_NorwayArmy_Toolkit_Backpack : B_mas_nor_Kitbag_d {
+		class TransportItems {
+			class _xx_Toolkit {
+				name = "ToolKit";
+				count = 1;
+			};
+		};
+	};
 
 	class I_MBT_03_cannon_F;
 	class B_NorwayArmy_Leopard : I_MBT_03_cannon_F {
@@ -143,16 +158,28 @@ class CfgVehicles {
 			};
 		};
 
-		class TransportMagazines {
-			VEHICLE_MAGAZINES
+	class TransportMagazines {
+		VEHICLE_MAGAZINES
+		class _xx_rhs_fim92_mag {
+			weapon = "rhs_fim92_mag";
+			count = 3;
 		};
+	};
 
-		class TransportWeapons {
-			VEHICLE_WEAPONS
+	class TransportWeapons {
+		VEHICLE_WEAPONS
+		class _xx_rhs_weap_fim92 {
+			weapon = "rhs_weap_fim92";
+			count = 1;
 		};
+	};
 
 		class TransportItems {
 			VEHICLE_ITEMS
+		};
+
+		class TransportBackpacks {
+			VEHICLE_TOOLKIT_BACKPACK
 		};
 	};
 

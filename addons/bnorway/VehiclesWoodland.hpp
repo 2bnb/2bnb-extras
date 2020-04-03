@@ -1,139 +1,3 @@
-class rhsusf_m998_w_s_2dr_fulltop;
-class rhsusf_m998_w_s_2dr_fulltop_OCimport_01 : rhsusf_m998_w_s_2dr_fulltop { scope = 0; class EventHandlers; };
-class rhsusf_m998_w_s_2dr_fulltop_OCimport_02 : rhsusf_m998_w_s_2dr_fulltop_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_m1043_w_s_m2;
-class rhsusf_m1043_w_s_m2_OCimport_01 : rhsusf_m1043_w_s_m2 { scope = 0; class EventHandlers; };
-class rhsusf_m1043_w_s_m2_OCimport_02 : rhsusf_m1043_w_s_m2_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_m1043_w_s_mk19;
-class rhsusf_m1043_w_s_mk19_OCimport_01 : rhsusf_m1043_w_s_mk19 { scope = 0; class EventHandlers; };
-class rhsusf_m1043_w_s_mk19_OCimport_02 : rhsusf_m1043_w_s_mk19_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_M977A4_AMMO_BKIT_usarmy_wd;
-class rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_01 : rhsusf_M977A4_AMMO_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
-class rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_02 : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd;
-class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_01 : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
-class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_02 : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_M978A4_BKIT_usarmy_wd;
-class rhsusf_M978A4_BKIT_usarmy_wd_OCimport_01 : rhsusf_M978A4_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
-class rhsusf_M978A4_BKIT_usarmy_wd_OCimport_02 : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy;
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy { scope = 0; class EventHandlers; };
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_02 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_m1240a1_m2_usmc_wd;
-class rhsusf_m1240a1_m2_usmc_wd_OCimport_01 : rhsusf_m1240a1_m2_usmc_wd { scope = 0; class EventHandlers; };
-class rhsusf_m1240a1_m2_usmc_wd_OCimport_02 : rhsusf_m1240a1_m2_usmc_wd_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_stryker_m1126_m2_wd;
-class rhsusf_stryker_m1126_m2_wd_OCimport_01 : rhsusf_stryker_m1126_m2_wd { scope = 0; class EventHandlers; };
-class rhsusf_stryker_m1126_m2_wd_OCimport_02 : rhsusf_stryker_m1126_m2_wd_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhsusf_m113_usarmy;
-class rhsusf_m113_usarmy_OCimport_01 : rhsusf_m113_usarmy { scope = 0; class EventHandlers; class Turrets; };
-class rhsusf_m113_usarmy_OCimport_02 : rhsusf_m113_usarmy_OCimport_01 {
-	class EventHandlers;
-	class Turrets : Turrets {
-		class MainTurret;
-		class CargoTurret_01;
-		class CargoTurret_02;
-	};
-};
-
-class rhsusf_m113_usarmy_MK19;
-class rhsusf_m113_usarmy_MK19_OCimport_01 : rhsusf_m113_usarmy_MK19 { scope = 0; class EventHandlers; };
-class rhsusf_m113_usarmy_MK19_OCimport_02 : rhsusf_m113_usarmy_MK19_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhs_uh1h_hidf_gunship;
-class rhs_uh1h_hidf_gunship_OCimport_01 : rhs_uh1h_hidf_gunship { scope = 0; class EventHandlers; };
-class rhs_uh1h_hidf_gunship_OCimport_02 : rhs_uh1h_hidf_gunship_OCimport_01 {
-	class EventHandlers;
-};
-
-class rhs_uh1h_hidf;
-class rhs_uh1h_hidf_OCimport_01 : rhs_uh1h_hidf { scope = 0; class EventHandlers; };
-class rhs_uh1h_hidf_OCimport_02 : rhs_uh1h_hidf_OCimport_01 {
-	class EventHandlers;
-};
-
-class RHS_UH60M;
-class RHS_UH60M_OCimport_01 : RHS_UH60M { scope = 0; class EventHandlers; class Turrets; };
-class RHS_UH60M_OCimport_02 : RHS_UH60M_OCimport_01 {
-	class EventHandlers;
-	class Turrets : Turrets {
-		class CopilotTurret;
-		class MainTurret;
-		class RightDoorGun;
-		class CargoTurret_01;
-		class CargoTurret_02;
-		class CargoTurret_03;
-		class CargoTurret_04;
-	};
-};
-
-class RHS_MELB_AH6M;
-class RHS_MELB_AH6M_OCimport_01 : RHS_MELB_AH6M { scope = 0; class EventHandlers; };
-class RHS_MELB_AH6M_OCimport_02 : RHS_MELB_AH6M_OCimport_01 {
-	class EventHandlers;
-};
-
-class I_Plane_Fighter_04_F;
-class I_Plane_Fighter_04_F_OCimport_01 : I_Plane_Fighter_04_F { scope = 0; class EventHandlers; };
-class I_Plane_Fighter_04_F_OCimport_02 : I_Plane_Fighter_04_F_OCimport_01 { scope = 0; class EventHandlers; };
-
-class RHS_M2StaticMG_WD;
-class RHS_M2StaticMG_WD_OCimport_01 : RHS_M2StaticMG_WD { scope = 0; class EventHandlers; };
-class RHS_M2StaticMG_WD_OCimport_02 : RHS_M2StaticMG_WD_OCimport_01 {
-	class EventHandlers;
-};
-
-class RHS_M2StaticMG_MiniTripod_WD;
-class RHS_M2StaticMG_MiniTripod_WD_OCimport_01 : RHS_M2StaticMG_MiniTripod_WD { scope = 0; class EventHandlers; };
-class RHS_M2StaticMG_MiniTripod_WD_OCimport_02 : RHS_M2StaticMG_MiniTripod_WD_OCimport_01 {
-	class EventHandlers;
-};
-
-class RHS_M252_WD;
-class RHS_M252_WD_OCimport_01 : RHS_M252_WD { scope = 0; class EventHandlers; };
-class RHS_M252_WD_OCimport_02 : RHS_M252_WD_OCimport_01 {
-	class EventHandlers;
-};
-
-class RHS_MK19_TriPod_USMC_WD;
-class RHS_MK19_TriPod_USMC_WD_OCimport_01 : RHS_MK19_TriPod_USMC_WD { scope = 0; class EventHandlers; };
-class RHS_MK19_TriPod_USMC_WD_OCimport_02 : RHS_MK19_TriPod_USMC_WD_OCimport_01 {
-	class EventHandlers;
-};
-
-class RHS_A10;
-class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
-class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
-
 // Infantry
 class B_NorwayArmy_Man_Woodland : B_NorwayArmy_Man {
 	displayName = "Man";
@@ -389,6 +253,11 @@ class B_NorwayArmy_Pilot_Woodland : B_NorwayArmy_Man_Woodland {
 };
 
 // Vehicles
+class rhsusf_m998_w_s_2dr_fulltop;
+class rhsusf_m998_w_s_2dr_fulltop_OCimport_01 : rhsusf_m998_w_s_2dr_fulltop { scope = 0; class EventHandlers; };
+class rhsusf_m998_w_s_2dr_fulltop_OCimport_02 : rhsusf_m998_w_s_2dr_fulltop_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Command_Humvee_Woodland : rhsusf_m998_w_s_2dr_fulltop_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -423,6 +292,11 @@ class B_NorwayArmy_Command_Humvee_Woodland : rhsusf_m998_w_s_2dr_fulltop_OCimpor
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_m1043_w_s_m2;
+class rhsusf_m1043_w_s_m2_OCimport_01 : rhsusf_m1043_w_s_m2 { scope = 0; class EventHandlers; };
+class rhsusf_m1043_w_s_m2_OCimport_02 : rhsusf_m1043_w_s_m2_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Armed_Humvee_M2_Woodland : rhsusf_m1043_w_s_m2_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -457,6 +331,11 @@ class B_NorwayArmy_Armed_Humvee_M2_Woodland : rhsusf_m1043_w_s_m2_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_m1043_w_s_mk19;
+class rhsusf_m1043_w_s_mk19_OCimport_01 : rhsusf_m1043_w_s_mk19 { scope = 0; class EventHandlers; };
+class rhsusf_m1043_w_s_mk19_OCimport_02 : rhsusf_m1043_w_s_mk19_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Armed_Humvee_Mk19_Woodland : rhsusf_m1043_w_s_mk19_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -491,6 +370,11 @@ class B_NorwayArmy_Armed_Humvee_Mk19_Woodland : rhsusf_m1043_w_s_mk19_OCimport_0
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_M977A4_AMMO_BKIT_usarmy_wd;
+class rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_01 : rhsusf_M977A4_AMMO_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
+class rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_02 : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_HEMTT_Ammo_Woodland : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -524,6 +408,11 @@ class B_NorwayArmy_HEMTT_Ammo_Woodland : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimp
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_M978A4_BKIT_usarmy_wd;
+class rhsusf_M978A4_BKIT_usarmy_wd_OCimport_01 : rhsusf_M978A4_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
+class rhsusf_M978A4_BKIT_usarmy_wd_OCimport_02 : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_HEMTT_Fuel_Woodland : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -557,6 +446,11 @@ class B_NorwayArmy_HEMTT_Fuel_Woodland : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_0
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd;
+class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_01 : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd { scope = 0; class EventHandlers; };
+class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_02 : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_HEMTT_Repair_Woodland : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -590,6 +484,11 @@ class B_NorwayArmy_HEMTT_Repair_Woodland : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_O
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_M1083A1P2_B_WD_fmtv_usarmy;
+class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy { scope = 0; class EventHandlers; };
+class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_02 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_FMTV_Transport_Woodland : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -624,6 +523,11 @@ class B_NorwayArmy_FMTV_Transport_Woodland : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_O
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_m1240a1_m2_usmc_wd;
+class rhsusf_m1240a1_m2_usmc_wd_OCimport_01 : rhsusf_m1240a1_m2_usmc_wd { scope = 0; class EventHandlers; };
+class rhsusf_m1240a1_m2_usmc_wd_OCimport_02 : rhsusf_m1240a1_m2_usmc_wd_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Hunter_M2_Woodland : rhsusf_m1240a1_m2_usmc_wd_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -657,7 +561,12 @@ class B_NorwayArmy_Hunter_M2_Woodland : rhsusf_m1240a1_m2_usmc_wd_OCimport_02 {
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
-
+["rhs_weap_fim92","rhs_fim92_mag","Titan_AA"]
+class rhsusf_stryker_m1126_m2_wd;
+class rhsusf_stryker_m1126_m2_wd_OCimport_01 : rhsusf_stryker_m1126_m2_wd { scope = 0; class EventHandlers; };
+class rhsusf_stryker_m1126_m2_wd_OCimport_02 : rhsusf_stryker_m1126_m2_wd_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -677,14 +586,26 @@ class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 
 	class TransportMagazines {
 		VEHICLE_MAGAZINES
+		class _xx_rhs_fim92_mag {
+			weapon = "rhs_fim92_mag";
+			count = 3;
+		};
 	};
 
 	class TransportWeapons {
 		VEHICLE_WEAPONS
+		class _xx_rhs_weap_fim92 {
+			weapon = "rhs_weap_fim92";
+			count = 1;
+		};
 	};
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_TOOLKIT_BACKPACK
 	};
 
 
@@ -692,6 +613,16 @@ class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_m113_usarmy;
+class rhsusf_m113_usarmy_OCimport_01 : rhsusf_m113_usarmy { scope = 0; class EventHandlers; class Turrets; };
+class rhsusf_m113_usarmy_OCimport_02 : rhsusf_m113_usarmy_OCimport_01 {
+	class EventHandlers;
+	class Turrets : Turrets {
+		class MainTurret;
+		class CargoTurret_01;
+		class CargoTurret_02;
+	};
+};
 class B_NorwayArmy_M113_M2_Woodland : rhsusf_m113_usarmy_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -717,14 +648,26 @@ class B_NorwayArmy_M113_M2_Woodland : rhsusf_m113_usarmy_OCimport_02 {
 
 	class TransportMagazines {
 		VEHICLE_MAGAZINES
+		class _xx_rhs_fim92_mag {
+			weapon = "rhs_fim92_mag";
+			count = 3;
+		};
 	};
 
 	class TransportWeapons {
 		VEHICLE_WEAPONS
+		class _xx_rhs_weap_fim92 {
+			weapon = "rhs_weap_fim92";
+			count = 1;
+		};
 	};
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_TOOLKIT_BACKPACK
 	};
 
 
@@ -732,6 +675,11 @@ class B_NorwayArmy_M113_M2_Woodland : rhsusf_m113_usarmy_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhsusf_m113_usarmy_MK19;
+class rhsusf_m113_usarmy_MK19_OCimport_01 : rhsusf_m113_usarmy_MK19 { scope = 0; class EventHandlers; };
+class rhsusf_m113_usarmy_MK19_OCimport_02 : rhsusf_m113_usarmy_MK19_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_M113_Mk19_Woodland : rhsusf_m113_usarmy_MK19_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -751,14 +699,26 @@ class B_NorwayArmy_M113_Mk19_Woodland : rhsusf_m113_usarmy_MK19_OCimport_02 {
 
 	class TransportMagazines {
 		VEHICLE_MAGAZINES
+		class _xx_rhs_fim92_mag {
+			weapon = "rhs_fim92_mag";
+			count = 3;
+		};
 	};
 
 	class TransportWeapons {
 		VEHICLE_WEAPONS
+		class _xx_rhs_weap_fim92 {
+			weapon = "rhs_weap_fim92";
+			count = 1;
+		};
 	};
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_TOOLKIT_BACKPACK
 	};
 
 
@@ -802,6 +762,11 @@ class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : B_NorwayArmy_Leopard {
 	};
 };
 
+class rhs_uh1h_hidf_gunship;
+class rhs_uh1h_hidf_gunship_OCimport_01 : rhs_uh1h_hidf_gunship { scope = 0; class EventHandlers; };
+class rhs_uh1h_hidf_gunship_OCimport_02 : rhs_uh1h_hidf_gunship_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Huey_Gunship_Woodland : rhs_uh1h_hidf_gunship_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -835,6 +800,11 @@ class B_NorwayArmy_Huey_Gunship_Woodland : rhs_uh1h_hidf_gunship_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class rhs_uh1h_hidf;
+class rhs_uh1h_hidf_OCimport_01 : rhs_uh1h_hidf { scope = 0; class EventHandlers; };
+class rhs_uh1h_hidf_OCimport_02 : rhs_uh1h_hidf_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Huey_Transport_Woodland : rhs_uh1h_hidf_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -868,6 +838,20 @@ class B_NorwayArmy_Huey_Transport_Woodland : rhs_uh1h_hidf_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_UH60M;
+class RHS_UH60M_OCimport_01 : RHS_UH60M { scope = 0; class EventHandlers; class Turrets; };
+class RHS_UH60M_OCimport_02 : RHS_UH60M_OCimport_01 {
+	class EventHandlers;
+	class Turrets : Turrets {
+		class CopilotTurret;
+		class MainTurret;
+		class RightDoorGun;
+		class CargoTurret_01;
+		class CargoTurret_02;
+		class CargoTurret_03;
+		class CargoTurret_04;
+	};
+};
 class B_NorwayArmy_Blackhawk_Woodland : RHS_UH60M_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -905,16 +889,17 @@ class B_NorwayArmy_Blackhawk_Woodland : RHS_UH60M_OCimport_02 {
 
 	class TransportItems {
 		VEHICLE_ITEMS
-		class _xx_Toolkit {
-			name = "ToolKit";
-			count = 1;
-		};
 	};
 
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_MELB_AH6M;
+class RHS_MELB_AH6M_OCimport_01 : RHS_MELB_AH6M { scope = 0; class EventHandlers; };
+class RHS_MELB_AH6M_OCimport_02 : RHS_MELB_AH6M_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Littlebird_CAS_Woodland : RHS_MELB_AH6M_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -994,6 +979,9 @@ class B_NorwayArmy_C130J_Woodland : RHS_C130J {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class I_Plane_Fighter_04_F;
+class I_Plane_Fighter_04_F_OCimport_01 : I_Plane_Fighter_04_F { scope = 0; class EventHandlers; };
+class I_Plane_Fighter_04_F_OCimport_02 : I_Plane_Fighter_04_F_OCimport_01 { scope = 0; class EventHandlers; };
 class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1020,6 +1008,11 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_M2StaticMG_WD;
+class RHS_M2StaticMG_WD_OCimport_01 : RHS_M2StaticMG_WD { scope = 0; class EventHandlers; };
+class RHS_M2StaticMG_WD_OCimport_02 : RHS_M2StaticMG_WD_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Static_MG_High_Woodland : RHS_M2StaticMG_WD_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1042,6 +1035,11 @@ class B_NorwayArmy_Static_MG_High_Woodland : RHS_M2StaticMG_WD_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_M2StaticMG_MiniTripod_WD;
+class RHS_M2StaticMG_MiniTripod_WD_OCimport_01 : RHS_M2StaticMG_MiniTripod_WD { scope = 0; class EventHandlers; };
+class RHS_M2StaticMG_MiniTripod_WD_OCimport_02 : RHS_M2StaticMG_MiniTripod_WD_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Static_MG_Low_Woodland : RHS_M2StaticMG_MiniTripod_WD_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1064,6 +1062,11 @@ class B_NorwayArmy_Static_MG_Low_Woodland : RHS_M2StaticMG_MiniTripod_WD_OCimpor
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_M252_WD;
+class RHS_M252_WD_OCimport_01 : RHS_M252_WD { scope = 0; class EventHandlers; };
+class RHS_M252_WD_OCimport_02 : RHS_M252_WD_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Mortar_Woodland : RHS_M252_WD_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1085,6 +1088,11 @@ class B_NorwayArmy_Mortar_Woodland : RHS_M252_WD_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_MK19_TriPod_USMC_WD;
+class RHS_MK19_TriPod_USMC_WD_OCimport_01 : RHS_MK19_TriPod_USMC_WD { scope = 0; class EventHandlers; };
+class RHS_MK19_TriPod_USMC_WD_OCimport_02 : RHS_MK19_TriPod_USMC_WD_OCimport_01 {
+	class EventHandlers;
+};
 class B_NorwayArmy_Static_GMG_Woodland : RHS_MK19_TriPod_USMC_WD_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1128,6 +1136,9 @@ class B_NorwayArmy_Static_TOW_Woodland : RHS_TOW_TriPod_WD {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+class RHS_A10;
+class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
+class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
 class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
 	author = "Jebby";
 	scope = 2;

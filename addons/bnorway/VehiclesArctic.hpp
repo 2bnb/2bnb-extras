@@ -32,7 +32,7 @@ class B_NorwayArmy_Medic_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"hlc_rifle_416D10C","rhsusf_weap_glock17g4","Throw","Put"};
 	respawnWeapons[] = {"hlc_rifle_416D10C","rhsusf_weap_glock17g4","Throw","Put"};
@@ -54,7 +54,7 @@ class B_NorwayArmy_LMG_762_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"rhs_weap_m240B","rhsusf_weap_glock17g4","Throw","Put"};
 	respawnWeapons[] = {"rhs_weap_m240B","rhsusf_weap_glock17g4","Throw","Put"};
@@ -76,7 +76,7 @@ class B_NorwayArmy_LMG_556_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"rhs_weap_m249_pip_L","rhsusf_weap_glock17g4","Throw","Put"};
 	respawnWeapons[] = {"rhs_weap_m249_pip_L","rhsusf_weap_glock17g4","Throw","Put"};
@@ -123,7 +123,7 @@ class B_NorwayArmy_Engineer_EOD_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"hlc_rifle_416D145","rhs_weap_m72a7","ACE_VMM3","Throw","Put"};
 	respawnWeapons[] = {"hlc_rifle_416D145","rhs_weap_m72a7","ACE_VMM3","Throw","Put"};
@@ -145,7 +145,7 @@ class B_NorwayArmy_1IC_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Bergen_Arctic_SL_A";
+	backpack = "tfw_ilbe_DD_alpine";
 
 	weapons[] = {"hlc_rifle_416D145_gl","rhsusf_weap_glock17g4","Laserdesignator","Throw","Put"};
 	respawnWeapons[] = {"hlc_rifle_416D145_gl","rhsusf_weap_glock17g4","Laserdesignator","Throw","Put"};
@@ -171,7 +171,7 @@ class B_NorwayArmy_Rifleman_AT_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"hlc_rifle_416D145","SAW_W_MAAWS1","Throw","Put"};
 	respawnWeapons[] = {"hlc_rifle_416D145","SAW_W_MAAWS1","Throw","Put"};
@@ -192,7 +192,7 @@ class B_NorwayArmy_Rifleman_Arctic : B_NorwayArmy_Man_Arctic {
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 
-	backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+	backpack = "Alpine_backpack_kitbag";
 
 	weapons[] = {"hlc_rifle_416D145","rhs_weap_m72a7","Throw","Put"};
 	respawnWeapons[] = {"hlc_rifle_416D145","rhs_weap_m72a7","Throw","Put"};

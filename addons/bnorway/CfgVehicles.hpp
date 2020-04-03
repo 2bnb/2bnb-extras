@@ -64,7 +64,7 @@ class CfgVehicles {
 	class B_Soldier_F_OCimport_02 : B_Soldier_F_OCimport_01 { class EventHandlers; };
 
 	class B_NorwayArmy_Man : B_Soldier_F_OCimport_02 {
-		author = "Capt. Arend";
+		author = "Arend";
 		scope = 0;
 		scopeCurator = 2;
 		side = 1;
@@ -84,6 +84,9 @@ class CfgVehicles {
 
 	class B_mas_nor_Kitbag_d;
 	class B_NorwayArmy_Toolkit_Backpack : B_mas_nor_Kitbag_d {
+		scope = 0;
+		scopeCurator = 0;
+
 		class TransportItems {
 			class _xx_Toolkit {
 				name = "ToolKit";

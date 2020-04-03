@@ -4,6 +4,10 @@ class CBA_Extended_EventHandlers_base;
 class _xx_hlc_30rnd_556x45_SPR_PMAG { \
 	magazine = "hlc_30rnd_556x45_SPR_PMAG"; \
 	count = 15; \
+}; \
+class _xx_rhsusf_m112_mag { \
+	magazine = "rhsusf_m112_mag"; \
+	count = 3; \
 };
 
 #define VEHICLE_WEAPONS \
@@ -158,21 +162,21 @@ class CfgVehicles {
 			};
 		};
 
-	class TransportMagazines {
-		VEHICLE_MAGAZINES
-		class _xx_rhs_fim92_mag {
-			weapon = "rhs_fim92_mag";
-			count = 3;
+		class TransportMagazines {
+			VEHICLE_MAGAZINES
+			class _xx_rhs_fim92_mag {
+				weapon = "rhs_fim92_mag";
+				count = 3;
+			};
 		};
-	};
 
-	class TransportWeapons {
-		VEHICLE_WEAPONS
-		class _xx_rhs_weap_fim92 {
-			weapon = "rhs_weap_fim92";
-			count = 1;
+		class TransportWeapons {
+			VEHICLE_WEAPONS
+			class _xx_rhs_weap_fim92 {
+				weapon = "rhs_weap_fim92";
+				count = 1;
+			};
 		};
-	};
 
 		class TransportItems {
 			VEHICLE_ITEMS

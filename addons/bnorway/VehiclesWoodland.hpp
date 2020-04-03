@@ -561,7 +561,7 @@ class B_NorwayArmy_Hunter_M2_Woodland : rhsusf_m1240a1_m2_usmc_wd_OCimport_02 {
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
-["rhs_weap_fim92","rhs_fim92_mag","Titan_AA"]
+
 class rhsusf_stryker_m1126_m2_wd;
 class rhsusf_stryker_m1126_m2_wd_OCimport_01 : rhsusf_stryker_m1126_m2_wd { scope = 0; class EventHandlers; };
 class rhsusf_stryker_m1126_m2_wd_OCimport_02 : rhsusf_stryker_m1126_m2_wd_OCimport_01 {

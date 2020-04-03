@@ -50,11 +50,11 @@ class _xx_ACE_EarPlugs { \
 	count = 5; \
 };
 
-#define VEHICLE_TOOLKIT_BACKPACK \
-class _xx_B_NorwayArmy_Tookit_Backpack { \
-	name = "B_NorwayArmy_Tookit_Backpack"; \
-	count = 1; \
-};
+#define VEHICLE_INVENTORY_RESET \
+class TransportMagazines {}; \
+class TransportWeapons {}; \
+class TransportItems {}; \
+class TransportBackpacks {};
 
 
 class CfgVehicles {
@@ -165,7 +165,7 @@ class CfgVehicles {
 		class TransportMagazines {
 			VEHICLE_MAGAZINES
 			class _xx_rhs_fim92_mag {
-				weapon = "rhs_fim92_mag";
+				magazine = "rhs_fim92_mag";
 				count = 3;
 			};
 		};
@@ -180,10 +180,17 @@ class CfgVehicles {
 
 		class TransportItems {
 			VEHICLE_ITEMS
+			class _xx_Toolkit {
+				name = "Toolkit";
+				count = 1;
+			};
 		};
 
 		class TransportBackpacks {
-			VEHICLE_TOOLKIT_BACKPACK
+			class _xx_B_NorwayArmy_Toolkit_Backpack {
+				backpack = "B_NorwayArmy_Toolkit_Backpack";
+				count = 1;
+			};
 		};
 	};
 

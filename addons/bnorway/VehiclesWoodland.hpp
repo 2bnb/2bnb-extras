@@ -25,6 +25,7 @@ class B_NorwayArmy_Man_Woodland : B_NorwayArmy_Man {
 class B_NorwayArmy_Rifleman_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Rifleman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_Woodland.jpg";
+	bnb_e_optic = "RKSL_optic_EOT552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -47,6 +48,7 @@ class B_NorwayArmy_Rifleman_AT_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Rifleman AT";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_AT_Woodland.jpg";
 	icon = "iconManAT";
+	bnb_e_optic = "RKSL_optic_EOT552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -69,6 +71,7 @@ class B_NorwayArmy_Engineer_EOD_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Engineer/EOD";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Engineer_EOD_Woodland.jpg";
 	icon = "iconManEngineer";
+	bnb_e_optic = "RKSL_optic_EOT552";
 	picture = "pictureRepair";
 
 	canDeactivateMines = 1;
@@ -95,6 +98,7 @@ class B_NorwayArmy_1IC_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "1IC";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_IC_2IC_Woodland.jpg";
 	icon = "iconManOfficer";
+	bnb_e_optic = "RKSL_optic_EOT552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -121,6 +125,7 @@ class B_NorwayArmy_2IC_Woodland : B_NorwayArmy_1IC_Woodland {
 class B_NorwayArmy_Marksman_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Marksman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Marksman_Woodland.jpg";
+	bnb_e_optic = "rhsusf_acc_su230_mrds";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -187,6 +192,7 @@ class B_NorwayArmy_Medic_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Medic";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Medic_Woodland.jpg";
 	icon = "iconManMedic";
+	bnb_e_optic = "RKSL_optic_EOT552";
 	picture = "pictureHeal";
 
 	attendant = 1;
@@ -212,6 +218,7 @@ class B_NorwayArmy_Crew_Woodland : B_NorwayArmy_Man_Woodland {
 	author = "Jebby";
 	displayName = "Crew";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Crew_Woodland.jpg";
+	bnb_e_optic = "optic_Yorris";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -234,6 +241,7 @@ class B_NorwayArmy_Pilot_Woodland : B_NorwayArmy_Man_Woodland {
 	author = "Jebby";
 	displayName = "Pilot";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Pilot_Woodland.jpg";
+	bnb_e_optic = "optic_Yorris";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -468,6 +476,7 @@ class B_NorwayArmy_HEMTT_Repair_Woodland : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_O
 	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
 
 	class EventHandlers : EventHandlers {
+		// init = "systemChat this;[this, 2, \"ACE_Track\", true] call ace_repair_fnc_addSpareParts;[this, 8, \"ACE_Wheel\", true] call ace_repair_fnc_addSpareParts;";
 		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 		class ALiVE_orbatCreator {
 			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";

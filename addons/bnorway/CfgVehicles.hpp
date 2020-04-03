@@ -71,10 +71,14 @@ class CfgVehicles {
 
 		genericNames="norwegian_names";
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
+		bnb_e_optic = "";
 
 
 		class EventHandlers : EventHandlers {
 			class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
+			class BNB_E_Optics {
+				init = "if (local (_this select 0)) then {_onSpawn = {_this = _this select 0;sleep 0.2;_optic = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'bnb_e_optic');sleep 0.2;_this addPrimaryWeaponItem _optic;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];";
+			};
 		};
 	};
 

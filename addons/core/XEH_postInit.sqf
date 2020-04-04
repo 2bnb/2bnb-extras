@@ -85,3 +85,23 @@ player addEventHandler ["Killed", {
 	_unit setVariable ["bnb_e_diedAt", serverTime];
 	[format["Unit died at: %1", _unit getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
+
+// Pass magazine keybinding
+[
+	'2BNB',
+	'bnb_e_passMagazine',
+	'Pass magazine',
+	{
+		private _target = cursorTarget;
+		if (
+			_target isKindOf "CAManBase"
+			&& {[ACE_player, _target, primaryWeapon ACE_player] call ace_interaction_fnc_canPassMagazine}
+			&& ACE_player distance _target < 4
+		) then {
+			[format["%1 passed a magazine", name ACE_player], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+			[ACE_player, _target, primaryWeapon ACE_player] call ace_interaction_fnc_passMagazine;
+			hint "Mag passed!";
+		};
+	},
+	''
+] call CBA_fnc_addKeybind;

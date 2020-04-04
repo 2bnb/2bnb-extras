@@ -1,7 +1,7 @@
 bnb_e_screenshotMode_active = false;
 
 [
-    '2BNB - Screenshot Mode',
+    '2BNB',
     'bnb_e_screenshotMode_toggle',
     'Toggle Screenshot Mode',
     {

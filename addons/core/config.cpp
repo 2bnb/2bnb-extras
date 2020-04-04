@@ -76,6 +76,15 @@ class Extended_PostInit_EventHandlers {
 	};
 };
 
+
+// Remove "Activate mine" action from diffused explosives/mines
+class CfgActions {
+	class None;
+	class UseContainerMagazine : None {
+		show = 0;
+	};
+};
+
 // Config features/fixes
 #include "configs\CfgBarrelSwaps.hpp";
 #include "configs\CfgDirectConnect.hpp";

@@ -172,9 +172,9 @@ class CfgVehicles {
         magazines[] = {};
         respawnMagazines[] = {};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{}},{"UK3CB_BAF_B_Kitbag_Arctic",{}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{}},{"Alpine_backpack_kitbag",{}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -213,9 +213,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
         respawnMagazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"Alpine_backpack_kitbag",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Balaclava_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -254,9 +254,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_rpg7_PG7V_mag","rhs_30Rnd_762x39mm_polymer"};
         respawnMagazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_rpg7_PG7V_mag","rhs_30Rnd_762x39mm_polymer"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{"rhs_weap_rpg7","","","rhs_acc_pgo7v3",{"rhs_rpg7_PG7V_mag",1},{},""},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_rpg7_PG7V_mag",3,1},{"rhs_rpg7_PG7VR_mag",1,1},{"rhs_rpg7_PG7VL_mag",1,1}}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{"rhs_weap_rpg7","","","rhs_acc_pgo7v3",{"rhs_rpg7_PG7V_mag",1},{},""},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"Alpine_backpack_kitbag",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_rpg7_PG7V_mag",3,1},{"rhs_rpg7_PG7VR_mag",1,1},{"rhs_rpg7_PG7VL_mag",1,1}}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -286,8 +286,8 @@ class CfgVehicles {
 
         uniformClass = "LOP_U_ISTS_Fatigue_07";
 
-        linkedItems[] = {"V_mas_nor_PlateCarrierLR_wint","UK3CB_BAF_H_Mk7_Win_A","ItemMap","ItemRadio","ItemCompass","ItemWatch"};
-        respawnlinkedItems[] = {"V_mas_nor_PlateCarrierLR_wint","UK3CB_BAF_H_Mk7_Win_A","ItemMap","ItemRadio","ItemCompass","ItemWatch"};
+        linkedItems[] = {"V_mas_nor_PlateCarrierLR_wint","H_Tank_black_F","ItemMap","ItemRadio","ItemCompass","ItemWatch"};
+        respawnlinkedItems[] = {"V_mas_nor_PlateCarrierLR_wint","H_Tank_black_F","ItemMap","ItemRadio","ItemCompass","ItemWatch"};
 
         weapons[] = {"rhs_weap_aks74un","Binocular"};
         respawnWeapons[] = {"rhs_weap_aks74un","Binocular"};
@@ -295,9 +295,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_545x39_7N6M_AK","rhs_30Rnd_545x39_7N6M_AK"};
         respawnMagazines[] = {"rhs_30Rnd_545x39_7N6M_AK","rhs_30Rnd_545x39_7N6M_AK"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_aks74un","rhs_acc_pgs64_74un","","",{"rhs_30Rnd_545x39_7N6M_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",4},{"ACE_packingBandage",4},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"ACE_morphine",2},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"rhs_30Rnd_545x39_AK_plum_green",8,30},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_nspn_yellow",2,1}}},{"UK3CB_BAF_B_Kitbag_Arctic",{}},"UK3CB_BAF_H_Mk7_Win_A","rhsusf_shemagh_gogg_white",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_aks74un","rhs_acc_pgs64_74un","","",{"rhs_30Rnd_545x39_7N6M_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",4},{"ACE_packingBandage",4},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"ACE_morphine",2},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"rhs_30Rnd_545x39_AK_plum_green",8,30},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_nspn_yellow",2,1}}},{"Alpine_backpack_kitbag",{}},"H_Tank_black_F","rhsusf_shemagh_gogg_white",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -336,9 +336,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_545x39_7N6M_AK","rhs_30Rnd_545x39_7N6M_AK"};
         respawnMagazines[] = {"rhs_30Rnd_545x39_7N6M_AK","rhs_30Rnd_545x39_7N6M_AK"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_aks74un","rhs_acc_pgs64_74un","","",{"rhs_30Rnd_545x39_7N6M_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",4},{"ACE_packingBandage",4},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"ACE_morphine",2},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"rhs_30Rnd_545x39_AK_plum_green",8,30},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_nspn_yellow",2,1}}},{"UK3CB_BAF_B_Kitbag_Arctic",{}},"rhsusf_hgu56p_visor_white","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_aks74un","rhs_acc_pgs64_74un","","",{"rhs_30Rnd_545x39_7N6M_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",4},{"ACE_packingBandage",4},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"ACE_morphine",2},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"rhs_30Rnd_545x39_AK_plum_green",8,30},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_nspn_yellow",2,1}}},{"Alpine_backpack_kitbag",{}},"rhsusf_hgu56p_visor_white","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -377,9 +377,9 @@ class CfgVehicles {
         magazines[] = {"rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1"};
         respawnMagazines[] = {"rhs_10Rnd_762x54mmR_7N1","rhs_10Rnd_762x54mmR_7N1"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_svds","","","rhs_acc_pso1m21",{"rhs_10Rnd_762x54mmR_7N1",10},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",5},{"ACE_packingBandage",4},{"ACE_morphine",2},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_10Rnd_762x54_Tracer_mag",14,10},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_rgn",1,1}}},{"UK3CB_BAF_B_Kitbag_Arctic",{}},"H_mas_nor_beanie_w","G_Bandanna_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_svds","","","rhs_acc_pso1m21",{"rhs_10Rnd_762x54mmR_7N1",10},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",5},{"ACE_packingBandage",4},{"ACE_morphine",2},{"ACE_tourniquet",3},{"ACE_quikclot",2},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"rhs_mag_rdg2_white",1,1}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_10Rnd_762x54_Tracer_mag",14,10},{"rhs_mag_rdg2_white",3,1},{"rhs_mag_rgn",1,1}}},{"Alpine_backpack_kitbag",{}},"H_mas_nor_beanie_w","G_Bandanna_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -418,9 +418,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
         respawnMagazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"ACE_surgicalKit",4},{"ACE_packingBandage",12},{"ACE_morphine",6},{"ACE_epinephrine",6},{"ACE_EarPlugs",1},{"ACE_quikclot",6},{"ACE_fieldDressing",8},{"ACE_atropine",3},{"ACE_adenosine",3},{"ACE_tourniquet",6},{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Bandanna_shades",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_ekp8_02",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"Alpine_backpack_kitbag",{{"ACE_surgicalKit",4},{"ACE_packingBandage",12},{"ACE_morphine",6},{"ACE_epinephrine",6},{"ACE_EarPlugs",1},{"ACE_quikclot",6},{"ACE_fieldDressing",8},{"ACE_atropine",3},{"ACE_adenosine",3},{"ACE_tourniquet",6},{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Bandanna_shades",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -459,9 +459,9 @@ class CfgVehicles {
         magazines[] = {"rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR"};
         respawnMagazines[] = {"rhs_100Rnd_762x54mmR","rhs_100Rnd_762x54mmR"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_pkm","","","",{"rhs_100Rnd_762x54mmR",100},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",3},{"ACE_packingBandage",2},{"ACE_morphine",1},{"ACE_tourniquet",1},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",3},{"ACE_quikclot",2},{"ACE_epinephrine",3},{"ACE_morphine",1},{"ACE_tourniquet",4},{"ACE_packingBandage",1},{"rhs_mag_an_m8hc",2,1},{"rhs_mag_rgn",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30},{"rhs_100Rnd_762x54mmR_green",1,100}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_100Rnd_762x54mmR_green",3,100}}},"H_mas_nor_beanie_w","G_Bandanna_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_pkm","","","",{"rhs_100Rnd_762x54mmR",100},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",3},{"ACE_packingBandage",2},{"ACE_morphine",1},{"ACE_tourniquet",1},{"ACE_EarPlugs",1},{"ACE_epinephrine",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",3},{"ACE_quikclot",2},{"ACE_epinephrine",3},{"ACE_morphine",1},{"ACE_tourniquet",4},{"ACE_packingBandage",1},{"rhs_mag_an_m8hc",2,1},{"rhs_mag_rgn",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30},{"rhs_100Rnd_762x54mmR_green",1,100}}},{"Alpine_backpack_kitbag",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_100Rnd_762x54mmR_green",3,100}}},"H_mas_nor_beanie_w","G_Bandanna_blk",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -539,9 +539,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
         respawnMagazines[] = {"rhs_30Rnd_762x39mm_polymer","rhs_30Rnd_762x39mm_polymer"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_pgo7v2",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Bandanna_shades",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak103_2","rhs_acc_dtk","","rhs_acc_pgo7v2",{"rhs_30Rnd_762x39mm_polymer",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30}}},{"Alpine_backpack_kitbag",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30}}},"H_mas_nor_beanie_w","G_Bandanna_shades",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {
@@ -580,9 +580,9 @@ class CfgVehicles {
         magazines[] = {"rhs_30Rnd_545x39_7N10_AK","rhs_30Rnd_545x39_7N10_AK"};
         respawnMagazines[] = {"rhs_30Rnd_545x39_7N10_AK","rhs_30Rnd_545x39_7N10_AK"};
 
-        backpack = "UK3CB_BAF_B_Kitbag_Arctic";
+        backpack = "Alpine_backpack_kitbag";
 
-        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak74mr_gp25","rhs_acc_dtk","","rhs_acc_1p87",{"rhs_30Rnd_545x39_7N10_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30},{"rhs_30Rnd_545x39_AK_plum_green",3,30}}},{"UK3CB_BAF_B_Kitbag_Arctic",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_30Rnd_545x39_AK_plum_green",4,30},{"rhs_VOG25",8,1},{"rhs_VG40TB",3,1},{"rhs_GRD40_White",5,1}}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
+        ALiVE_orbatCreator_loadout[] = {{"rhs_weap_ak74mr_gp25","rhs_acc_dtk","","rhs_acc_1p87",{"rhs_30Rnd_545x39_7N10_AK",30},{},""},{},{},{"LOP_U_ISTS_Fatigue_07",{{"ACE_fieldDressing",1},{"ACE_packingBandage",1},{"ACE_morphine",1},{"ACE_tourniquet",1},{"rhs_mag_rdg2_white",1,1},{"30Rnd_762x39_Mag_Tracer_Green_F",2,30}}},{"V_mas_nor_PlateCarrierLR_wint",{{"ACE_fieldDressing",6},{"ACE_quikclot",6},{"ACE_EarPlugs",1},{"ACE_epinephrine",3},{"ACE_morphine",3},{"ACE_packingBandage",4},{"ACE_tourniquet",4},{"rhs_mag_an_m8hc",3,1},{"rhs_mag_rgn",4,1},{"30Rnd_762x39_Mag_Tracer_Green_F",10,30},{"rhs_30Rnd_545x39_AK_plum_green",3,30}}},{"Alpine_backpack_kitbag",{{"30Rnd_762x39_Mag_Tracer_Green_F",6,30},{"rhs_30Rnd_545x39_AK_plum_green",4,30},{"rhs_VOG25",8,1},{"rhs_VG40TB",3,1},{"rhs_GRD40_White",5,1}}},"H_mas_nor_beanie_w","",{"Binocular","","","",{},{},""},{"ItemMap","","ItemRadio","ItemCompass","ItemWatch",""}};
 
 
         class EventHandlers : EventHandlers {

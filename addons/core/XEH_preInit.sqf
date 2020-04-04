@@ -70,3 +70,5 @@ private _prettyName = "";
 		true
 	] call CBA_Settings_fnc_init;
 } forEach ("true" configClasses (configfile >> "CfgWorldList"));
+
+CHVD_allowNoGrass = false;

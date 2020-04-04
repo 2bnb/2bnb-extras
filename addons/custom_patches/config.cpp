@@ -132,22 +132,6 @@ class CfgUnitInsignia
 		textureVehicle="";
 	};
 
-	class CmbtMdcJcks
-	{
-		displayName="Combat Medic - Jackson";
-		author="Jackson";
-		texture="x\bnb_e\custom_patches\img\CmbtMdcJcks.paa";
-		textureVehicle="";
-	};
-
-	class PlankMedicPatch
-	{
-		displayName="Combat Medic - Plank";
-		author="Jackson";
-		texture="x\bnb_e\custom_patches\img\PlankMedicPatch.paa";
-		textureVehicle="";
-	};
-
 	class ScruffyHammond
 	{
 		displayName="Scruffy Hammond";

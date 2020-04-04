@@ -91,6 +91,7 @@ class CfgActions {
 #include "configs\CfgEdenModules.hpp";
 #include "configs\CfgExplosives.hpp";
 #include "configs\CfgSatcom.hpp";
+#include "configs\CfgLadderTweak.hpp";
 #include "configs\CfgSupplyCrates.hpp";
 #include "configs\CfgEnableDebug.hpp";
 #include "configs\CfgZeusActions.hpp";

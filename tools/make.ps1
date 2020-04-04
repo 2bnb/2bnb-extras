@@ -9,7 +9,7 @@ $cachePath      = "$projectRoot\.build\cache"
 $modPrefix      = "bnb_e_"
 $releasePage    = "https://github.com/KoffeinFlummi/armake/releases"
 $downloadPage   = "https://github.com/KoffeinFlummi/armake/releases/download/v{0}/armake_v{0}.zip"
-$armake2         = "$projectRoot\tools\armake2.exe"
+$armake2        = "$projectRoot\tools\armake2.exe"
 $armake         = "$projectRoot\tools\armake.exe"
 $tag            = git describe --tag | %{$_ -replace "-.*-", "-"}
 $privateKeyFile = "$cachePath\keys\$modPrefix$tag.biprivatekey"
@@ -390,6 +390,7 @@ function Main {
 
 	if (Test-Path -Path $privateKeyFile) {
 		New-Item "$buildPath\addons" -ItemType "directory" -Force | Out-Null
+		New-Item "$projectRoot\optionals" -ItemType "directory" -Force | Out-Null
 
 		foreach ($component in Get-ChildItem -File "$projectRoot\optionals") {
 			Build-PBO $component -Prebuilt $True
@@ -402,6 +403,8 @@ function Main {
 		foreach ($component in @(Get-ChildItem "$buildPath\addons\*.pbo")) {
 			Check-Obsolete $component
 		}
+
+		Remove-Item "$buildPath\*.tmp"
 	}
 
 	Set-Location $origLocation

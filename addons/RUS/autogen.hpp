@@ -1116,10 +1116,10 @@ class CfgVehicles {
         displayName = "BMP-3 (Up-Armored)";
         side = 0;
         faction = "RUS";
-        crew = "I_RUS_Crewman_01";
+        crew = "O_RUS_Crewman_01";
 
         class Turrets : Turrets {
-            class MainTurret : MainTurret { gunnerType = "I_RUS_Crewman_01"; };
+            class MainTurret : MainTurret { gunnerType = "O_RUS_Crewman_01"; };
             class GPMGTurret1 : GPMGTurret1 { gunnerType = "rhs_msv_rifleman"; };
             class GPMGTurret2 : GPMGTurret2 { gunnerType = "rhs_msv_rifleman"; };
         };

@@ -297,7 +297,7 @@ class CfgMusic {
 		klpq_ignoreTrack = 0;
 	};
 	class bnb_e_song_katyusha {
-		sound[] = {"x\bnb_e\songs\other\Katyusha_-_Girls_und_Panzer", db+3, 1};
+		sound[] = {"x\bnb_e\songs\other\Katyusha_-_Girls_und_Panzer.ogg", db+3, 1};
 		tag = "klpq_musicRadio_v1";
 		theme = "other";
 		duration = 147;

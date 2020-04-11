@@ -1,3 +1,16 @@
+class CfgPatches {
+	class bnb_e_maps {
+		name = "2BNB Extras - Maps";
+		weapons[] = {};
+		requiredAddons[] = {
+		};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"Arend"
+		};
+	};
+};
+
 class CfgWorlds {
 	class CAWorld;
 	// Find the classnames in the `altis_map.pbo` file

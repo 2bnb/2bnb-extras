@@ -30,14 +30,12 @@ if (!isServer) exitWith {
 
 if (_logic getVariable ["HasArsenal", false]) then {
 	// [_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
-	private _filter = [_logic getVariable ["ArsenalFilter", ""]] call bnb_f_core_fnc_getArsenalFilter;
-	if (_filter isEqualTo true) then {
-		_filter = [];
-	};
+	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call bnb_f_core_fnc_getArsenalFilter;
 
 	{
-		[_x, [_filter, 0]] call ace_arsenal_fnc_attributeInit;
-		[format["Added %1 filtered arsenal to %2", _filter, _x], "core\functions\fn_arsenal.sqf"] call bnb_e_core_fnc_log;
+		[_x, [], true] call ace_arsenal_fnc_initBox;
+		[_x, _whitelist, true] call ace_arsenal_fnc_addVirtualItems;
+		[format["Added %1 filtered arsenal to %2", _whitelist, _x], "core\functions\fn_arsenal.sqf"] call bnb_e_core_fnc_log;
 	} foreach _objects;
 };
 

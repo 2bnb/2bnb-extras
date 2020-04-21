@@ -1,6 +1,7 @@
 class CfgPatches {
 	class bnb_e_maps {
 		name = "2BNB Extras - Maps";
+		units = {};
 		weapons[] = {};
 		requiredAddons[] = {
 			"CUP_Chernarus_Winter_Config"

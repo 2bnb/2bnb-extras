@@ -1,6 +1,7 @@
 class CfgPatches {
 	class bnb_e_hk416SoundCompat {
 		name = "2BNB Extras - HK416 Sound Compat";
+		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {
 			"a3_sounds_f",

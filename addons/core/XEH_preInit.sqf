@@ -37,11 +37,12 @@ private _bnb_e_settings = [
 	[
 		"bnb_e_respawn_timer",
 		"SLIDER",
-		["Respawn Timer (seconds)", "Number of seconds player waves need to wait before respawn (set to 99999 for infinite!)"],
+		["Respawn Timer (seconds)", "Number of seconds player waves need to wait before respawn (0 -> 600 (10 minutes))"],
 		["2BNB Zeus", "Respawn"],
-		[1, 99999, 2, 0],
+		[1, 600, 5, 0],
 		1,
 		{
+			missionNamespace setVariable ["bnb_e_respawn_timer_override", true, true];
 			setPlayerRespawnTime _this;
 		}
 	]

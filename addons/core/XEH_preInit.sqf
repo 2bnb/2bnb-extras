@@ -45,6 +45,18 @@ private _bnb_e_settings = [
 			missionNamespace setVariable ["bnb_e_respawn_timer_override", true, true];
 			setPlayerRespawnTime _this;
 		}
+	],
+	[
+		"bnb_e_arsenal_whitelist_mission",
+		"EDITBOX",
+		["Mission", "Mission specific equipment whitelist"],
+		["2BNB Arsenal", "Arsenal Whitelists"],
+		"[]",
+		true,
+		{
+			// One day this will re-init all arsenals that have this filter set
+		},
+		true
 	]
 ];
 

@@ -25,7 +25,7 @@ private _objects = [_objectUnderCursor];
 
 // Show Filter Dialog
 private _availableFilters = [
-	"None",
+	"Full",
 	"Standard",
 	"West",
 	"East",

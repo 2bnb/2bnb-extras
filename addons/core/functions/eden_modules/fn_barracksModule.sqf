@@ -29,7 +29,6 @@ if (!isServer) exitWith {
 };
 
 if (_logic getVariable ["HasArsenal", false]) then {
-	// [_logic getVariable ["ArsenalFilter", ""], _objects] call bnb_f_core_fnc_arsenal;
 	private _whitelist = [_logic getVariable ["ArsenalFilter", ""]] call bnb_f_core_fnc_getArsenalFilter;
 
 	{

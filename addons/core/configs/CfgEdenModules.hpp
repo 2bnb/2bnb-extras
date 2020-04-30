@@ -63,7 +63,7 @@ class CfgVehicles {
 				defaultValue = "";
 				class Values {
 					class None {
-						name = "None";
+						name = "Full";
 						value = "";
 						default = 1;
 					};

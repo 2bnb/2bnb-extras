@@ -88,9 +88,9 @@ player addEventHandler ["Killed", {
 
 // Pass magazine keybinding
 [
-	'2BNB',
-	'bnb_e_passMagazine',
-	'Pass magazine',
+	"2BNB",
+	"bnb_e_passMagazine",
+	["Pass magazine", "Pass a magazine to the person you're looking at"],
 	{
 		private _target = cursorTarget;
 		if (
@@ -100,7 +100,8 @@ player addEventHandler ["Killed", {
 		) then {
 			[format["%1 passed a magazine", name ACE_player], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 			[ACE_player, _target, primaryWeapon ACE_player] call ace_interaction_fnc_passMagazine;
-			hint "Mag passed!";
+			playSound "ace_overheating_fixing_pistol";
+			hint "Magazine passed!";
 		};
 	},
 	''

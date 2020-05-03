@@ -106,3 +106,148 @@ player addEventHandler ["Killed", {
 	},
 	''
 ] call CBA_fnc_addKeybind;
+
+
+/**
+ * Interact with civilians using gestures
+ *
+ * Possible gestures:
+ * - Freeze:		`ace_gestures_Freeze`
+ * - Cover:			`ace_gestures_Cover`
+ * - Forward:		`ace_gestures_Forward`
+ * - Regroup:		`ace_gestures_Regroup`
+ * - Engage:		`ace_gestures_Engage`
+ * - Point:			`ace_gestures_Point`
+ * - Hold:			`ace_gestures_Hold`
+ * - Warning:		`ace_gestures_Warning`
+ *
+ * - Go:			`gestureGo`
+ * - Advance:		`gestureAdvance`
+ * - Follow:		`gestureFollow`
+ * - Up:			`gestureUp`
+ * - Stop:			`gestureFreeze`
+ * - Cease Fire:	`gestureCeaseFire`
+ *
+ * All gestures with `ace_gestures_[x]` have a second stance
+ * `ace_gestures_[x]StandLowered` for when the player is standing with a
+ * lowered weapon, or without one!
+ */
+["ace_common_playActionNow", {
+	params ["_player", "_gesture"];
+
+	// If it's not a player, don't do anything
+	if !(isPlayer _player) exitWith {};
+
+	// The percentage chance a civilian will listen
+	private _chance = [0.5, 0.8] select (count weapons _player > 0);
+	private _acceptedGestures = [];
+
+// Commands affecting units only under cursor
+	private _targets = cursorTarget;
+
+	// Follow!
+	_acceptedGestures = ["gestureFollow"];
+
+	if ({_x == _gesture} count _acceptedGestures > 0 && _player distance _targets < 10) then {
+
+		if (count weapons _targets == 0 && {random 1 < _chance}) then {
+		[format["%1 told %2 to follow using a %3 gesture", _player, _targets, _gesture], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+
+			private _following = [_targets, _player] spawn {
+				params ["_targets", "_player"];
+				_targets setVariable ["bnb_e_following", _player, true];
+
+				[format["%1 about to move to %2 (%3)", _targets, _player, _targets getVariable ["bnb_e_following", "nothing"]], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+				private _playerPosition = [];
+				private _index = 0;
+
+				while {(_targets getVariable ["bnb_e_following", false]) isEqualTo _player} do {
+					if (_index > 30) exitWith {
+						_targets setVariable ["bnb_e_following", nil, true];
+					};
+
+					if !(_playerPosition isEqualTo (getPosASL _player)) then {
+						[format["%1 moving", _targets], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+						_targets doMove (getPosASL _player vectorDiff (vectorDir _player vectorMultiply 4));
+						_playerPosition = getPosASL _player;
+					};
+
+					sleep 2;
+					_index = 1 + _index;
+				};
+			};
+
+		};
+	};
+
+
+	// Hi there!
+	_acceptedGestures = [
+		"ace_gestures_Cover",
+		"ace_gestures_CoverStandLowered",
+		"ace_gestures_Warning",
+		"ace_gestures_WarningStandLowered"
+	];
+
+	if ({_x == _gesture} count _acceptedGestures > 0 && [side group _targets, side group _player] call BIS_fnc_sideIsFriendly) then {
+		[format["%1 waved at %2 with a %3 gesture", _player, _targets, _gesture], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+		[_targets, _player] spawn {
+			_targets = _this select 0;
+			sleep 1;
+			[_targets, "ace_gestures_WarningStandLowered"] call ace_common_fnc_doGesture;
+		};
+	};
+
+// Commands affecting units within angle sector
+	_targets = [];
+
+	// Stop!
+	_acceptedGestures = [
+		"gestureFreeze",
+		"ace_gestures_Hold",
+		"ace_gestures_HoldStandLowered",
+		"ace_gestures_Freeze",
+		"ace_gestures_FreezeStandLowered"
+	];
+
+	if ({_x == _gesture} count _acceptedGestures > 0) then {
+		{
+			if (count weapons _x == 0 && {random 1 < _chance}) then {
+				// In case unit is following someone
+				_x setVariable ["bnb_e_following", nil, true];
+
+				[format["%1 told %2 to stop with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+				doStop _x;
+				false;
+			};
+		} count (_player nearEntities ["Civilian", 50])
+	};
+
+	// Go away!
+	_acceptedGestures = [
+		"gestureGo",
+		"gestureAdvance",
+		"ace_gestures_Forward",
+		"ace_gestures_ForwardStandLowered",
+		"ace_gestures_Engage",
+		"ace_gestures_EngageStandLowered"
+	];
+
+	if ({_x == _gesture} count _acceptedGestures > 0) then {
+		// Source: https://github.com/acemod/ACE3/blob/master/addons/interaction/functions/fnc_sendAway.sqf
+		// Extracted from source to avoid an infinite loop caused by line 23 in source
+		{
+			if (count weapons _x == 0 && {random 1 < _chance}) then {
+				[format["%1 told %2 to go away with a %3 gesture", _player, _x, _gesture], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+				// In case unit is following someone
+				_x setVariable ["bnb_e_following", nil, true];
+
+				private _position = getPosASL _player vectorAdd (eyeDirection _player vectorMultiply 50);
+				_position set [2, 0];
+
+				["ace_interaction_sendAway", [_x, _position], [_x]] call CBA_fnc_targetEvent;
+			};
+			false;
+		} count (_player nearEntities ["Civilian", 10]);
+	};
+}] call CBA_fnc_addEventHandler;

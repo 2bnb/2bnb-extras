@@ -70,7 +70,7 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 };
 
 player addEventHandler ["Killed", {
-	params ["_unit"];
+	params ["_player"];
 
 	private _curator = objNull;
 	private _curators = [];
@@ -81,9 +81,9 @@ player addEventHandler ["Killed", {
 		};
 	} foreach allCurators;
 
-	[format["%1 just died!", name _unit]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
-	_unit setVariable ["bnb_e_diedAt", serverTime];
-	[format["Unit died at: %1", _unit getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
+	_player setVariable ["bnb_e_diedAt", serverTime];
+	[format["Unit died at: %1", _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
 
 // Pass magazine keybinding

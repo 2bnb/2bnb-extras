@@ -83,7 +83,12 @@ player addEventHandler ["Killed", {
 
 	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
 	_player setVariable ["bnb_e_diedAt", serverTime];
-	[format["Unit died at: %1", _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+	[format["%1 died at: %2", name _player, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+}];
+
+player addEventHandler ["Respawn", {
+	params ["_player", "_corpse"];
+	[format["%1 respawned at: %2. Died at: %3", name _player, serverTime, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
 
 // Pass magazine keybinding

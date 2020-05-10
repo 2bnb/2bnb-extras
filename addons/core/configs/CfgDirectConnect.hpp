@@ -18,12 +18,22 @@ class CfgMainMenuSpotlight {
 		condition = true;
 	};
 
+	class bnb_e_old_server {
+		text = "2BNB Old Server";
+		textIsQuote = 0;
+		picture = "\x\bnb_e\core\2bnb-tile.paa";
+		video = "\x\bnb_e\core\2bnb-tile.ogv";
+		action = "[""5.9.108.39"", 2302] call compile preprocessFileLineNumbers '\x\bnb_e\core\functions\common\fn_connectToServer.sqf'";
+		actionText = "Connect";
+		condition = true;
+	};
+
 	class bnb_e_operations_server {
 		text = "2BNB Server";
 		textIsQuote = 0;
 		picture = "\x\bnb_e\core\2bnb-tile.paa";
 		video = "\x\bnb_e\core\2bnb-tile.ogv";
-		action = "[""5.9.108.39"", 2302] call compile preprocessFileLineNumbers '\x\bnb_e\core\functions\common\fn_connectToServer.sqf'";
+		action = "[""116.202.244.176"", 2302] call compile preprocessFileLineNumbers '\x\bnb_e\core\functions\common\fn_connectToServer.sqf'";
 		actionText = "Connect";
 		condition = true;
 	};

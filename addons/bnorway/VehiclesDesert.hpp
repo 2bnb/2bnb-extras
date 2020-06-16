@@ -27,7 +27,7 @@ class B_NorwayArmy_Medic_Desert : B_NorwayArmy_Man_Desert {
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Medic_Desert.jpg";
 	icon = "iconManMedic";
 	picture = "pictureHeal";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	attendant = 1;
 
@@ -119,7 +119,7 @@ class B_NorwayArmy_Engineer_EOD_Desert : B_NorwayArmy_Man_Desert {
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Engineer_EOD_Desert.jpg";
 	icon = "iconManEngineer";
 	picture = "pictureRepair";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	canDeactivateMines = 1;
 	engineer = 1;
@@ -145,7 +145,7 @@ class B_NorwayArmy_1IC_Desert : B_NorwayArmy_Man_Desert {
 	displayName = "1IC";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_IC_2IC_Desert.jpg";
 	icon = "iconManOfficer";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor1";
 
@@ -173,7 +173,7 @@ class B_NorwayArmy_Rifleman_AT_Desert : B_NorwayArmy_Man_Desert {
 	displayName = "Rifleman AT";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_AT_Desert.jpg";
 	icon = "iconManAT";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor1";
 
@@ -195,7 +195,7 @@ class B_NorwayArmy_Rifleman_AT_Desert : B_NorwayArmy_Man_Desert {
 class B_NorwayArmy_Rifleman_Desert : B_NorwayArmy_Man_Desert {
 	displayName = "Rifleman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_Desert.jpg";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor1";
 

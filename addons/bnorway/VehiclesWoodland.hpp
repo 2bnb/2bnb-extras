@@ -25,7 +25,7 @@ class B_NorwayArmy_Man_Woodland : B_NorwayArmy_Man {
 class B_NorwayArmy_Rifleman_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Rifleman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_Woodland.jpg";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -48,7 +48,7 @@ class B_NorwayArmy_Rifleman_AT_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Rifleman AT";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_AT_Woodland.jpg";
 	icon = "iconManAT";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -71,7 +71,7 @@ class B_NorwayArmy_Engineer_EOD_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Engineer/EOD";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Engineer_EOD_Woodland.jpg";
 	icon = "iconManEngineer";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 	picture = "pictureRepair";
 
 	canDeactivateMines = 1;
@@ -98,7 +98,7 @@ class B_NorwayArmy_1IC_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "1IC";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_IC_2IC_Woodland.jpg";
 	icon = "iconManOfficer";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 
@@ -192,7 +192,7 @@ class B_NorwayArmy_Medic_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Medic";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Medic_Woodland.jpg";
 	icon = "iconManMedic";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 	picture = "pictureHeal";
 
 	attendant = 1;

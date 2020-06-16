@@ -27,7 +27,7 @@ class B_NorwayArmy_Medic_Multicam : B_NorwayArmy_Man_Multicam {
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Medic_Multicam.jpg";
 	icon = "iconManMedic";
 	picture = "pictureHeal";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	attendant = 1;
 
@@ -119,7 +119,7 @@ class B_NorwayArmy_Engineer_EOD_Multicam : B_NorwayArmy_Man_Multicam {
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Engineer_EOD_Multicam.jpg";
 	icon = "iconManEngineer";
 	picture = "pictureRepair";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	canDeactivateMines = 1;
 	engineer = 1;
@@ -145,7 +145,7 @@ class B_NorwayArmy_1IC_Multicam : B_NorwayArmy_Man_Multicam {
 	displayName = "1IC";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_IC_2IC_Multicam.jpg";
 	icon = "iconManOfficer";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_multi";
 
@@ -172,7 +172,7 @@ class B_NorwayArmy_2IC_Multicam : B_NorwayArmy_1IC_Multicam {
 class B_NorwayArmy_Rifleman_AT_Multicam : B_NorwayArmy_Man_Multicam {
 	displayName = "Rifleman AT";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_AT_Multicam.jpg";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_multi";
 
@@ -194,7 +194,7 @@ class B_NorwayArmy_Rifleman_AT_Multicam : B_NorwayArmy_Man_Multicam {
 class B_NorwayArmy_Rifleman_Multicam : B_NorwayArmy_Man_Multicam {
 	displayName = "Rifleman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Rifleman_Multicam.jpg";
-	bnb_e_optic = "RKSL_optic_EOT552";
+	bnb_e_optic = "rhsusf_acc_eotech_552";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_multi";
 

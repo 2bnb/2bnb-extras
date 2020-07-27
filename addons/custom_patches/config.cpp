@@ -100,6 +100,14 @@ class CfgUnitInsignia
 		textureVehicle="";
 	};
 
+	class _2BNBAlt
+	{
+		displayName="2BNB Alternate";
+		author="Arend";
+		texture="x\bnb_e\custom_patches\img\2bnb-patch.paa";
+		textureVehicle="";
+	};
+
 	class Putin
 	{
 		displayName="Putin";
@@ -225,6 +233,30 @@ class CfgUnitInsignia
 		displayName="Recon Wolves";
 		author="Krieg";
 		texture="x\bnb_e\custom_patches\img\recon-wolves.paa";
+		textureVehicle="";
+	};
+
+	class CallsignViking
+	{
+		displayName="Callsign Viking";
+		author="Carmichael";
+		texture="x\bnb_e\custom_patches\img\callsign-viking.paa";
+		textureVehicle="";
+	};
+
+	class CallsignVikingCamo
+	{
+		displayName="Callsign Viking (Camo)";
+		author="Carmichael";
+		texture="x\bnb_e\custom_patches\img\callsign-viking-camo.paa";
+		textureVehicle="";
+	};
+
+	class SouthAfrica
+	{
+		displayName="South Africa";
+		author="Arend";
+		texture="x\bnb_e\custom_patches\img\south-africa.paa";
 		textureVehicle="";
 	};
 };

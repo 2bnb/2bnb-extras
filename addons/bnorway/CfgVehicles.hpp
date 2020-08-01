@@ -77,28 +77,34 @@ class CfgVehicles {
 		class EventHandlers : EventHandlers {
 			class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
 			class BNB_E_Optics {
-			init = "
-				if (local (_this select 0)) then {
-					_onSpawn = {
-						_this = _this select 0;
-						_optic = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'bnb_e_optic');
-						sleep 0.2;
-						_this addPrimaryWeaponItem _optic;
-					};
-					[(_this select 0)] spawn _onSpawn;
-				};";
+				init = "
+					if (local (_this select 0)) then {
+						_onSpawn = {
+							_this = _this select 0;
+							_optic = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'bnb_e_optic');
+							sleep 0.2;
+							_this addPrimaryWeaponItem _optic;
+						};
+						[(_this select 0)] spawn _onSpawn;
+					};";
 			};
 		};
 	};
 
 	class B_mas_nor_Kitbag_d;
 	class B_NorwayArmy_Toolkit_Backpack : B_mas_nor_Kitbag_d {
-		scope = 0;
+		scope = 1;
 		scopeCurator = 0;
+		scopeArsenal = 0;
 
 		class TransportItems {
 			class _xx_Toolkit {
 				name = "ToolKit";
+				count = 1;
+			};
+
+			class _xx_ACE_Clacker {
+				name = "ACE_Clacker";
 				count = 1;
 			};
 		};
@@ -196,10 +202,6 @@ class CfgVehicles {
 
 		class TransportItems {
 			VEHICLE_ITEMS
-			class _xx_Toolkit {
-				name = "Toolkit";
-				count = 1;
-			};
 		};
 
 		class TransportBackpacks {

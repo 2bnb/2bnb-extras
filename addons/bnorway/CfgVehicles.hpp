@@ -71,7 +71,6 @@ class CfgVehicles {
 
 		genericNames="norwegian_names";
 		identityTypes[] = {"Head_NATO","LanguageENG_F","G_NATO_default"};
-		bnb_e_optic = "";
 
 
 		class EventHandlers : EventHandlers {
@@ -81,9 +80,11 @@ class CfgVehicles {
 					if (local (_this select 0)) then {
 						_onSpawn = {
 							_this = _this select 0;
-							_optic = gettext(configfile >> 'cfgvehicles' >> (typeof _this) >> 'bnb_e_optic');
+							_weaponItems = (configfile >> 'cfgvehicles' >> (typeof _this) >> 'bnb_e_weaponItems') call BIS_fnc_getCfgDataArray;
 							sleep 0.2;
-							_this addPrimaryWeaponItem _optic;
+							{
+								_this addPrimaryWeaponItem _x;
+							} foreach _weaponItems;
 						};
 						[(_this select 0)] spawn _onSpawn;
 					};";

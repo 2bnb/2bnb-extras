@@ -95,7 +95,7 @@ class B_NorwayArmy_LMG_556_Multicam : B_NorwayArmy_Man_Multicam {
 class B_NorwayArmy_Marksman_Multicam : B_NorwayArmy_Man_Multicam {
 	displayName = "Marksman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Marksman_Multicam.jpg";
-	bnb_e_optic = "rhsusf_acc_su230_mrds";
+	bnb_e_optic = "rhsusf_acc_su230a_mrds";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_multi";
 

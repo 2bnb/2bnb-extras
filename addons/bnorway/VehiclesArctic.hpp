@@ -95,7 +95,7 @@ class B_NorwayArmy_LMG_556_Arctic : B_NorwayArmy_Man_Arctic {
 class B_NorwayArmy_Marksman_Arctic : B_NorwayArmy_Man_Arctic {
 	displayName = "Marksman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Marksman_Arctic.jpg";
-	bnb_e_optic = "rhsusf_acc_su230_mrds";
+	bnb_e_optic = "rhsusf_acc_su230a_mrds";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_wint2";
 

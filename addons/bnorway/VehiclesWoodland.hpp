@@ -125,7 +125,7 @@ class B_NorwayArmy_2IC_Woodland : B_NorwayArmy_1IC_Woodland {
 class B_NorwayArmy_Marksman_Woodland : B_NorwayArmy_Man_Woodland {
 	displayName = "Marksman";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Marksman_Woodland.jpg";
-	bnb_e_optic = "rhsusf_acc_su230_mrds";
+	bnb_e_optic = "rhsusf_acc_su230a_mrds";
 
 	uniformClass = "U_mas_nor_B_CombatUniform_S_aor2";
 

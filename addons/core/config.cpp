@@ -89,9 +89,10 @@ class CfgActions {
 #include "configs\CfgBarrelSwaps.hpp";
 #include "configs\CfgDirectConnect.hpp";
 #include "configs\CfgEdenModules.hpp";
-#include "configs\CfgExplosives.hpp";
-#include "configs\CfgSatcom.hpp";
-#include "configs\CfgLadderTweak.hpp";
-#include "configs\CfgSupplyCrates.hpp";
 #include "configs\CfgEnableDebug.hpp";
+#include "configs\CfgExplosives.hpp";
+#include "configs\CfgLadderTweak.hpp";
+#include "configs\CfgMedicalEquipment.hpp";
+#include "configs\CfgSatcom.hpp";
+#include "configs\CfgSupplyCrates.hpp";
 #include "configs\CfgZeusActions.hpp";

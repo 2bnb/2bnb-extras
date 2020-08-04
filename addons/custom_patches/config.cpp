@@ -11,9 +11,13 @@ class CfgPatches {
 			"Farcry",
 			"Wolfpack",
 			"Elkku",
-			"Jackson",
+			"Jebby",
 			"Psycho",
-			"Eden"
+			"Eden",
+			"Carmichael",
+			"Sindre",
+			"Krieg",
+			"Badger"
 		};
 	};
 };
@@ -25,7 +29,6 @@ class CfgUnitInsignia
 		displayName="Kompis";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Kompis.paa";
-		textureVehicle="";
 	};
 
 	class jepulis
@@ -33,7 +36,6 @@ class CfgUnitInsignia
 		displayName="jepulis";
 		author="Ellku";
 		texture="x\bnb_e\custom_patches\img\jepulis.paa";
-		textureVehicle="";
 	};
 
 	class Punisher
@@ -41,7 +43,6 @@ class CfgUnitInsignia
 		displayName="Punisher";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Punisher.paa";
-		textureVehicle="";
 	};
 
 	class Rball
@@ -49,7 +50,6 @@ class CfgUnitInsignia
 		displayName="Rball";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Rball.paa";
-		textureVehicle="";
 	};
 
 	class SC
@@ -57,7 +57,6 @@ class CfgUnitInsignia
 		displayName="SC";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\SC.paa";
-		textureVehicle="";
 	};
 
 	class Trump
@@ -65,7 +64,6 @@ class CfgUnitInsignia
 		displayName="Trump";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Trump.paa";
-		textureVehicle="";
 	};
 
 	class Ussr
@@ -73,7 +71,6 @@ class CfgUnitInsignia
 		displayName="Ussr";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Ussr.paa";
-		textureVehicle="";
 	};
 
 	class Ussr1
@@ -81,7 +78,6 @@ class CfgUnitInsignia
 		displayName="Ussr1";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Ussr1.paa";
-		textureVehicle="";
 	};
 
 	class Ussr2
@@ -89,15 +85,13 @@ class CfgUnitInsignia
 		displayName="Ussr2";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Ussr2.paa";
-		textureVehicle="";
 	};
 
 	class _2BNB
 	{
 		displayName="2BNB";
-		author="2BNB";
+		author="Ford";
 		texture="x\bnb_e\custom_patches\img\2bnb-logo.paa";
-		textureVehicle="";
 	};
 
 	class _2BNBAlt
@@ -105,7 +99,6 @@ class CfgUnitInsignia
 		displayName="2BNB Alternate";
 		author="Arend";
 		texture="x\bnb_e\custom_patches\img\2bnb-patch.paa";
-		textureVehicle="";
 	};
 
 	class Putin
@@ -113,7 +106,6 @@ class CfgUnitInsignia
 		displayName="Putin";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Putin.paa";
-		textureVehicle="";
 	};
 
 	class Putin1
@@ -121,7 +113,6 @@ class CfgUnitInsignia
 		displayName="Putin1";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Putin1.paa";
-		textureVehicle="";
 	};
 
 	class Canada
@@ -129,7 +120,6 @@ class CfgUnitInsignia
 		displayName="Canada";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Canada.paa";
-		textureVehicle="";
 	};
 
 	class Australia
@@ -137,7 +127,6 @@ class CfgUnitInsignia
 		displayName="Australia";
 		author="Ford";
 		texture="x\bnb_e\custom_patches\img\Australia.paa";
-		textureVehicle="";
 	};
 
 	class ScruffyHammond
@@ -145,7 +134,6 @@ class CfgUnitInsignia
 		displayName="Scruffy Hammond";
 		author="Psycho";
 		texture="x\bnb_e\custom_patches\img\hammond.paa";
-		textureVehicle="";
 	};
 
 	class Order66
@@ -153,7 +141,6 @@ class CfgUnitInsignia
 		displayName="Order 66";
 		author="Farcry";
 		texture="x\bnb_e\custom_patches\img\Order66-2.paa";
-		textureVehicle="";
 	};
 
 	class KimmyJongyBoi
@@ -161,7 +148,6 @@ class CfgUnitInsignia
 		displayName="Kimmy Jongy Boi";
 		author="Farcry";
 		texture="x\bnb_e\custom_patches\img\KimmyJongyBoi.paa";
-		textureVehicle="";
 	};
 
 	class WolfpackInsignia
@@ -169,7 +155,6 @@ class CfgUnitInsignia
 		displayName="Wolfpack Insignia";
 		author="Wolfpack";
 		texture="x\bnb_e\custom_patches\img\wolfpack-insignia.paa";
-		textureVehicle="";
 	};
 
 	class JebbyInsignia
@@ -177,7 +162,6 @@ class CfgUnitInsignia
 		displayName="Jebby Insignia";
 		author="Jebby";
 		texture="x\bnb_e\custom_patches\img\jebby-insignia.paa";
-		textureVehicle="";
 	};
 
 	class FarcryInsignia
@@ -185,7 +169,6 @@ class CfgUnitInsignia
 		displayName="Farcry Insignia";
 		author="Farcry";
 		texture="x\bnb_e\custom_patches\img\farcry-insignia.paa";
-		textureVehicle="";
 	};
 
 	class TomJerry
@@ -193,7 +176,6 @@ class CfgUnitInsignia
 		displayName="Tom & Jerry wut";
 		author="Eden";
 		texture="x\bnb_e\custom_patches\img\tom-jerry.paa";
-		textureVehicle="";
 	};
 
 	class MedicPatch
@@ -201,7 +183,6 @@ class CfgUnitInsignia
 		displayName="2BNB Medic Patch";
 		author="Badger";
 		texture="x\bnb_e\custom_patches\img\2bnbMedicPatch.paa";
-		textureVehicle="";
 	};
 
 	class ArendsBrother
@@ -209,7 +190,6 @@ class CfgUnitInsignia
 		displayName="Arend's Brother";
 		author="Krieg";
 		texture="x\bnb_e\custom_patches\img\arends-brother.paa";
-		textureVehicle="";
 	};
 
 	class DeathKorpsOfKrieg
@@ -217,7 +197,6 @@ class CfgUnitInsignia
 		displayName="Death Korps of Krieg";
 		author="Krieg";
 		texture="x\bnb_e\custom_patches\img\death-korps-of-krieg.paa";
-		textureVehicle="";
 	};
 
 	class Goat
@@ -225,7 +204,6 @@ class CfgUnitInsignia
 		displayName="Goat";
 		author="Krieg";
 		texture="x\bnb_e\custom_patches\img\goat.paa";
-		textureVehicle="";
 	};
 
 	class ReconWolves
@@ -233,7 +211,6 @@ class CfgUnitInsignia
 		displayName="Recon Wolves";
 		author="Krieg";
 		texture="x\bnb_e\custom_patches\img\recon-wolves.paa";
-		textureVehicle="";
 	};
 
 	class CallsignViking
@@ -241,7 +218,6 @@ class CfgUnitInsignia
 		displayName="Callsign Viking";
 		author="Carmichael";
 		texture="x\bnb_e\custom_patches\img\callsign-viking.paa";
-		textureVehicle="";
 	};
 
 	class CallsignVikingCamo
@@ -249,7 +225,6 @@ class CfgUnitInsignia
 		displayName="Callsign Viking (Camo)";
 		author="Carmichael";
 		texture="x\bnb_e\custom_patches\img\callsign-viking-camo.paa";
-		textureVehicle="";
 	};
 
 	class SouthAfrica
@@ -257,6 +232,12 @@ class CfgUnitInsignia
 		displayName="South Africa";
 		author="Arend";
 		texture="x\bnb_e\custom_patches\img\south-africa.paa";
-		textureVehicle="";
+	};
+
+	class NorwegianForces
+	{
+		displayName="Norwegian Forces of King Harald V";
+		author="Sindre";
+		texture="x\bnb_e\custom_patches\img\norwegian-forces.paa";
 	};
 };

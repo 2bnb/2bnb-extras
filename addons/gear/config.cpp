@@ -229,7 +229,7 @@ class cfgWeapons
 		scope = 2;
 		displayName = "Adidas Helmet";
 		picture = "\x\bnb_e\gear\data\adidass.paa";
-		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";		
+		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
 		ace_hearing_protection = 0.8;
         ace_hearing_lowerVolume = 0.25;
 		hiddenSelections[] = { "Camo1" };
@@ -289,6 +289,9 @@ class cfgWeapons
 		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\2BNB_Berret.paa" };
 		class ItemInfo: ItemInfo
 		{
+			mass = 0;
+			allowedSlots[] = {801, 701, 901, 605}; // Allow me in uniform, vest, backpack and on the head (of course)
+
 			class HitpointsProtectionInfo:HitpointsProtectionInfo
 			{
 				class Head:Head
@@ -1607,10 +1610,10 @@ class CfgVehicles
 	class I_Soldier_base_F;
 	class I_soldier_F;
 	class Heli_Light_02_base_F;
-	
+
 	class O_Heli_Light_02_unarmed_F : Heli_Light_02_base_F
 	{
-		class textureSources 
+		class textureSources
 		{
 			class Black {
 				author = "Bohemia Interactive";

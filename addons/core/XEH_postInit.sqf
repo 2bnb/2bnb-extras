@@ -88,6 +88,17 @@ player addEventHandler ["Killed", {
 
 player addEventHandler ["Respawn", {
 	params ["_player", "_corpse"];
+
+	private _curator = objNull;
+	private _curators = [];
+	{
+		_curator = getAssignedCuratorUnit _x;
+		if !(_curator isEqualTo objNull) then {
+			_curators pushBack _curator;
+		};
+	} foreach allCurators;
+
+	[format["%1 has just respawned!", name _player]] remoteExec ["Achilles_fnc_showZeusErrorMessage", _curators];
 	[format["%1 respawned at: %2. Died at: %3", name _player, serverTime, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
 

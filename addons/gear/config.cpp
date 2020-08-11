@@ -287,6 +287,7 @@ class cfgWeapons
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "\x\bnb_e\gear\data\2BNB_Berret.paa" };
+		// hiddenSelectionsMaterials[] = {"\x\bnb_e\gear\data\2BNB_Berret.rvmat"};
 		class ItemInfo: ItemInfo
 		{
 			mass = 0;

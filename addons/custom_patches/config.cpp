@@ -171,6 +171,13 @@ class CfgUnitInsignia
 		texture="x\bnb_e\custom_patches\img\farcry-insignia.paa";
 	};
 
+	class FarcryInsignia2
+	{
+		displayName="Farcry Insignia 2";
+		author="Farcry";
+		texture="x\bnb_e\custom_patches\img\farcry-insignia2.paa";
+	};
+
 	class TomJerry
 	{
 		displayName="Tom & Jerry wut";

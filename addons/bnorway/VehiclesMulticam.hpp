@@ -1,4 +1,6 @@
-// Infantry
+//////////////
+// Infantry //
+//////////////
 class B_NorwayArmy_Man_Multicam : B_NorwayArmy_Man {
 	displayName = "Man";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Man_Multicam.jpg";

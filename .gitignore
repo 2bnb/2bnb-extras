@@ -8,3 +8,5 @@ archives/
 *.log
 .build/
 .builds/
+raw textures/**/*.png
+raw textures/**/*.jpg

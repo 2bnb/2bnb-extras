@@ -16,6 +16,20 @@ class CfgPatches {
 			"B_NorwayArmy_Crew_Arctic",
 			"B_NorwayArmy_Pilot_Arctic",
 			"B_NorwayArmy_Leopard_2SG_Arctic",
+			"B_NorwayArmy_CV90_Veteran_Arctic",
+			"B_NorwayArmy_CV90_Viking_Arctic",
+			"B_NorwayArmy_Scania_Arctic",
+			"B_NorwayArmy_Scania_Covered_Arctic",
+			"B_NorwayArmy_Scania_Fuel_Arctic",
+			"B_NorwayArmy_Scania_Utility_Arctic",
+			"B_NorwayArmy_Scania_Medical_Arctic",
+			"B_NorwayArmy_M113_Arctic",
+			"B_NorwayArmy_M113_M2_Arctic",
+			"B_NorwayArmy_M113_Medical_Arctic",
+			"B_NorwayArmy_M113_M2_Shield_Arctic",
+			"B_NorwayArmy_C130J_Arctic",
+			"B_NorwayArmy_Bell412_Arctic",
+			"B_NorwayArmy_Bell412_Armed_Arctic",
 
 			// Desert
 			"B_NorwayArmy_Man_Desert",
@@ -31,6 +45,20 @@ class CfgPatches {
 			"B_NorwayArmy_Crew_Desert",
 			"B_NorwayArmy_Pilot_Desert",
 			"B_NorwayArmy_Leopard_2SG_Desert",
+			"B_NorwayArmy_CV90_Veteran_Desert",
+			"B_NorwayArmy_CV90_Viking_Desert",
+			"B_NorwayArmy_Scania_Desert",
+			"B_NorwayArmy_Scania_Covered_Desert",
+			"B_NorwayArmy_Scania_Fuel_Desert",
+			"B_NorwayArmy_Scania_Utility_Desert",
+			"B_NorwayArmy_Scania_Medical_Desert",
+			"B_NorwayArmy_M113_Desert",
+			"B_NorwayArmy_M113_M2_Desert",
+			"B_NorwayArmy_M113_Medical_Desert",
+			"B_NorwayArmy_M113_M2_Shield_Desert",
+			"B_NorwayArmy_C130J_Desert",
+			"B_NorwayArmy_Bell412_Desert",
+			"B_NorwayArmy_Bell412_Armed_Desert",
 
 			// Multicam
 			"B_NorwayArmy_Man_Multicam",
@@ -66,17 +94,28 @@ class CfgPatches {
 			"B_NorwayArmy_HEMTT_Ammo_Woodland",
 			"B_NorwayArmy_HEMTT_Fuel_Woodland",
 			"B_NorwayArmy_HEMTT_Repair_Woodland",
-			"B_NorwayArmy_FMTV_Transport_Woodland",
 			"B_NorwayArmy_Hunter_M2_Woodland",
 			"B_NorwayArmy_Stryker_Woodland",
+			"B_NorwayArmy_M113_Woodland",
 			"B_NorwayArmy_M113_M2_Woodland",
+			"B_NorwayArmy_M113_Medical_Woodland",
+			"B_NorwayArmy_M113_M2_Shield_Woodland",
 			"B_NorwayArmy_Leopard_2SG_Kompis_Woodland",
 			"B_NorwayArmy_Leopard_2SG_Woodland",
+			"B_NorwayArmy_CV90_Veteran_Woodland",
+			"B_NorwayArmy_CV90_Viking_Woodland",
+			"B_NorwayArmy_Scania_Woodland",
+			"B_NorwayArmy_Scania_Covered_Woodland",
+			"B_NorwayArmy_Scania_Fuel_Woodland",
+			"B_NorwayArmy_Scania_Utility_Woodland",
+			"B_NorwayArmy_Scania_Medical_Woodland",
 			"B_NorwayArmy_Huey_Gunship_Woodland",
 			"B_NorwayArmy_Huey_Transport_Woodland",
 			"B_NorwayArmy_Blackhawk_Woodland",
 			"B_NorwayArmy_Littlebird_CAS_Woodland",
 			"B_NorwayArmy_C130J_Woodland",
+			"B_NorwayArmy_Bell412_Woodland",
+			"B_NorwayArmy_Bell412_Armed_Woodland",
 			"B_NorwayArmy_JAS_39_Gripen_Woodland",
 			"B_NorwayArmy_Static_MG_High_Woodland",
 			"B_NorwayArmy_Static_MG_Low_Woodland",
@@ -88,6 +127,7 @@ class CfgPatches {
 		weapons[] = {};
 		requiredVersion = 1.62;
 		requiredAddons[] = {
+			"A3_Armor_F_EPB_APC_Tracked_03",
 			"A3_Armor_F_EPB_MBT_03",
 			"rhs_c_mig29",
 			"A3_Air_F_EPC_Plane_CAS_01"
@@ -97,7 +137,8 @@ class CfgPatches {
 			"D. Ford",
 			"Arend",
 			"Jebby",
-			"Ezpez"
+			"Ezpez",
+			"Christiansen [NTF]"
 		};
 	};
 };

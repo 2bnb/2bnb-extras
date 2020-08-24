@@ -1,4 +1,6 @@
-// Infantry
+//////////////
+// Infantry //
+//////////////
 class B_NorwayArmy_Man_Woodland : B_NorwayArmy_Man {
 	displayName = "Man";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Man_Woodland.jpg";
@@ -274,7 +276,9 @@ class B_NorwayArmy_Pilot_Woodland : B_NorwayArmy_Man_Woodland {
 	respawnLinkedItems[] = {"V_mas_nor_PlateCarrier1_tan","rhsusf_hgu56p_visor","ItemMap","ItemCompass","ACE_Altimeter","TFAR_anprc152","ItemGPS"};
 };
 
-// Vehicles
+///////////////////
+// Land Vehicles //
+///////////////////
 class rhsusf_m998_w_s_2dr_fulltop;
 class rhsusf_m998_w_s_2dr_fulltop_OCimport_01 : rhsusf_m998_w_s_2dr_fulltop { scope = 0; class EventHandlers; };
 class rhsusf_m998_w_s_2dr_fulltop_OCimport_02 : rhsusf_m998_w_s_2dr_fulltop_OCimport_01 {
@@ -308,6 +312,10 @@ class B_NorwayArmy_Command_Humvee_Woodland : rhsusf_m998_w_s_2dr_fulltop_OCimpor
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 
@@ -350,6 +358,10 @@ class B_NorwayArmy_Armed_Humvee_M2_Woodland : rhsusf_m1043_w_s_m2_OCimport_02 {
 		VEHICLE_ITEMS
 	};
 
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
+	};
+
 
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
@@ -388,6 +400,10 @@ class B_NorwayArmy_Armed_Humvee_Mk19_Woodland : rhsusf_m1043_w_s_mk19_OCimport_0
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 
@@ -430,6 +446,10 @@ class B_NorwayArmy_HEMTT_Ammo_Woodland : rhsusf_M977A4_AMMO_BKIT_usarmy_wd_OCimp
 		VEHICLE_ITEMS
 	};
 
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
@@ -467,6 +487,10 @@ class B_NorwayArmy_HEMTT_Fuel_Woodland : rhsusf_M978A4_BKIT_usarmy_wd_OCimport_0
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -509,45 +533,9 @@ class B_NorwayArmy_HEMTT_Repair_Woodland : rhsusf_M977A4_REPAIR_BKIT_usarmy_wd_O
 		VEHICLE_ITEMS
 	};
 
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
-};
-
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy;
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy { scope = 0; class EventHandlers; };
-class rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_02 : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_01 {
-	class EventHandlers;
-	VEHICLE_INVENTORY_RESET
-};
-class B_NorwayArmy_FMTV_Transport_Woodland : rhsusf_M1083A1P2_B_WD_fmtv_usarmy_OCimport_02 {
-	author = "Jebby";
-	scope = 2;
-	scopeCurator = 2;
-	displayName = "FMTV Transport";
-	side = 1;
-	faction = "B_NorwayArmy_Woodland";
-	crew = "B_NorwayArmy_Rifleman_Woodland";
-	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
-
-	class TransportMagazines {
-		VEHICLE_MAGAZINES
-	};
-
-	class TransportWeapons {
-		VEHICLE_WEAPONS
-	};
-
-	class TransportItems {
-		VEHICLE_ITEMS
-	};
-
 
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
@@ -588,6 +576,10 @@ class B_NorwayArmy_Hunter_M2_Woodland : rhsusf_m1240a1_m2_usmc_wd_OCimport_02 {
 		VEHICLE_ITEMS
 	};
 
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
+	};
+
 
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
@@ -617,30 +609,19 @@ class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
-		class _xx_rhs_fim92_mag {
-			magazine = "rhs_fim92_mag";
-			count = 3;
-		};
+		ARMOURED_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
-		class _xx_rhs_weap_fim92 {
-			weapon = "rhs_weap_fim92";
-			count = 1;
-		};
+		ARMOURED_VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		VEHICLE_ITEMS
+		ARMOURED_VEHICLE_ITEMS
 	};
 
 	class TransportBackpacks {
-		class _xx_B_NorwayArmy_Toolkit_Backpack {
-			backpack = "B_NorwayArmy_Toolkit_Backpack";
-			count = 1;
-		};
+		ARMOURED_VEHICLE_BACKPACKS
 	};
 
 
@@ -648,125 +629,69 @@ class B_NorwayArmy_Stryker_Woodland : rhsusf_stryker_m1126_m2_wd_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class rhsusf_m113_usarmy;
-class rhsusf_m113_usarmy_OCimport_01 : rhsusf_m113_usarmy { scope = 0; class EventHandlers; class Turrets; };
-class rhsusf_m113_usarmy_OCimport_02 : rhsusf_m113_usarmy_OCimport_01 {
-	class EventHandlers;
-	VEHICLE_INVENTORY_RESET
-	class Turrets : Turrets {
-		class MainTurret;
-		class CargoTurret_01;
-		class CargoTurret_02;
-	};
-};
-class B_NorwayArmy_M113_M2_Woodland : rhsusf_m113_usarmy_OCimport_02 {
-	author = "Jebby";
+class B_NorwayArmy_M113_Woodland : B_NorwayArmy_M113 {
 	scope = 2;
 	scopeCurator = 2;
-	displayName = "M113 (M2)";
-	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Crew_Woodland";
-	typicalCargo[] = { "B_NorwayArmy_Crew_Woodland" };
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
 
-	class Turrets : Turrets {
-		class MainTurret : MainTurret { gunnerType = "B_NorwayArmy_Crew_Woodland"; };
-		class CargoTurret_01 : CargoTurret_01 { gunnerType = "B_NorwayArmy_Rifleman_Woodland"; };
-		class CargoTurret_02 : CargoTurret_02 { gunnerType = "B_NorwayArmy_Medic_Woodland"; };
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Hull_Light.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Gun_Mount.paa" // Gun Mount
 	};
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
-	};
-
-	class TransportMagazines {
-		VEHICLE_MAGAZINES
-		class _xx_rhs_fim92_mag {
-			magazine = "rhs_fim92_mag";
-			count = 3;
-		};
-	};
-
-	class TransportWeapons {
-		VEHICLE_WEAPONS
-		class _xx_rhs_weap_fim92 {
-			weapon = "rhs_weap_fim92";
-			count = 1;
-		};
-	};
-
-	class TransportItems {
-		VEHICLE_ITEMS
-	};
-
-	class TransportBackpacks {
-		class _xx_B_NorwayArmy_Toolkit_Backpack {
-			backpack = "B_NorwayArmy_Toolkit_Backpack";
-			count = 1;
-		};
-	};
-
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
 };
 
-class rhsusf_m113_usarmy_MK19;
-class rhsusf_m113_usarmy_MK19_OCimport_01 : rhsusf_m113_usarmy_MK19 { scope = 0; class EventHandlers; };
-class rhsusf_m113_usarmy_MK19_OCimport_02 : rhsusf_m113_usarmy_MK19_OCimport_01 {
-	class EventHandlers;
-	VEHICLE_INVENTORY_RESET
-};
-class B_NorwayArmy_M113_Mk19_Woodland : rhsusf_m113_usarmy_MK19_OCimport_02 {
-	author = "Jebby";
+class B_NorwayArmy_M113_M2_Woodland : B_NorwayArmy_M113_M2 {
 	scope = 2;
 	scopeCurator = 2;
-	displayName = "M113 (Mk19)";
-	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Crew_Woodland";
-	typicalCargo[] = { "B_NorwayArmy_Crew_Woodland" };
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
 
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Gun_Mount.paa" // Gun Mount
 	};
+};
 
-	class TransportMagazines {
-		VEHICLE_MAGAZINES
-		class _xx_rhs_fim92_mag {
-			magazine = "rhs_fim92_mag";
-			count = 3;
-		};
+class B_NorwayArmy_M113_Medical_Woodland : B_NorwayArmy_M113_Medical {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Crew_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Medical_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Gun_Mount.paa" // Gun Mount
 	};
+};
 
-	class TransportWeapons {
-		VEHICLE_WEAPONS
-		class _xx_rhs_weap_fim92 {
-			weapon = "rhs_weap_fim92";
-			count = 1;
-		};
+class B_NorwayArmy_M113_M2_Shield_Woodland : B_NorwayArmy_M113_M2_Shield {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Crew_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Gun_Mount.paa", // Gun Mount
+		"\x\bnb_e\bnorway\data\textures\M113_Woodland_Shield.paa" // Turret Shield
 	};
-
-	class TransportItems {
-		VEHICLE_ITEMS
-	};
-
-	class TransportBackpacks {
-		class _xx_B_NorwayArmy_Toolkit_Backpack {
-			backpack = "B_NorwayArmy_Toolkit_Backpack";
-			count = 1;
-		};
-	};
-
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
 };
 
 class B_NorwayArmy_Leopard_2SG_Woodland : B_NorwayArmy_Leopard {
@@ -805,6 +730,96 @@ class B_NorwayArmy_Leopard_2SG_Kompis_Woodland : B_NorwayArmy_Leopard {
 	};
 };
 
+class B_NorwayArmy_CV90_Woodland : B_NorwayArmy_CV90 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	displayName = "CV90";
+	crew = "B_NorwayArmy_Crew_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Woodland" };
+
+	hiddenSelections[] = {"Camo1","Camo2","CamoNet","CamoSlat"};
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\CV90_Woodland_Turret.paa", // Turret
+		"\x\bnb_e\bnorway\data\textures\CV90_Woodland_Hull.paa", // Hull
+		"A3\Armor_F\Data\camonet_greenbeige_co.paa", // Camonet
+		"\x\bnb_e\bnorway\data\textures\CV90_Woodland_Cage.paa" // Blast Cage
+	};
+};
+
+class B_NorwayArmy_Scania_Woodland : B_NorwayArmy_Scania {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Rifleman_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Covered_Woodland : B_NorwayArmy_Scania_Covered {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Rifleman_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Fuel_Woodland : B_NorwayArmy_Scania_Fuel {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Rifleman_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Fuel.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Utility_Woodland : B_NorwayArmy_Scania_Utility {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Rifleman_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Utility.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Medical_Woodland : B_NorwayArmy_Scania_Medical {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Rifleman_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Woodland_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+//////////////////
+// Air Vehicles //
+//////////////////
 class rhs_uh1h_hidf_gunship;
 class rhs_uh1h_hidf_gunship_OCimport_01 : rhs_uh1h_hidf_gunship { scope = 0; class EventHandlers; };
 class rhs_uh1h_hidf_gunship_OCimport_02 : rhs_uh1h_hidf_gunship_OCimport_01 {
@@ -838,6 +853,10 @@ class B_NorwayArmy_Huey_Gunship_Woodland : rhs_uh1h_hidf_gunship_OCimport_02 {
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -877,6 +896,10 @@ class B_NorwayArmy_Huey_Transport_Woodland : rhs_uh1h_hidf_OCimport_02 {
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -935,6 +958,10 @@ class B_NorwayArmy_Blackhawk_Woodland : RHS_UH60M_OCimport_02 {
 
 	class TransportItems {
 		VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1006,20 +1033,55 @@ class B_NorwayArmy_Littlebird_Transport_Woodland : RHS_MELB_MH6M {
 	ALiVE_orbatCreator_owned = 1;
 };
 
-class RHS_C130J;
-class B_NorwayArmy_C130J_Woodland : RHS_C130J {
-	author = "Jebby";
+class B_NorwayArmy_C130J_Woodland : B_NorwayArmy_C130J {
 	scope = 2;
 	scopeCurator = 2;
-	displayName = "C-130J";
-	side = 1;
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Pilot_Woodland";
 	typicalCargo[] = { "B_NorwayArmy_Pilot_Woodland" };
+};
 
-	class EventHandlers;
+class B_NorwayArmy_C130J_Cargo_Woodland : B_NorwayArmy_C130J_Cargo {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Pilot_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Woodland" };
+};
+
+class B_NorwayArmy_Bell412_Woodland : B_NorwayArmy_Bell412 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Pilot_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Woodland" };
+};
+
+class B_NorwayArmy_Bell412_Armed_Woodland : B_NorwayArmy_Bell412_Armed {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Pilot_Woodland";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Woodland" };
+};
+
+class RHS_A10;
+class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
+class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
+class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
+	author = "Jebby";
+	scope = 2;
+	scopeCurator = 2;
+	displayName = "A-10";
+	side = 1;
+	faction = "B_NorwayArmy_Woodland";
+	crew = "B_NorwayArmy_Pilot_Woodland";
+
 	class EventHandlers : EventHandlers {
 		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
+		class ALiVE_orbatCreator {
+			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
+		};
 	};
 
 	// custom attributes (do not delete)
@@ -1055,6 +1117,9 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 	ALiVE_orbatCreator_owned = 1;
 };
 
+/////////////
+// Statics //
+/////////////
 class RHS_M2StaticMG_WD;
 class RHS_M2StaticMG_WD_OCimport_01 : RHS_M2StaticMG_WD { scope = 0; class EventHandlers; };
 class RHS_M2StaticMG_WD_OCimport_02 : RHS_M2StaticMG_WD_OCimport_01 {
@@ -1175,29 +1240,6 @@ class B_NorwayArmy_Static_TOW_Woodland : RHS_TOW_TriPod_WD {
 	faction = "B_NorwayArmy_Woodland";
 	crew = "B_NorwayArmy_Rifleman_Woodland";
 	typicalCargo[] = { "B_NorwayArmy_Rifleman_Woodland" };
-
-	class EventHandlers : EventHandlers {
-		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};
-		class ALiVE_orbatCreator {
-			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
-		};
-	};
-
-	// custom attributes (do not delete)
-	ALiVE_orbatCreator_owned = 1;
-};
-
-class RHS_A10;
-class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
-class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
-class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
-	author = "Jebby";
-	scope = 2;
-	scopeCurator = 2;
-	displayName = "A-10";
-	side = 1;
-	faction = "B_NorwayArmy_Woodland";
-	crew = "B_NorwayArmy_Pilot_Woodland";
 
 	class EventHandlers : EventHandlers {
 		class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};

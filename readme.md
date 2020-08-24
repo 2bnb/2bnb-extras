@@ -15,6 +15,7 @@ This mod is being developed to offer members of the 2nd Battalion, Nord Brigade 
 
 # Credits
 - GRAD developer, for their [gruppe_adler_mod](https://github.com/gruppe-adler/gruppe_adler_mod) and allowing us to use parts of it for the basis of some of our addons
+- Tittoffer and Martin M. from Norwegian Task Force for access to their assets made available to us with permission from the [NorwegianTaskForce Github](https://github.com/Tittoffer/NorwegianTaskForce/), which we then modified and built upon to make them our own
 
 
 # For Developers of this mod

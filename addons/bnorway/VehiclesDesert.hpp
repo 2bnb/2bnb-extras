@@ -1,4 +1,6 @@
-// Infantry
+//////////////
+// Infantry //
+//////////////
 class B_NorwayArmy_Man_Desert : B_NorwayArmy_Man {
 	displayName = "Man";
 	editorPreview = "\x\bnb_e\bnorway\data\preview\B_NorwayArmy_Man_Desert.jpg";
@@ -275,8 +277,10 @@ class B_NorwayArmy_Pilot_Desert : B_NorwayArmy_Man_Desert {
 };
 
 
-// Vehicles
-class B_NorwayArmy_Leopard_2SG_Desert: B_NorwayArmy_Leopard {
+///////////////////
+// Land Vehicles //
+///////////////////
+class B_NorwayArmy_Leopard_2SG_Desert : B_NorwayArmy_Leopard {
 	scope = 2;
 	scopeCurator = 2;
 	faction = "B_NorwayArmy_Desert";
@@ -291,4 +295,192 @@ class B_NorwayArmy_Leopard_2SG_Desert: B_NorwayArmy_Leopard {
 		"\x\bnb_e\bnorway\data\textures\Leopard_Woodland_Com_Turret.paa", // Commander Turret
 		"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa"
 	};
+};
+
+class B_NorwayArmy_CV90_Desert : B_NorwayArmy_CV90 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	displayName = "CV90";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Crew_Desert" };
+
+	hiddenSelections[] = {"Camo1","Camo2","CamoNet","CamoSlat"};
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\CV90_Desert_Turret.paa", // Turret
+		"\x\bnb_e\bnorway\data\textures\CV90_Desert_Hull.paa", // Hull
+		"A3\Armor_F\Data\camonet_NATO_Desert_CO.paa", // Camonet
+		"\x\bnb_e\bnorway\data\textures\CV90_Desert_Cage.paa" // Blast Cage
+	};
+};
+
+class B_NorwayArmy_Scania_Desert : B_NorwayArmy_Scania {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Rifleman_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Covered_Desert : B_NorwayArmy_Scania_Covered {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Rifleman_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Fuel_Desert : B_NorwayArmy_Scania_Fuel {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Rifleman_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Fuel.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Utility_Desert : B_NorwayArmy_Scania_Utility {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Rifleman_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Utility.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_Scania_Medical_Desert : B_NorwayArmy_Scania_Medical {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Rifleman_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenSelectionsTextures[] = {
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Front.paa", // Front
+		"\x\bnb_e\bnorway\data\textures\Scania_Desert_Canopy.paa", // Canopy
+		"\x\bnb_e\bnorway\data\textures\Scania_Interior.paa" // Interior
+	};
+};
+
+class B_NorwayArmy_M113_Desert : B_NorwayArmy_M113 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Hull_Light.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Gun_Mount.paa" // Gun Mount
+	};
+};
+
+class B_NorwayArmy_M113_M2_Desert : B_NorwayArmy_M113_M2 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Gun_Mount.paa" // Gun Mount
+	};
+};
+
+class B_NorwayArmy_M113_Medical_Desert : B_NorwayArmy_M113_Medical {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Medical_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Gun_Mount.paa" // Gun Mount
+	};
+};
+
+class B_NorwayArmy_M113_M2_Shield_Desert : B_NorwayArmy_M113_M2_Shield {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Crew_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Rifleman_Desert" };
+
+	hiddenselectionstextures[] = {
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Hull.paa", // Hull
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Accessories.paa", // Accessories
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Wheels.paa", // Wheels
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Interior_Hatches.paa", // Hatch Interiors
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Gun_Mount.paa", // Gun Mount
+		"\x\bnb_e\bnorway\data\textures\M113_Desert_Shield.paa" // Turret Shield
+	};
+};
+
+
+//////////////////
+// Air Vehicles //
+//////////////////
+class B_NorwayArmy_C130J_Desert : B_NorwayArmy_C130J {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Pilot_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Desert" };
+};
+
+class B_NorwayArmy_C130J_Cargo_Desert : B_NorwayArmy_C130J_Cargo {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Pilot_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Desert" };
+};
+
+class B_NorwayArmy_Bell412_Desert : B_NorwayArmy_Bell412 {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Pilot_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Desert" };
+};
+
+class B_NorwayArmy_Bell412_Armed_Desert : B_NorwayArmy_Bell412_Armed {
+	scope = 2;
+	scopeCurator = 2;
+	faction = "B_NorwayArmy_Desert";
+	crew = "B_NorwayArmy_Pilot_Desert";
+	typicalCargo[] = { "B_NorwayArmy_Pilot_Desert" };
 };

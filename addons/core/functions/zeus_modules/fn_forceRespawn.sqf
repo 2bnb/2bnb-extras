@@ -21,10 +21,5 @@ Author:
 {
 	setPlayerRespawnTime 1;
 	sleep 3;
-
-	if (missionNamespace getVariable ["bnb_e_respawn_timer_override", false]) then {
-		setPlayerRespawnTime bnb_e_respawn_timer;
-	} else {
-		setPlayerRespawnTime (getMissionConfigValue ["respawnDelay", 0]);
-	}
+	setPlayerRespawnTime bnb_e_respawn_timer;
 } remoteExec ["bis_fnc_call", 0];

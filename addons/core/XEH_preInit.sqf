@@ -42,7 +42,6 @@ private _bnb_e_settings = [
 		[1, 600, 5, 0],
 		1,
 		{
-			missionNamespace setVariable ["bnb_e_respawn_timer_override", true, true];
 			setPlayerRespawnTime _this;
 		}
 	],

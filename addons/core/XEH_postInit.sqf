@@ -69,6 +69,20 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 	//-------------------------------------------------------------------------------
 };
 
+// Export the mission setting into the CBA Setting on mission start
+if (
+	isServer
+	&& (["bnb_e_respawn_timer", "mission"] call CBA_settings_fnc_get) isEqualTo (["bnb_e_respawn_timer", "default"] call CBA_settings_fnc_get)
+	&& typeName (getMissionConfigValue "respawnDelay") == "SCALAR"
+) then {
+	[
+		"bnb_e_respawn_timer",
+		getMissionConfigValue ["respawnDelay", 0],
+		1,
+		"mission"
+	] call CBA_settings_fnc_set; // This is an internal CBA function and may change or cease to work without notice!
+};
+
 player addEventHandler ["Killed", {
 	params ["_player"];
 

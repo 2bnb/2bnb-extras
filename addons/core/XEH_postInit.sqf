@@ -86,7 +86,15 @@ if (
 player addEventHandler ["Killed", {
 	params ["_player"];
 
-	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", call bnb_e_core_fnc_getCurators];
+	private _curators = call bnb_e_core_fnc_getCurators;
+
+	if (_player in _curators) exitWith { // If zeus, instantly respawn
+		setPlayerRespawnTime 1;
+		sleep 2;
+		setPlayerRespawnTime bnb_e_respawn_timer;
+	};
+
+	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
 	_player setVariable ["bnb_e_diedAt", serverTime, true];
 	[format["%1 died at: %2", name _player, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];

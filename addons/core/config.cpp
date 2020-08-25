@@ -41,6 +41,8 @@ class CfgFunctions {
 			class getCurators {};
 			class getDeadPlayers {};
 			class listDeadPlayers {};
+			class openTimerUI {};
+			class setRespawnTimer {};
 		};
 
 		class zeus_modules {

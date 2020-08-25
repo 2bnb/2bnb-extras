@@ -75,12 +75,7 @@ if (
 	&& (["bnb_e_respawn_timer", "mission"] call CBA_settings_fnc_get) isEqualTo (["bnb_e_respawn_timer", "default"] call CBA_settings_fnc_get)
 	&& typeName (getMissionConfigValue "respawnDelay") == "SCALAR"
 ) then {
-	[
-		"bnb_e_respawn_timer",
-		getMissionConfigValue ["respawnDelay", 0],
-		1,
-		"mission"
-	] call CBA_settings_fnc_set; // This is an internal CBA function and may change or cease to work without notice!
+	[getMissionConfigValue "respawnDelay"] call bnb_e_core_fnc_setRespawnTimer;
 };
 
 player addEventHandler ["Killed", {

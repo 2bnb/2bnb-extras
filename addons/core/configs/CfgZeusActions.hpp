@@ -46,5 +46,11 @@ class ACE_ZeusActions {
 				condition = "count ((call bnb_e_core_fnc_getDeadPlayers) select 3) > 0";
 			};
 		};
+
+		class Set_Respawn_Timer {
+			displayName = "Set Respawn Timer";
+			icon = "\z\ace\addons\explosives\data\UI\Timer.paa";
+			statement = "call bnb_e_core_fnc_openTimerUI";
+		};
 	};
 };

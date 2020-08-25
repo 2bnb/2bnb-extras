@@ -38,6 +38,7 @@ class CfgFunctions {
 			class addFullHeal {};
 			class addSpectator {};
 			class connectToServer {};
+			class getCurators {};
 			class getDeadPlayers {};
 			class listDeadPlayers {};
 		};

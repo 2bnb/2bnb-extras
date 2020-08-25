@@ -72,16 +72,7 @@ if (_climate isEqualTo "woodland" || _climate isEqualTo "all") then {
 player addEventHandler ["Killed", {
 	params ["_player"];
 
-	private _curator = objNull;
-	private _curators = [];
-	{
-		_curator = getAssignedCuratorUnit _x;
-		if !(_curator isEqualTo objNull) then {
-			_curators pushBack _curator;
-		};
-	} foreach allCurators;
-
-	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", _curators];
+	[format["%1 just died!", name _player]] remoteExec ["Ares_fnc_ShowZeusMessage", call bnb_e_core_fnc_getCurators];
 	_player setVariable ["bnb_e_diedAt", serverTime, true];
 	[format["%1 died at: %2", name _player, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
@@ -89,16 +80,7 @@ player addEventHandler ["Killed", {
 player addEventHandler ["Respawn", {
 	params ["_player", "_corpse"];
 
-	private _curator = objNull;
-	private _curators = [];
-	{
-		_curator = getAssignedCuratorUnit _x;
-		if !(_curator isEqualTo objNull) then {
-			_curators pushBack _curator;
-		};
-	} foreach allCurators;
-
-	[format["%1 has just respawned!", name _player]] remoteExec ["Achilles_fnc_showZeusErrorMessage", _curators];
+	[format["%1 has just respawned!", name _player]] remoteExec ["Achilles_fnc_showZeusErrorMessage", call bnb_e_core_fnc_getCurators];
 	[format["%1 respawned at: %2. Died at: %3", name _player, serverTime, _player getVariable "bnb_e_diedAt"], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
 }];
 

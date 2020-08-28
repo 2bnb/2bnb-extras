@@ -457,7 +457,7 @@ class CfgGroups {
 						position[] = {0,0,0};
 						rank = "PRIVATE";
 						side = 1;
-						vehicle = "B_NorwayArmy_FMTV_Transport_Woodland";
+						vehicle = "B_NorwayArmy_Scania_Covered_Woodland";
 					};
 					class Unit1 {
 						position[] = {5,-5,0};

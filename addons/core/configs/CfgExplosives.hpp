@@ -3,6 +3,7 @@ Config: ACE Explosives
 
 Description:
 	Registers RHS explosives to ACE Explosives framework.
+	Removes the "Activate mine" scroll menu option.
 
 Author:
 	Arend
@@ -38,4 +39,12 @@ class CfgVehicles {
 	class ACE_Explosives_Place;
 	class rhsusf_explosive_m112 : ACE_Explosives_Place {};
 	class rhsusf_explosive_m112x4 : ACE_Explosives_Place {};
+};
+
+// Remove "Activate mine" action from diffused explosives/mines
+class CfgActions {
+	class None;
+	class UseContainerMagazine : None {
+		show = 0;
+	};
 };

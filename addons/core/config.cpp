@@ -40,6 +40,7 @@ class CfgFunctions {
 			class connectToServer {};
 			class getCurators {};
 			class getDeadPlayers {};
+			class isCurator {};
 			class listDeadPlayers {};
 			class openTimerUI {};
 			class setRespawnTimer {};
@@ -89,4 +90,5 @@ class Extended_PostInit_EventHandlers {
 #include "configs\CfgMedicalEquipment.hpp";
 #include "configs\CfgSatcom.hpp";
 #include "configs\CfgSupplyCrates.hpp";
+#include "configs\CfgUnitTrainerTools.hpp";
 #include "configs\CfgZeusActions.hpp";

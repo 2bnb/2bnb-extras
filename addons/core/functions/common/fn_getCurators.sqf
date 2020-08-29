@@ -11,7 +11,7 @@ Returns:
 	Array of players with curator powers <ARRAY>
 
 Examples:
-	[] call bnb_e_core_fnc_getCurators;
+	call bnb_e_core_fnc_getCurators;
 
 Author:
 	Arend

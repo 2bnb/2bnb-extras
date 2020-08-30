@@ -28,6 +28,60 @@ class CfgGroups {
 					};
 				};
 
+				class b_norwayarmy_infantry_sniper_team_woodland {
+					name = "Sniper Team";
+					side = 1;
+					faction = "B_NorwayArmy_Woodland";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Sniper_Woodland";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Spotter_Woodland";
+					};
+				};
+
+				class b_norwayarmy_infantry_recon_team_woodland {
+					name = "Recon Team";
+					side = 1;
+					faction = "B_NorwayArmy_Woodland";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_IC_Woodland";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Woodland";
+					};
+					class Unit2 {
+						position[] = {-5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Woodland";
+					};
+					class Unit3 {
+						position[] = {10,-10,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Woodland";
+					};
+				};
+
 				class b_norwayarmy_infantry_section_base_woodland {
 					name = "Section (Base)";
 					side = 1;
@@ -798,6 +852,60 @@ class CfgGroups {
 					};
 				};
 
+				class b_norwayarmy_infantry_sniper_team_multicam {
+					name = "Sniper Team";
+					side = 1;
+					faction = "B_NorwayArmy_Multicam";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Sniper_Multicam";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Spotter_Multicam";
+					};
+				};
+
+				class b_norwayarmy_infantry_recon_team_multicam {
+					name = "Recon Team";
+					side = 1;
+					faction = "B_NorwayArmy_Multicam";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_IC_Multicam";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Multicam";
+					};
+					class Unit2 {
+						position[] = {-5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Multicam";
+					};
+					class Unit3 {
+						position[] = {10,-10,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Multicam";
+					};
+				};
+
 				class b_norwayarmy_infantry_section_base_multicam {
 					name = "Section (Base)";
 					side = 1;
@@ -1241,6 +1349,60 @@ class CfgGroups {
 					};
 				};
 
+				class b_norwayarmy_infantry_sniper_team_desert {
+					name = "Sniper Team";
+					side = 1;
+					faction = "B_NorwayArmy_Desert";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Sniper_Desert";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Spotter_Desert";
+					};
+				};
+
+				class b_norwayarmy_infantry_recon_team_desert {
+					name = "Recon Team";
+					side = 1;
+					faction = "B_NorwayArmy_Desert";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_IC_Desert";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Desert";
+					};
+					class Unit2 {
+						position[] = {-5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Desert";
+					};
+					class Unit3 {
+						position[] = {10,-10,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Desert";
+					};
+				};
+
 				class b_norwayarmy_infantry_section_base_desert {
 					name = "Section (Base)";
 					side = 1;
@@ -1681,6 +1843,60 @@ class CfgGroups {
 						rank = "PRIVATE";
 						side = 1;
 						vehicle = "B_NorwayArmy_Rifleman_Arctic";
+					};
+				};
+
+				class b_norwayarmy_infantry_sniper_team_arctic {
+					name = "Sniper Team";
+					side = 1;
+					faction = "B_NorwayArmy_Arctic";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Sniper_Arctic";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Spotter_Arctic";
+					};
+				};
+
+				class b_norwayarmy_infantry_recon_team_arctic {
+					name = "Recon Team";
+					side = 1;
+					faction = "B_NorwayArmy_Arctic";
+					icon = "\A3\ui_f\data\map\markers\nato\b_recon.paa";
+					rarityGroup = 0.5;
+
+					class Unit0 {
+						position[] = {0,0,0};
+						rank = "CORPORAL";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_IC_Arctic";
+					};
+					class Unit1 {
+						position[] = {5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Arctic";
+					};
+					class Unit2 {
+						position[] = {-5,-5,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Arctic";
+					};
+					class Unit3 {
+						position[] = {10,-10,0};
+						rank = "PRIVATE";
+						side = 1;
+						vehicle = "B_NorwayArmy_Recon_Rifleman_Arctic";
 					};
 				};
 

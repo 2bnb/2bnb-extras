@@ -30,6 +30,11 @@ class CfgPatches {
 			"B_NorwayArmy_C130J_Arctic",
 			"B_NorwayArmy_Bell412_Arctic",
 			"B_NorwayArmy_Bell412_Armed_Arctic",
+			"B_NorwayArmy_Recon_IC_Arctic",
+			"B_NorwayArmy_Recon_Rifleman_Arctic",
+			"B_NorwayArmy_Sniper_Arctic",
+			"B_NorwayArmy_Spotter_Arctic",
+			"B_NorwayArmy_Zeus_Arctic",
 
 			// Desert
 			"B_NorwayArmy_Man_Desert",
@@ -59,6 +64,11 @@ class CfgPatches {
 			"B_NorwayArmy_C130J_Desert",
 			"B_NorwayArmy_Bell412_Desert",
 			"B_NorwayArmy_Bell412_Armed_Desert",
+			"B_NorwayArmy_Recon_IC_Desert",
+			"B_NorwayArmy_Recon_Rifleman_Desert",
+			"B_NorwayArmy_Sniper_Desert",
+			"B_NorwayArmy_Spotter_Desert",
+			"B_NorwayArmy_Zeus_Desert",
 
 			// Multicam
 			"B_NorwayArmy_Man_Multicam",
@@ -73,6 +83,11 @@ class CfgPatches {
 			"B_NorwayArmy_Rifleman_Multicam",
 			"B_NorwayArmy_Crew_Multicam",
 			"B_NorwayArmy_Pilot_Multicam",
+			"B_NorwayArmy_Recon_IC_Multicam",
+			"B_NorwayArmy_Recon_Rifleman_Multicam",
+			"B_NorwayArmy_Sniper_Multicam",
+			"B_NorwayArmy_Spotter_Multicam",
+			"B_NorwayArmy_Zeus_Multicam",
 
 			// Woodland
 			"B_NorwayArmy_Rifleman_Woodland",
@@ -87,6 +102,11 @@ class CfgPatches {
 			"B_NorwayArmy_Man_Woodland",
 			"B_NorwayArmy_Crew_Woodland",
 			"B_NorwayArmy_Pilot_Woodland",
+			"B_NorwayArmy_Recon_IC_Woodland",
+			"B_NorwayArmy_Recon_Rifleman_Woodland",
+			"B_NorwayArmy_Sniper_Woodland",
+			"B_NorwayArmy_Spotter_Woodland",
+			"B_NorwayArmy_Zeus_Woodland",
 
 			"B_NorwayArmy_Command_Humvee_Woodland",
 			"B_NorwayArmy_Armed_Humvee_M2_Woodland",

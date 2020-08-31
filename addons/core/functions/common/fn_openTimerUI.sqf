@@ -6,13 +6,14 @@ Description:
 	Original: https://github.com/acemod/ACE3/blob/711e9073a8edbac5c7643fe7df897ab20724010d/addons/explosives/functions/fnc_openTimerUI.sqf
 
 Parameters:
-	None
+	0: _default - Position the slider should be at when the UI is opened, if
+				  not default. <NUMBER>
 
 Returns:
 	True <BOOL>
 
 Examples:
-	[] call bnb_e_core_fnc_openTimerUI;
+	[250] call bnb_e_core_fnc_openTimerUI;
 
 Author:
 	mharis001
@@ -30,10 +31,25 @@ IDC_TIMER_DIGIT_4 8504
 
 TIMER_DIGIT_IDCs [IDC_TIMER_DIGIT_1, IDC_TIMER_DIGIT_2, IDC_TIMER_DIGIT_3, IDC_TIMER_DIGIT_4]
  */
+private _defaultConfirmAction = {
+	params ["_button"];
+
+	private _slider = ctrlParent _button displayCtrl 8505;
+	private _time = floor sliderPosition _slider;
+
+	[_time] call bnb_e_core_fnc_setRespawnTimer;
+	closeDialog 0;
+};
+
+params [
+	["_default", 30, [0]],
+	["_confirmAction", _defaultConfirmAction, [{}]],
+	["_min", 0, [0]],
+	["_max", 600, [0]]
+];
 
 private _min = 0;
 private _max = 600;
-private _default = 30;
 
 createDialog "ace_explosives_timerUI";
 private _display = uiNamespace getVariable ["ace_explosives_timerDisplay", displayNull];
@@ -45,15 +61,7 @@ private _display = uiNamespace getVariable ["ace_explosives_timerDisplay", displ
 
 
 // Add confirm button action
-(_display displayCtrl 8506) ctrlAddEventHandler ["ButtonClick", {
-	params ["_button"];
-
-	private _slider = ctrlParent _button displayCtrl 8505;
-	private _time = floor sliderPosition _slider;
-
-	[_time] call bnb_e_core_fnc_setRespawnTimer;
-	closeDialog 0;
-}];
+(_display displayCtrl 8506) ctrlAddEventHandler ["ButtonClick", _confirmAction];
 
 // Add EH to allow for changing values by scrolling
 _display displayAddEventHandler ["MouseZChanged", {

@@ -50,7 +50,7 @@ class ACE_ZeusActions {
 		class Set_Respawn_Timer {
 			displayName = "Set Respawn Timer";
 			icon = "\z\ace\addons\explosives\data\UI\Timer.paa";
-			statement = "call bnb_e_core_fnc_openTimerUI";
+			statement = "[bnb_e_respawn_timer] call bnb_e_core_fnc_openTimerUI";
 		};
 	};
 };

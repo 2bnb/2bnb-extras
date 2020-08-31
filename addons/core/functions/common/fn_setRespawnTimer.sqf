@@ -28,5 +28,5 @@ private _response = [
 if (_response) then {
 	[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime]] call Ares_fnc_ShowZeusMessage;
 } else {
-	[format["The time you gave is invalid!"]] call Ares_fnc_ShowZeusMessage;
+	[format["Respawn timer remains as %1", [bnb_e_respawn_timer, "M:SS"] call CBA_fnc_formatElapsedTime]] call Ares_fnc_ShowZeusMessage;
 };

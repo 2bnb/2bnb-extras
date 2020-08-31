@@ -42,7 +42,7 @@ private _bnb_e_settings = [
 		[1, 600, 5, 0],
 		1,
 		{
-			setPlayerRespawnTime _this;
+			setPlayerRespawnTime bnb_e_respawn_timer;
 		}
 	],
 	[

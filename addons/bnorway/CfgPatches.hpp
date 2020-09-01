@@ -150,7 +150,8 @@ class CfgPatches {
 			"A3_Armor_F_EPB_APC_Tracked_03",
 			"A3_Armor_F_EPB_MBT_03",
 			"rhs_c_mig29",
-			"A3_Air_F_EPC_Plane_CAS_01"
+			"A3_Air_F_EPC_Plane_CAS_01",
+			"ace_repair"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {

@@ -1,4 +1,5 @@
 #include "CfgPatches.hpp"
+#include "CfgEventhandlers.hpp"
 #include "CfgWorlds.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"

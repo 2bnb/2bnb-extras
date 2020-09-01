@@ -17,6 +17,8 @@ class CfgVehicles {
 		transportMaxMagazines = 9002;
 		transportMaxItems = 9002;
 		maximumload = 9002;
+		ace_rearm_defaultSupply = 200;
+
 		class TransportMagazines {};
 		class TransportWeapons {};
 		class TransportBackpacks {};

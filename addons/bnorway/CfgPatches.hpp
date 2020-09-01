@@ -2,6 +2,9 @@ class CfgPatches {
 	class B_NorwayArmy {
 		name = "2BNB Extras - Norway Units";
 		units[] = {
+			"B_NorwayArmy_Toolkit_Backpack",
+			"B_NorwayArmy_Survival_Backpack",
+
 			// Arctic
 			"B_NorwayArmy_Man_Arctic",
 			"B_NorwayArmy_Medic_Arctic",

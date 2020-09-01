@@ -59,11 +59,7 @@ class _xx_ACE_EarPlugs { \
 	count = 5; \
 };
 
-#define VEHICLE_BACKPACKS \
-class _xx_B_NorwayArmy_Toolkit_Backpack { \
-	name = "B_NorwayArmy_Toolkit_Backpack"; \
-	count = 1; \
-};
+#define VEHICLE_BACKPACKS
 
 ////////////////////////////////
 // Armoured Vehicle inventory //
@@ -84,7 +80,26 @@ class _xx_rhs_weap_fim92 { \
 
 #define ARMOURED_VEHICLE_ITEMS VEHICLE_ITEMS
 
-#define ARMOURED_VEHICLE_BACKPACKS VEHICLE_BACKPACKS
+#define ARMOURED_VEHICLE_BACKPACKS \
+class _xx_B_NorwayArmy_Toolkit_Backpack { \
+	backpack = "B_NorwayArmy_Toolkit_Backpack"; \
+	count = 1; \
+};
+
+////////////////////////
+// Aviation inventory //
+////////////////////////
+#define AIR_VEHICLE_MAGAZINES VEHICLE_MAGAZINES
+
+#define AIR_VEHICLE_WEAPONS VEHICLE_WEAPONS
+
+#define AIR_VEHICLE_ITEMS VEHICLE_ITEMS
+
+#define AIR_VEHICLE_BACKPACKS \
+class _xx_B_NorwayArmy_Toolkit_Backpack { \
+	backpack = "B_NorwayArmy_Survival_Backpack"; \
+	count = 1; \
+};
 
 
 class CfgVehicles {
@@ -130,6 +145,8 @@ class CfgVehicles {
 		scopeCurator = 0;
 		scopeArsenal = 0;
 
+		class TransportMagazines {};
+
 		class TransportItems {
 			class _xx_Toolkit {
 				name = "ToolKit";
@@ -139,6 +156,68 @@ class CfgVehicles {
 			class _xx_ACE_Clacker {
 				name = "ACE_Clacker";
 				count = 1;
+			};
+		};
+	};
+
+	class B_mas_nor_Kitbag_d;
+	class B_NorwayArmy_Survival_Backpack : B_mas_nor_Kitbag_d {
+		scope = 1;
+		scopeCurator = 0;
+		scopeArsenal = 0;
+		displayName = "Survival Kit";
+
+		class TransportMagazines {};
+
+		class TransportItems {
+			class _xx_ACE_elasticBandage {
+				name = "ACE_elasticBandage";
+				count = 15;
+			};
+
+			class _xx_ACE_packingBandage {
+				name = "ACE_packingBandage";
+				count = 15;
+			};
+
+			class _xx_ACE_epinephrine {
+				name = "ACE_epinephrine";
+				count = 2;
+			};
+
+			class _xx_ACE_morphine {
+				name = "ACE_morphine";
+				count = 4;
+			};
+
+			class _xx_ACE_adenosine {
+				name = "ACE_adenosine";
+				count = 2;
+			};
+
+			class _xx_ACE_tourniquet {
+				name = "ACE_tourniquet";
+				count = 2;
+			};
+
+			class _xx_ACE_plasmaIV_250 {
+				name = "ACE_plasmaIV_250";
+				count = 4;
+			};
+
+			class _xx_ACE_surgicalKit {
+				name = "ACE_surgicalKit";
+				count = 1;
+			};
+
+			class _xx_ACE_IR_Strobe_Item {
+				name = "ACE_IR_Strobe_Item";
+				count = 1;
+			};
+
+			class _xx_Chemlight_green {
+				name = "Chemlight_green";
+				count = 4;
 			};
 		};
 	};
@@ -866,15 +945,15 @@ class CfgVehicles {
 		};
 
 		class TransportMagazines {
-			VEHICLE_MAGAZINES
+			AIR_VEHICLE_MAGAZINES
 		};
 
 		class TransportWeapons {
-			VEHICLE_WEAPONS
+			AIR_VEHICLE_WEAPONS
 		};
 
 		class TransportItems {
-			VEHICLE_ITEMS
+			AIR_VEHICLE_ITEMS
 		};
 
 		class TransportBackpacks {
@@ -916,15 +995,15 @@ class CfgVehicles {
 		};
 
 		class TransportMagazines {
-			VEHICLE_MAGAZINES
+			AIR_VEHICLE_MAGAZINES
 		};
 
 		class TransportWeapons {
-			VEHICLE_WEAPONS
+			AIR_VEHICLE_WEAPONS
 		};
 
 		class TransportItems {
-			VEHICLE_ITEMS
+			AIR_VEHICLE_ITEMS
 		};
 
 		class TransportBackpacks {
@@ -949,7 +1028,7 @@ class CfgVehicles {
 
 		hiddenselectionstextures[] = {
 			"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.paa", // Fuselage
-			"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Wings
+			"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Interior
 		};
 		hiddenselectionsmaterials[] = {"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.rvmat"};
 
@@ -959,7 +1038,7 @@ class CfgVehicles {
 				author = "2nd Battalion, Nord Brigade";
 				textures[] = {
 					"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.paa", // Fuselage
-					"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Wings
+					"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Interior
 				};
 				factions[] = {
 					"B_NorwayArmy_Woodland",
@@ -970,15 +1049,15 @@ class CfgVehicles {
 		};
 
 		class TransportMagazines {
-			VEHICLE_MAGAZINES
+			AIR_VEHICLE_MAGAZINES
 		};
 
 		class TransportWeapons {
-			VEHICLE_WEAPONS
+			AIR_VEHICLE_WEAPONS
 		};
 
 		class TransportItems {
-			VEHICLE_ITEMS
+			AIR_VEHICLE_ITEMS
 		};
 	};
 
@@ -991,7 +1070,7 @@ class CfgVehicles {
 
 		hiddenselectionstextures[] = {
 			"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.paa", // Fuselage
-			"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Wings
+			"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Interior
 		};
 		hiddenselectionsmaterials[] = {"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.rvmat"};
 
@@ -1001,7 +1080,7 @@ class CfgVehicles {
 				author = "2nd Battalion, Nord Brigade";
 				textures[] = {
 					"\x\bnb_e\bnorway\data\textures\Bell412_Fuselage.paa", // Fuselage
-					"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Wings
+					"\x\bnb_e\bnorway\data\textures\Bell412_Interior.paa" // Interior
 				};
 				factions[] = {
 					"B_NorwayArmy_Woodland",
@@ -1012,15 +1091,15 @@ class CfgVehicles {
 		};
 
 		class TransportMagazines {
-			VEHICLE_MAGAZINES
+			AIR_VEHICLE_MAGAZINES
 		};
 
 		class TransportWeapons {
-			VEHICLE_WEAPONS
+			AIR_VEHICLE_WEAPONS
 		};
 
 		class TransportItems {
-			VEHICLE_ITEMS
+			AIR_VEHICLE_ITEMS
 		};
 	};
 

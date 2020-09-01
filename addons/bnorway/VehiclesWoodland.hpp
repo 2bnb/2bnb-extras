@@ -961,19 +961,19 @@ class B_NorwayArmy_Huey_Gunship_Woodland : rhs_uh1h_hidf_gunship_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
+		AIR_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
+		AIR_VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		VEHICLE_ITEMS
+		AIR_VEHICLE_ITEMS
 	};
 
 	class TransportBackpacks {
-		VEHICLE_BACKPACKS
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1004,19 +1004,19 @@ class B_NorwayArmy_Huey_Transport_Woodland : rhs_uh1h_hidf_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
+		AIR_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
+		AIR_VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		VEHICLE_ITEMS
+		AIR_VEHICLE_ITEMS
 	};
 
 	class TransportBackpacks {
-		VEHICLE_BACKPACKS
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1066,19 +1066,19 @@ class B_NorwayArmy_Blackhawk_Woodland : RHS_UH60M_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
+		AIR_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
+		AIR_VEHICLE_WEAPONS
 	};
 
 	class TransportItems {
-		VEHICLE_ITEMS
+		AIR_VEHICLE_ITEMS
 	};
 
 	class TransportBackpacks {
-		VEHICLE_BACKPACKS
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1109,11 +1109,19 @@ class B_NorwayArmy_Littlebird_CAS_Woodland : RHS_MELB_AH6M_OCimport_02 {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
+		AIR_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
+		AIR_VEHICLE_WEAPONS
+	};
+
+	class TransportItems {
+		AIR_VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1139,11 +1147,19 @@ class B_NorwayArmy_Littlebird_Transport_Woodland : RHS_MELB_MH6M {
 	};
 
 	class TransportMagazines {
-		VEHICLE_MAGAZINES
+		AIR_VEHICLE_MAGAZINES
 	};
 
 	class TransportWeapons {
-		VEHICLE_WEAPONS
+		AIR_VEHICLE_WEAPONS
+	};
+
+	class TransportItems {
+		AIR_VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)
@@ -1184,7 +1200,11 @@ class B_NorwayArmy_Bell412_Armed_Woodland : B_NorwayArmy_Bell412_Armed {
 
 class RHS_A10;
 class RHS_A10_OCimport_01 : RHS_A10 { scope = 0; class EventHandlers; };
-class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 { scope = 0; class EventHandlers; };
+class RHS_A10_OCimport_02 : RHS_A10_OCimport_01 {
+	scope = 0;
+	class EventHandlers;
+	VEHICLE_INVENTORY_RESET
+};
 class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1201,13 +1221,33 @@ class B_NorwayArmy_A10_Woodland : RHS_A10_OCimport_02 {
 		};
 	};
 
+	class TransportMagazines {
+		AIR_VEHICLE_MAGAZINES
+	};
+
+	class TransportWeapons {
+		AIR_VEHICLE_WEAPONS
+	};
+
+	class TransportItems {
+		AIR_VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		AIR_VEHICLE_BACKPACKS
+	};
+
 	// custom attributes (do not delete)
 	ALiVE_orbatCreator_owned = 1;
 };
 
 class I_Plane_Fighter_04_F;
 class I_Plane_Fighter_04_F_OCimport_01 : I_Plane_Fighter_04_F { scope = 0; class EventHandlers; };
-class I_Plane_Fighter_04_F_OCimport_02 : I_Plane_Fighter_04_F_OCimport_01 { scope = 0; class EventHandlers; };
+class I_Plane_Fighter_04_F_OCimport_02 : I_Plane_Fighter_04_F_OCimport_01 {
+	scope = 0;
+	class EventHandlers;
+	VEHICLE_INVENTORY_RESET
+};
 class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 	author = "Jebby";
 	scope = 2;
@@ -1228,6 +1268,22 @@ class B_NorwayArmy_JAS_39_Gripen_Woodland : I_Plane_Fighter_04_F_OCimport_02 {
 		class ALiVE_orbatCreator {
 			init = "if (local (_this select 0)) then {_onSpawn = {sleep 0.3; _unit = _this select 0;};_this spawn _onSpawn;(_this select 0) addMPEventHandler ['MPRespawn', _onSpawn];};";
 		};
+	};
+
+	class TransportMagazines {
+		AIR_VEHICLE_MAGAZINES
+	};
+
+	class TransportWeapons {
+		AIR_VEHICLE_WEAPONS
+	};
+
+	class TransportItems {
+		AIR_VEHICLE_ITEMS
+	};
+
+	class TransportBackpacks {
+		AIR_VEHICLE_BACKPACKS
 	};
 
 	// custom attributes (do not delete)

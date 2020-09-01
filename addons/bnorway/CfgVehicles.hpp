@@ -91,12 +91,16 @@ class _xx_B_NorwayArmy_Toolkit_Backpack { \
 ////////////////////////
 #define AIR_VEHICLE_MAGAZINES VEHICLE_MAGAZINES
 
-#define AIR_VEHICLE_WEAPONS VEHICLE_WEAPONS
+#define AIR_VEHICLE_WEAPONS VEHICLE_WEAPONS \
+class _xx_rhs_weap_m72a7 { \
+	weapon = "rhs_weap_m72a7"; \
+	count = 0; \
+};
 
 #define AIR_VEHICLE_ITEMS VEHICLE_ITEMS
 
 #define AIR_VEHICLE_BACKPACKS \
-class _xx_B_NorwayArmy_Toolkit_Backpack { \
+class _xx_B_NorwayArmy_Survival_Backpack { \
 	backpack = "B_NorwayArmy_Survival_Backpack"; \
 	count = 1; \
 };
@@ -797,6 +801,10 @@ class CfgVehicles {
 
 		class TransportItems {
 			VEHICLE_ITEMS
+			class _xx_Toolkit {
+				name = "Toolkit";
+				count = 1;
+			};
 		};
 
 		class TransportBackpacks {
@@ -952,6 +960,7 @@ class CfgVehicles {
 		};
 
 		class TransportBackpacks {
+			AIR_VEHICLE_BACKPACKS
 			class _xx_B_Parachute {
 				backpack = "B_Parachute";
 				count = 25;
@@ -1002,6 +1011,7 @@ class CfgVehicles {
 		};
 
 		class TransportBackpacks {
+			AIR_VEHICLE_BACKPACKS
 			class _xx_B_Parachute {
 				backpack = "B_Parachute";
 				count = 25;
@@ -1054,6 +1064,10 @@ class CfgVehicles {
 		class TransportItems {
 			AIR_VEHICLE_ITEMS
 		};
+
+		class TransportBackpacks {
+			AIR_VEHICLE_BACKPACKS
+		};
 	};
 
 	class RHS_UH1Y_d;
@@ -1095,6 +1109,10 @@ class CfgVehicles {
 
 		class TransportItems {
 			AIR_VEHICLE_ITEMS
+		};
+
+		class TransportBackpacks {
+			AIR_VEHICLE_BACKPACKS
 		};
 	};
 

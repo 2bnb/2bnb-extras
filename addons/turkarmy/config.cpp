@@ -4,11 +4,46 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {
-			// "TMT_Turkish_Army"
+			"TMT_Turkish_Army"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
 			"SeeOne"
+		};
+	};
+};
+
+
+class CfgVehicles {
+	class I_Soldier_SL_F;
+	class TMT_KKK_Soldier_SL : I_Soldier_SL_F {
+		magazines[] = {
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"HandGrenade",
+			"HandGrenade",
+			"Chemlight_red",
+			"Chemlight_green"
+		};
+		respawnmagazines[] = {
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"30Rnd_556x45_Stanag_red",
+			"HandGrenade",
+			"HandGrenade",
+			"Chemlight_red",
+			"Chemlight_green"
 		};
 	};
 };

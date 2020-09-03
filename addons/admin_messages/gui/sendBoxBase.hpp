@@ -47,6 +47,9 @@ class bnb_e_admin_messages_sendBoxBase: RscEdit {
     onLoad = "uiNamespace setVariable [""bnb_e_admin_messages_sendBoxCtrl"",(_this select 0)]";
     onUnLoad = "uiNamespace setVariable [""bnb_e_admin_messages_sendBoxCtrl"",nil]";
 
+    onSetFocus = "[_this select 0, true] call bnb_e_admin_messages_fnc_handleEnterKey";
+    onKillFocus = "[_this select 0, false] call bnb_e_admin_messages_fnc_handleEnterKey";
+
     x = BNB_E_ADMIN_MESSAGES_EDITBOX_X;
     y = BNB_E_ADMIN_MESSAGES_EDITBOX_Y;
     w = BNB_E_ADMIN_MESSAGES_EDITBOX_W;

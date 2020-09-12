@@ -106,6 +106,72 @@ class _xx_B_NorwayArmy_Survival_Backpack { \
 };
 
 
+///////////////
+// CV90 Ammo //
+///////////////
+class CfgAmmo {
+	class rhs_ammo_3uor6;
+	class B_NorwayArmy_30mm_MP_Tracer_Yellow : rhs_ammo_3uor6 {
+		indirectHit = 8;
+		indirectHitRange = 2;
+		displayName = "HEI-T";
+	};
+};
+
+class CfgMagazines {
+	class rhs_mag_3uor6_125;
+	class B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow : rhs_mag_3uor6_125 {
+		ammo = "B_NorwayArmy_30mm_MP_Tracer_Yellow";
+		displayName = "MP-T";
+		displayNameShort = "MP-T";
+		count = 80;
+	};
+
+	class 200Rnd_762x51_Belt;
+	class B_NorwayArmy_200rnd_762_fnmag_coax : 200Rnd_762x51_Belt {
+		displayName = "200rnd 762x51";
+		ammo = "B_762x51_Ball";
+		count = 200;
+	};
+};
+
+/////////////////
+// CV90 Cannon //
+/////////////////
+class CfgWeapons {
+	class player;
+	class MGun;
+
+	class autocannon_30mm;
+	class B_NorwayArmy_30mm_bushmastermk2 : autocannon_30mm {
+		class player : player {
+			reloadTime = 0.3;
+		};
+		muzzles[] = {"this"};
+		displayName = "Bushmaster II";
+		// magazineWell[] = {"RHS_AutoCannon_30mm_2A42_AP","RHS_AutoCannon_30mm_2A42_AP","B_NorwayArmy_AutoCannon_30mm_2A42_HE"};
+		magazines[] = {
+			"60Rnd_30mm_APFSDS_shells",
+			"60Rnd_30mm_APFSDS_shells_Tracer_Red",
+			"60Rnd_30mm_APFSDS_shells_Tracer_Green",
+			"60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+			"B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow"
+		};
+		magazineReloadTime = 4;
+	};
+
+	class LMG_coax;
+	class B_NorwayArmy_fnmag_coax : LMG_coax {
+		class manual : MGun {
+			reloadTime = 0.115;
+		};
+		displayName = "FN MAG Coaxial";
+		magazines[] = {"B_NorwayArmy_200rnd_762_fnmag_coax"};
+		//magazineReloadTime = 8 ;
+	};
+};
+
+
 class CfgVehicles {
 	////////////////
 	// Units Base //
@@ -318,13 +384,48 @@ class CfgVehicles {
 	///////////////
 	// CV90 Base //
 	///////////////
-	class I_APC_tracked_03_cannon_F;
+	class Tank;
+	class Tank_F: Tank {
+		class Turrets;
+	};
+	class APC_Tracked_03_base_F: Tank_F {
+		class Turrets: Turrets {
+			class MainTurret;
+		};
+	};
+	class I_APC_tracked_03_base_F: APC_Tracked_03_base_F {};
+	class I_APC_tracked_03_cannon_F: I_APC_tracked_03_base_F {};
+
 	class B_NorwayArmy_CV90 : I_APC_tracked_03_cannon_F {
 		author = "Christiansen [NTF]";
 		scope = 0;
 		side = 1;
 		vehicleClass = "rhs_vehclass_ifv";
 		editorSubcategory = "rhs_EdSubcat_ifv";
+
+		class Turrets : Turrets {
+			class MainTurret : MainTurret {
+				weapons[]={"B_NorwayArmy_30mm_bushmastermk2","B_NorwayArmy_fnmag_coax"};
+				magazines[]= {
+					"B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow",
+					"B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow",
+					"B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow",
+					"B_NorwayArmy_80Rnd_30mm_MP_shells_Tracer_Yellow",
+					"60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+					"60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+					"60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+					"60Rnd_30mm_APFSDS_shells_Tracer_Yellow",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax",
+					"B_NorwayArmy_200rnd_762_fnmag_coax"
+				};
+			};
+		};
 
 		class TextureSources {
 			class NorwayWoodland {

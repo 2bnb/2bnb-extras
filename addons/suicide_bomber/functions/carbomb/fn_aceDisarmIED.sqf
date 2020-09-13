@@ -16,7 +16,7 @@ Examples:
 	[_position, _objectUnderCursor] call bnb_e_suicide_bomber_fnc_aceDisarmIED;
 
 Author:
-  Ph¡l
+	Ph¡l
 	Arend
 ---------------------------------------------------------------------------- */
 _vehicle = _this select 0;

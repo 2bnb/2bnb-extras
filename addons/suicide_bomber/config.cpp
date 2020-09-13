@@ -19,6 +19,7 @@ class CfgFunctions {
 	class bnb_e_suicide_bomber {
 		class carbomb {
 			file = "\x\bnb_e\suicide_bomber\functions\carbomb";
+			class aceCanDisarmIED {};
 			class aceDisarmIED {};
 			class aceExamine {};
 		};
@@ -44,7 +45,7 @@ class CfgVehicles {
 					};
 					class fox_suicice_bomber_carbombDisarm {
 							displayName = "Disarm IED";
-							condition = "[_target] call fox_suicide_bomber_fnc_aceCanDisarmIED";
+							condition = "[_player, _target] call bnb_e_suicide_bomber_fnc_aceCanDisarmIED";
 							exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
 							statement = "[_target] call bnb_e_suicide_bomber_fnc_aceDisarmIED";
 					};

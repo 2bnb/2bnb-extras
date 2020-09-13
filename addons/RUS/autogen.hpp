@@ -644,7 +644,7 @@ class CfgVehicles {
 		scope = 0;
         scopeCurator = 0;
 		faction = "RUS";
-		vehicleClass = "RUS";
+		vehicleClass = "MenRUS";
 	};
     class I_RUS_Medic_01_OCimport_01 : I_RUS_Medic_01 { scope = 0; class EventHandlers; };
     class I_RUS_Medic_01_OCimport_02 : I_RUS_Medic_01_OCimport_01 { class EventHandlers; };
@@ -654,7 +654,7 @@ class CfgVehicles {
 		scope = 0;
         scopeCurator = 0;
 		faction = "RUS";
-		vehicleClass = "RUS";
+		vehicleClass = "MenRUS";
 	};
     class I_RUS_Squad_Leader_01_OCimport_01 : I_RUS_Squad_Leader_01 { scope = 0; class EventHandlers; };
     class I_RUS_Squad_Leader_01_OCimport_02 : I_RUS_Squad_Leader_01_OCimport_01 { class EventHandlers; };
@@ -678,7 +678,7 @@ class CfgVehicles {
 		scope = 0;
         scopeCurator = 0;
 		faction = "RUS";
-		vehicleClass = "RUS";
+		vehicleClass = "MenRUS";
 	};
     class I_medic_F_OCimport_01 : I_medic_F { scope = 0; class EventHandlers; };
     class I_medic_F_OCimport_02 : I_medic_F_OCimport_01 { class EventHandlers; };

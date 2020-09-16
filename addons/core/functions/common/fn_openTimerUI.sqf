@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_core_fnc_setRespawnTimer
+Function: bnb_e_core_fnc_openTimerUI
 
 Description:
 	Opens the Timer UI to set respawn timer.

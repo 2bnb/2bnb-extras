@@ -18,15 +18,15 @@ Author:
 ---------------------------------------------------------------------------- */
 params [["_time", 0, [0]]];
 
-private _response = [
-	"bnb_e_respawn_timer",
-	_time,
-	1,
-	"mission"
-] call CBA_settings_fnc_set; // This is an internal CBA function and may change or cease to work without notice!
+[
+	"cba_settings_setSettingMission",
+	[
+		"bnb_e_respawn_timer",
+		_time,
+		1
+	],
+	"bnb_e_respawn_timer_event"
+] call CBA_fnc_globalEventJIP;
 
-if (_response) then {
-	[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime]] call Ares_fnc_ShowZeusMessage;
-} else {
-	[format["Respawn timer remains as %1", [bnb_e_respawn_timer, "M:SS"] call CBA_fnc_formatElapsedTime]] call Ares_fnc_ShowZeusMessage;
-};
+[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime]] call Ares_fnc_ShowZeusMessage;
+[format["Respawn timer set to %1", [_time, "M:SS"] call CBA_fnc_formatElapsedTime], "core\functions\common\fn_setRespawnTimer.sqf"] call bnb_e_core_fnc_log;

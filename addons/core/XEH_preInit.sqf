@@ -46,6 +46,13 @@ private _bnb_e_settings = [
 		}
 	],
 	[
+		"bnb_e_map_volume",
+		"SLIDER",
+		["Map Volume", "Volume to set when in a vehicle and looking at the map (so that you don't have to listen to loud as fuck helicopter rotors)"],
+		["2BNB Gear", "Common"],
+		[0, 1, 0.20, 2]
+	],
+	[
 		"bnb_e_arsenal_whitelist_mission",
 		"EDITBOX",
 		["Mission", "Mission specific equipment whitelist"],

@@ -148,6 +148,44 @@ player addEventHandler ["Respawn", {
 	''
 ] call CBA_fnc_addKeybind;
 
+// Reduce the map volume
+addMissionEventHandler ["Map", {
+	params ["_mapIsOpened", "_mapIsForced"];
+
+
+	if (isNil "bnb_e_restoredVolume") then {
+		bnb_e_restoredVolume = missionNamespace getVariable ["acex_volume_initialGameVolume", soundVolume];
+	};
+
+	if (_mapIsOpened) then {
+		if (vehicle player == player) exitWith {};
+
+		0.1 fadeSound bnb_e_map_volume;
+		["Lowered volume in map", "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+
+	} else {
+
+		if (isNil "acex_volume_isLowered") then {
+
+			0.1 fadeSound bnb_e_restoredVolume;
+			[format["Restored volume from map to %1", bnb_e_restoredVolume], "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+
+		} else {
+
+			if (acex_volume_isLowered) then {
+				call acex_volume_fnc_lowerVolume;
+				["Going back to ACEX lowered volume", "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+			} else {
+
+				if (soundVolume != acex_volume_initialGameVolume) then {
+					call acex_volume_fnc_restoreVolume;
+					["Letting ACEX restore volume", "core\XEH_postInit.sqf"] call bnb_e_core_fnc_log;
+				};
+			};
+		};
+	};
+}];
+
 
 /**
  * Interact with civilians using gestures

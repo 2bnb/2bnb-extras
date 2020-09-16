@@ -14,5 +14,5 @@ if (_newState) then {
 	// _ctrlText ctrlSetPosition [_origX,_origY - _textHeight,_origW,_textHeight];
 	// _ctrlText ctrlCommit 0;
 } else {
-	"bnb_e_admin_messages_customChatLayer" cutRsc ["Default", "PLAIN"];
+	"bnb_e_admin_messages_customChatLayer" cutText ["", "PLAIN"];
 };

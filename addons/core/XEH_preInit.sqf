@@ -51,7 +51,7 @@ private _bnb_e_settings = [
 		["Mission", "Mission specific equipment whitelist"],
 		["2BNB Arsenal", "Arsenal Whitelists"],
 		"[]",
-		true,
+		1,
 		{
 			// One day this will re-init all arsenals that have this filter set
 		},
@@ -77,7 +77,7 @@ private _prettyName = "";
 			["All", "Woodland", "Multicam", "Desert", "Arctic"],
 			0
 		],
-		true,
+		1,
 		{},
 		true
 	] call CBA_Settings_fnc_init;

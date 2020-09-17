@@ -3,7 +3,6 @@ class CfgFunctions {
 		class functions {
 			file = "x\bnb_e\admin_messages\functions";
 			class displayMessage {};
-			class handleEnterKey {};
 			class initListbox {};
 			class isAdminOrZeus {};
 			class onRecipientChanged {};

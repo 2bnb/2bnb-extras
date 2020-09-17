@@ -145,7 +145,8 @@ player addEventHandler ["Respawn", {
 			hint "Magazine passed!";
 		};
 	},
-	''
+	'',
+	[DIK_R, [false, false, true]]
 ] call CBA_fnc_addKeybind;
 
 // Reduce the map volume

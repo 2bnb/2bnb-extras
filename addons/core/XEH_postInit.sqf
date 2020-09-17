@@ -146,7 +146,7 @@ player addEventHandler ["Respawn", {
 		};
 	},
 	'',
-	[DIK_R, [false, false, true]],
+	[0x13, [false, false, true]], // Alt+R
 	false,
 	0,
 	true

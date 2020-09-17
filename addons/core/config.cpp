@@ -37,6 +37,7 @@ class CfgFunctions {
 			file = "\x\bnb_e\core\functions\common";
 			class addFullHeal {};
 			class addSpectator {};
+			class changeSpeakVolume {};
 			class connectToServer {};
 			class getCurators {};
 			class getDeadPlayers {};

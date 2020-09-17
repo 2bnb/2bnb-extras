@@ -146,7 +146,33 @@ player addEventHandler ["Respawn", {
 		};
 	},
 	'',
-	[DIK_R, [false, false, true]]
+	[DIK_R, [false, false, true]],
+	false,
+	0,
+	true
+] call CBA_fnc_addKeybind;
+
+// TFAR Direct Speech Volume Change
+[
+	"2BNB",
+	"bnb_e_increaseSpeakVolume",
+	["Increase Direct Speech Volume", "Use this to increase direct speech volume until ""Yelling"""],
+	{
+	    [true] call bnb_e_core_fnc_changeSpeakVolume;
+	},
+	'',
+	[0xF8, [false, false, true]] // Alt + Mouse wheel Up
+] call CBA_fnc_addKeybind;
+
+[
+	"2BNB",
+	"bnb_e_decreaseSpeakVolume",
+	["Decrease Direct Speech Volume", "Use this to decrease direct speech volume until ""Whisper"""],
+	{
+	    [false] call bnb_e_core_fnc_changeSpeakVolume;
+	},
+	'',
+	[0xF9, [false, false, true]] // Alt + Mouse wheel Down
 ] call CBA_fnc_addKeybind;
 
 // Reduce the map volume

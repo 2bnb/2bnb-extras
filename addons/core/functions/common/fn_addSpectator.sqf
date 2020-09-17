@@ -2,7 +2,7 @@
 Function: bnb_e_core_fnc_addSpectator
 
 Description:
-	Adds a "Sepctate" interaction to the object in question.
+	Adds a "Spectate" interaction to the object in question.
 
 	WARNING: This function is NOT Global!
 

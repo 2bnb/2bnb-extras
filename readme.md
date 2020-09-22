@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://yt3.ggpht.com/jBVu-LcazbMJXvyll-GGEf7lIVuzkgXEmNWBIPmG4Y80T9_fQXy7Jos0buCVGZyAnkARwtCGBA=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+<img src="https://github.com/2bnb/2bnb-extras/blob/master/2BNB_Extras_Github.png"
      alt="2BNB Banner" /><br />
   <a href="https://github.com/2bnb/2bnb-extras/wiki">
     <img src="https://img.shields.io/badge/2BNB%20Extras-Wiki-orange.svg?style=for-the-badge&logo=github"

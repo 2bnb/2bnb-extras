@@ -4,10 +4,16 @@ class CfgPatches
 {
 	class LTF_CU_Config
 	{
+		name = "2BNB Extras - SURPAT Uniform";
 		units[] = {"_Mod"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"D. Ford",
+			"Arend"
+		};
 	};
 };
 class UniformSlotInfo

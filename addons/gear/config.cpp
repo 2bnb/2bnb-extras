@@ -3,6 +3,9 @@ class CfgPatches {
 		name = "2BNB Extras - Gear";
 		units[] = {};
 		weapons[] = {};
+		requiredAddons[] = {
+			"VSM_Helmets"
+		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
 			"D. Ford",

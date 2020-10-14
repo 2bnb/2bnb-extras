@@ -1,11 +1,11 @@
 class CfgPatches {
-	class bnb_e_suicide_bomber {
+	class bnb_ex_suicide_bomber {
 		name = "2BNB Extras - Suicide Bomber";
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {
 			"fox_suicide_bomber",
-			"bnb_e_core"
+			"bnb_es_core"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
@@ -16,9 +16,9 @@ class CfgPatches {
 };
 
 class CfgFunctions {
-	class bnb_e_suicide_bomber {
+	class bnb_ex_suicide_bomber {
 		class carbomb {
-			file = "\x\bnb_e\suicide_bomber\functions\carbomb";
+			file = "\x\bnb_ex\suicide_bomber\functions\carbomb";
 			class aceCanDisarmIED {};
 			class aceDisarmIED {};
 			class aceExamine {};
@@ -41,13 +41,13 @@ class CfgVehicles {
 							displayName = "Search for explosives";
 							condition = "alive _target";
 							exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
-							statement = "[_target] call bnb_e_suicide_bomber_fnc_aceExamine";
+							statement = "[_target] call bnb_ex_suicide_bomber_fnc_aceExamine";
 					};
 					class fox_suicice_bomber_carbombDisarm {
 							displayName = "Disarm IED";
-							condition = "[_player, _target] call bnb_e_suicide_bomber_fnc_aceCanDisarmIED";
+							condition = "[_player, _target] call bnb_ex_suicide_bomber_fnc_aceCanDisarmIED";
 							exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
-							statement = "[_target] call bnb_e_suicide_bomber_fnc_aceDisarmIED";
+							statement = "[_target] call bnb_ex_suicide_bomber_fnc_aceDisarmIED";
 					};
 				};
 			};

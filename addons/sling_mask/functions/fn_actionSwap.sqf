@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_sling_mask_fnc_actionSwap
+Function: bnb_ex_sling_mask_fnc_actionSwap
 
 Description:
 	Swaps the slung mask and the goggle item currently being worn,
@@ -13,7 +13,7 @@ Returns:
 	Nothing
 
 Examples:
-	[player] call bnb_e_sling_mask_fnc_actionSwap
+	[player] call bnb_ex_sling_mask_fnc_actionSwap
 
 Author:
 	Arend
@@ -23,14 +23,14 @@ params ["_unit"];
 private _goggles = goggles _unit;
 removeGoggles _unit;
 
-[_unit] call bnb_e_sling_mask_fnc_actionUnSling;
+[_unit] call bnb_ex_sling_mask_fnc_actionUnSling;
 
 // Restore the goggles somewhere, either by slinging, in inventory or on ground
 // Check if _goggles is a slingable item
-if (_goggles in ([] call bnb_e_sling_mask_fnc_whitelist)) then {
+if (_goggles in ([] call bnb_ex_sling_mask_fnc_whitelist)) then {
 
-	[_unit, _goggles] call bnb_e_sling_mask_fnc_addSlungMask;
-	_unit setVariable ["bnb_e_sling_mask_slung", 1];
+	[_unit, _goggles] call bnb_ex_sling_mask_fnc_addSlungMask;
+	_unit setVariable ["bnb_ex_sling_mask_slung", 1];
 
 } else {
 	[_unit, _goggles, true] call CBA_fnc_addItem;

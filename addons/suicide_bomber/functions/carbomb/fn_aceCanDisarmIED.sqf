@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_suicide_bomber_fnc_aceCanDisarmIED
+Function: bnb_ex_suicide_bomber_fnc_aceCanDisarmIED
 
 Description:
 	Checks whether the player is able to disarm the IED.
@@ -12,7 +12,7 @@ Returns:
 	Whether the unit can disarm <BOOLEAN>
 
 Examples:
-	[_unit, _vehicle] call bnb_e_suicide_bomber_fnc_aceCanDisarmIED;
+	[_unit, _vehicle] call bnb_ex_suicide_bomber_fnc_aceCanDisarmIED;
 
 Author:
 	Ph¡l

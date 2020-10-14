@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_suicide_bomber_fnc_aceDisarmIED
+Function: bnb_ex_suicide_bomber_fnc_aceDisarmIED
 
 Description:
 	Adds music radio from KLPQ to the backpack or to the vehicle, depending on
@@ -13,7 +13,7 @@ Returns:
 	Nothing
 
 Examples:
-	[_position, _objectUnderCursor] call bnb_e_suicide_bomber_fnc_aceDisarmIED;
+	[_position, _objectUnderCursor] call bnb_ex_suicide_bomber_fnc_aceDisarmIED;
 
 Author:
 	Ph¡l

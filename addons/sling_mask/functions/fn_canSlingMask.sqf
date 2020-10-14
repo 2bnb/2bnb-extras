@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_sling_mask_fnc_canSlingMask
+Function: bnb_ex_sling_mask_fnc_canSlingMask
 
 Description:
 	Returns wether a unit can sling it's mask.
@@ -11,7 +11,7 @@ Returns:
 	Can Sling <BOOLEAN>
 
 Examples:
-	[player] call bnb_e_sling_mask_fnc_canSlingMask;
+	[player] call bnb_ex_sling_mask_fnc_canSlingMask;
 
 Author:
 	DerZade, Arend
@@ -31,6 +31,6 @@ if (missionNamespace getVariable ["GRAD_slingHelmet_allowAll", false]) exitWith 
 if !(isNull (configFile >> "CfgWeapons" >> (goggles _unit) >> "grad_slingHelmet_allow")) exitWith {true;};
 
 //check wether unit's helemt is in list of allowed helmets
-if !((goggles _unit) in ([] call bnb_e_sling_mask_fnc_whitelist)) exitWith {false;};
+if !((goggles _unit) in ([] call bnb_ex_sling_mask_fnc_whitelist)) exitWith {false;};
 
 true;

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_sling_mask_fnc_addSlungMask
+Function: bnb_ex_sling_mask_fnc_addSlungMask
 
 Description:
 	Adds a slung mask to the given unit.
@@ -12,7 +12,7 @@ Returns:
 	Nothing
 
 Examples:
-	[player, "H_HelmetB_desert"] call bnb_e_sling_mask_fnc_addSlungMask;
+	[player, "H_HelmetB_desert"] call bnb_ex_sling_mask_fnc_addSlungMask;
 
 Author:
 	DerZade, Arend
@@ -30,7 +30,7 @@ _weaponHolder addItemCargoGlobal [_maskClass, 1];
 
 //add EHs to unit
 private _getInID = _unit addEventHandler ["GetInMan",GRAD_slingHelmet_fnc_EHGetIn];
-private _getOutID = _unit addEventHandler ["GetOutMan",bnb_e_sling_mask_fnc_EHGetOut];
+private _getOutID = _unit addEventHandler ["GetOutMan",bnb_ex_sling_mask_fnc_EHGetOut];
 private _killedID = _unit addEventHandler ["Killed",GRAD_slingHelmet_fnc_EHKilled];
 
 _unit setVariable ["GRAD_slingHelmet_variable",[_maskClass, _weaponHolder, [_getInID,_getOutID,_killedID]], true];
@@ -46,5 +46,5 @@ if !(missionNamespace getVariable ["GRAD_slingHelmet_HDCEHadded",false]) then {
 if !(vehicle _unit isEqualTo _unit) then {
 	[_unit, "", vehicle _unit] call GRAD_slingHelmet_fnc_EHGetIn;
 } else {
-	[_unit, "", objNull] call bnb_e_sling_mask_fnc_EHGetOut;
+	[_unit, "", objNull] call bnb_ex_sling_mask_fnc_EHGetOut;
 };

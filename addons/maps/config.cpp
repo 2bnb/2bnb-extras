@@ -1,5 +1,5 @@
 class CfgPatches {
-	class bnb_e_maps {
+	class bnb_ex_maps {
 		name = "2BNB Extras - Maps";
 		units[] = {};
 		weapons[] = {};

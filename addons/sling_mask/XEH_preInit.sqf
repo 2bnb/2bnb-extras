@@ -1,6 +1,6 @@
-private _bnb_e_settings = [
+private _bnb_ex_settings = [
 	[
-		"bnb_e_sling_mask_additionalList",
+		"bnb_ex_sling_mask_additionalList",
 		"EDITBOX",
 		["Additional Whitelist", "Classnames with double quotes, separated by commas"],
 		["2BNB Gear", "Sling Masks"],
@@ -8,9 +8,9 @@ private _bnb_e_settings = [
 		true,
 		{
 			if !(isServer) exitWith {};
-			(call compile format ["[%1]", _this]) call bnb_e_sling_mask_fnc_addMaskToWhitelist;
+			(call compile format ["[%1]", _this]) call bnb_ex_sling_mask_fnc_addMaskToWhitelist;
 		}
 	]
 ];
 
-{_x call CBA_Settings_fnc_init;} forEach _bnb_e_settings;
+{_x call CBA_Settings_fnc_init;} forEach _bnb_ex_settings;

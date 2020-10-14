@@ -59,7 +59,7 @@ class Stage4 {
 };
 
 class Stage5 {
-	texture = "\x\bnb_e\gear\data\2BNB_Berret_nohq.paa";
+	texture = "\x\bnb_ex\gear\data\2BNB_Berret_nohq.paa";
 	uvSource = "tex";
 
 	class uvTransform {

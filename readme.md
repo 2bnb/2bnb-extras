@@ -44,7 +44,6 @@
 - [RHS GREF](https://steamcommunity.com/sharedfiles/filedetails/?id=843593391)
 - [Project OPFOR](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
 - [GRAD Sling Helmet](https://steamcommunity.com/sharedfiles/filedetails/?id=1354112941)
-- [TMT - Turkish Forces](https://steamcommunity.com/sharedfiles/filedetails/?id=740727824)
 - [[FOX] Suicide Bomber](https://steamcommunity.com/sharedfiles/filedetails/?id=1373303221)
 - [CUP Terrains - Maps](https://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 - [MLO - All-in-one Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=823636749)
@@ -71,16 +70,16 @@ If on Windows, use the `tools\make.ps1` file to build the mod for you. It will b
 
 The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
-Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `bnb_e_v1.0.3.bikey` rather than `bnb_e_v1.0.3-g0558b0c.bikey`.
+Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `bnb_ex_v1.0.3.bikey` rather than `bnb_ex_v1.0.3-g0558b0c.bikey`.
 
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:
-- for code: bnb_e
+- for code: bnb_ex
 - for urls: 2bnb-extras
 - for presentation: 2BNB Extras
 
 ### Prefixes
-The prefix `bnb_e_` should be used where appropriate to avoid any potential name clashes with other mods.
+The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
 For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/DRaWNyf).

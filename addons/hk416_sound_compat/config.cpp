@@ -8,10 +8,9 @@ class CfgPatches {
 			"a3_weapons_f",
 			"a3_sounds_f_exp",
 			"a3_weapons_f_exp",
-			"rhs_c_weaponsounds",
+			"niarms_416",
 			"rhsusf_sounds",
-			"rhsusf_c_weaponsounds",
-			"rhs_sounds"
+			"rhsusf_c_weaponsounds"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
@@ -88,6 +87,24 @@ class CfgDistanceFilters {
 		range = 2600;
 		powerFactor = 32;
 	};
+	class bnb_ex_rifleShotDistanceFilter
+	{
+		type="lowPassFilter";
+		minCutoffFrequency=250;
+		qFactor=1.3;
+		innerRange=150;
+		range=1800;
+		powerFactor=32;
+	};
+	class bnb_ex_rifleTailDistanceFilter
+	{
+		type="lowPassFilter";
+		minCutoffFrequency=150;
+		qFactor=1;
+		innerRange=350;
+		range=1800;
+		powerFactor=32;
+	};
 };
 
 class CfgSoundCurves {
@@ -103,6 +120,33 @@ class CfgSoundCurves {
 			{0.69999999,0.0074999998},
 			{0.80000001,0.0024999999},
 			{0.89999998,0.001},
+			{1,0}
+		};
+	};
+	class bnb_ex_tailSoundCurve
+	{
+		points[]=
+		{
+			{0,1},
+			{0.2,0.85000002},
+			{0.5,0.40000001},
+			{0.80000001,0.1},
+			{1,0}
+		};
+	};
+	class bnb_ex_rifleSoundCurve
+	{
+		points[]=
+		{
+			{0,1},
+			{0.001,0.92000002},
+			{0.0049999999,0.88999999},
+			{0.1,0.84750003},
+			{0.2,0.8096},
+			{0.40000001,0.75330001},
+			{0.60000002,0.63150001},
+			{0.80000001,0.49680001},
+			{0.89999998,0.39680001},
 			{1,0}
 		};
 	};

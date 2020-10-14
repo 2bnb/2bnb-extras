@@ -9,7 +9,12 @@ class CfgPatches {
 			"BNB_EX_Resupply_Class_C"
 		};
 		weapons[] = {};
-		requiredAddons[] = {};
+		requiredAddons[] = {
+			"ace_medical",
+			"niarms_416",
+			"rhsusf_c_weapons",
+			"rhs_c_weapons"
+		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
 			"Arend"

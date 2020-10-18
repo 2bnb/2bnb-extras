@@ -40,6 +40,7 @@
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - [RHS AFRF](https://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 - [RHS USAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
+- [NORSOF_LITE_mas](https://steamcommunity.com/sharedfiles/filedetails/?id=1654680843)
 - [GRAD Sling Helmet](https://steamcommunity.com/sharedfiles/filedetails/?id=1354112941)
 - [[FOX] Suicide Bomber](https://steamcommunity.com/sharedfiles/filedetails/?id=1373303221)
 - [MLO - All-in-one Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=823636749)

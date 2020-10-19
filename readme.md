@@ -35,7 +35,6 @@
 <p align="center"><sup><strong>Making Arma 3 a better place for all members of the 2nd Battalion, Nord Brigade.</strong></sup></p>
 
 ## Dependencies
-- [2BNB Essentials]()
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - [RHS AFRF](https://steamcommunity.com/sharedfiles/filedetails/?id=843425103)

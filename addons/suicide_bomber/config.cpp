@@ -4,8 +4,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredAddons[] = {
-			"fox_suicide_bomber",
-			"bnb_es_core"
+			"fox_suicide_bomber"
 		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {

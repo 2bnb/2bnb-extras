@@ -162,16 +162,20 @@ class CfgVehicles {
 				magazine = "ACE_Chemlight_HiGreen";
 				count = 10;
 			};
+			class _xx_6Rnd_GreenSignal_F {
+				magazine = "6Rnd_GreenSignal_F";
+				count = 10;
+			};
+			class _xx_6Rnd_RedSignal_F {
+				magazine = "6Rnd_RedSignal_F";
+				count = 10;
+			};
 		};
 
 		class TransportWeapons {
-			class _xx_rhs_weap_rsp30_white {
-				weapon = "rhs_weap_rsp30_white";
-				count = 10;
-			};
-			class _xx_rhs_weap_rsp30_green {
-				weapon = "rhs_weap_rsp30_green";
-				count = 10;
+			class _xx_hgun_Pistol_Signal_F {
+				weapon = "hgun_Pistol_Signal_F";
+				count = 2;
 			};
 		};
 	};

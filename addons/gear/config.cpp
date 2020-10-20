@@ -30,6 +30,7 @@ class CfgWeapons
 
 	class U_I_CombatUniform;
 
+	class H_HelmetB;
 	class H_HelmetB_TI_tna_F;
 	class V_PlateCarrier2_wdl;
 	class U_B_CTRG_Soldier_F;
@@ -347,12 +348,12 @@ class CfgWeapons
 	};
 
 
-	class H_mas_nor_opscore : ItemCore
+	class H_mas_nor_opscore : H_HelmetB
 	{
 		ace_hearing_protection = 0.75;
 		ace_hearing_lowerVolume = 0;
 	};
-	class H_mas_nor_Cap_fsk_f : ItemCore
+	class H_mas_nor_Cap_fsk_f : H_HelmetB
 	{
 		ace_hearing_protection = 0.75;
 		ace_hearing_lowerVolume = 0;
@@ -1590,7 +1591,6 @@ class CfgGlasses
 
 class CfgVehicles
 {
-	class I_Soldier_base_F;
 	class I_soldier_F;
 	class Heli_Light_02_base_F;
 

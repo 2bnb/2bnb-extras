@@ -26,7 +26,7 @@ if (_this isEqualTo []) exitWith {};
 
 //execute on server to make sure that only one client (server) is writing to array at the same time
 if (!isServer) exitWith {
-    _this remoteExec ["bnb_ex_sling_mask_addMaskToWhitelist", 2];
+	_this remoteExec ["bnb_ex_sling_mask_addMaskToWhitelist", 2];
 };
 
 //init variable if isn't yet
@@ -34,7 +34,7 @@ if (!isServer) exitWith {
 
 //add classnames
 {
-    bnb_ex_sling_mask_whitelist pushBackUnique _x;
+	bnb_ex_sling_mask_whitelist pushBackUnique _x;
 } forEach _this;
 
 publicVariable "bnb_ex_sling_mask_whitelist";

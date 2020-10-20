@@ -19,9 +19,9 @@ Author:
 #include "..\allowedMasks.hpp"
 
 if (isNil "bnb_ex_sling_mask_whitelist") then {
-    //var has to be initialized
-    bnb_ex_sling_mask_whitelist = _allowedMasks;
-    publicVariable "bnb_ex_sling_mask_whitelist";
+	//var has to be initialized
+	bnb_ex_sling_mask_whitelist = _allowedMasks;
+	publicVariable "bnb_ex_sling_mask_whitelist";
 };
 
 bnb_ex_sling_mask_whitelist;

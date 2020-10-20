@@ -46,7 +46,7 @@ _dummy = "Land_HelipadEmpty_F" createVehicle getpos player;
 	_cutterPos = _player modelToWorld [-0.3,1.3,0];
 
 
-	_holder =  createVehicle ["GroundWeaponHolder", _c4Pos, [], 0, "CAN_COLLIDE"];
+	_holder = createVehicle ["GroundWeaponHolder", _c4Pos, [], 0, "CAN_COLLIDE"];
 	_cutter = createVehicle ["Land_Pliers_F", _cutterPos, [], 0, "CAN_COLLIDE"];
 	_cutter setdir ((getDir _player) + 120);
 	_holder addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 1];

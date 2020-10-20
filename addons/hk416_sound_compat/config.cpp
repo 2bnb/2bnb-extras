@@ -19,7 +19,7 @@ class CfgPatches {
 	};
 };
 
-#define HK416_SOUNDS  \
+#define HK416_SOUNDS \
 reloadMagazineSound[] = { \
 	"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\reload.ogg", \
 	5.5, \
@@ -552,7 +552,7 @@ class baseSoundModeType;
 class CfgWeapons {
 	class Rifle_Base_F;
 	class hlc_HK416_base : Rifle_Base_F {
-		zeroingSound[]  = {"A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_metal",0.316228,1,5};
+		zeroingSound[] = {"A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_metal",0.316228,1,5};
 		changeFiremodeSound[] = {
 			"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\weap_fireselctor.ogg",
 			5,

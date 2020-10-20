@@ -132,7 +132,7 @@ class CfgWeapons
 		author = "Ford";
 		picture = "\x\bnb_ex\gear\data\adidass.paa";
 
-	   class ItemInfo : UniformItem {
+		class ItemInfo : UniformItem {
 			uniformModel = "-";
 			uniformClass = "Irish_Peacekeeper"; //Edited
 			containerClass = "Supply70";

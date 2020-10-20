@@ -21,7 +21,7 @@ params ["_unit", "_maskClass"];
 
 //remove old helmet if unit has already a slung helmet
 if !(([_unit] call GRAD_slingHelmet_fnc_getSlungHelmet) isEqualTo "") then {
-    [_unit] call GRAD_slingHelmet_fnc_removeSlungHelmet;
+	[_unit] call GRAD_slingHelmet_fnc_removeSlungHelmet;
 };
 
 //create weaponholder
@@ -37,9 +37,9 @@ _unit setVariable ["GRAD_slingHelmet_variable",[_maskClass, _weaponHolder, [_get
 
 //add HandleDisconnect-EH on server if not done yet
 if !(missionNamespace getVariable ["GRAD_slingHelmet_HDCEHadded",false]) then {
-    ["HandleDisconnect", GRAD_slingHelmet_fnc_EHHandleDisconnect] remoteExec ["addMissionEventHandler", 2];
-    GRAD_slingHelmet_HDCEHadded = true;
-    publicVariable "GRAD_slingHelmet_HDCEHadded";
+	["HandleDisconnect", GRAD_slingHelmet_fnc_EHHandleDisconnect] remoteExec ["addMissionEventHandler", 2];
+	GRAD_slingHelmet_HDCEHadded = true;
+	publicVariable "GRAD_slingHelmet_HDCEHadded";
 };
 
 //execute vehicle shit

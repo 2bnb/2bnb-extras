@@ -1,8 +1,19 @@
 class CfgPatches {
 	class bnb_ex_gear {
+		// Addon identity
 		name = "2BNB Extras - Gear";
-		units[] = {};
-		weapons[] = {};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"Ford",
+			"Arend"
+		};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
 		requiredAddons[] = {
 			"VSM_HELMETS",
 			"VSM_Shemagh_config",
@@ -10,14 +21,15 @@ class CfgPatches {
 			"rhs_c_weapons",
 			"A3_Characters_F_Enoch"
 		};
-		author = "2nd Battalion, Nord Brigade";
-		authors[] = {
-			"D. Ford",
-			"Arend"
-		};
+
+		// Addon items
+		units[] = {};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
-
 
 
 class CfgWeapons

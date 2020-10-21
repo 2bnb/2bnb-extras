@@ -4,7 +4,7 @@ action = "https://discord.gg/DRaWNyf";
 description = "2nd Battalion, Nord Brigade - Extras";
 
 picture = "2bnb-logo.paa";
-contentBrowserPicture="2bnb-logo.paa";
+contentBrowserPicture = "2bnb-logo.paa";
 logo = "2bnb-logo.paa";
 logoOver = "2bnb-logo.paa";
 

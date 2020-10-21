@@ -1,24 +1,36 @@
 class CfgPatches {
 	class bnb_ex_supply_crates {
+		// Addon identity
 		name = "2BNB Extras - Supply Crates";
-		units[] = {
-			// CfgSupplyCrates
-			"BNB_EX_Resupply",
-			"BNB_EX_Resupply_Class_A",
-			"BNB_EX_Resupply_Class_B",
-			"BNB_EX_Resupply_Class_C"
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"Arend"
 		};
-		weapons[] = {};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
 		requiredAddons[] = {
 			"ace_medical",
 			"niarms_416",
 			"rhsusf_c_weapons",
 			"rhs_c_weapons"
 		};
-		author = "2nd Battalion, Nord Brigade";
-		authors[] = {
-			"Arend"
+
+		// Addon items
+		units[] = {
+			"BNB_EX_Resupply",
+			"BNB_EX_Resupply_Class_A",
+			"BNB_EX_Resupply_Class_B",
+			"BNB_EX_Resupply_Class_C"
 		};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
 

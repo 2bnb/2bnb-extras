@@ -1,16 +1,29 @@
 class CfgPatches {
 	class bnb_ex_suicide_bomber {
+		// Addon identity
 		name = "2BNB Extras - Suicide Bomber";
-		units[] = {};
-		weapons[] = {};
-		requiredAddons[] = {
-			"fox_suicide_bomber"
-		};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
 			"Ph¡l",
 			"Arend"
 		};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
+		requiredAddons[] = {
+			"fox_suicide_bomber"
+		};
+
+		// Addon items
+		units[] = {};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
 

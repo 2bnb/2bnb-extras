@@ -1,26 +1,37 @@
-#define _ARMA_
-
-class CfgPatches
-{
-	class LTF_CU_Config
-	{
+class CfgPatches {
+	class bnb_ex_combat_unf	{
+		// Addon identity
 		name = "2BNB Extras - SURPAT Uniform";
-		units[] = {"_Mod"};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Characters_F"};
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
-			"D. Ford",
+			"Ford",
 			"Arend"
 		};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
+		requiredAddons[] = {
+			"A3_Characters_F"
+		};
+
+		// Addon items
+		units[] = {};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
-class UniformSlotInfo
-{
-	slotType = 0;
-	linkProxy = "-";
-};
+
+// class UniformSlotInfo
+// {
+// 	slotType = 0;
+// 	linkProxy = "-";
+// };
 class CfgVehicles
 {
 	class B_Soldier_F;

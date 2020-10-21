@@ -1,8 +1,18 @@
 class CfgPatches {
-	class bnb_ex_hk416SoundCompat {
+	class bnb_ex_hk416_sound_compat {
+		// Addon identity
 		name = "2BNB Extras - HK416 Sound Compat";
-		units[] = {};
-		weapons[] = {};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"Arend"
+		};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
 		requiredAddons[] = {
 			"a3_sounds_f",
 			"a3_weapons_f",
@@ -12,10 +22,13 @@ class CfgPatches {
 			"rhsusf_sounds",
 			"rhsusf_c_weaponsounds"
 		};
-		author = "2nd Battalion, Nord Brigade";
-		authors[] = {
-			"Arend"
-		};
+
+		// Addon items
+		units[] = {};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
 

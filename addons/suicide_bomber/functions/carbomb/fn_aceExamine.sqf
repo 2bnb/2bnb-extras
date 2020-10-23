@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_suicide_bomber_fnc_aceExamine
+Function: bnb_ex_suicide_bomber_fnc_aceExamine
 
 Description:
 	Handles the "Examine" ACE interaction.
@@ -11,7 +11,7 @@ Returns:
 	Nothing
 
 Examples:
-	[_car] call bnb_e_suicide_bomber_fnc_aceExamine;
+	[_car] call bnb_ex_suicide_bomber_fnc_aceExamine;
 
 Author:
 	Ph¡l

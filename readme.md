@@ -37,21 +37,14 @@
 ## Dependencies
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-- [Achilles](https://steamcommunity.com/sharedfiles/filedetails/?id=723217262)
-- [TFAR 1.0 (BETA)](https://steamcommunity.com/sharedfiles/filedetails/?id=894678801)
 - [RHS AFRF](https://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
 - [RHS USAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-- [RHS GREF](https://steamcommunity.com/sharedfiles/filedetails/?id=843593391)
-- [Project OPFOR](https://steamcommunity.com/sharedfiles/filedetails/?id=735566597)
+- [NORSOF_LITE_mas](https://steamcommunity.com/sharedfiles/filedetails/?id=1654680843)
 - [GRAD Sling Helmet](https://steamcommunity.com/sharedfiles/filedetails/?id=1354112941)
-- [TMT - Turkish Forces](https://steamcommunity.com/sharedfiles/filedetails/?id=740727824)
 - [[FOX] Suicide Bomber](https://steamcommunity.com/sharedfiles/filedetails/?id=1373303221)
-- [CUP Terrains - Maps](https://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 - [MLO - All-in-one Collection](https://steamcommunity.com/sharedfiles/filedetails/?id=823636749)
-
-# Credits
-- GRAD developer, for their [gruppe_adler_mod](https://github.com/gruppe-adler/gruppe_adler_mod) and allowing us to use parts of it for the basis of some of our addons
-- Tittoffer and Martin M. from Norwegian Task Force for access to their assets made available to us with permission from the [NorwegianTaskForce Github](https://github.com/Tittoffer/NorwegianTaskForce/), which we then modified and built upon to make them our own
+- [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
+- [NIArms HK416 Rifles](https://steamcommunity.com/sharedfiles/filedetails/?id=1519157834)
 
 
 # For Developers of this mod
@@ -71,16 +64,16 @@ If on Windows, use the `tools\make.ps1` file to build the mod for you. It will b
 
 The build script will NOT leave the private key in the `keys` folder. It will delete it instead, to avoid any accidental uploading or distribution.
 
-Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `bnb_e_v1.0.3.bikey` rather than `bnb_e_v1.0.3-g0558b0c.bikey`.
+Be aware, that the names of the `.bisign` and `.bikey` files depend on the latest tag on git. This means that, if you wish to upload a release, it is advised to first tag the latest git commit, and then build the mod. That way you have a nice version, such as `bnb_ex_v1.0.3.bikey` rather than `bnb_ex_v1.0.3-g0558b0c.bikey`.
 
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:
-- for code: bnb_e
+- for code: bnb_ex
 - for urls: 2bnb-extras
 - for presentation: 2BNB Extras
 
 ### Prefixes
-The prefix `bnb_e_` should be used where appropriate to avoid any potential name clashes with other mods.
+The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
 For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/DRaWNyf).

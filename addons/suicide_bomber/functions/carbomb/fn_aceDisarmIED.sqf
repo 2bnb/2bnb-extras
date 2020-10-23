@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_suicide_bomber_fnc_aceDisarmIED
+Function: bnb_ex_suicide_bomber_fnc_aceDisarmIED
 
 Description:
 	Adds music radio from KLPQ to the backpack or to the vehicle, depending on
@@ -13,7 +13,7 @@ Returns:
 	Nothing
 
 Examples:
-	[_position, _objectUnderCursor] call bnb_e_suicide_bomber_fnc_aceDisarmIED;
+	[_position, _objectUnderCursor] call bnb_ex_suicide_bomber_fnc_aceDisarmIED;
 
 Author:
 	Ph¡l
@@ -46,7 +46,7 @@ _dummy = "Land_HelipadEmpty_F" createVehicle getpos player;
 	_cutterPos = _player modelToWorld [-0.3,1.3,0];
 
 
-	_holder =  createVehicle ["GroundWeaponHolder", _c4Pos, [], 0, "CAN_COLLIDE"];
+	_holder = createVehicle ["GroundWeaponHolder", _c4Pos, [], 0, "CAN_COLLIDE"];
 	_cutter = createVehicle ["Land_Pliers_F", _cutterPos, [], 0, "CAN_COLLIDE"];
 	_cutter setdir ((getDir _player) + 120);
 	_holder addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 1];

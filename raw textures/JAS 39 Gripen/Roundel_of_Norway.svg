@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">
-<circle cx="300" cy="300" r="300" fill="#002868"/>
-<circle cx="300" cy="300" r="224" fill="#fff"/>
-<path d="m188,492 217,-126H188m0,-258 217,126H188" fill="#d40000"/>
-<path d="m463,333h-275v-66h275l56,33" fill="#002868"/>
-</svg>

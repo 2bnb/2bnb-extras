@@ -1,28 +1,40 @@
 class CfgPatches {
-	class bnb_e_hk416SoundCompat {
+	class bnb_ex_hk416_sound_compat {
+		// Addon identity
 		name = "2BNB Extras - HK416 Sound Compat";
-		units[] = {};
-		weapons[] = {};
+		author = "2nd Battalion, Nord Brigade";
+		authors[] = {
+			"Arend"
+		};
+		url = "https://discord.gg/DRaWNyf";
+		version = 1.0.0;
+		versionAr[] = {1,0,0,0};
+		versionStr = "v1.0.0";
+
+		// Addon requirements
+		requiredVersion = 2.00;
 		requiredAddons[] = {
 			"a3_sounds_f",
 			"a3_weapons_f",
 			"a3_sounds_f_exp",
 			"a3_weapons_f_exp",
-			"rhs_c_weaponsounds",
+			"niarms_416",
 			"rhsusf_sounds",
-			"rhsusf_c_weaponsounds",
-			"rhs_sounds"
+			"rhsusf_c_weaponsounds"
 		};
-		author = "2nd Battalion, Nord Brigade";
-		authors[] = {
-			"Arend"
-		};
+
+		// Addon items
+		units[] = {};
+		weapons[] = {};
+		magazines[] = {};
+		ammo[] = {};
+		worlds[] = {};
 	};
 };
 
-#define HK416_SOUNDS  \
+#define HK416_SOUNDS \
 reloadMagazineSound[] = { \
-	"\x\bnb_e\hk416_sound_compat\sounds\weapons\m4a1\reload.ogg", \
+	"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\reload.ogg", \
 	5.5, \
 	1, \
 	30 \
@@ -31,16 +43,16 @@ class Single: Mode_SemiAuto { \
 	class BaseSoundModeType {}; \
 	class StandardSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_Shot_SoundSet", \
-			"bnb_e_HK416_Tail_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_Shot_SoundSet", \
+			"bnb_ex_HK416_Tail_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 	class SilencedSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_ShotSD_SoundSet", \
-			"bnb_e_HK416_TailSD_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_ShotSD_SoundSet", \
+			"bnb_ex_HK416_TailSD_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 }; \
@@ -48,16 +60,16 @@ class Burst: Mode_Burst { \
 	class BaseSoundModeType {}; \
 	class StandardSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_Shot_SoundSet", \
-			"bnb_e_HK416_Tail_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_Shot_SoundSet", \
+			"bnb_ex_HK416_Tail_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 	class SilencedSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_ShotSD_SoundSet", \
-			"bnb_e_HK416_TailSD_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_ShotSD_SoundSet", \
+			"bnb_ex_HK416_TailSD_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 }; \
@@ -65,22 +77,22 @@ class FullAuto: Mode_FullAuto { \
 	class BaseSoundModeType {}; \
 	class StandardSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_Shot_SoundSet", \
-			"bnb_e_HK416_Tail_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_Shot_SoundSet", \
+			"bnb_ex_HK416_Tail_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 	class SilencedSound: BaseSoundModeType { \
 		soundSetShot[] = { \
-			"bnb_e_HK416_ShotSD_SoundSet", \
-			"bnb_e_HK416_TailSD_SoundSet", \
-			"bnb_e_rifle_shells_SoundSet" \
+			"bnb_ex_HK416_ShotSD_SoundSet", \
+			"bnb_ex_HK416_TailSD_SoundSet", \
+			"bnb_ex_rifle_shells_SoundSet" \
 		}; \
 	}; \
 };
 
 class CfgDistanceFilters {
-	class bnb_e_defaultDistanceFilter {
+	class bnb_ex_defaultDistanceFilter {
 		type = "lowPassFilter";
 		minCutoffFrequency= 150;
 		qFactor = 1;
@@ -88,10 +100,28 @@ class CfgDistanceFilters {
 		range = 2600;
 		powerFactor = 32;
 	};
+	class bnb_ex_rifleShotDistanceFilter
+	{
+		type="lowPassFilter";
+		minCutoffFrequency=250;
+		qFactor=1.3;
+		innerRange=150;
+		range=1800;
+		powerFactor=32;
+	};
+	class bnb_ex_rifleTailDistanceFilter
+	{
+		type="lowPassFilter";
+		minCutoffFrequency=150;
+		qFactor=1;
+		innerRange=350;
+		range=1800;
+		powerFactor=32;
+	};
 };
 
 class CfgSoundCurves {
-	class bnb_e_basic {
+	class bnb_ex_basic {
 		points[] = {
 			{0,1},
 			{0.1,0.75},
@@ -106,13 +136,40 @@ class CfgSoundCurves {
 			{1,0}
 		};
 	};
+	class bnb_ex_tailSoundCurve
+	{
+		points[]=
+		{
+			{0,1},
+			{0.2,0.85000002},
+			{0.5,0.40000001},
+			{0.80000001,0.1},
+			{1,0}
+		};
+	};
+	class bnb_ex_rifleSoundCurve
+	{
+		points[]=
+		{
+			{0,1},
+			{0.001,0.92000002},
+			{0.0049999999,0.88999999},
+			{0.1,0.84750003},
+			{0.2,0.8096},
+			{0.40000001,0.75330001},
+			{0.60000002,0.63150001},
+			{0.80000001,0.49680001},
+			{0.89999998,0.39680001},
+			{1,0}
+		};
+	};
 };
 
 class CfgSoundShaders {
-	class bnb_e_HK416_Close_SoundShader {
+	class bnb_ex_HK416_Close_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_close.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_close.ogg",
 				1
 			},
 		};
@@ -124,10 +181,10 @@ class CfgSoundShaders {
 			{200,0}
 		};
 	};
-	class bnb_e_HK416_Close_Tail_SoundShader {
+	class bnb_ex_HK416_Close_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_close_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_close_tail.ogg",
 				1
 			},
 		};
@@ -139,10 +196,10 @@ class CfgSoundShaders {
 			{200,0}
 		};
 	};
-	class bnb_e_HK416_Far_SoundShader {
+	class bnb_ex_HK416_Far_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_far.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_far.ogg",
 				1
 			},
 		};
@@ -156,10 +213,10 @@ class CfgSoundShaders {
 			{1600,0}
 		};
 	};
-	class bnb_e_HK416_Far_Tail_SoundShader {
+	class bnb_ex_HK416_Far_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_far_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_far_tail.ogg",
 				1
 			},
 		};
@@ -173,10 +230,10 @@ class CfgSoundShaders {
 			{1600,0}
 		};
 	};
-	class bnb_e_HK416_Close_Silenced_SoundShader {
+	class bnb_ex_HK416_Close_Silenced_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_close.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_close.ogg",
 				1
 			},
 		};
@@ -188,10 +245,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Close_Silenced_Tail_SoundShader {
+	class bnb_ex_HK416_Close_Silenced_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_close_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_close_tail.ogg",
 				1
 			},
 		};
@@ -203,10 +260,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Distant_Silenced_SoundShader {
+	class bnb_ex_HK416_Distant_Silenced_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_distant.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_distant.ogg",
 				1
 			},
 		};
@@ -219,10 +276,10 @@ class CfgSoundShaders {
 			{650,0}
 		};
 	};
-	class bnb_e_HK416_Distant_Silenced_Tail_SoundShader {
+	class bnb_ex_HK416_Distant_Silenced_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_distant_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_outdoor_silenced_distant_tail.ogg",
 				1
 			},
 		};
@@ -235,10 +292,10 @@ class CfgSoundShaders {
 			{650,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Close_SoundShader {
+	class bnb_ex_HK416_Indoor_Close_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close.ogg",
 				1
 			}
 		};
@@ -250,10 +307,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Close_Tail_SoundShader {
+	class bnb_ex_HK416_Indoor_Close_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close_tail.ogg",
 				1
 			}
 		};
@@ -265,10 +322,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Distant_SoundShader {
+	class bnb_ex_HK416_Indoor_Distant_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_distant.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_distant.ogg",
 				1
 			}
 		};
@@ -281,10 +338,10 @@ class CfgSoundShaders {
 			{100,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Distant_Tail_SoundShader {
+	class bnb_ex_HK416_Indoor_Distant_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_close_tail.ogg",
 				1
 			}
 		};
@@ -297,10 +354,10 @@ class CfgSoundShaders {
 			{100,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Close_Silenced_SoundShader {
+	class bnb_ex_HK416_Indoor_Close_Silenced_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_close.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_close.ogg",
 				1
 			}
 		};
@@ -312,10 +369,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Close_Silenced_Tail_SoundShader {
+	class bnb_ex_HK416_Indoor_Close_Silenced_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_close_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_close_tail.ogg",
 				1
 			}
 		};
@@ -327,10 +384,10 @@ class CfgSoundShaders {
 			{50,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Distant_Silenced_SoundShader {
+	class bnb_ex_HK416_Indoor_Distant_Silenced_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_distant.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_distant.ogg",
 				1
 			}
 		};
@@ -343,10 +400,10 @@ class CfgSoundShaders {
 			{100,0}
 		};
 	};
-	class bnb_e_HK416_Indoor_Distant_Silenced_Tail_SoundShader {
+	class bnb_ex_HK416_Indoor_Distant_Silenced_Tail_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_distant_tail.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\weapons\hk416\hk416_indoor_silenced_distant_tail.ogg",
 				1
 			}
 		};
@@ -359,140 +416,140 @@ class CfgSoundShaders {
 			{100,0}
 		};
 	};
-	class bnb_e_rifle_shells_SoundShader {
+	class bnb_ex_rifle_shells_SoundShader {
 		samples[] = {
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete1.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete1.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete2.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete2.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete3.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_concrete3.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil1.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil1.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil2.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil2.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil3.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_soil3.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal1.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal1.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal2.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal2.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal3.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_metal3.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood1.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood1.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood2.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood2.ogg",
 				1
 			},
 			{
-				"\x\bnb_e\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood3.ogg",
+				"\x\bnb_ex\hk416_sound_compat\sounds\ammo\shells\556mm_shell_wood3.ogg",
 				1
 			}
 		};
 		volume = 1;
 		range = 35;
-		rangeCurve = "bnb_e_basic";
+		rangeCurve = "bnb_ex_basic";
 	};
 };
 
 class CfgSoundSets {
-	class bnb_e_HK416_Shot_SoundSet {
+	class bnb_ex_HK416_Shot_SoundSet {
 		soundShaders[] = {
-			"bnb_e_HK416_Close_SoundShader",
-			"bnb_e_HK416_Far_SoundShader",
-			"bnb_e_HK416_Indoor_Close_SoundShader",
-			"bnb_e_HK416_Indoor_Distant_SoundShader"
+			"bnb_ex_HK416_Close_SoundShader",
+			"bnb_ex_HK416_Far_SoundShader",
+			"bnb_ex_HK416_Indoor_Close_SoundShader",
+			"bnb_ex_HK416_Indoor_Distant_SoundShader"
 		};
 		volumeFactor = 1.5;
-		volumeCurve = "bnb_e_rifleSoundCurve";
+		volumeCurve = "bnb_ex_rifleSoundCurve";
 		sound3DProcessingType = "WeaponMediumShot3DProcessingType";
-		distanceFilter = "bnb_e_rifleShotDistanceFilter";
+		distanceFilter = "bnb_ex_rifleShotDistanceFilter";
 		occlusionFactor = 0.15;
 		obstructionFactor = 0.15;
 		spatial= 1;
 		doppler = 0;
 		loop= 0;
 	};
-	class bnb_e_HK416_Tail_SoundSet {
+	class bnb_ex_HK416_Tail_SoundSet {
 		soundShaders[] = {
-			"bnb_e_HK416_Close_Tail_SoundShader",
-			"bnb_e_HK416_Far_Tail_SoundShader",
-			"bnb_e_HK416_Indoor_Close_Tail_SoundShader",
-			"bnb_e_HK416_Indoor_Distant_Tail_SoundShader"
+			"bnb_ex_HK416_Close_Tail_SoundShader",
+			"bnb_ex_HK416_Far_Tail_SoundShader",
+			"bnb_ex_HK416_Indoor_Close_Tail_SoundShader",
+			"bnb_ex_HK416_Indoor_Distant_Tail_SoundShader"
 		};
 		volumeFactor = 1.5;
-		volumeCurve = "bnb_e_tailSoundCurve";
+		volumeCurve = "bnb_ex_tailSoundCurve";
 		sound3DProcessingType = "RHSUSF_Shot_light_3DProcessingType";
-		distanceFilter = "bnb_e_rifleTailDistanceFilter";
+		distanceFilter = "bnb_ex_rifleTailDistanceFilter";
 		occlusionFactor = 0.15;
 		obstructionFactor = 0.15;
 		spatial= 1;
 		doppler = 0;
 		loop= 0;
 	};
-	class bnb_e_HK416_ShotSD_SoundSet {
+	class bnb_ex_HK416_ShotSD_SoundSet {
 		soundShaders[] = {
-			"bnb_e_HK416_Close_Silenced_SoundShader",
-			"bnb_e_HK416_Distant_Silenced_SoundShader",
-			"bnb_e_HK416_Indoor_Close_Silenced_SoundShader",
-			"bnb_e_HK416_Indoor_Distant_Silenced_SoundShader"
+			"bnb_ex_HK416_Close_Silenced_SoundShader",
+			"bnb_ex_HK416_Distant_Silenced_SoundShader",
+			"bnb_ex_HK416_Indoor_Close_Silenced_SoundShader",
+			"bnb_ex_HK416_Indoor_Distant_Silenced_SoundShader"
 		};
 		volumeFactor = 1.5;
-		volumeCurve = "bnb_e_rifleSoundCurve";
+		volumeCurve = "bnb_ex_rifleSoundCurve";
 		sound3DProcessingType = "RHSUSF_Shot_light_3DProcessingType";
-		distanceFilter = "bnb_e_rifleShotDistanceFilter";
+		distanceFilter = "bnb_ex_rifleShotDistanceFilter";
 		occlusionFactor = 0.15;
 		obstructionFactor = 0.15;
 		spatial= 1;
 		doppler = 0;
 		loop= 0;
 	};
-	class bnb_e_HK416_TailSD_SoundSet {
+	class bnb_ex_HK416_TailSD_SoundSet {
 		soundShaders[] = {
-			"bnb_e_HK416_Close_Silenced_Tail_SoundShader",
-			"bnb_e_HK416_Distant_Silenced_Tail_SoundShader",
-			"bnb_e_HK416_Indoor_Close_Silenced_Tail_SoundShader",
-			"bnb_e_HK416_Indoor_Distant_Silenced_Tail_SoundShader"
+			"bnb_ex_HK416_Close_Silenced_Tail_SoundShader",
+			"bnb_ex_HK416_Distant_Silenced_Tail_SoundShader",
+			"bnb_ex_HK416_Indoor_Close_Silenced_Tail_SoundShader",
+			"bnb_ex_HK416_Indoor_Distant_Silenced_Tail_SoundShader"
 		};
 		volumeFactor = 1.5;
-		volumeCurve = "bnb_e_tailSoundCurve";
+		volumeCurve = "bnb_ex_tailSoundCurve";
 		sound3DProcessingType = "RHSUSF_Shot_light_3DProcessingType";
-		distanceFilter = "bnb_e_rifleTailDistanceFilter";
+		distanceFilter = "bnb_ex_rifleTailDistanceFilter";
 		occlusionFactor = 0.15;
 		obstructionFactor = 0.15;
 		spatial= 1;
 		doppler = 0;
 		loop= 0;
 	};
-	class bnb_e_rifle_shells_SoundSet {
+	class bnb_ex_rifle_shells_SoundSet {
 		soundShaders[] = {
-			"bnb_e_rifle_shells_SoundShader"
+			"bnb_ex_rifle_shells_SoundShader"
 		};
 		volumeFactor = 0.35;
 		volumeCurve = "InverseSquare2Curve";
 		sound3DProcessingType = "RHSUSF_Shot_light_3DProcessingType";
-		distanceFilter = "bnb_e_defaultDistanceFilter";
+		distanceFilter = "bnb_ex_defaultDistanceFilter";
 		occlusionFactor = 0;
 		obstructionFactor = 0;
 		spatial= 1;
@@ -508,88 +565,88 @@ class baseSoundModeType;
 class CfgWeapons {
 	class Rifle_Base_F;
 	class hlc_HK416_base : Rifle_Base_F {
-		zeroingSound[]  = {"A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_metal",0.316228,1,5};
+		zeroingSound[] = {"A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_metal",0.316228,1,5};
 		changeFiremodeSound[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\weapons\m4a1\weap_fireselctor.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\weap_fireselctor.ogg",
 			5,
 			1,
 			5
 		};
 		drySound[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\weapons\m4a1\weap_trigger_empty.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\weap_trigger_empty.ogg",
 			3,
 			1,
 			10
 		};
 		HK416_SOUNDS
 		bullet1[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_concrete1.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_concrete1.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet2[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_concrete2.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_concrete2.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet3[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_concrete3.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_concrete3.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet4[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_metal1.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_metal1.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet5[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_metal2.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_metal2.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet6[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_metal3.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_metal3.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet7[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_soil1.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_soil1.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet8[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_soil2.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_soil2.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet9[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_soil3.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_soil3.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet10[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_wood1.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_wood1.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet11[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_wood2.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_wood2.ogg",
 			0.801,
 			1,
 			10
 		};
 		bullet12[] = {
-			"\x\bnb_e\hk416_sound_compat\sounds\ammo\556mm_shell_wood3.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\ammo\556mm_shell_wood3.ogg",
 			0.801,
 			1,
 			10

@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_sling_mask_fnc_actionUnSling
+Function: bnb_ex_sling_mask_fnc_actionUnSling
 
 Description:
 	Triggered by the unSling-action. Handles all the stuff.
@@ -11,7 +11,7 @@ Returns:
 	Nothing
 
 Examples:
-	[player] call bnb_e_sling_mask_fnc_actionUnSling;
+	[player] call bnb_ex_sling_mask_fnc_actionUnSling;
 
 Author:
 	DerZade, Arend
@@ -25,5 +25,5 @@ private _maskClass = [_unit] call GRAD_slingHelmet_fnc_getSlungHelmet;
 if (_maskClass isEqualTo "") exitWith {};
 
 [_unit] call GRAD_slingHelmet_fnc_removeSlungHelmet;
-_unit setVariable ["bnb_e_sling_mask_slung", 0];
+_unit setVariable ["bnb_ex_sling_mask_slung", 0];
 _unit addgoggles _maskClass;

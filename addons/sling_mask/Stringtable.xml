@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Project name="bnb_e">
+<Project name="bnb_ex">
 	<Package name="sling_mask">
 		<Container name="Misc">
 			<Key ID="STR_sling_mask_sling">

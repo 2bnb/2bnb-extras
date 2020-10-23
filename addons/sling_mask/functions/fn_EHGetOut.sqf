@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: bnb_e_sling_mask_fnc_EHGetOut
+Function: bnb_ex_sling_mask_fnc_EHGetOut
 
 Description:
 	Eventhandler - Get Out. Does the actual mounting of the weapon holder
@@ -15,7 +15,7 @@ Returns:
 	Nothing
 
 Examples:
-	[player, "", objNull] call bnb_e_sling_mask_fnc_EHGetOut;
+	[player, "", objNull] call bnb_ex_sling_mask_fnc_EHGetOut;
 
 Author:
 	DerZade, Arend

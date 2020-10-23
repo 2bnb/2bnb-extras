@@ -184,4 +184,77 @@ class CfgWeapons {
 			uniformClass = "BNB_EX_Surpat_Gear_Uniform_Crye_Tee";
 		};
 	};
+
+
+	// Old combat unf
+	class BNB_EX_Surpat_Gear_Camo_Unf : Uniform_Base
+	{
+		scope = 2;
+		displayName = "[CU] Surpat";
+		author = "LTF";
+		picture = "\x\bnb_ex\surpat_gear\ui\surpat_ui.paa";
+		model = "\A3\characters_F\BLUFOR\b_soldier_01.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformClass = "BNB_EX_Surpat_Gear_Uniform";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
+	class BNB_EX_Surpat_Gear_Camo_Unf_R : Uniform_Base
+	{
+		scope = 2;
+		displayName = "[CU] Surpat(RS)";
+		author = "LTF";
+		picture = "\x\bnb_ex\surpat_gear\ui\surpat_ui.paa";
+		model = "\A3\characters_F\BLUFOR\b_soldier_03.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformClass = "BNB_EX_Surpat_Gear_Uniform_R";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
+	class BNB_EX_Surpat_Gear_Camo_Unf_TG : Uniform_Base
+	{
+		scope = 2;
+		displayName = "[CU] Surpat(T)green";
+		author = "LTF";
+		picture = "\x\bnb_ex\surpat_gear\ui\surpat_ui.paa";
+		model = "\A3\characters_F\BLUFOR\b_soldier_02.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformClass = "BNB_EX_Surpat_Gear_Uniform_TG";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
+	class BNB_EX_Surpat_Gear_Camo_Unf_TB : Uniform_Base
+	{
+		scope = 2;
+		displayName = "[CU] Surpat(T)black";
+		author = "LTF";
+		picture = "\x\bnb_ex\surpat_gear\ui\surpat_ui.paa";
+		model = "\A3\characters_F\BLUFOR\b_soldier_02.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformClass = "BNB_EX_Surpat_Gear_Uniform_TB";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
+	class BNB_EX_Surpat_Gear_Camo_Unf_Ghillie : Uniform_Base
+	{
+		scope = 2;
+		displayName = "[CU] Surpat Ghillie";
+		author = "LTF";
+		picture = "\x\bnb_ex\surpat_gear\ui\surpat_ui.paa";
+		model = "\A3\characters_F\BLUFOR\b_sniper.p3d";
+		class ItemInfo : UniformItem
+		{
+			uniformClass = "BNB_EX_Surpat_Gear_Uniform_Ghillie";
+			containerClass = "Supply80";
+			mass = 20;
+		};
+	};
 };

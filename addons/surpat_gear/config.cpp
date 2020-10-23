@@ -4,7 +4,8 @@ class CfgPatches {
 		name = "2BNB Extras - SURPAT Gear";
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
-			"Ford"
+			"Ford",
+			"Arend"
 		};
 		url = "https : //discord.gg/DRaWNyf";
 		version = 1.0.0;
@@ -38,7 +39,13 @@ class CfgPatches {
 			"BNB_EX_Surpat_Gear_Uniform_Crye_TP",
 			"BNB_EX_Surpat_Gear_Uniform_Crye_GP",
 			"BNB_EX_Surpat_Gear_Uniform_Crye_GS",
-			"BNB_EX_Surpat_Gear_Uniform_Crye_Tee"
+			"BNB_EX_Surpat_Gear_Uniform_Crye_Tee",
+			// old "combat_unf"
+			"BNB_EX_Surpat_Gear_Uniform",
+			"BNB_EX_Surpat_Gear_Uniform_R",
+			"BNB_EX_Surpat_Gear_Uniform_TG",
+			"BNB_EX_Surpat_Gear_Uniform_TB",
+			"BNB_EX_Surpat_Gear_Uniform_Ghillie",
 		};
 		weapons[] = {
 			"BNB_EX_Surpat_Gear_Camo",
@@ -72,7 +79,17 @@ class CfgPatches {
 			"BNB_EX_Surpat_Gear_Helmet2",
 			"BNB_EX_Surpat_Gear_Helmet3",
 			"BNB_EX_Surpat_Gear_Boonie",
-			"BNB_EX_Surpat_Gear_Cap"
+			"BNB_EX_Surpat_Gear_Cap",
+			// old "combat_unf"
+			"BNB_EX_Surpat_Gear_Boonie2",
+			"BNB_EX_Surpat_Gear_Boonie_HS",
+			"BNB_EX_Surpat_Gear_Cap2",
+			"BNB_EX_Surpat_Gear_Helmet",
+			"BNB_EX_Surpat_Gear_Camo_Unf",
+			"BNB_EX_Surpat_Gear_Camo_Unf_R",
+			"BNB_EX_Surpat_Gear_Camo_Unf_TG",
+			"BNB_EX_Surpat_Gear_Camo_Unf_TB",
+			"BNB_EX_Surpat_Gear_Camo_Unf_Ghillie",
 		};
 		magazines[] = {};
 		ammo[] = {};
@@ -89,8 +106,8 @@ class CfgPatches {
 // 	};
 // };
 
-#include "infantry.hpp"
-#include "vests.hpp"
-#include "uniforms.hpp"
-#include "backpacks.hpp"
-#include "headgear.hpp"
+#include "Infantry.hpp"
+#include "Vests.hpp"
+#include "Uniforms.hpp"
+#include "Backpacks.hpp"
+#include "Headgear.hpp"

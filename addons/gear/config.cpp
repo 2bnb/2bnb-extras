@@ -5,7 +5,8 @@ class CfgPatches {
 		author = "2nd Battalion, Nord Brigade";
 		authors[] = {
 			"Ford",
-			"Arend"
+			"Arend",
+			"Sawtes"
 		};
 		url = "https://discord.gg/DRaWNyf";
 		version = 1.0.0;
@@ -62,7 +63,7 @@ class CfgWeapons
 		};
 	};
 
-	class H_HelmetB_TI_tna_Fx : H_HelmetB_TI_tna_F
+	class BNB_EX_Gear_Super_Stealth_Helmet : H_HelmetB_TI_tna_F
 	{
 		author = "Ford";
 		scope = 2;
@@ -90,7 +91,7 @@ class CfgWeapons
 		};
 	};
 
-	class V_PlateCarrier2_wdlXXX : V_PlateCarrier2_wdl
+	class BNB_EX_Gear_Super_Stealth_Platecarrier : V_PlateCarrier2_wdl
 	{
 		author = "Ford";
 		displayName = "SUPAR STEALTH";
@@ -138,12 +139,12 @@ class CfgWeapons
 
 	};
 
-	class Adidas_Uniform : U_I_CombatUniform //Edited
+	class BNB_EX_Gear_Adidas_Uniform : U_I_CombatUniform //Edited
 	{
 		scope = 2;
 		displayName = "Adidas Uniform";
 		author = "Ford";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -153,16 +154,16 @@ class CfgWeapons
 		};
 	};
 
-	class Adidas_Vest : ItemCore
+	class BNB_EX_Gear_Adidas_Vest : ItemCore
 	{
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas Light Vest";
 		allowedSlots[] = {901}; // This means the vest can be put into a backpack.
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPC\Civil\equip_press_vest_01.p3d";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidasV.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidas_vest.paa"};
 		editorPreview = "\A3\EditorPreviews_F\Data\add.jpg";
 		class ItemInfo : VestItem
 		{
@@ -213,15 +214,15 @@ class CfgWeapons
 		};
 	};
 
-	class Adidas_Berret : ItemCore
+	class BNB_EX_Gear_Adidas_Berret : ItemCore
 	{
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas Berret";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\adidasB.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\adidas_berret.paa" };
 		ace_hearing_protection = 0.75;
 		ace_hearing_lowerVolume = 0;
 		class ItemInfo : HeadgearItem
@@ -242,17 +243,17 @@ class CfgWeapons
 			};
 		};
 	};
-	class Adidas_Helmet : ItemCore
+	class BNB_EX_Gear_Adidas_Helmet : ItemCore
 	{
 		author = "Ford";
 		scope = 2;
 		displayName = "Adidas Helmet";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\rhsafrf\addons\rhs_infantry2\gear\head\rhs_altyn_visordown";
 		ace_hearing_protection = 0.8;
 		ace_hearing_lowerVolume = 0.25;
 		hiddenSelections[] = { "Camo1" };
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidasH.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidas_altyn.paa"};
 		class ItemInfo : HeadgearItem
 		{
 			mass = 10;
@@ -277,16 +278,16 @@ class CfgWeapons
 			};
 		};
 	};
-	class Adidas_BerretX : Adidas_Berret
+	class BNB_EX_Gear_Adidas_Berret_Muffled : BNB_EX_Gear_Adidas_Berret
 	{
 		author = "Ford";
 		scope = 2;
-		displayName = "Adidas Berret (Muffeled)";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		displayName = "Adidas Berret (Muffled)";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		ace_hearing_lowerVolume = 0.80;
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\adidasB.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\adidas_berret.paa" };
 		class ItemInfo : ItemInfo
 		{
 			class HitpointsProtectionInfo : HitpointsProtectionInfo
@@ -298,11 +299,11 @@ class CfgWeapons
 		};
 	};
 
-	class 2BNB_Berret : Adidas_Berret
+	class BNB_EX_Gear_Unit_Berret : BNB_EX_Gear_Adidas_Berret
 	{
 		author = "FarGay";
 		displayName = "2BNB Berret";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\2BNB_Berret.paa" };
@@ -321,14 +322,14 @@ class CfgWeapons
 		};
 	};
 
-	class RUS1 : Adidas_Berret
+	class BNB_EX_Gear_Russian_Berret_Flag : BNB_EX_Gear_Adidas_Berret
 	{
 		author = "Ford";
-		displayName = "2BNB RUSB";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		displayName = "Russian Berret (Flag)";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\RUSB.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\russian_berret_flag.paa" };
 		class ItemInfo : ItemInfo
 		{
 			class HitpointsProtectionInfo : HitpointsProtectionInfo
@@ -340,14 +341,14 @@ class CfgWeapons
 		};
 	};
 
-	class RUS2 : Adidas_Berret
+	class BNB_EX_Gear_Russian_Berret_Star : BNB_EX_Gear_Adidas_Berret
 	{
 		author = "Ford";
-		displayName = "2BNB RUSB1";
-		picture = "\x\bnb_ex\gear\data\adidass.paa";
+		displayName = "Russian Berret (Star)";
+		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\RUSB1.paa" };
+		hiddenSelectionsTextures[] = { "\x\bnb_ex\gear\data\russian_berret_star.paa" };
 		class ItemInfo : ItemInfo
 		{
 			class HitpointsProtectionInfo : HitpointsProtectionInfo
@@ -676,60 +677,62 @@ class CfgWeapons
 		ace_hearing_lowerVolume = 0;
 	};
 	class launch_MRAWS_green_rail_f;
-	class SAW_W_MAAWS0 : launch_MRAWS_green_rail_f
+	class BNB_EX_Gear_SAW_W_MAAWS0 : launch_MRAWS_green_rail_f
 	{
+		author = "Sawtes";
 		scope = 2;
-		baseWeapon = "SAW_W_MAAWS0";
+		baseWeapon = "BNB_EX_Gear_SAW_W_MAAWS0";
 		displayName = "MAAWS Mk4 Mod 0 (White)";
-		picture = "\x\bnb_ex\gear\data\whitemaawsicon.paa";
+		picture = "\x\bnb_ex\gear\data\white_maaws_icon.paa";
 		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\maaws.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\maaws_tube.paa"};
 	};
 	class launch_MRAWS_green_F;
-	class SAW_W_MAAWS1 : launch_MRAWS_green_F
+	class BNB_EX_Gear_SAW_W_MAAWS1 : launch_MRAWS_green_F
 	{
+		author = "Sawtes";
 		scope = 2;
-		baseWeapon = "SAW_W_MAAWS1";
+		baseWeapon = "BNB_EX_Gear_SAW_W_MAAWS1";
 		displayName = "MAAWS Mk4 Mod 1 (White)";
-		picture = "\x\bnb_ex\gear\data\whitemaawsicon.paa";
+		picture = "\x\bnb_ex\gear\data\white_maaws_icon.paa";
 		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\maaws.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\maaws_tube.paa"};
 	};
 	class rhs_weap_ak74m;
-	class SAW_W_AK_Adidas : rhs_weap_ak74m
+	class BNB_EX_Gear_SAW_W_AK_Adidas : rhs_weap_ak74m
 	{
 		scope = 2;
-		baseWeapon = "SAW_W_AK_Adidas";
+		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas";
 		displayName = "AK-74M (Adidas)";
-		picture = "\x\bnb_ex\gear\data\akadidasicon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\akadidas.paa"};
+		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
 	};
 	class rhs_weap_ak74m_npz;
-	class SAW_W_AK_Adidas_npz : rhs_weap_ak74m_npz
+	class BNB_EX_Gear_SAW_W_AK_Adidas_npz : rhs_weap_ak74m_npz
 	{
 		scope = 2;
-		baseWeapon = "SAW_W_AK_Adidas_npz";
+		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_npz";
 		displayName = "AK-74M (Adidas/B-13)";
-		picture = "\x\bnb_ex\gear\data\akadidasicon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\akadidas.paa"};
+		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
 	};
 	class rhs_weap_ak74m_gp25;
-	class SAW_W_AK_Adidas_gp25 : rhs_weap_ak74m_gp25
+	class BNB_EX_Gear_SAW_W_AK_Adidas_gp25 : rhs_weap_ak74m_gp25
 	{
 		scope = 2;
-		baseWeapon = "SAW_W_AK_Adidas_gp25";
+		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25";
 		displayName = "AK-74M (Adidas/GP-25)";
-		picture = "\x\bnb_ex\gear\data\akadidasicon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\akadidas.paa"};
+		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
 	};
 	class rhs_weap_ak74m_gp25_npz;
-	class SAW_W_AK_Adidas_gp25_npz : rhs_weap_ak74m_gp25_npz
+	class BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz : rhs_weap_ak74m_gp25_npz
 	{
 		scope = 2;
-		baseWeapon = "SAW_W_AK_Adidas_gp25_npz";
+		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz";
 		displayName = "AK-74M (Adidas/GP-25/B-13)";
-		picture = "\x\bnb_ex\gear\data\akadidasicon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\akadidas.paa"};
+		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
 	};
 };
 class CfgGlasses
@@ -1608,7 +1611,7 @@ class CfgVehicles
 
 	class O_Heli_Light_02_unarmed_F : Heli_Light_02_base_F
 	{
-		class textureSources
+		class TextureSources
 		{
 			class Black {
 				author = "Bohemia Interactive";
@@ -1638,7 +1641,7 @@ class CfgVehicles
 			{
 				displayName = "Russki";
 				author = "Ford";
-				textures[] = {"\x\bnb_ex\gear\data\rr.paa"};
+				textures[] = {"\x\bnb_ex\gear\data\kasatka_ka60_hull.paa"};
 				factions[] = {};
 			};
 		};
@@ -1650,9 +1653,9 @@ class CfgVehicles
 		displayName = "Adidas Warrior";
 		author = "Ford";
 		nakedUniform = "U_BasicBody";
-		uniformClass = "Adidas_Uniform";
+		uniformClass = "BNB_EX_Gear_Adidas_Uniform";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidas.paa"};
+		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\adidas_trousers.paa"};
 
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		side = 1;

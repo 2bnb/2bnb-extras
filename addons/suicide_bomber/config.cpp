@@ -41,8 +41,8 @@ class CfgFunctions {
 
 class CfgVehicles {
 	class LandVehicle;
-	class Car: LandVehicle {
-	class ACE_Actions {
+	class Car : LandVehicle {
+		class ACE_Actions {
 			class ACE_MainActions {
 				class FOX_MainActions {
 					displayName = "Vehicle";

@@ -567,7 +567,7 @@ class CfgWeapons {
 	class hlc_HK416_base : Rifle_Base_F {
 		zeroingSound[] = {"A3\Sounds_F\arsenal\sfx\shared\zeroing_knob_tick_metal",0.316228,1,5};
 		changeFiremodeSound[] = {
-			"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\weap_fireselctor.ogg",
+			"\x\bnb_ex\hk416_sound_compat\sounds\weapons\m4a1\weap_fireselector.ogg",
 			5,
 			1,
 			5

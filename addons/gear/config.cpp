@@ -16,9 +16,6 @@ class CfgPatches {
 		// Addon requirements
 		requiredVersion = 2.00;
 		requiredAddons[] = {
-			"VSM_HELMETS",
-			"VSM_Shemagh_config",
-			"mas_nor_lite_common",
 			"rhs_c_weapons",
 			"A3_Characters_F_Enoch"
 		};

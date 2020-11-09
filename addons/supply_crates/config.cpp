@@ -233,6 +233,18 @@ class CfgVehicles {
 				magazine = "rhs_mag_m7a3_cs";
 				count = 10;
 			};
+			class _xx_MRAWS_HE_F {
+				magazine = "MRAWS_HE_F";
+				count = 4;
+			};
+			class _xx_MRAWS_HEAT55_F {
+				magazine = "MRAWS_HEAT55_F";
+				count = 4;
+			};
+			class _xx_MRAWS_HEAT_F {
+				magazine = "MRAWS_HEAT_F";
+				count = 8;
+			};
 		};
 
 		class TransportWeapons {

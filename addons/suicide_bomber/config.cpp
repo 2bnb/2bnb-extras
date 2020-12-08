@@ -35,9 +35,22 @@ class CfgFunctions {
 			class aceDisarmIED {};
 			class aceExamine {};
 		};
+		class ied {
+			file = "\x\bnb_ex\suicide_bomber\functions\ied";
+			class aiRemoteIEDZen {};
+		};
+		class suicide_bomber {
+			file = "\x\bnb_ex\suicide_bomber\functions\suicide_bomber";
+			class suicideBomberZen {};
+		};
 	};
 };
 
+class Extended_PostInit_EventHandlers {
+	class bnb_ex_core_postInit {
+		init = "call compile preprocessFileLineNumbers '\x\bnb_ex\suicide_bomber\XEH_postInit.sqf'";
+	};
+};
 
 class CfgVehicles {
 	class LandVehicle;
@@ -49,6 +62,7 @@ class CfgVehicles {
 					condition = "player == vehicle player";
 					exceptions[] = {"isNotInside", "isNotSitting", "isNotOnLadder"};
 					statement = "";
+
 					class fox_suicice_bomber_carbombSearch {
 							displayName = "Search for explosives";
 							condition = "alive _target";

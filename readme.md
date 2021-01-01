@@ -37,6 +37,10 @@
 - [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
 - [NIArms HK416 Rifles](https://steamcommunity.com/sharedfiles/filedetails/?id=1519157834)
 
+### Recommended Mods
+Whilst 2BNB Extras don't depend on the following mods, some individual functionality will be missing without them:
+- [BettIR](https://steamcommunity.com/sharedfiles/filedetails/?id=2260572637)
+
 
 # For Developers of this mod
 ## Install

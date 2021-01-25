@@ -58,16 +58,16 @@ class CfgVehicles {
 		scope = 2;
 
 		class TransportItems {
-			class _xx_ACE_salineIV {
-				name = "ACE_salineIV";
+			class _xx_ACE_plasmaIV {
+				name = "ACE_plasmaIV";
 				count = 10;
 			};
-			class _xx_ACE_salineIV_500 {
-				name = "ACE_salineIV_500";
+			class _xx_ACE_plasmaIV_500 {
+				name = "ACE_plasmaIV_500";
 				count = 10;
 			};
-			class _xx_ACE_salineIV_250 {
-				name = "ACE_salineIV_250";
+			class _xx_ACE_plasmaIV_250 {
+				name = "ACE_plasmaIV_250";
 				count = 10;
 			};
 			class _xx_ACE_elasticBandage {

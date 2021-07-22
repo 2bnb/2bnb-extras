@@ -1,6 +1,6 @@
 name = "2BNB Extras";
 actionName = "Discord";
-action = "https://discord.gg/DRaWNyf";
+action = "https://discord.gg/rUUsCShkzJ";
 description = "2nd Battalion, Nord Brigade - Extras";
 
 picture = "2bnb-logo.paa";

@@ -4,7 +4,7 @@
 	<a href="https://github.com/2bnb/2bnb-extras/wiki">
 		<img src="https://img.shields.io/badge/2BNB%20Extras-Wiki-orange.svg?style=for-the-badge&logo=github" alt="Wiki" />
 	</a>
-	<a href="https://discord.gg/DRaWNyf">
+	<a href="https://discord.gg/rUUsCShkzJ">
 		<img src="https://img.shields.io/discord/532683310409842728.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge" alt="Discord Server">
 	</a>
 	<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1747089493">
@@ -71,4 +71,4 @@ To make the names of this mod less likely to run into problems in the future reg
 The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
-For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/DRaWNyf).
+For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/rUUsCShkzJ).

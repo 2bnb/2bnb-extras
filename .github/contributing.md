@@ -6,4 +6,4 @@ Including videos or screenshots in your issue will be a massive help to us, and 
 
 # Want to help develop?
 
-For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/DRaWNyf).
+For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/rUUsCShkzJ).

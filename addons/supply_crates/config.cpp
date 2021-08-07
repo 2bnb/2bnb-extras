@@ -14,10 +14,7 @@ class CfgPatches {
 		// Addon requirements
 		requiredVersion = 2.00;
 		requiredAddons[] = {
-			"ace_medical",
-			"niarms_416",
-			"rhsusf_c_weapons",
-			"rhs_c_weapons"
+			"ace_medical"
 		};
 
 		// Addon items
@@ -110,52 +107,56 @@ class CfgVehicles {
 		scope = 2;
 
 		class TransportMagazines {
-			class _xx_rhsusf_200rnd_556x45_mixed_box {
-				magazine = "rhsusf_200rnd_556x45_mixed_box";
+			class _xx_BWA3_120Rnd_762x51_soft {
+				magazine = "BWA3_120Rnd_762x51_soft";
 				count = 15;
 			};
-			class _xx_rhsusf_100Rnd_762x51_m61_ap {
-				magazine = "rhsusf_100Rnd_762x51_m61_ap";
+			class _xx_BWA3_120Rnd_762x51_Tracer_soft {
+				magazine = "BWA3_120Rnd_762x51_Tracer_soft";
 				count = 5;
 			};
-			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+			class _xx_BWA3_120Rnd_762x51 {
+				magazine = "BWA3_120Rnd_762x51";
 				count = 10;
 			};
-			class _xx_rhsusf_100Rnd_762x51_m80a1epr {
-				magazine = "rhsusf_100Rnd_762x51_m80a1epr";
+			class _xx_BWA3_120Rnd_762x51_Tracer {
+				magazine = "BWA3_120Rnd_762x51_Tracer";
 				count = 10;
 			};
-			class _xx_hlc_30rnd_556x45_SPR_PMAG {
-				magazine = "hlc_30rnd_556x45_SPR_PMAG";
+			class _xx_BWA3_30Rnd_556x45_G36 {
+				magazine = "BWA3_30Rnd_556x45_G36";
 				count = 70;
 			};
-			class _xx_hlc_30rnd_556x45_SOST_PMAG {
-				magazine = "hlc_30rnd_556x45_SOST_PMAG";
+			class _xx_BWA3_30Rnd_556x45_G36_Tracer {
+				magazine = "BWA3_30Rnd_556x45_G36_Tracer";
 				count = 15;
 			};
-			class _xx_hlc_30rnd_556x45_t_PMAG {
-				magazine = "hlc_30rnd_556x45_t_PMAG";
+			class _xx_BWA3_30Rnd_556x45_G36_AP {
+				magazine = "BWA3_30Rnd_556x45_G36_AP";
 				count = 15;
 			};
-			class _xx_hlc_30rnd_556x45_TDim_PMAG {
-				magazine = "hlc_30rnd_556x45_TDim_PMAG";
+			class _xx_BWA3_30Rnd_556x45_G36_SD {
+				magazine = "BWA3_30Rnd_556x45_G36_SD";
 				count = 15;
 			};
-			class _xx_hlc_30rnd_556x45_MDim_PMAG {
-				magazine = "hlc_30rnd_556x45_MDim_PMAG";
+			class _xx_BWA3_30Rnd_556x45_G36_Tracer_Dim {
+				magazine = "BWA3_30Rnd_556x45_G36_Tracer_Dim";
 				count = 15;
 			};
-			class _xx_ACE_20Rnd_762x51_Mk319_Mod_0_Mag {
-				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+			class _xx_BWA3_20Rnd_762x51_G28 {
+				magazine = "BWA3_20Rnd_762x51_G28";
 				count = 15;
 			};
-			class _xx_ACE_20Rnd_762x51_M993_AP_Mag {
-				magazine = "ACE_20Rnd_762x51_M993_AP_Mag";
+			class _xx_BWA3_20Rnd_762x51_G28_AP {
+				magazine = "BWA3_20Rnd_762x51_G28_AP";
 				count = 5;
 			};
-			class _xx_rhs_mag_m67 {
-				magazine = "rhs_mag_m67";
+			class _xx_BWA3_20Rnd_762x51_G28_SD {
+				magazine = "BWA3_20Rnd_762x51_G28_SD";
+				count = 5;
+			};
+			class _xx_HandGrenade {
+				magazine = "HandGrenade";
 				count = 20;
 			};
 			class _xx_SmokeShell {
@@ -197,12 +198,12 @@ class CfgVehicles {
 		scope = 2;
 
 		class TransportMagazines {
-			class _xx_rhs_mag_M441_HE {
-				magazine = "rhs_mag_M441_HE";
+			class _xx_1Rnd_HE_Grenade_shell {
+				magazine = "1Rnd_HE_Grenade_shell";
 				count = 25;
 			};
-			class _xx_rhs_mag_M433_HEDP {
-				magazine = "rhs_mag_M433_HEDP";
+			class _xx_CUP_1Rnd_HEDP_M203 {
+				magazine = "CUP_1Rnd_HEDP_M203";
 				count = 25;
 			};
 			class _xx_1Rnd_Smoke_Grenade_shell {
@@ -217,8 +218,8 @@ class CfgVehicles {
 				magazine = "1Rnd_SmokeBlue_Grenade_shell";
 				count = 5;
 			};
-			class _xx_rhs_mag_m662_red {
-				magazine = "rhs_mag_m662_red";
+			class _xx_CUP_1Rnd_StarFlare_Red_M203 {
+				magazine = "CUP_1Rnd_StarFlare_Red_M203";
 				count = 10;
 			};
 			class _xx_ACE_40mm_Flare_ir {
@@ -229,8 +230,8 @@ class CfgVehicles {
 				magazine = "ACE_HuntIR_M203";
 				count = 10;
 			};
-			class _xx_rhs_mag_m7a3_cs {
-				magazine = "rhs_mag_m7a3_cs";
+			class _xx_ACE_CTS9 {
+				magazine = "ACE_CTS9";
 				count = 10;
 			};
 			class _xx_MRAWS_HE_F {
@@ -248,15 +249,15 @@ class CfgVehicles {
 		};
 
 		class TransportWeapons {
-			class _xx_rhs_weap_m72a7 {
-				weapon = "rhs_weap_m72a7";
+			class _xx_BWA3_PzF3_Tandem_Loaded {
+				weapon = "BWA3_PzF3_Tandem_Loaded";
 				count = 8;
 			};
 		};
 
 		class TransportItems {
-			class _xx_rhsusf_m112_mag {
-				name = "rhsusf_m112_mag";
+			class _xx_DemoCharge_Remote_Mag {
+				name = "DemoCharge_Remote_Mag";
 				count = 10;
 			};
 			class _xx_ACE_Clacker {

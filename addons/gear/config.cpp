@@ -16,7 +16,6 @@ class CfgPatches {
 		// Addon requirements
 		requiredVersion = 2.00;
 		requiredAddons[] = {
-			"rhs_c_weapons",
 			"A3_Characters_F_Enoch"
 		};
 
@@ -358,16 +357,6 @@ class CfgWeapons
 	};
 
 
-	class H_mas_nor_opscore : H_HelmetB
-	{
-		ace_hearing_protection = 0.75;
-		ace_hearing_lowerVolume = 0;
-	};
-	class H_mas_nor_Cap_fsk_f : H_HelmetB
-	{
-		ace_hearing_protection = 0.75;
-		ace_hearing_lowerVolume = 0;
-	};
 	class launch_MRAWS_green_rail_f;
 	class BNB_EX_Gear_SAW_W_MAAWS0 : launch_MRAWS_green_rail_f
 	{
@@ -390,42 +379,43 @@ class CfgWeapons
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\maaws_tube.paa"};
 	};
-	class rhs_weap_ak74m;
-	class BNB_EX_Gear_SAW_W_AK_Adidas : rhs_weap_ak74m
-	{
-		scope = 2;
-		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas";
-		displayName = "AK-74M (Adidas)";
-		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
-	};
-	class rhs_weap_ak74m_npz;
-	class BNB_EX_Gear_SAW_W_AK_Adidas_npz : rhs_weap_ak74m_npz
-	{
-		scope = 2;
-		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_npz";
-		displayName = "AK-74M (Adidas/B-13)";
-		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
-	};
-	class rhs_weap_ak74m_gp25;
-	class BNB_EX_Gear_SAW_W_AK_Adidas_gp25 : rhs_weap_ak74m_gp25
-	{
-		scope = 2;
-		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25";
-		displayName = "AK-74M (Adidas/GP-25)";
-		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
-	};
-	class rhs_weap_ak74m_gp25_npz;
-	class BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz : rhs_weap_ak74m_gp25_npz
-	{
-		scope = 2;
-		baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz";
-		displayName = "AK-74M (Adidas/GP-25/B-13)";
-		picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
-		hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
-	};
+	// Hidden until we can confirm that the Vanilla AKs can have these textures applied
+	// class rhs_weap_ak74m;
+	// class BNB_EX_Gear_SAW_W_AK_Adidas : rhs_weap_ak74m
+	// {
+	// 	scope = 2;
+	// 	baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas";
+	// 	displayName = "AK-74M (Adidas)";
+	// 	picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+	// 	hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
+	// };
+	// class rhs_weap_ak74m_npz;
+	// class BNB_EX_Gear_SAW_W_AK_Adidas_npz : rhs_weap_ak74m_npz
+	// {
+	// 	scope = 2;
+	// 	baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_npz";
+	// 	displayName = "AK-74M (Adidas/B-13)";
+	// 	picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+	// 	hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
+	// };
+	// class rhs_weap_ak74m_gp25;
+	// class BNB_EX_Gear_SAW_W_AK_Adidas_gp25 : rhs_weap_ak74m_gp25
+	// {
+	// 	scope = 2;
+	// 	baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25";
+	// 	displayName = "AK-74M (Adidas/GP-25)";
+	// 	picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+	// 	hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
+	// };
+	// class rhs_weap_ak74m_gp25_npz;
+	// class BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz : rhs_weap_ak74m_gp25_npz
+	// {
+	// 	scope = 2;
+	// 	baseWeapon = "BNB_EX_Gear_SAW_W_AK_Adidas_gp25_npz";
+	// 	displayName = "AK-74M (Adidas/GP-25/B-13)";
+	// 	picture = "\x\bnb_ex\gear\data\ak_adidas_icon.paa";
+	// 	hiddenSelectionsTextures[] = {"\x\bnb_ex\gear\data\ak_adidas.paa"};
+	// };
 };
 class CfgGlasses
 {

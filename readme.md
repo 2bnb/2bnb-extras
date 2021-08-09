@@ -30,12 +30,9 @@
 ## Dependencies
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
-- [RHS AFRF](https://steamcommunity.com/sharedfiles/filedetails/?id=843425103)
-- [RHS USAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
-- [GRAD Sling Helmet](https://steamcommunity.com/sharedfiles/filedetails/?id=1354112941)
-- [[FOX] Suicide Bomber](https://steamcommunity.com/sharedfiles/filedetails/?id=1373303221)
 - [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
-- [NIArms HK416 Rifles](https://steamcommunity.com/sharedfiles/filedetails/?id=1519157834)
+- [BWMod](https://steamcommunity.com/workshop/filedetails/?id=1200127537)
+- [CUP Weapons](https://steamcommunity.com/workshop/filedetails/?id=497660133)
 
 ### Recommended Mods
 Whilst 2BNB Extras don't depend on the following mods, some individual functionality will be missing without them:

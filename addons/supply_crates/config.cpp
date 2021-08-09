@@ -14,7 +14,11 @@ class CfgPatches {
 		// Addon requirements
 		requiredVersion = 2.00;
 		requiredAddons[] = {
-			"ace_medical"
+			"ace_medical_treatment",
+			"ace_grenades",
+			"ace_explosives",
+			"bwa3_pzf3",
+			"CUP_Weapons_Ammunition"
 		};
 
 		// Addon items

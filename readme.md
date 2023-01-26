@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/2bnb/2bnb-extras/blob/master/2BNB_Extras_Github.png" alt="2BNB Banner" />
+	<img src="https://github.com/2bnb/2bnb-extras/blob/master/Banner_github_tf15.png" alt="2BNB Banner" />
 	<br />
 	<a href="https://github.com/2bnb/2bnb-extras/wiki">
 		<img src="https://img.shields.io/badge/2BNB%20Extras-Wiki-orange.svg?style=for-the-badge&logo=github" alt="Wiki" />
@@ -63,8 +63,8 @@ Be aware, that the names of the `.bisign` and `.bikey` files depend on the lates
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:
 - for code: bnb_ex
-- for urls: 2bnb-extras
-- for presentation: 2BNB Extras
+- for urls: tf15-extras
+- for presentation: TF15 Extras
 
 ### Prefixes
 The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.

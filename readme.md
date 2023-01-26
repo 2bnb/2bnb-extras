@@ -31,8 +31,10 @@
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
-- [BWMod](https://steamcommunity.com/workshop/filedetails/?id=1200127537)
+- [Free World Armoury](https://steamcommunity.com/workshop/filedetails/?id=2424797017)
 - [CUP Weapons](https://steamcommunity.com/workshop/filedetails/?id=497660133)
+- [Japan Units](https://steamcommunity.com/sharedfiles/filedetails/?id=823476448)
+- [RHSUSAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 
 ### Recommended Mods
 Whilst 2BNB Extras don't depend on the following mods, some individual functionality will be missing without them:

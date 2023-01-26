@@ -1,17 +1,17 @@
-name = "2BNB Extras";
+name = "TF15 Extras";
 actionName = "Discord";
 action = "https://discord.gg/rUUsCShkzJ";
-description = "2nd Battalion, Nord Brigade - Extras";
+description = "Task Force 15 - Extras";
 
-picture = "2bnb-logo.paa";
-contentBrowserPicture = "2bnb-logo.paa";
-logo = "2bnb-logo.paa";
-logoOver = "2bnb-logo.paa";
+picture = "tf15_logo.paa";
+contentBrowserPicture = "tf15_logologo.paa";
+logo = "tf15_logo.paa";
+logoOver = "tf15_logo.paa";
 
-tooltip = "2nd Battalion, Nord Brigade - Extras";
-tooltipOwned = "2nd Battalion, Nord Brigade - Extras";
-overview = "2BNB extra customisations and enhancements.";
-author = "2nd Battalion, Nord Brigade Technical Team";
+tooltip = "Task Force 15 - Extras";
+tooltipOwned = "Task Force 15 - Extras";
+overview = "TF15 extra customisations and enhancements.";
+author = "Task Force 15 Technical Team";
 overviewPicture = "2bnb-logo.paa";
-overviewText = "2nd Battalion, Nord Brigade - Extras";
+overviewText = "Task Force 15 - Extras";
 overviewFootnote = "<br /><br /><t color='#999999'>This content is under APL-SA License.<t />";

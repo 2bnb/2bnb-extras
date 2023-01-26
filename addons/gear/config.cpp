@@ -297,7 +297,7 @@ class CfgWeapons
 
 	class BNB_EX_Gear_Unit_Berret : BNB_EX_Gear_Adidas_Berret
 	{
-		author = "FarGay";
+		author = "FarCry";
 		displayName = "2BNB Berret";
 		picture = "\x\bnb_ex\gear\data\adidas_icon.paa";
 		model = "\A3\Characters_F_EPB\BLUFOR\headgear_beret02";

@@ -4,7 +4,7 @@ param(
 
 $projectRoot    = Split-Path -Parent $PSScriptRoot
 $toolsPath      = "$projectRoot\tools"
-$buildPath      = "$projectRoot\.build\@2BNB Extras"
+$buildPath      = "$projectRoot\.build\@TF15 Extras"
 $cachePath      = "$projectRoot\.build\cache"
 $modPrefix      = "bnb_ex_"
 $releasePage    = "https://github.com/KoffeinFlummi/armake/releases"

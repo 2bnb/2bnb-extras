@@ -1,8 +1,8 @@
 class CfgPatches {
 	class bnb_ex_supply_crates {
 		// Addon identity
-		name = "2BNB Extras - Supply Crates";
-		author = "2nd Battalion, Nord Brigade";
+		name = "TF15 Extras - Supply Crates";
+		author = "Task Force 15";
 		authors[] = {
 			"Arend"
 		};
@@ -17,7 +17,9 @@ class CfgPatches {
 			"ace_medical_treatment",
 			"ace_grenades",
 			"ace_explosives",
-			"bwa3_pzf3",
+			"free_world_armoury",
+			"japan_units",
+			"rhsusaf",
 			"CUP_Weapons_Ammunition"
 		};
 
@@ -55,7 +57,7 @@ class CfgVehicles {
 	};
 
 	class BNB_EX_Resupply_Class_A : BNB_EX_Resupply {
-		displayName = "[2BNB] Resupply Crate (Medical) - Class A";
+		displayName = "[TF15] Resupply Crate (Medic) - Class A";
 		scope = 2;
 
 		class TransportItems {
@@ -107,58 +109,139 @@ class CfgVehicles {
 	};
 
 	class BNB_EX_Resupply_Class_B : BNB_EX_Resupply {
-		displayName = "[2BNB] Resupply Crate (Ammo) - Class B";
+		displayName = "[TF15] Resupply Crate (Ammo) - Class B";
 		scope = 2;
 
 		class TransportMagazines {
-			class _xx_BWA3_120Rnd_762x51_soft {
-				magazine = "BWA3_120Rnd_762x51_soft";
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
 				count = 15;
 			};
-			class _xx_BWA3_120Rnd_762x51_Tracer_soft {
-				magazine = "BWA3_120Rnd_762x51_Tracer_soft";
-				count = 5;
-			};
-			class _xx_BWA3_120Rnd_762x51 {
-				magazine = "BWA3_120Rnd_762x51";
-				count = 10;
-			};
-			class _xx_BWA3_120Rnd_762x51_Tracer {
-				magazine = "BWA3_120Rnd_762x51_Tracer";
-				count = 10;
-			};
-			class _xx_BWA3_30Rnd_556x45_G36 {
-				magazine = "BWA3_30Rnd_556x45_G36";
-				count = 70;
-			};
-			class _xx_BWA3_30Rnd_556x45_G36_Tracer {
-				magazine = "BWA3_30Rnd_556x45_G36_Tracer";
+			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
+				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
 				count = 15;
 			};
-			class _xx_BWA3_30Rnd_556x45_G36_AP {
-				magazine = "BWA3_30Rnd_556x45_G36_AP";
+			class _xx_ACE_30Rnd_556x45_Stanag_Tracer_Dim {
+				magazine = "ACE_30Rnd_556x45_Stanag_Dim";
 				count = 15;
 			};
-			class _xx_BWA3_30Rnd_556x45_G36_SD {
-				magazine = "BWA3_30Rnd_556x45_G36_SD";
-				count = 15;
+			class _xx_CUP_30Rnd_556x45_PMAG_BLACK {
+				magazine = "CUP_30Rnd_556x45_PMAG_BLACK";
+				count = 15
 			};
-			class _xx_BWA3_30Rnd_556x45_G36_Tracer_Dim {
-				magazine = "BWA3_30Rnd_556x45_G36_Tracer_Dim";
-				count = 15;
+			class _xx_rhs_mag_30Rnd_556x45_Mk318_PMAG {
+				magazine = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
+				count = 15
 			};
-			class _xx_BWA3_20Rnd_762x51_G28 {
-				magazine = "BWA3_20Rnd_762x51_G28";
-				count = 15;
+			class _xx_rhs_mag_30Rnd_556x45_Mk262_PMAG {
+				magazine = "rhs_mag_30Rnd_556x45_Mk262_PMAG";
+				count = 15
 			};
-			class _xx_BWA3_20Rnd_762x51_G28_AP {
-				magazine = "BWA3_20Rnd_762x51_G28_AP";
-				count = 5;
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_PMAG_Tacer_Red {
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tacer_Red";
+				count = 15
 			};
-			class _xx_BWA3_20Rnd_762x51_G28_SD {
-				magazine = "BWA3_20Rnd_762x51_G28_SD";
-				count = 5;
+			class _xx_rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red {
+				magazine = "rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red";
+				count = 15
 			};
+			class _xx_30Rnd_jpa_556x45_T_Stanag {
+				magazine = "30Rnd_jpa_556x45_T_Stanag";
+				count = 15
+			};
+			class _xx_20Rnd_jpa_762x51_Stanag {
+				magazine = "20Rnd_jpa_762x51_Stanag";
+				count = 10
+			};
+			class _xx_20Rnd_jpa_762x51_T_Stanag {
+				magazine = "20Rnd_jpa_762x51_T_Stanag";
+				count = 10
+			};
+			class _xx_ACE_20Rnd_762x51_M993_AP_Mag {
+				magazine = "ACE_20Rnd_762x51_M993_AP_Mag";
+				count = 10
+			};
+			class _xx_ACE_20Rnd_762x51_Mag_Tracer_Dim {
+				magazine = "ACE_20Rnd_762x51_Mag_Tracer_Dim";
+				count = 10
+			};
+			class _xx_sp_fwa_m67_1rnd_heat {
+				magazine = "sp_fwa_m67_1rnd_heat";
+				count = 3
+			};
+			class _xx_sp_fwa_m67_1rnd_he {
+				magazine = "sp_fwa_m67_1rnd_he";
+				count = 3
+			};
+			class _xx_sp_fwa_100Rnd_762_mag_ball {
+				magazine = "sp_fwa_100Rnd_762_mag_ball";
+				count = 6
+			};
+			class _xx_CUP_lmg_m249_pip3 {
+				magazine = "CUP_lmg_m249_pip3";
+				count = 8
+			};
+			class _xx_CUP_100Rnd_TE4_Red_Tracer_556x45_M249 {
+				magazine = "CUP_100Rnd_TE4_Red_Tracer_556x45_M249";
+				count = 8
+			};
+			class _xx_CUP_lmg_M240_B {
+				magazine = "CUP_lmg_M240_B";
+				count = 6
+			};
+			class _xx_CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M {
+				magazine = "CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M";
+				count = 6
+			};
+			class _xx_rhsusf_100Rnd_762x51_m61_ap {
+				magazine = "rhsusf_100Rnd_762x51_m61_ap";
+				count = 6
+			};
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer {
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				count = 6
+			};
+			class _xx_rhsusf_100Rnd_762x51_m80a1epr {
+				magazine = "rhsusf_100Rnd_762x51_m80a1epr";
+				count = 6
+			};
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch_coyote {
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch_coyote";
+				count = 8
+			};
+			class _xx_rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote {
+				magazine = "rhsusf_100Rnd_556x45_mixed_soft_pouch_coyote";
+				count = 8
+			};
+			class _xx_rhsusf_100Rnd_556x45_M995_soft_pouch_coyote {
+				magazine = "rhsusf_100Rnd_556x45_M995_soft_pouch_coyote";
+				count - 8
+			};
+			class _xx_10Rnd_338_Mag {
+				magazine = "10Rnd_338_Mag";
+				count = 8
+			};
+			class _xx_ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag {
+				magazine = "ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag";
+				count = 8
+			};
+			class _xx_rhs_fim92_mag {
+				magazine = "rhs_fim92_mag";
+				count = 2
+			};
+			class _xx_sp_fwa_20Rnd_762_FAL_Metric_Tracer {
+				magazine = "sp_fwa_20Rnd_762_FAL_Metric_Tracer";
+				count = 10
+			};
+			class _xx_sp_fwa_20Rnd_762_FAL_Metric {
+				magazine = "sp_fwa_20Rnd_762_FAL_Metric";
+				count = 10
+			};
+			class _xx_sp_fwa_20Rnd_762_FAL_Metric_Ball {
+				magazine = "sp_fwa_20Rnd_762_FAL_Metric_Ball";
+				count = 10
+			};
+			//Above this line is new updates, below is 2BNB era -- Date: 26/01/2023 -- //
 			class _xx_HandGrenade {
 				magazine = "HandGrenade";
 				count = 20;
@@ -198,7 +281,7 @@ class CfgVehicles {
 	};
 
 	class BNB_EX_Resupply_Class_C : BNB_EX_Resupply {
-		displayName = "[2BNB] Resupply Crate (Special) - Class C";
+		displayName = "[TF15] Resupply Crate (Explosives) - Class C";
 		scope = 2;
 
 		class TransportMagazines {
@@ -253,8 +336,8 @@ class CfgVehicles {
 		};
 
 		class TransportWeapons {
-			class _xx_BWA3_PzF3_Tandem_Loaded {
-				weapon = "BWA3_PzF3_Tandem_Loaded";
+			class _xx_rhs_weap_m72a7 {
+				weapon = "rhs_weap_m72a7";
 				count = 8;
 			};
 		};

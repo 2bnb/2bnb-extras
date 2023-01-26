@@ -70,4 +70,4 @@ To make the names of this mod less likely to run into problems in the future reg
 The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
-For any questions, contact Arend or Ford on the 2nd Battalion, Nord Brigade [Discord](https://discord.gg/rUUsCShkzJ).
+For any questions, contact FarCry or Met on the Task Force 15 [Discord](https://discord.gg/FA7EJkq2zU).

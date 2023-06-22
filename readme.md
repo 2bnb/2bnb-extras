@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="https://github.com/2bnb/2bnb-extras/blob/master/Banner_github_tf15.png" alt="2BNB Banner" />
+	<img src="https://media.githubusercontent.com/media/2bnb/2bnb-extras/master/2BNB_Extras_Github.png" alt="2BNB Banner" />
 	<br />
 	<a href="https://github.com/2bnb/2bnb-extras/wiki">
 		<img src="https://img.shields.io/badge/2BNB%20Extras-Wiki-orange.svg?style=for-the-badge&logo=github" alt="Wiki" />
@@ -30,10 +30,14 @@
 ## Dependencies
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+- [3CB (Main Mods + RHS ammo compat)](https://steamcommunity.com/sharedfiles/filedetails/?id=909680404)
 - [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
+<<<<<<< Updated upstream
 - [Free World Armoury](https://steamcommunity.com/workshop/filedetails/?id=2424797017)
 - [CUP Weapons](https://steamcommunity.com/workshop/filedetails/?id=497660133)
 - [Japan Units](https://steamcommunity.com/sharedfiles/filedetails/?id=823476448)
+=======
+>>>>>>> Stashed changes
 - [RHSUSAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 
 ### Recommended Mods
@@ -63,11 +67,14 @@ Be aware, that the names of the `.bisign` and `.bikey` files depend on the lates
 ## Naming conventions
 To make the names of this mod less likely to run into problems in the future regarding the inclusion of a number in the name:
 - for code: bnb_ex
-- for urls: tf15-extras
-- for presentation: TF15 Extras
+- for urls: 2bnb-extras
+- for presentation: 2BNB Extras
 
 ### Prefixes
 The prefix `bnb_ex_` should be used where appropriate to avoid any potential name clashes with other mods.
 
 ## Contact
-For any questions, contact FarCry or Met on the Task Force 15 [Discord](https://discord.gg/FA7EJkq2zU).
+For any questions, contact FarCry, Carmichael or Met on the 2BNB [Discord](https://discord.gg/FA7EJkq2zU).
+
+## Previous versions
+For any previously used gear such as SURPAT or BettIR Compats, they're in our gDrive; still accessible but has been taken out of the mod for simplicity.

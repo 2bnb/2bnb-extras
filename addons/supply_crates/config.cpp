@@ -198,7 +198,7 @@ class CfgVehicles {
 			class _xx_ACE_HuntIR_M203 {
 				magazine = "ACE_HuntIR_M203";
 				count = 10;
-			}
+			};
 			//Above this line is new updates, below is 2BNB era -- Date: 26/01/2023 -- //
 			class _xx_HandGrenade {
 				magazine = "HandGrenade";

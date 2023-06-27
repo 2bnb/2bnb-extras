@@ -18,7 +18,6 @@ class CfgPatches {
 			"ace_medical_treatment",
 			"ace_grenades",
 			"ace_explosives",
-			"CUP_Weapons_Ammunition"
 		};
 
 		// Addon items

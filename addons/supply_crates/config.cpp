@@ -110,40 +110,8 @@ class CfgVehicles {
 		scope = 2;
 
 		class TransportMagazines {
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk318_mag";
-				count = 15;
-			};
-			class _xx_ACE_30Rnd_556x45_Stanag_Mk262_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_Mk262_mag";
-				count = 15;
-			};
-			class _xx_ACE_30Rnd_556x45_Stanag_Tracer_Dim {
-				magazine = "ACE_30Rnd_556x45_Stanag_Dim";
-				count = 15;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_Mk318_PMAG {
-				magazine = "rhs_mag_30Rnd_556x45_Mk318_PMAG";
-				count = 15;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_Mk262_PMAG {
-				magazine = "rhs_mag_30Rnd_556x45_Mk262_PMAG";
-				count = 15;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_M855A1_PMAG_Tacer_Red {
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tacer_Red";
-				count = 15;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red {
-				magazine = "rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red";
-				count = 15;
-			};
 			class _xx_ACE_20Rnd_762x51_M993_AP_Mag {
 				magazine = "ACE_20Rnd_762x51_M993_AP_Mag";
-				count = 10;
-			};
-			class _xx_ACE_20Rnd_762x51_Mag_Tracer_Dim {
-				magazine = "ACE_20Rnd_762x51_Mag_Tracer_Dim";
 				count = 10;
 			};
 			class _xx_UK3CB_BAF_556_200Rnd_T {
@@ -182,17 +150,13 @@ class CfgVehicles {
 				magazine = "rhs_fim92_mag";
 				count = 3;
 			};
-			class _xx_ACE_30Rnd_556x45_Stanag_M995_AP_mag {
-				magazine = "ACE_30Rnd_556x45_Stanag_M995_AP_mag";
-				count = 15;
-			};
 			class _xx_UK3CB_BAF_556_30Rnd {
 				magazine = "UK3CB_BAF_556_30Rnd";
-				count = 15;
+				count = 30;
 			};
 			class _xx_UK3CB_BAF_556_30Rnd_T {
 				magazine = "UK3CB_BAF_556_30Rnd_T";
-				count = 15;
+				count = 30;
 			};
 			class _xx_ACE_HuntIR_M203 {
 				magazine = "ACE_HuntIR_M203";
@@ -218,21 +182,9 @@ class CfgVehicles {
 				magazine = "ACE_Chemlight_HiGreen";
 				count = 10;
 			};
-			class _xx_6Rnd_GreenSignal_F {
-				magazine = "6Rnd_GreenSignal_F";
-				count = 10;
-			};
-			class _xx_6Rnd_RedSignal_F {
-				magazine = "6Rnd_RedSignal_F";
-				count = 10;
-			};
 		};
 
 		class TransportWeapons {
-			class _xx_hgun_Pistol_Signal_F {
-				weapon = "hgun_Pistol_Signal_F";
-				count = 2;
-			};
 			class _xx_rhs_weap_m72a7 {
 				weapon = "rhs_weap_m72a7";
 				count = 4;

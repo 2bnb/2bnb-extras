@@ -221,10 +221,6 @@ class CfgVehicles {
 				magazine = "ACE_HuntIR_M203";
 				count = 10;
 			};
-			class _xx_ACE_CTS9 {
-				magazine = "ACE_CTS9";
-				count = 10;
-			};
 			class _xx_MRAWS_HE_F {
 				magazine = "MRAWS_HE_F";
 				count = 4;

@@ -42,6 +42,13 @@ We have a build system to allow for key signing and addon compiling.
 1. [Git for Windows](https://git-scm.com/download/win)
 1. Windows PowerShell v5.1 or higher
 
+<ins>Automated Process:</ins>
+
+To automatically set up your system and build the mod you can execute the included `build.bat` file.
+You can do this by either going to `\tools` and double clicking the `build.bat` file, or if you use VSC you can select the bat file then in the `TERMINAL` at the bottom you can select the `Run Active File` option from the `...` menu.
+
+<ins>Manual Proccess:</ins>
+
 To set up your system to use the build script:
 - Open Windows PowerShell as Administrator and execute `set-executionpolicy remotesigned`
 - In the future, always use PowerShell as Admin

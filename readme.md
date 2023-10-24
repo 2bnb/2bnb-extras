@@ -31,7 +31,6 @@
 - [CBA A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 - [ACE3](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - [3CB (Main Mods + RHS ammo compat)](https://steamcommunity.com/sharedfiles/filedetails/?id=909680404)
-- [ILBE Assault Pack - Rewrite](https://steamcommunity.com/sharedfiles/filedetails/?id=1875281645)
 - [RHSUSAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117)
 
 # For Developers of this mod

@@ -7,8 +7,7 @@ $toolsPath      = "$projectRoot\tools"
 $buildPath      = "$projectRoot\.build\@2BNB Extras"
 $cachePath      = "$projectRoot\.build\cache"
 $modPrefix      = "bnb_ex_"
-$releasePage    = "https://github.com/KoffeinFlummi/armake/releases"
-$downloadPage   = "https://github.com/KoffeinFlummi/armake/releases/download/v{0}/armake_v{0}.zip"
+$downloadUrl    = "https://github.com/KoffeinFlummi/armake/releases/download/v0.6.3/armake_v0.6.3.zip"
 $armake2        = "$projectRoot\tools\armake2.exe"
 $armake         = "$projectRoot\tools\armake.exe"
 $tag            = git describe --tag | ForEach-Object {$_ -replace "-.*-", "-"}
@@ -180,26 +179,6 @@ function Get-InstalledArmakeVersion {
     }
 
     $version
-}
-
-function Get-LatestArmakeVersion {
-    $client = New-Object Net.WebClient
-    $content = $client.DownloadString($releasePage)
-    $client.dispose()
-
-    # Updated regex to match the latest version from the releases page
-    $versionMatches = [regex]::Matches($content, 'href="/KoffeinFlummi/armake/releases/download/v([\d\.]+)/armake_v[\d\.]+\.zip"')
-
-    if ($versionMatches.Count -eq 0) {
-        Write-Error -Message "[$timestamp] Failed to find valid armake download link."
-        return "0.0.0"
-    }
-
-    # Get the highest version number from the matches
-    $versions = $versionMatches | ForEach-Object { $_.Groups[1].Value }
-    $latestVersion = $versions | Sort-Object -Descending | Select-Object -First 1
-
-    return $latestVersion
 }
 
 function Update-Armake {
@@ -393,11 +372,11 @@ function Main {
     }
 
     $installed = Get-InstalledArmakeVersion
-    $latest    = Get-LatestArmakeVersion
+    $latest    = "0.6.3"  # Hardcoded latest version
 
     if (Compare-Version -version1 $latest -version2 $installed) {
-        Write-Output -InputObject "Found newer version of armake:" "  Installed: $installed" "  Latest: $latest"
-        Update-Armake -url ($downloadPage -f $latest)
+        Write-Output -InputObject ("Found newer version of armake: Installed: " + $installed + " Latest: " + $latest)
+        Update-Armake -url $downloadUrl
         Write-Output -InputObject "Update complete, armake up-to-date."
     }
 
